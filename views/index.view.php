@@ -15,6 +15,14 @@
     <h1>COLEGIO JESÚS ROMERO FLORES</h1>
 </nav>
 
+<div>
+    <img src="img/img1.svg" alt="">
+    <img src="img/img2.svg" alt="">
+    <img src="img/img3.svg" alt="">
+    <img src="img/img4.svg" alt="">
+    <img src="img/img5.svg" alt="">
+</div>
+
 <!--Archivos javascript para bootstrap --> 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>

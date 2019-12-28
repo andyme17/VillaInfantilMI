@@ -4,3 +4,7 @@
     background-image: url('../img/.svg');
  
 }
+
+.img-slide{
+  height: 100vh!important;
+}

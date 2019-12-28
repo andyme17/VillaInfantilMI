@@ -11,17 +11,31 @@
 <body>
 
 <nav>
-    <img src="img/logo.svg" alt="">
+    <!-- <img src="img/logo.svg" alt=""> -->
     <h1>COLEGIO JESÚS ROMERO FLORES</h1>
 </nav>
-
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="img/img1.png" class="d-block w-100 img-slide" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/img2.png" class="d-block w-100 img-slide" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/img3.png" class="d-block w-100 img-slide" alt="...">
+    </div>
+  </div>
+</div>
+<!-- 
 <div>
     <img src="img/img1.svg" alt="">
     <img src="img/img2.svg" alt="">
     <img src="img/img3.svg" alt="">
     <img src="img/img4.svg" alt="">
     <img src="img/img5.svg" alt="">
-</div>
+</div> -->
+
 
 <!--Archivos javascript para bootstrap --> 
     <script src="js/jquery-3.4.1.min.js"></script>

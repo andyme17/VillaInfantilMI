@@ -1,10 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500,700,900&display=swap');
 
-.sec-principal{
-    background-image: url('../img/.svg');
- 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.img-slide{
-  height: 100vh!important;
+body{
+  font-size: 16px;
 }
+
+/*Estilos sobreescritos de etiquetas propias de html*/
+a:hover{
+  text-decoration: none!important;
+}
+
+/*Barra de navegacion*/
+.site-header{
+  background-color: #FFAB00;
+}
+
+.nav-bar{
+  display: flex;
+}
+
+.navegation a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.125rem;
+  padding: 3rem 0rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.25rem;
+  width: 9.375rem;
+}
+
+.navegation .opc{
+  padding: 2.375rem 0rem;
+}
+
+.logo{
+  height: 6.25rem;
+}
+
+.navegation a:hover{
+  background-color: #019306;
+  color: #ffffff;
+} 
+
+/*Reescribiendo estilos de bootstrap*/
+.btn-primary{
+  background-color: #0F7512!important;
+  border-color: #0F7512!important;
+}
+
+.btn-primary.focus, .btn-primary:focus{
+  box-shadow: none!important;
+}
+

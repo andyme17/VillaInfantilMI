@@ -11,35 +11,82 @@ body{
   font-size: 16px;
 }
 
-/*Estilos sobreescritos de etiquetas propias de html*/
+/*********Styles of html tags**********/
 a:hover{
   text-decoration: none!important;
 }
 
-/*Barra de navegacion*/
-.site-header{
-  background-color: #FFAB00;
+/*Encabezados*/
+h1,h2{
+  font-family: 'Roboto', sans-serif;
+  color: #0F7512;
 }
 
-.nav-bar{
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+}
+
+hr{
+  background-color: #FFAB00;
+  height: 3px;
+}
+
+/*********Rewriting boostrap styles**************/
+.btn-primary{
+  background-color: #0F7512!important;
+  border-color: #0F7512!important;
+}
+
+.btn-primary.focus, .btn-primary:focus{
+  box-shadow: none!important;
+}
+
+/********Navegation menu**********/
+
+/*Styles for mobile device*/
+.nav-responsive{
+  background-color: #FFAB00;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.10980);
+}
+
+.mobile-logo{
+  height: 75px;
+}
+
+.mobile-icon{
+  color: #000000;
+  font-size: 2.5rem;
+  display: block;
+  padding: 0px 15px;
+}
+
+.mobile-icon:hover{
+  color: #ffffff;
+  background-color: #019306;
 }
 
 .navegation a{
+  background-color:rgba(255, 171, 0, 0.61);
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: #000000;
-  font-size: 1.125rem;
-  padding: 3rem 0rem;
-  display: inline-block;
+  font-size: 1rem;
+  display: block;
   text-align: center;
-  vertical-align: middle;
-  line-height: 1.25rem;
-  width: 9.375rem;
+  padding: 10px 0;  
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.35);;
 }
 
-.navegation .opc{
-  padding: 2.375rem 0rem;
+.navegation a:last-of-type{
+  border-bottom: none;
+}
+
+.navegation .logo-center{
+  display: none;
 }
 
 .logo{
@@ -51,13 +98,67 @@ a:hover{
   color: #ffffff;
 } 
 
-/*Reescribiendo estilos de bootstrap*/
-.btn-primary{
-  background-color: #0F7512!important;
-  border-color: #0F7512!important;
+/*Style for Tablet/PC*/
+@media (min-width: 992px){
+  .nav-container {
+    max-width: 960px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .nav-bar .nav-responsive{
+    display: none;
+  } 
+
+  .site-header{
+    background-color: #FFAB00;
+  }
+
+  .navegation .logo-center{
+    display: block;
+  }
+  
+  .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-bar .navegation a{
+    padding: 3rem 0rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.25rem;
+    width: 8rem;
+    border-bottom: none;
+  }
+
+  .nav-bar .navegation .opc{
+    padding: 2.375rem 1rem;
+  }
 }
 
-.btn-primary.focus, .btn-primary:focus{
-  box-shadow: none!important;
+/*Style for PC*/
+@media (min-width: 1200px){
+  .nav-bar .navegation{
+    margin-left: 15px;
+  } 
+  
+  .nav-bar .navegation a{
+    width: 9.375rem;
+  }
 }
 
+/*Welcome section */
+.sec-bienvenida{
+  display: flex;
+  align-items: center;
+}
+
+.text-bienvenida{
+  text-align: justify;
+}

@@ -14,14 +14,22 @@
 
 <body>
   <header class="site-header">
-    <div class="container">
-      <div class="nav-bar">
-       
-        <nav class="navegation">
+    <div id="nav" class="nav-bar">
+      <div class="nav-responsive py-2 px-3 px-md-4">
+        <a href="/" class="">
+          <img src="img/logo.png" class="mobile-logo" alt="Logotipo de la escuela">
+        </a>
+        <a href="#nav" class="mobile-icon">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="nav-container">
+        <nav id="nav" class="navegation">
           <a href="#">INICIO</a>
           <a href="#">NOSOTROS</a>
           <a href="#" class="opc">OFERTA EDUCATIVA</a>
-          <a href="/" class="py-2">
+          <a href="/" class="py-2 logo-center">
             <img src="img/logo.png" class="logo" alt="Logotipo de la escuela">
           </a>
           <a href="#">INSCRIPCIONES</a>
@@ -38,14 +46,23 @@
     <h2>Slogan</h2>
   </section>
 
-  <main>
-    <h2>Bienvenid@s</h2>
-    <hr>
-    <p>El jardín de niños Villa Infantil María Isabel le da las más cordial bienvenida a sus pequeños.
-      Ponemos a su disposición los servicios para el adecuado desarrollo de sus hijos en diversas
-      áreas como a convivencia, idiomas y valores para que sus niños tengan un desarrollo sano y
-      obtengan las habilidades que les permitirán continuar con su proceso de maduración.</p>
-    <img src="img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
+  <main class="container py-3">
+    <div class="sec-bienvenida">
+      <div class="content-bienvenida">
+        <h2>Bienvenid@s</h2>
+        <hr>
+        <p class="text-bienvenida">
+          El jardín de niños Villa Infantil María Isabel le da las más cordial bienvenida a sus pequeños.
+          Ponemos a su disposición los servicios para el adecuado desarrollo de sus hijos en diversas
+          áreas como la convivencia, idiomas y valores para que sus niños tengan un desarrollo sano y
+          obtengan las habilidades que les permitirán continuar con su proceso de maduración.</p>
+      </div>
+      <div class="img-bienvenida mx-5">
+        <img src="img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
+      </div>
+    </div>
+
+
   </main>
 
   <section>

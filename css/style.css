@@ -45,6 +45,10 @@ hr{
 /********Navegation menu**********/
 
 /*Styles for mobile device*/
+/* .nav-bar{
+  overflow: hidden;
+} */
+
 .nav-responsive{
   background-color: #FFAB00;
   display: flex;
@@ -68,7 +72,15 @@ hr{
   color: #ffffff;
   background-color: #019306;
 }
+/* 
+#nav:target{
+  max-height: 800;
+}
 
+.navegation{
+  max-height: 0;
+}
+ */
 .navegation a{
   background-color:rgba(255, 171, 0, 0.61);
   font-family: 'Roboto', sans-serif;
@@ -97,6 +109,22 @@ hr{
   background-color: #019306;
   color: #ffffff;
 } 
+
+.img-slide{
+  width: 100%;
+  height: 40vh;
+}
+
+ /*Welcome section */
+.text-bienvenida{
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.img-bienvenida{
+  text-align: center;
+}
 
 /*Style for Tablet/PC*/
 @media (min-width: 992px){
@@ -140,10 +168,28 @@ hr{
   .nav-bar .navegation .opc{
     padding: 2.375rem 1rem;
   }
+
+  .img-slide{
+    width: 100%;
+    height: 80vh;
+  }
+
+  /*Welcome section */
+  .sec-bienvenida{
+    display: flex;
+    align-items: center;
+  }
+
+  
 }
 
 /*Style for PC*/
 @media (min-width: 1200px){
+  .nav-container {
+    max-width: 960px;
+    max-width: 1140px;
+  }  
+
   .nav-bar .navegation{
     margin-left: 15px;
   } 
@@ -153,12 +199,4 @@ hr{
   }
 }
 
-/*Welcome section */
-.sec-bienvenida{
-  display: flex;
-  align-items: center;
-}
 
-.text-bienvenida{
-  text-align: justify;
-}

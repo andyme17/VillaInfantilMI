@@ -14,7 +14,7 @@
 
 <body>
   <header class="site-header">
-    <div id="nav" class="nav-bar">
+    <div class="nav-bar">
       <div class="nav-responsive py-2 px-3 px-md-4">
         <a href="/" class="">
           <img src="img/logo.png" class="mobile-logo" alt="Logotipo de la escuela">
@@ -41,12 +41,40 @@
     </div>
   </header>
 
-  <section>
-    <h1>VILLA INFANTIL MARÍA ISABEL</h1>
-    <h2>Slogan</h2>
+  <section class="principal-slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/img1.jpg" class="img-slide d-block" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>VILLA INFANTIL MARÍA ISABEL</h1>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/img2.jpg" class="img-slide d-block" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Second slide label</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/img3.jpg" class="img-slide d-block" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Third slide label</h1>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <main class="container py-3">
+  <main class="container my-5">
     <div class="sec-bienvenida">
       <div class="content-bienvenida">
         <h2>Bienvenid@s</h2>
@@ -57,7 +85,7 @@
           áreas como la convivencia, idiomas y valores para que sus niños tengan un desarrollo sano y
           obtengan las habilidades que les permitirán continuar con su proceso de maduración.</p>
       </div>
-      <div class="img-bienvenida mx-5">
+      <div class="img-bienvenida pt-3 pt-lg-0 mx-lg-5">
         <img src="img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
       </div>
     </div>

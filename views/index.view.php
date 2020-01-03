@@ -50,21 +50,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/img1.jpg" class="img-slide d-block" alt="...">
+          <img src="img/img1.jpg" class="img-slide-1 d-block" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h1>VILLA INFANTIL MARÍA ISABEL</h1>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/img2.jpg" class="img-slide d-block" alt="...">
+          <img src="img/img2.jpg" class="img-slide-1 d-block" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h1>Second slide label</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/img3.jpg" class="img-slide d-block" alt="...">
+          <img src="img/img3.jpg" class="img-slide-1 d-block" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h1>Third slide label</h1>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <main class="container my-5">
+  <main class="container my-4">
     <div class="sec-bienvenida">
       <div class="content-bienvenida">
         <h2>Bienvenid@s</h2>
@@ -89,17 +89,17 @@
         <img src="img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
       </div>
     </div>
-
-
   </main>
 
-  <section>
-    <h3>Conoce nuestra oferta educativa así como los diferentes servicios con los que contamos</h3>
-    <a href="#" class="btn btn-primary">Ver más ></a>
+  <section class="img-oferta">
+    <div class="container text-oferta">
+      <h4>Conoce nuestra oferta educativa así como los diferentes servicios con los que contamos</h4>
+      <a href="#" class="btn btn-outline-light mt-4">Ver más ></a>
+    </div>
   </section>
 
-  <section>
-    <h2>Avisos</h2>
+  <section class="container my-4 slide-avisos">
+    <h2 class="text-center mb-4">Avisos</h2>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -108,13 +108,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/av1.jpg" class="d-block" alt="...">
+          <img src="img/av1.jpg" class="img-slide-2 d-block" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/av2.jpg" class="d-block" alt="...">
+          <img src="img/av3.jpg" class="img-slide-2 d-block" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/av3.jpg" class="d-block" alt="...">
+          <img src="img/av1.jpg" class="img-slide-2 d-block" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -128,135 +128,185 @@
     </div>
   </section>
 
-  <section class="container mx-auto">
+  <section class="container mt-4 mx-auto">
     <h2 class="text-center">Últimos eventos</h2>
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <article class="card">
+    <div class="row mt-4">
+      <div class="col-12 col-md-4 pb-3">
+        <article class="card shadow-sm">
+          <img src=" img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <div class="card-body">
+            <h5 class="card-title">Título del evento</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary mt-2">Leer más</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-4 pb-3">
+        <article class="card shadow-sm">
           <img src="img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
+            <a href="#" class="btn btn-primary mt-2">Leer más</a>
           </div>
         </article>
       </div>
       <div class="col-12 col-md-4">
-        <article class="card">
+        <article class="card shadow-sm">
           <img src="img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-12 col-md-4">
-        <article class="card">
-          <img src="img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <h5 class="card-title">Título del evento</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
+            <a href="#" class="btn btn-primary mt-2">Leer más</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section>
-    <h3>Frase</h3>
-    <p>Para ofrecerte más informes acerca de nuestros servicios, llena el siguiente formulario
-      y un asesor educativo se pondrá en contacto contigo a la brevedad.
-    </p>
-    <a href="#" class="btn btn-primary">Contáctanos ></a>
-  </section>
-
-  <section>
-    <h2>Testimonios</h2>
-    <div>
-      <h5>Nombre de la persona</h5>
-      <hr>
-      <blockquote>
-        Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type
-        and scrambled it to make a type specimen book.
-      </blockquote>
-      <div class="calificion">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
+  <section class="sec-contacto mt-4 py-4">
+    <div class="container">
+      <h3 class="mb-3">Frase</h3>
+      <p>Para ofrecerte más informes acerca de nuestros servicios, llena el siguiente formulario
+        y un asesor educativo se pondrá en contacto contigo a la brevedad.
+      </p>
+      <div class="text-md-right">
+      <a href="#" class="btn btn-outline-light mt-3">Contáctanos ></a>
       </div>
-    </div>
-    <div>
-      <h5>Nombre de la persona</h5>
-      <hr>
-      <blockquote>
-        Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type
-        and scrambled it to make a type specimen book.
-      </blockquote>
-      <div class="calificion">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
-    </div>
-    <div>
-      <h5>Nombre de la persona</h5>
-      <hr>
-      <blockquote>
-        Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type
-        and scrambled it to make a type specimen book.
-      </blockquote>
-      <div class="calificion">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
+      
     </div>
   </section>
 
-  <footer>
-    <div>
-      <img src="img/mascotakinder.png" alt="Logotipo de la mascota del kinder">
+  <section class="testimonios container mt-4">
+    <h2 class="text-center">Testimonios</h2>
+    <div class="row mt-4 mt-md-5">
+      <div class="col-12 col-md-4 pb-3">
+        <div class="card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de la persona</h5>
+            <hr>
+            <blockquote class="card-text">
+              Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type
+              and scrambled it to make a type specimen book.
+            </blockquote>
+            <div class="calificacion text-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 pb-3">
+        <div class="card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de la persona</h5>
+            <hr>
+            <blockquote class="card-text">
+              Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type
+              and scrambled it to make a type specimen book.
+            </blockquote>
+            <div class="calificacion text-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de la persona</h5>
+            <hr>
+            <blockquote class="card-text">
+              Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type
+              and scrambled it to make a type specimen book.
+            </blockquote>
+            <div class="calificacion text-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h5>Enlaces de interés</h5>
-      <hr>
-      <ul>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Oferta Educativa</a></li>
-        <li><a href="#">Inscripciones</a></li>
-        <li><a href="#">Instalaciones y servicios</a></li>
-        <li><a href="#">Nivel Primaria </a></li>
-      </ul>
+  </section>
+
+  <footer class="mt-4 mt-mb-5">
+    <div class="sec-footer">
+      <div class="row container mx-auto py-4">
+        <div class="img-footer col-12 col-md-0 col-lg-4 text-center">
+          <img src="img/mascotakinder.png" alt="Logotipo de la mascota del kinder">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-2">
+          <div class="img-footer-2 text-center mb-md-3">
+            <img src="img/mascotakinder.png" class="size-img-footer" alt="Logotipo de la mascota del kinder">
+          </div>
+          <h5>Enlaces de interés</h5>
+          <hr>
+          <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Oferta Educativa</a></li>
+            <li><a href="#">Inscripciones</a></li>
+            <li><a href="#">Instalaciones y servicios</a></li>
+            <li><a href="#">Nivel Primaria </a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mt-2">
+          <h5>Contacto</h5>
+          <hr>
+          <div class="row pl-2 pb-3">
+            <div class="col-1">
+              <i class="fas fa-map-marker-alt icon"></i>
+            </div>
+            <div class="col-10 pl-4 pl-lg-3">
+              <p>Morelos 11, Santa Fe. Alvaro Obregon, CP 01210 Ciudad de México, CDMX</p>
+            </div>
+          </div>
+          <div class="row pl-2 pb-3">
+            <div class="col-1">
+              <i class="fas fa-envelope icon"></i>
+            </div>
+            <div class="col-10 pl-4 pl-lg-3">
+              <p>colegiojrf@live.com.mx</p>
+            </div>
+          </div>
+          <div class="row pl-2 pb-3">
+            <div class="col-1">
+              <i class="fas fa-phone icon"></i>
+            </div>
+            <div class="col-10 pl-4 pl-lg-3">
+              <p>55 70 59 39</p>
+            </div>
+          </div>
+          <div class="row pl-4 pt-3">
+            <h5>Siguenos en:</h5>
+            <a href="https://www.facebook.com/Villa-Infantil-Maria-Isabel-813116022199232/"><i class="fab fa-facebook icon-2 ml-4"></i></a>
+            <a href="#"> <i class="fab fa-twitter icon-2 ml-4"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h5>Contacto</h5>
-      <i class="fas fa-map-marker-alt"></i>
-      <p>Morelos 11, Santa Fe. Alvaro Obregon, CP 01210 Ciudad de México, CDMX</p>
-      <i class="fas fa-envelope"></i>
-      <p>colegiojrf@live.com.mx</p>
-      <i class="fas fa-phone"></i>
-      <p>55 70 59 39</p>
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter"></i>
-    </div>
-    <div>
-      <p>&copy;2020 Todos los derechos reservados</p>
-      <nav>
-        <a href="#">Aviso de Privacidad</a>|
-        <a href="#">Otro documento</a>|
-        <a href="#">Otro documento</a>
-      </nav>
+    <div class="sec-copyright row py-3">
+      <div class="container sec-content-copy">
+        <p class="pb-2 pb-md-0">&copy;2020 Todos los derechos reservados</p>
+        <nav>
+          <a href="#">Aviso de Privacidad</a>
+          <a href="#">Otro documento</a>
+          <a href="#">Otro documento</a>
+        </nav>
+      </div>
     </div>
   </footer>
 

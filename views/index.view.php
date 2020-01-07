@@ -19,7 +19,7 @@
         <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
         <a href="#" class="btn-menu" id="btn-menu"> <i class="icono fas fa-bars"></i></a>
       </div>
-      <div class="enlaces" id="enlaces">
+           <div class="enlaces" id="enlaces">
         <a href="#">INICIO</a>
         <a href="#">NOSOTROS</a>
         <a href="#" class="opc">OFERTA EDUCATIVA</a>
@@ -32,6 +32,43 @@
       </div>
     </nav>
   </header>
+<!-- 
+  <section class="slider-1">
+    <div class="row">
+      <div class="col-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/img2.jpg" class="img-fluid" alt="...">
+              <div class="carousel-caption d-block">
+                <p class="title-slider">VILLA INFANTIL MARÍA ISABEL</p>
+                <p class="subtitle-slider">Slogan</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/img1.jpg" class="img-fluid" alt="...">
+              <div class="carousel-caption d-block">
+                <p class="title-slider">VILLA INFANTIL MARÍA ISABEL</p>
+                <p class="subtitle-slider">Slogan</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/img3.jpg" class="img-fluid" alt="...">
+              <div class="carousel-caption d-block">
+                <p class="title-slider">VILLA INFANTIL MARÍA ISABEL</p>
+                <p class="subtitle-slider">Slogan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <main class="sec-bienvenida container my-4">
     <div class="content-bienvenida">

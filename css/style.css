@@ -15,7 +15,13 @@ html {
 
 body{
   font-size: 16px;
-  padding-top: 110px;
+  padding-top: 90px;
+}
+
+@media(min-width: 768px) {
+  body{
+    padding-top: 100px;
+  }
 }
 
 /*********Styles of html tags**********/
@@ -305,7 +311,35 @@ header .menu .menu-logo{
     display: block;
     text-align: center;
   }
+} 
+
+/*slide1 section*/
+.slider-1 img{
+/*   width: 100%;
+  height: 85vh; */
 }
+
+.title-slider{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900!important;
+  font-size: 60px!important;
+}
+
+.subtitle-slider{
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px!important;
+}
+
+.carousel-caption{
+  bottom: 30%!important;
+}
+
+@media(min-width: 768px) {
+  .carousel-caption{
+    bottom: 40%!important;
+  }  
+}  
+
   
 /*Educative offer section*/
 .img-oferta{

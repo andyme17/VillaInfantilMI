@@ -6,33 +6,33 @@ $(function () {
 
     //Menu responsive
     //calculando el ancho de la pagina
-    /*  var ancho = $(window).width(),
+      var ancho = $(window).width(),
         enlaces = $('#enlaces'),
         btnMenu = $('#btn-menu'),
         icono = $('#btn-menu .icono');
 
-    if (ancho < 992) {
+    if (ancho < 1024) {
         enlaces.hide();
         icono.addClass('fas fa-bars');
     }
 
     btnMenu.on('click', function (e) {
+        icono.removeClass('fa-bars');
+        icono.addClass('fa-times'); 
         enlaces.slideToggle();
-        icono.toggleClass('fa-bars');
-        icono.toggleClass('fa-times'); 
     });
 
    $(window).on('resize',function(){
-        if($(this).width()<992){
+        if($(this).width()>1024){
             enlaces.show();
             icono.addClass('fa-times');
             icono.removeClass('fa-bars');
         }else{
             enlaces.hide();
             icono.addClass('fa-bars');
-            icono.addClass('fa-times');
+            icono.removeClass('fa-times');
         }
-    }); */
+    }); 
 });
 
 

@@ -13,33 +13,25 @@
 </head>
 
 <body>
-  <!-- <header class="site-header">
-    <div class="nav-bar">
-      <div class="nav-responsive py-2 px-3 px-md-4">
-        <a href="/" class="">
-          <img src="img/logo.png" class="mobile-logo" alt="Logotipo de la escuela">
-        </a>
-        <a href="#nav" class="mobile-icon">
-          <i class="fas fa-bars"></i>
-        </a>
+  <header id="header">
+    <nav class="menu">
+      <div class="menu-logo">
+        <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
+        <a href="#" class="btn-menu" id="btn-menu"> <i class="icono fas fa-bars"></i></a>
       </div>
-
-      <div class="nav-container">
-        <nav id="nav" class="navegation">
-          <a href="#">INICIO</a>
-          <a href="#">NOSOTROS</a>
-          <a href="#" class="opc">OFERTA EDUCATIVA</a>
-          <a href="/" class="py-2 logo-center">
-            <img src="img/logo.png" class="logo" alt="Logotipo de la escuela">
-          </a>
-          <a href="#">INSCRIPCIONES</a>
-          <a href="#">INSTALACIONES</a>
-          <a href="#">CONTACTO</a>
-          </ul>
-        </nav>
+      <div class="enlaces" id="enlaces">
+        <a href="#">INICIO</a>
+        <a href="#">NOSOTROS</a>
+        <a href="#" class="opc">OFERTA EDUCATIVA</a>
+        <a href="/" class="py-2 logo-center">
+          <img src="img/logo.png" alt="Logotipo de la escuela">
+        </a>
+        <a href="#">INSCRIPCIONES</a>
+        <a href="#">INSTALACIONES</a>
+        <a href="#">CONTACTO</a>
       </div>
-    </div>
-  </header> -->
+    </nav>
+  </header>
 
   <main class="sec-bienvenida container my-4">
     <div class="content-bienvenida">
@@ -268,6 +260,8 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/headroom.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

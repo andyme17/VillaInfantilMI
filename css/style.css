@@ -255,7 +255,7 @@ header .menu .menu-logo{
   header .menu .menu-logo {
     padding: 0;
     width: 0;
-}
+  }
  
   .menu .enlaces a{
     display: inline-block;
@@ -275,6 +275,7 @@ header .menu .menu-logo{
 @media(min-width: 1200px) {
   header .menu{
     max-width: 1140px;
+  }  
 }
 
 /*Efectos del menu */
@@ -313,34 +314,6 @@ header .menu .menu-logo{
   }
 } 
 
-/*slide1 section*/
-.slider-1 img{
-/*   width: 100%;
-  height: 85vh; */
-}
-
-.title-slider{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900!important;
-  font-size: 60px!important;
-}
-
-.subtitle-slider{
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px!important;
-}
-
-.carousel-caption{
-  bottom: 30%!important;
-}
-
-@media(min-width: 768px) {
-  .carousel-caption{
-    bottom: 40%!important;
-  }  
-}  
-
-  
 /*Educative offer section*/
 .img-oferta{
   background-image: url("../img/img4.jpg"); 

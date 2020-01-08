@@ -19,7 +19,7 @@
         <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
         <a href="#" class="btn-menu" id="btn-menu"> <i class="icono fas fa-bars"></i></a>
       </div>
-           <div class="enlaces" id="enlaces">
+      <div class="enlaces" id="enlaces">
         <a href="#">INICIO</a>
         <a href="#">NOSOTROS</a>
         <a href="#" class="opc">OFERTA EDUCATIVA</a>
@@ -32,7 +32,7 @@
       </div>
     </nav>
   </header>
-<!-- 
+  <!-- 
   <section class="slider-1">
     <div class="row">
       <div class="col-12">

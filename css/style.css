@@ -97,7 +97,7 @@ ul li a:hover{
 }
   
 .btn-primary:hover{
-  box-shadow: 220px 0#089588 inset, -220px 0 #089588 inset!important;
+  box-shadow: 320px 0#089588 inset, -320px 0 #089588 inset!important;
   border-color: #089588!important;
 }
   
@@ -115,11 +115,11 @@ ul li a:hover{
 
 .btn-outline-light:hover {
   color: #03224e!important;
-  box-shadow: 220px 0#69e3bc inset, -220px 0 #69e3bc inset!important;
+  box-shadow: 320px 0#69e3bc inset, -320px 0 #69e3bc inset!important;
   border-color: #69e3bc!important;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 500px) {
   .btn{
     font-size: 1.125rem;
     padding: .375rem 3.5rem;
@@ -127,14 +127,7 @@ ul li a:hover{
   }
   
   .btn.btn-primary{
-    display: block;
     padding: .375rem 2.5rem;
-  }
-}
-  
-@media(min-width: 992px) {
-  .btn.btn-primary{
-    display: inline-block;
   }
 }
 
@@ -241,6 +234,7 @@ header .menu .menu-logo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: #bdf7e3;
   }
 
@@ -260,15 +254,25 @@ header .menu .menu-logo{
   .menu .enlaces a{
     display: inline-block;
     text-align: center;
-    padding: 2.8rem 0;
+    padding: 0;
     width: 10rem;
     vertical-align: middle;
     font-size: 18px;
+    border-bottom: 5px solid transparent;
+    transition: all .1s;
+  }
+
+  .menu .enlaces a:hover{
+    border-bottom: 5px solid #69e3bc;
+    background-color: #6fc7ab02;
   }
 
   .menu .enlaces a.opc{
     line-height: 1.25;
-    padding: 2.25rem 0rem;
+  }
+
+  .menu .enlaces .logo-center:hover{
+    border-bottom: 5px solid transparent; 
   }
 }
 
@@ -347,7 +351,7 @@ header .menu .menu-logo{
 
 /*Link section*/
 .sec-primaria{
-  background-image: url("../img/fondo2.png");
+  background-image: url("../img/fondo.png");
   background-position: center center; 
   background-size: cover;
   position: relative;
@@ -374,7 +378,13 @@ header .menu .menu-logo{
 }
 
 .img-primaria img{
-  height: 180px;
+  height: 250px;
+}
+
+@media(min-width: 600px) {
+  .img-primaria img{
+    height: 320px;
+  }
 }
 
 .btn-sec-1{
@@ -390,10 +400,6 @@ header .menu .menu-logo{
     line-height: 1.5;
   }
 
-  .img-primaria img{
-    height: 250px;
-  }
-
   .sec-primaria .btn-sec-1{
     display: inline-block;
   }
@@ -403,15 +409,9 @@ header .menu .menu-logo{
   }
 }
 
-@media(min-width: 992px) {
-  .img-primaria img{
-    height: 300px;
-  }
-}
-
 /*Last events section*/
 .sec-eventos{
-  background-image: url("../img/fondo2.png");
+  background-image: url("../img/fondo.png");
   background-position: center center; 
   background-size: cover;
   position: relative;
@@ -445,7 +445,7 @@ header .menu .menu-logo{
 
 /*Testimonials section*/
 .testimonios{
-  background-image:url("../img/img2.JPG");
+  background-image:url("../img/img1.JPG");
   background-position: center center;
   background-size: cover;
   position: relative;

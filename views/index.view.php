@@ -17,7 +17,7 @@
     <nav class="menu">
       <div class="menu-logo">
         <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
-        <a href="#" class="btn-menu" id="btn-menu"> <i class="icono fas fa-bars"></i></a>
+        <a href="#" id="btn-menu" class="btn-menu"><i class="icono fas fa-bars"></i></a>
       </div>
       <div class="enlaces" id="enlaces">
         <a href="#">INICIO</a>
@@ -94,11 +94,11 @@
 
   <section class="sec-primaria py-3 py-lg-4">
     <div class="row container mx-auto">
-      <div class="col-12 col-md-5 col-lg-4 text-primaria">
+      <div class="col-12 col-md-6 text-primaria">
         <h4 class="pb-1">También ofrecemos educación de calidad a <span>Nivel Primaria</span> en nuestro <span>Colegio Jesús Romero Flores</span></h4>
         <a href="#" class="btn btn-primary mt-3 btn-sec-1">Más información</a>
       </div>
-      <div class="col-12 col-md-7 col-lg-8 img-primaria">
+      <div class="col-12 col-md-6 img-primaria">
         <img src="img/img-primaria.jpg" class="img-fluid" alt="Fotografía de la primaria">
         <a href="#" class="btn btn-primary mt-2 btn-sec-2">Más información</a>
       </div>
@@ -262,7 +262,7 @@
               <i class="fas fa-envelope icon"></i>
             </div>
             <div class="col-10 pl-4 pl-lg-3">
-              <p>colegiojrf@live.com.mx</p>
+              <p>villa.infantil.mi@live.com.mx</p>
             </div>
           </div>
           <div class="row pl-2 pb-3">
@@ -270,7 +270,7 @@
               <i class="fas fa-phone icon"></i>
             </div>
             <div class="col-10 pl-4 pl-lg-3">
-              <p>55 70 59 39</p>
+              <p>21 67 74 36</p>
             </div>
           </div>
           <div class="row pl-4 pt-2">

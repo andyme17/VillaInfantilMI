@@ -13,24 +13,24 @@ $(function () {
 
     if (ancho < 1024) {
         enlaces.hide();
-        icono.addClass('fas fa-bars');
+        icono.addClass('fa-bars');
     }
 
     btnMenu.on('click', function (e) {
-        icono.removeClass('fa-bars');
-        icono.addClass('fa-times'); 
+      /*   icono.toggleClass('fa-bars');
+        icono.toggleClass('fa-times'); */
         enlaces.slideToggle();
     });
 
    $(window).on('resize',function(){
         if($(this).width()>1024){
             enlaces.show();
-            icono.addClass('fa-times');
-            icono.removeClass('fa-bars');
+           /*  icono.addClass('fa-times');
+            icono.removeClass('fa-bars'); */
         }else{
             enlaces.hide();
-            icono.addClass('fa-bars');
-            icono.removeClass('fa-times');
+           /*  icono.addClass('fa-bars');
+            icono.removeClass('fa-times'); */
         }
     }); 
 });

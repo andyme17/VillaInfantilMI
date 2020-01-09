@@ -32,43 +32,13 @@
       </div>
     </nav>
   </header>
-  <!-- 
-  <section class="slider-1">
-    <div class="row">
-      <div class="col-12">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/img2.jpg" class="img-fluid" alt="...">
-              <div class="carousel-caption d-block">
-                <p class="title-slider">VILLA INFANTIL MARÍA ISABEL</p>
-                <p class="subtitle-slider">Slogan</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/img1.jpg" class="img-fluid" alt="...">
-              <div class="carousel-caption d-block">
-                <p class="title-slider">VILLA INFANTIL MARÍA ISABEL</p>
-                <p class="subtitle-slider">Slogan</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/img3.jpg" class="img-fluid" alt="...">
-              <div class="carousel-caption d-block">
-                <p class="title-slider">VILLA INFANTIL MARÍA ISABEL</p>
-                <p class="subtitle-slider">Slogan</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+  <section class="banner">
+    <div class="banner-content">
+      <p class="header-banner">VILLA INFANTIL MARÍA ISABEL</p>
+      <p class="sub-header-banner">Preparando a sus pequeños para el futuro</p>
     </div>
-  </section> -->
+  </section>
 
   <main class="sec-bienvenida container my-4">
     <div class="content-bienvenida">
@@ -94,13 +64,59 @@
 
   <section class="sec-primaria py-3 py-lg-4">
     <div class="row container mx-auto">
-      <div class="col-12 col-md-6 text-primaria">
-        <h4 class="pb-1">También ofrecemos educación de calidad a <span>Nivel Primaria</span> en nuestro <span>Colegio Jesús Romero Flores</span></h4>
+      <div class="col-12 col-md-5 text-primaria">
+        <h4 class="pb-2">También ofrecemos educación de calidad a <span>Nivel Primaria</span> en nuestro <span>Colegio Jesús Romero Flores</span></h4>
         <a href="#" class="btn btn-primary mt-3 btn-sec-1">Más información</a>
       </div>
-      <div class="col-12 col-md-6 img-primaria">
-        <img src="img/img-primaria.jpg" class="img-fluid" alt="Fotografía de la primaria">
+      <div class="col-12 col-md-7 img-primaria">
+        <img src="img/img-primaria.jpg" class="ml-md-3 img-fluid" alt="Fotografía de la primaria">
         <a href="#" class="btn btn-primary mt-2 btn-sec-2">Más información</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-contacto py-4">
+    <div class="container">
+      <h3 class="mb-3">Frase</h3>
+      <p>Para ofrecerte más informes acerca de nuestros servicios, llena el siguiente formulario
+        y un asesor educativo se pondrá en contacto contigo a la brevedad.
+      </p>
+      <div class="text-md-right">
+        <a href="#" class="btn btn-outline-light mt-3">Contáctanos ></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-avisos py-4">
+    <div class="row container mx-auto">
+      <div class="col-12 col-md-8 col-lg-7 container">
+        <h2 class="text-center">Avisos</h2>
+        <div id="carouselExampleIndicators" class="carousel slide my-3" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/img1.jpg" class="d-block img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/img4.jpg" class="d-block img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/img5.jpg" class="d-block img-fluid" alt="...">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -167,18 +183,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec-contacto py-4">
-    <div class="container">
-      <h3 class="mb-3">Frase</h3>
-      <p>Para ofrecerte más informes acerca de nuestros servicios, llena el siguiente formulario
-        y un asesor educativo se pondrá en contacto contigo a la brevedad.
-      </p>
-      <div class="text-md-right">
-        <a href="#" class="btn btn-outline-light mt-3">Contáctanos ></a>
       </div>
     </div>
   </section>

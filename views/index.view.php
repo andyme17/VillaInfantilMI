@@ -5,25 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Villa Infantil María Isabel</title>
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>Villa Infantil María Isabel</title>
-  <script defer src="js/all.js"></script>
 </head>
 
 <body>
   <header id="header">
     <nav class="menu">
-      <div class="menu-logo">
-        <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
-        <a href="#" id="btn-menu" class="btn-menu"><i class="icono fas fa-bars"></i></a>
+      <div class="container-menu">
+        <div class="logo">
+          <div class="logo-name">
+            <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
+          </div>
+          <div class="icon-menu">
+            <a href="#" id="btn-menu" class="btn-menu"><i class="fas fa-bars"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="enlaces" id="enlaces">
+
+      <div class="menu-link">
         <a href="#">INICIO</a>
         <a href="#">NOSOTROS</a>
         <a href="#" class="opc">OFERTA EDUCATIVA</a>
-        <a href="/" class="py-2 logo-center">
+        <a href="/" class="logo-center">
           <img src="img/logo.png" alt="Logotipo de la escuela">
         </a>
         <a href="#">INSCRIPCIONES</a>
@@ -277,7 +284,7 @@
               <p>21 67 74 36</p>
             </div>
           </div>
-          <div class="row pl-4 pt-2">
+          <div class="redes row pl-4 pt-2">
             <h5>Siguenos en:</h5>
             <a href="https://www.facebook.com/Villa-Infantil-Maria-Isabel-813116022199232/"><i class="fab fa-facebook icon-2 ml-4"></i></a>
             <a href="#"> <i class="fab fa-twitter icon-2 ml-4"></i></a>

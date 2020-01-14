@@ -1,39 +1,17 @@
-$(function () {
-    var header = document.getElementById('header');
+$(document).ready(function(){
+	var header = document.getElementById('header');
     var headroom = new Headroom(header);
 
     headroom.init();
 
-    //Menu responsive
-    //calculando el ancho de la pagina
-      var ancho = $(window).width(),
-        enlaces = $('#enlaces'),
-        btnMenu = $('#btn-menu'),
-        icono = $('#btn-menu .icono');
-
-    if (ancho < 1024) {
-        enlaces.hide();
-        icono.addClass('fa-bars');
-    }
-
-    btnMenu.on('click', function (e) {
-      /*   icono.toggleClass('fa-bars');
-        icono.toggleClass('fa-times'); */
-        enlaces.slideToggle();
-    });
-
-   $(window).on('resize',function(){
-        if($(this).width()>1024){
-            enlaces.show();
-           /*  icono.addClass('fa-times');
-            icono.removeClass('fa-bars'); */
-        }else{
-            enlaces.hide();
-           /*  icono.addClass('fa-bars');
-            icono.removeClass('fa-times'); */
-        }
-    }); 
-});
-
-
+	$("#btn-menu").click(function(){
+		if ( $ (".btn-menu i").attr("class") == "fas fa-bars") {
+			$ (".btn-menu i").removeClass("fas fa-bars").addClass("fas fa-times");
+			$ (".menu-link").css({"left": "0"});
+		} else {
+			$ (".btn-menu i").removeClass("fas fa-times").addClass("fas fa-bars");
+			$ (".menu-link").css({"left": "-100%"});			
+		}
+	})
+})
 

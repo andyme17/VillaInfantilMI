@@ -13,32 +13,7 @@
 </head>
 
 <body>
-  <header id="header">
-    <nav class="menu">
-      <div class="container-menu">
-        <div class="logo">
-          <div class="logo-name">
-            <a href="#"><img src="img/logo.png" alt="Logotipo de la escuela"></a>
-          </div>
-          <div class="icon-menu">
-            <a href="#" id="btn-menu" class="btn-menu"><i class="fas fa-bars"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-link">
-        <a href="#">INICIO</a>
-        <a href="#">NOSOTROS</a>
-        <a href="#" class="opc">OFERTA EDUCATIVA</a>
-        <a href="/" class="logo-center">
-          <img src="img/logo.png" alt="Logotipo de la escuela">
-        </a>
-        <a href="#">INSCRIPCIONES</a>
-        <a href="#">INSTALACIONES</a>
-        <a href="#">CONTACTO</a>
-      </div>
-    </nav>
-  </header>
+  <?php require 'nav-bar.php';?>
 
   <section class="banner">
     <div class="banner-content">
@@ -58,7 +33,7 @@
         obtengan las habilidades que les permitirán continuar con su proceso de maduración.</p>
     </div>
     <div class="img-bienvenida pt-3 pt-lg-0 ml-lg-5">
-      <img src="img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
+      <img src="<?php echo PATH;?>/img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
     </div>
   </main>
 
@@ -71,12 +46,12 @@
 
   <section class="sec-primaria py-3 py-lg-4">
     <div class="row container mx-auto">
-      <div class="col-12 col-md-5 text-primaria">
-        <h4 class="pb-2">También ofrecemos educación de calidad a <span>Nivel Primaria</span> en nuestro <span>Colegio Jesús Romero Flores</span></h4>
+      <div class="col-12 col-md-5 col-lg-6 text-primaria">
+        <h4 class="px-lg-5">También ofrecemos educación de calidad a <span>Nivel Primaria</span> en nuestro <span>Colegio Jesús Romero Flores</span></h4>
         <a href="#" class="btn btn-primary mt-3 btn-sec-1">Más información</a>
       </div>
-      <div class="col-12 col-md-7 img-primaria">
-        <img src="img/img-primaria.jpg" class="ml-md-3 img-fluid" alt="Fotografía de la primaria">
+      <div class="col-12 col-md-7 col-lg-6 img-primaria">
+        <img src="<?php echo PATH;?>/img/img-primaria.jpg" class="img-fluid" alt="Fotografía de la primaria">
         <a href="#" class="btn btn-primary mt-2 btn-sec-2">Más información</a>
       </div>
     </div>
@@ -106,13 +81,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/img1.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH;?>/img/img1.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="img/img4.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH;?>/img/img4.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="img/img5.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH;?>/img/img5.jpg" class="d-block img-fluid" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -201,7 +176,7 @@
     <div class="container row py-3 mx-auto">
       <div class="col-12 col-md-4 pb-3">
         <article class="card shadow-sm">
-          <img src=" img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH;?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -213,7 +188,7 @@
       </div>
       <div class="col-12 col-md-4 pb-3">
         <article class="card shadow-sm">
-          <img src="img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH;?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -225,7 +200,7 @@
       </div>
       <div class="col-12 col-md-4">
         <article class="card shadow-sm">
-          <img src="img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH;?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -237,72 +212,7 @@
       </div>
     </div>
   </section>
-  <footer>
-    <div class="sec-footer py-3 pb-md-0">
-      <div class="row container mx-auto">
-        <div class="col-12 col-md-0 col-lg-4 text-center">
-          <img src="img/mascotakinder.png" class="img-footer" alt="Logotipo de la mascota del kinder">
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mt-2 mt-md-0">
-          <div class="img-footer-2 text-center mb-2">
-            <img src="img/mascotakinder.png" class="size-img-footer" alt="Logotipo de la mascota del kinder">
-          </div>
-          <h5>Enlaces de interés</h5>
-          <hr>
-          <ul>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Oferta Educativa</a></li>
-            <li><a href="#">Inscripciones</a></li>
-            <li><a href="#">Instalaciones y servicios</a></li>
-            <li><a href="#">Nivel Primaria </a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <h5>Contacto</h5>
-          <hr>
-          <div class="row pl-2 pb-3">
-            <div class="col-1">
-              <i class="fas fa-map-marker-alt icon"></i>
-            </div>
-            <div class="col-10 pl-4 pl-lg-3">
-              <p>Morelos 11, Santa Fe. Alvaro Obregon, CP 01210 Ciudad de México, CDMX</p>
-            </div>
-          </div>
-          <div class="row pl-2 pb-3">
-            <div class="col-1">
-              <i class="fas fa-envelope icon"></i>
-            </div>
-            <div class="col-10 pl-4 pl-lg-3">
-              <p>villa.infantil.mi@live.com.mx</p>
-            </div>
-          </div>
-          <div class="row pl-2 pb-3">
-            <div class="col-1">
-              <i class="fas fa-phone icon"></i>
-            </div>
-            <div class="col-10 pl-4 pl-lg-3">
-              <p>21 67 74 36</p>
-            </div>
-          </div>
-          <div class="redes row pl-4 pt-2">
-            <h5>Siguenos en:</h5>
-            <a href="https://www.facebook.com/Villa-Infantil-Maria-Isabel-813116022199232/"><i class="fab fa-facebook icon-2 ml-4"></i></a>
-            <a href="#"> <i class="fab fa-twitter icon-2 ml-4"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sec-copyright py-2">
-      <div class="sec-content-copy container">
-        <p>&copy;2020 Todos los derechos reservados</p>
-        <nav class="nav-footer pt-2 pt-md-0">
-          <a href="#">Aviso de Privacidad</a>
-          <a href="#">Otro documento</a>
-          <a href="#">Otro documento</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
+<?php require 'footer.php'; ?>
 
   <!--Archivos javascript para bootstrap -->
   <script src="js/jquery-3.4.1.min.js"></script>

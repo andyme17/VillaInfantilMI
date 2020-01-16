@@ -64,8 +64,6 @@
         </div>
     </section>
 
-
-
     <?php require 'footer.view.php'; ?>
 
     <!--Archivos javascript para bootstrap -->
@@ -75,5 +73,4 @@
     <script src="js/headroom.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -57,15 +57,15 @@ h5 {
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
-  color: #072146;
+h2,h3 {
+  color: #03224e;
 }
 
 hr {
-  background-color: #17a2b8;
+  background-color: #28cbe4;
   border-top: 0;
   height: 0.1875rem;
-  transition: all 1s;
+  margin-top: .5rem;
 }
 
 ul li {
@@ -124,7 +124,7 @@ ul li a {
 
 .btn-outline-light:hover {
   color: #03224e !important;
-  box-shadow: 20rem 0 #59d0e3 inset, -20rem 0 #59d0e3 inset!important;
+  box-shadow: 20rem 0 #59d0e3 inset, -20rem 0 #59d0e3 inset !important;
   border-color: #59d0e3 !important;
 }
 
@@ -302,7 +302,7 @@ header {
   }
 } */
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
   .banner {
     height: calc(85vh - 5.6875rem);
   }
@@ -576,11 +576,11 @@ header {
   font-family: "Roboto", sans-serif;
   /* background: linear-gradient(#ffea44,#ffab00); 
   background: linear-gradient(#f9e864,#ffa700);*/
-  background: linear-gradient( #ffd970,#f8b524);;
+  background: linear-gradient(#ffd970, #f8b524);
   color: #03224e;
 }
 
-.img-footer{
+.img-footer {
   height: 7.75rem;
 }
 
@@ -677,4 +677,225 @@ footer .sec-footer .redes a:hover {
     border-left: 0;
     padding-left: 0;
   }
+}
+
+/********Page contacto.php**********/
+
+.sec-contact {
+  background-image: url("../img/img1.JPG");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.sec-contact:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background: rgb(16, 116, 132); 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.9;
+}
+
+.content-contact {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-contact,
+.form-contact {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .content-contact {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-contact {
+    flex-basis: 60%;
+  }
+
+  .text-contact {
+    flex-basis: calc(40% - 2.5rem);
+  }
+}
+
+@media(min-width: 1024px) {
+  .form-contact {
+    flex-basis: 55%;
+  }
+
+  .text-contact {
+    flex-basis: calc(45% - 4rem);
+  }
+}
+
+.text-contact h3,
+.text-contact p {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.content-contact h2,
+.content-contact p {
+  color: #fff;
+}
+
+form {
+  background-color: #f7f9f9;
+  width: 80%;
+  padding-bottom: 0.625rem;
+  border-radius: 0.0625rem;
+}
+
+@media(min-width: 1024px) {
+  form{
+    padding: 0 1.25rem 0.625rem;
+  }
+}
+
+form .group {
+  position: relative;
+  margin: 2.1875rem auto;
+}
+
+input,
+textarea {
+  background-color: #f7f9f9;
+  font-family: "Roboto", sans-serif;
+  color: #646161;
+  font-size: 1rem;
+  padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 0.0625rem solid #49454567;
+  resize: none;
+}
+
+@media (min-width: 768px) {
+  input,
+  textarea {
+    font-size: 1.125rem;
+  }
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  color: #03224e;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  position: absolute;
+  top: -0.875rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1393a8;
+}
+
+@media (min-width: 768px) {
+  input:focus ~ label,
+  input:valid ~ label,
+  textarea:focus ~ label,
+  textarea:valid ~ label {
+    font-size: 1.125rem;
+  }
+}
+
+label {
+  font-family: "Roboto", sans-serif;
+  color: #03224e;
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  left: 0.625rem;
+  top: 0.9375rem;
+  transition: 0.5s ease all;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  label {
+    font-size: 1.125rem;
+  }
+}
+
+input:focus ~ .barra:before,
+textarea:focus ~ .barra:before {
+  width: 100%;
+}
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barra:before {
+  content: "";
+  height: 0.125rem;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: #1a2980; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1a2980, #26d0ce); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1a2980, #26d0ce); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 0.3s ease all;
+  left: 0%;
+}
+
+button.btn {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  button.btn {
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+@media(min-width: 1200px) {
+  button.btn {
+    width: 40%;
+  }
+}
+
+.sec-map {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-horario{
+  color: #03224e;
+}
+
+@media(min-width: 768px) {
+  .text-map{
+    width: 50%;
+  }
+
+  .content-horario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-horario{
+    width: 50%;
+  } 
 }

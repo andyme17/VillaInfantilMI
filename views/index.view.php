@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <?php require 'nav-bar.php';?>
+  <?php require 'nav-bar.view.php'; ?>
 
   <section class="banner">
     <div class="banner-content">
@@ -33,7 +33,7 @@
         obtengan las habilidades que les permitirán continuar con su proceso de maduración.</p>
     </div>
     <div class="img-bienvenida pt-3 pt-lg-0 ml-lg-5">
-      <img src="<?php echo PATH;?>/img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
+      <img src="<?php echo PATH; ?>/img/mascotakinder.png" alt="Logotipo de la mascota de la escuela">
     </div>
   </main>
 
@@ -51,7 +51,7 @@
         <a href="#" class="btn btn-primary mt-3 btn-sec-1">Más información</a>
       </div>
       <div class="col-12 col-md-7 col-lg-6 img-primaria">
-        <img src="<?php echo PATH;?>/img/img-primaria.jpg" class="img-fluid" alt="Fotografía de la primaria">
+        <img src="<?php echo PATH; ?>/img/img-primaria.jpg" class="img-fluid" alt="Fotografía de la primaria">
         <a href="#" class="btn btn-primary mt-2 btn-sec-2">Más información</a>
       </div>
     </div>
@@ -81,13 +81,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="<?php echo PATH;?>/img/img1.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>/img/img1.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="<?php echo PATH;?>/img/img4.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>/img/img4.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="<?php echo PATH;?>/img/img5.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>/img/img5.jpg" class="d-block img-fluid" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -176,7 +176,7 @@
     <div class="container row py-3 mx-auto">
       <div class="col-12 col-md-4 pb-3">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH;?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -188,7 +188,7 @@
       </div>
       <div class="col-12 col-md-4 pb-3">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH;?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -200,7 +200,7 @@
       </div>
       <div class="col-12 col-md-4">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH;?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>/img/img1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <h5 class="card-title">Título del evento</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -212,7 +212,7 @@
       </div>
     </div>
   </section>
-<?php require 'footer.php'; ?>
+  <?php require 'footer.view.php'; ?>
 
   <!--Archivos javascript para bootstrap -->
   <script src="js/jquery-3.4.1.min.js"></script>

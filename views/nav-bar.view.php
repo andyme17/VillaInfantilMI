@@ -12,15 +12,15 @@
         </div>
 
         <div class="menu-link">
-            <a href="#">INICIO</a>
-            <a href="#">NOSOTROS</a>
-            <a href="#" class="opc">OFERTA EDUCATIVA</a>
-            <a href="/" class="logo-center">
+            <a href="<?php echo PATH;?>">INICIO</a>
+            <a href="<?php echo PATH;?>nosotros.php">NOSOTROS</a>
+            <a href="<?php echo PATH;?>oferta-educativa.php" class="opc">OFERTA EDUCATIVA</a>
+            <a href="<?php echo PATH;?>" class="logo-center">
                 <img src="img/logo.png" alt="Logotipo de la escuela">
             </a>
-            <a href="#">INSCRIPCIONES</a>
-            <a href="#">INSTALACIONES</a>
-            <a href="#">CONTACTO</a>
+            <a href="<?php echo PATH;?>inscripciones.php">INSCRIPCIONES</a>
+            <a href="<?php echo PATH;?>instalaciones.php">INSTALACIONES</a>
+            <a href="<?php echo PATH;?>contacto.php">CONTACTO</a>
         </div>
     </nav>
 </header>

@@ -19,7 +19,7 @@
     <section class="sec-history py-4">
         <div class="content-history container mx-auto text-center">
             <div class="header-history mx-auto">
-                <h2 class="">¿Quiénes Somos?</h2>
+                <h2>¿Quiénes Somos?</h2>
                 <hr>
             </div>
             <p class="text-history">
@@ -29,10 +29,13 @@
             </p>
         </div>
     </section>
-    <section class="sec-mi-vi py-">
-        <div class="content-mi-vi container">
-            <h3>Visión</h3>
-            <p>
+    <section class="container py-4">
+        <div class="row mx-auto">
+            <div class="header-vision">
+                <h2>Visión</h2>
+                <hr>
+            </div>
+            <p class="text-vision">
                 Ser una escuela con la mejor calidad, personal altamente calificado y la infraestructura adecuada, 
                 que permita brindar a los niños y niñas de edad preescolar las herramientas necesarias para desarrollar
                 sus capacidades intelectuales, de autonomía y valores universales como el respeto, la responsabilidad,
@@ -40,16 +43,15 @@
             </p>           
         </div>
     </section>
-    <main class="sec-nosotros">
-        <h2>Nuestro Equipo</h2>
-        <div class="content-nosotros container">
+    <main class="sec-nosotros py-4">
+        <h2 class="text-center">Nuestro Equipo</h2>
+        <div class="content-nosotros container mx-auto">
             <img src="<?php echo PATH?>img/personal_jrf.jpg" alt="Imagen del personal del kinder">
-            <div class="text-nosotros">
+            <div class="text-nosotros pt-3">
                 <p>
                     El Jardín de Niños Villa Infantil María Isabel se encuentra
                     en un continuo proceso de mejora, tanto en sus instalaciones como en sus
-                    planes de estudio y mecánicas de trabajo, esto incluye por supuesto a 
-                    ustedes padres de familia. En la búsqueda de mejorar su experiencia con
+                    planes de estudio y mecánicas de trabajo, esto incluye a padres de familia. En la búsqueda de mejorar su experiencia con
                     nosotros le invitamos a manifestar sus observaciones y sugerencias a 
                     través de nuestra página.
                     (falta por definir)

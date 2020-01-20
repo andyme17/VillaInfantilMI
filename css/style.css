@@ -803,7 +803,7 @@ footer .sec-footer .redes a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .content-contact {
@@ -1035,7 +1035,7 @@ button.btn {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .content-history {
@@ -1047,36 +1047,76 @@ button.btn {
   color: #fff;
 }
 
+.text-history span{
+  font-weight: 700;
+}
+
 @media (min-width: 768px) {
   .header-history {
     width: 50%;
   }
 }
 
-.content-mi-vi {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+.header-vision{
+  width: 35%;
 }
 
-.mision,
-.vision {
+.text-vision{
+  text-align: justify;
+  line-height: 2;
+}
+
+.sec-nosotros{
+  background-image: url("../img/fondo.png");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.sec-nosotros:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+.sec-nosotros h2,.sec-nosotros .content-nosotros{
+  position: relative;
+}
+
+.content-nosotros{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.content-nosotros img, .text-nosotros{
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
-  padding: 10px 0;
 }
 
-@media (min-width: 768px) {
-  .content-mi-vi {
-    justify-content: space-between;
-  }
+.text-nosotros p{
+  text-align: justify;
+  line-height: 2;
+}
 
-  .mision {
+@media(min-width: 768px) {
+  .content-nosotros{
+      justify-content: space-between; 
+  }
+  
+  .content-nosotros img {
     flex-basis: 50%;
   }
-
-  .vision {
+  
+  .text-nosotros {
     flex-basis: calc(50% - 2.5rem);
-  }
+  }  
 }

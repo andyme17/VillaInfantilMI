@@ -1,12 +1,12 @@
 <footer>
-    <div class="sec-footer py-3 pb-md-0">
+    <div class="sec-footer py-3">
         <div class="row container mx-auto">
             <div class="col-12 col-md-0 col-lg-4 text-center">
-                <img src="<?php echo PATH?>/img/logo-kinder-3.png" class="img-footer" alt="Logotipo de la mascota del kinder">
+                <img src="<?php echo PATH?>img/logo-mascota-kinder.png" class="img-footer" alt="Logotipo de la mascota del kinder">
             </div>
             <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0">
                 <div class="img-footer-2 text-center mb-2">
-                    <img src="<?php echo PATH?>/img/logo-kinder-3.png" class="size-img-footer" alt="Logotipo de la mascota del kinder">
+                    <img src="<?php echo PATH?>img/logo-mascota-kinder.png" class="size-img-footer" alt="Logotipo de la mascota del kinder">
                 </div>
                 <h5>Enlaces de interés</h5>
                 <hr>
@@ -58,8 +58,6 @@
             <p>&copy;2020 Todos los derechos reservados</p>
             <nav class="nav-footer pt-2 pt-md-0">
                 <a href="#">Aviso de Privacidad</a>
-                <!-- <a href="#">Otro documento</a>
-                <a href="#">Otro documento</a> -->
             </nav>
         </div>
     </div>

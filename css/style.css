@@ -55,11 +55,8 @@ h3,
 h4,
 h5 {
   font-family: "Roboto", sans-serif;
-}
-
-h2,
-h3 {
   color: #03224e;
+  margin-bottom: 0 !important; ;
 }
 
 hr {
@@ -422,6 +419,10 @@ header {
 
 .text-oferta {
   z-index: 1;
+}
+
+.text-oferta h4{
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -855,7 +856,7 @@ footer .sec-footer .redes a:hover {
   color: #fff;
 }
 
-form {
+.form-contact{
   background-color: #f7f9f9;
   width: 80%;
   padding-bottom: 0.625rem;
@@ -863,19 +864,18 @@ form {
 }
 
 @media (min-width: 1024px) {
-  form {
+  .form-contact,.form-opinion {
     padding: 0 1.25rem 0.625rem;
   }
 }
 
 form .group {
   position: relative;
-  margin: 2.1875rem auto;
+  margin: 2.1rem auto;
 }
 
 input,
 textarea {
-  background-color: #f7f9f9;
   font-family: "Roboto", sans-serif;
   color: #646161;
   font-size: 1rem;
@@ -886,6 +886,11 @@ textarea {
   border-bottom: 0.0625rem solid #49454567;
   resize: none;
 }
+
+.form-contact input,
+.form-contact textarea{
+  background-color: #f7f9f9;
+} 
 
 @media (min-width: 768px) {
   input,
@@ -1042,6 +1047,11 @@ button.btn {
   position: relative;
 }
 
+.content-history hr{
+  width: 50%;
+  margin: 0.1rem auto 1rem;
+}
+
 .content-history h2,
 .content-history p {
   color: #fff;
@@ -1051,19 +1061,16 @@ button.btn {
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
-  .header-history {
-    width: 50%;
-  }
-}
-
-.header-vision{
-  width: 35%;
-}
-
 .text-vision{
   text-align: justify;
-  line-height: 2;
+  line-height: 1.8;
+}
+
+@media(min-width: 768px) {
+  .vision hr{
+    width: 50%;
+    margin: 0.1rem auto 1rem;
+  }
 }
 
 .sec-nosotros{
@@ -1071,6 +1078,7 @@ button.btn {
   background-position: center center;
   background-size: cover;
   position: relative;
+  padding: 1.5rem 0;
 }
 
 .sec-nosotros:before {
@@ -1085,7 +1093,7 @@ button.btn {
   opacity: 0.8;
 }
 
-.sec-nosotros h2,.sec-nosotros .content-nosotros{
+.sec-nosotros h2,.sec-nosotros .content-nosotros,.sec-admin h3{
   position: relative;
 }
 
@@ -1096,27 +1104,123 @@ button.btn {
   padding-top: 20px;
 }
 
-.content-nosotros img, .text-nosotros{
+.img-nosotros, .text-nosotros{
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
 }
 
+.text-nosotros{
+  padding: 16px 0;
+}
+
 .text-nosotros p{
   text-align: justify;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 @media(min-width: 768px) {
   .content-nosotros{
-      justify-content: space-between; 
+    justify-content: space-between; 
+    align-items: center;
   }
   
-  .content-nosotros img {
+  .img-nosotros {
+    flex-basis: 55%;
+  }
+  
+  .text-nosotros {
+    flex-basis: calc(45% - 1.5rem);
+    padding: 0;
+  }  
+
+  .text-nosotros p{
+    line-height: 2;
+  }
+}
+
+@media(min-width: 1024px) {
+  .content-nosotros{
+    padding: 20px 20px 0;
+  }
+}
+
+@media(min-width: 1200px) {
+  .content-nosotros{
+    padding: 20px 45px 0;
+  }
+  
+  .img-nosotros{
     flex-basis: 50%;
   }
   
   .text-nosotros {
     flex-basis: calc(50% - 2.5rem);
+    padding: 0;
   }  
 }
+
+.sec-admin p{
+  color: #03224e;
+}
+
+.sec-admin img{
+  width: 200px;
+  padding: 10px;
+}
+.sec-admin hr{
+  width: 30%;
+  margin: 0.3rem auto 1rem;
+}
+
+.sec-opinion{
+  background: linear-gradient(#089588, #315993);
+  color:#fff;
+  text-align: center;  
+}
+
+/*Opinion form*/
+
+#formViewHide{
+  display: none;
+}
+
+.sec-form-opinion{
+  background-image: url("../img/fondo.png");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.sec-form-opinion:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+.form-opinion{
+  position: relative;
+  background-color: #9ad4d486;
+  width: 90%;
+  padding-bottom: 0.625rem;
+  padding-top: 1px;
+  border-radius: 0.0625rem;
+}
+
+@media(min-width: 1024px) {
+  .form-opinion{
+    width: 70%;
+  }
+}
+
+.form-opinion input,
+.form-opinion textarea{
+  background-color: #cae8e8;
+} 

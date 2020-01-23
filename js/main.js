@@ -12,6 +12,16 @@ $(document).ready(function(){
 			$ (".btn-menu i").removeClass("fas fa-times").addClass("fas fa-bars");
 			$ (".menu-link").css({"left": "-100%"});			
 		}
-	})
+	})	
+
+	$('.sec-form-opinion').hide();
+
+	$("#showFormOpinion").click(function(){
+		$('.sec-form-opinion').toggle("linear");
+
+		$(this).text(function(i, text){
+			return text === "Dejar comentario o sugerencia >" ? "Ocultar sección para comentario" : "Dejar comentario o sugerencia >";
+		})
+	 });
 })
 

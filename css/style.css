@@ -56,7 +56,7 @@ h4,
 h5 {
   font-family: "Roboto", sans-serif;
   color: #03224e;
-  margin-bottom: 0 !important; ;
+  margin-bottom: 0 !important;
 }
 
 hr {
@@ -71,13 +71,17 @@ ul li {
 }
 
 ul {
-  padding-left: 0.625rem;
+  padding-left: 0;
 }
 
 ul li a {
   color: #03224e;
   font-size: 1rem;
   line-height: 1;
+}
+
+ol{
+  padding-left: 1.5rem;
 }
 
 @media (min-width: 992px) {
@@ -421,7 +425,7 @@ header {
   z-index: 1;
 }
 
-.text-oferta h4{
+.text-oferta h4 {
   color: #fff;
 }
 
@@ -606,8 +610,8 @@ header {
   }
 }
 
-@media(min-width: 1200px) {
-  .sec-testimonios .card{
+@media (min-width: 1200px) {
+  .sec-testimonios .card {
     height: 16.875rem;
   }
 }
@@ -856,7 +860,7 @@ footer .sec-footer .redes a:hover {
   color: #fff;
 }
 
-.form-contact{
+.form-contact {
   background-color: #f7f9f9;
   width: 80%;
   padding-bottom: 0.625rem;
@@ -864,7 +868,8 @@ footer .sec-footer .redes a:hover {
 }
 
 @media (min-width: 1024px) {
-  .form-contact,.form-opinion {
+  .form-contact,
+  .form-opinion {
     padding: 0 1.25rem 0.625rem;
   }
 }
@@ -888,9 +893,9 @@ textarea {
 }
 
 .form-contact input,
-.form-contact textarea{
+.form-contact textarea {
   background-color: #f7f9f9;
-} 
+}
 
 @media (min-width: 768px) {
   input,
@@ -1047,7 +1052,7 @@ button.btn {
   position: relative;
 }
 
-.content-history hr{
+.content-history hr {
   width: 50%;
   margin: 0.1rem auto 1rem;
 }
@@ -1057,23 +1062,23 @@ button.btn {
   color: #fff;
 }
 
-.text-history span{
+.text-history span {
   font-weight: 700;
 }
 
-.text-vision{
+.text-vision {
   text-align: justify;
   line-height: 1.8;
 }
 
-@media(min-width: 768px) {
-  .vision hr{
+@media (min-width: 768px) {
+  .vision hr {
     width: 50%;
     margin: 0.1rem auto 1rem;
   }
 }
 
-.sec-nosotros{
+.sec-nosotros {
   background-image: url("../img/fondo.png");
   background-position: center center;
   background-size: cover;
@@ -1093,99 +1098,102 @@ button.btn {
   opacity: 0.8;
 }
 
-.sec-nosotros h2,.sec-nosotros .content-nosotros,.sec-admin h3{
+.sec-nosotros h2,
+.sec-nosotros .content-nosotros,
+.sec-admin h3 {
   position: relative;
 }
 
-.content-nosotros{
+.content-nosotros {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   padding-top: 20px;
 }
 
-.img-nosotros, .text-nosotros{
+.img-nosotros,
+.text-nosotros {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 100%;
 }
 
-.text-nosotros{
+.text-nosotros {
   padding: 16px 0;
 }
 
-.text-nosotros p{
+.text-nosotros p {
   text-align: justify;
   line-height: 1.8;
 }
 
-@media(min-width: 768px) {
-  .content-nosotros{
-    justify-content: space-between; 
+@media (min-width: 768px) {
+  .content-nosotros {
+    justify-content: space-between;
     align-items: center;
   }
-  
+
   .img-nosotros {
     flex-basis: 55%;
   }
-  
+
   .text-nosotros {
     flex-basis: calc(45% - 1.5rem);
     padding: 0;
-  }  
+  }
 
-  .text-nosotros p{
+  .text-nosotros p {
     line-height: 2;
   }
 }
 
-@media(min-width: 1024px) {
-  .content-nosotros{
+@media (min-width: 1024px) {
+  .content-nosotros {
     padding: 20px 20px 0;
   }
 }
 
-@media(min-width: 1200px) {
-  .content-nosotros{
+@media (min-width: 1200px) {
+  .content-nosotros {
     padding: 20px 45px 0;
   }
-  
-  .img-nosotros{
+
+  .img-nosotros {
     flex-basis: 50%;
   }
-  
+
   .text-nosotros {
     flex-basis: calc(50% - 2.5rem);
     padding: 0;
-  }  
+  }
 }
 
-.sec-admin p{
+.sec-admin p {
   color: #03224e;
 }
 
-.sec-admin img{
+.sec-admin img {
   width: 200px;
   padding: 10px;
 }
-.sec-admin hr{
+.sec-admin hr {
   width: 30%;
   margin: 0.3rem auto 1rem;
 }
 
-.sec-opinion{
+.sec-opinion {
   background: linear-gradient(#089588, #315993);
-  color:#fff;
-  text-align: center;  
+  color: #fff;
+  text-align: center;
 }
 
 /*Opinion form*/
 
-#formViewHide{
+#formViewHide {
   display: none;
 }
 
-.sec-form-opinion{
+.sec-form-opinion {
   background-image: url("../img/fondo.png");
   background-position: center center;
   background-size: cover;
@@ -1205,7 +1213,7 @@ button.btn {
   opacity: 0.8;
 }
 
-.form-opinion{
+.form-opinion {
   position: relative;
   background-color: #9ad4d486;
   width: 90%;
@@ -1214,13 +1222,67 @@ button.btn {
   border-radius: 0.0625rem;
 }
 
-@media(min-width: 1024px) {
-  .form-opinion{
+@media (min-width: 1024px) {
+  .form-opinion {
     width: 70%;
   }
 }
 
 .form-opinion input,
-.form-opinion textarea{
+.form-opinion textarea {
   background-color: #cae8e8;
-} 
+}
+
+/*Page gallery*/
+.sec-hg {
+  background-image: url("../img/img1.JPG");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.sec-hg:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background: rgb(16, 116, 132);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+.sec-nosotros .pgwSlideshow {
+  position: relative;
+}
+
+.pgwSlideshow {
+  background:#e6e6e64a !important;
+}
+
+.pgwSlideshow .ps-list {
+  border-top: 0!important;
+  box-shadow: 0 10px 10px -5px #b3b2b2 inset !important;
+  background: #ccc9c9 !important;
+}
+
+.text-aviso{
+  position: relative;
+}
+
+.text-aviso p,.text-aviso ol li{
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
+  font-size: 1rem;
+  text-align: justify;
+  padding-bottom: 10px;
+  color: #363535;
+}
+
+.text-aviso ol li:last-of-type{
+  padding-bottom: 0;
+}

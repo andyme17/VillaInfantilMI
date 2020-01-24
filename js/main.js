@@ -22,6 +22,15 @@ $(document).ready(function(){
 		$(this).text(function(i, text){
 			return text === "Dejar comentario o sugerencia >" ? "Ocultar sección para comentario" : "Dejar comentario o sugerencia >";
 		})
-	 });
+	});
+
+	//Slide gallery
+
+	var pgwSlideshow = $('.pgwSlideshow').pgwSlideshow();
+	
+	pgwSlideshow.reload({
+		autoSlide: true,		
+		maxHeight: 560
+	});
 })
 

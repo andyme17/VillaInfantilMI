@@ -11,10 +11,10 @@
                 <h5>Enlaces de interés</h5>
                 <hr>
                 <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Oferta Educativa</a></li>
-                    <li><a href="#">Inscripciones</a></li>
-                    <li><a href="#">Instalaciones y servicios</a></li>
+                    <li><a href="<?php echo PATH;?>nosotros.php">Nosotros</a></li>
+                    <li><a href="<?php echo PATH;?>oferta-educativa.php">Oferta Educativa</a></li>
+                    <li><a href="<?php echo PATH;?>inscripciones.php">Inscripciones</a></li>
+                    <li><a href="<?php echo PATH;?>instalaciones.php">Instalaciones</a></li>
                     <li><a href="#">Nivel Primaria </a></li>
                 </ul>
             </div>
@@ -57,7 +57,7 @@
         <div class="sec-content-copy container">
             <p>&copy;2020 Todos los derechos reservados</p>
             <nav class="nav-footer pt-2 pt-md-0">
-                <a href="#">Aviso de Privacidad</a>
+                <a href="<?php echo PATH;?>aviso-privacidad.php">Aviso de Privacidad</a>
             </nav>
         </div>
     </div>

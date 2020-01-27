@@ -15,6 +15,8 @@
 <body>
     <?php require 'nav-bar.view.php'; ?>
 
+    
+
     <?php require 'footer.view.php'; ?>
 
     <!--Archivos javascript para bootstrap -->

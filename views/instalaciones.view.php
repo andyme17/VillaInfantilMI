@@ -16,52 +16,51 @@
 <body>
     <?php require 'nav-bar.view.php'; ?>
 
-    <section class="sec-hg py-4">
-        <div class="content-history container mx-auto text-center">
-            <h2 class="text-center">Conoce nuestras instalaciones</h2>
+    <section class="img-back-blue h-md-back-2 py-4">
+        <div class="content-back-blue container mx-auto">
+            <h2>Instalaciones</h2>
             <hr>
-            <p class="text-history">
-               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
-               amet impedit nulla qui, fugiat earum perferendis iusto vitae.(definir). 
+            <p class="text-back-blue">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
+                amet impedit nulla qui, fugiat earum perferendis iusto vitae.(definir).
             </p>
         </div>
     </section>
-    <main class="sec-nosotros py-4">
-        <div class="container">       
-        <ul class="pgwSlideshow">
-            <li>
-                <img src="<?php echo PATH; ?>img/img-instalacion1.jpg">
-            </li>
-            <li>
-                <img src="<?php echo PATH; ?>img/img-instalacion2.jpg">
-            </li>
-            <li>
-                <img src="<?php echo PATH; ?>img/img-instalacion3.jpg">
-            </li>
-            <li>
-                <img src="<?php echo PATH; ?>img/img-instalacion1.jpg">
-            </li>
-            <li>
-                <img src="<?php echo PATH; ?>img/img-instalacion5.jpg">
-            </li>          
-        </ul>
+    <main class="img-back py-4">
+        <div class="sec-gallery container">
+            <ul class="pgwSlideshow">
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion1.jpg">
+                </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion2.jpg">
+                </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion3.jpg">
+                </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion1.jpg">
+                </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion5.jpg">
+                </li>
+            </ul>
         </div>
     </main>
 
     <section class="sec-contacto py-4">
-    <div class="container">
-      <div class="header-contacto mb-3">
-        <p class="mb-3 mb-md-0">¿Deseas visitarnos personalmente?</p>
-        <p>¡ No esperes más !</p>
-      </div>
-      <p>
-        Para ofrecerte más informes sobre el lugar y horario de visita 
-        consulta el siguiente enlace, o bien dejanos un mensaje(verificar).
-      </p>
-      <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos ></a>
-    </div>
-  </section>
-
+        <div class="container">
+            <div class="header-contacto mb-3">
+                <p class="mb-3 mb-md-0">¿Deseas visitarnos personalmente?</p>
+                <p>¡ No esperes más !</p>
+            </div>
+            <p>
+                Para ofrecerte más informes sobre el lugar y horario de visita
+                consulta el siguiente enlace, o bien dejanos un mensaje(verificar).
+            </p>
+            <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos ></a>
+        </div>
+    </section>
 
     <?php require 'footer.view.php'; ?>
 

@@ -17,11 +17,11 @@
 
     <?php require 'nav-bar.view.php'; ?>
 
-    <section class="sec-history py-4">
-        <div class="content-history container mx-auto text-center">
-            <h2 class="text-center">¿Quiénes Somos?</h2>
+    <section class="img-back-blue h-md-back-3 py-4">
+        <div class="content-back-blue container mx-auto">
+            <h2>¿Quiénes Somos?</h2>
             <hr>
-            <p class="text-history">
+            <p class="text-back-blue">
                 Villa Infantil María Isabel somos un equipo de profesionales especializados en educación infantil,
                 que tiene como <span>MISIÓN</span> lograr que los niños de edad preescolar desarrollen sus capacidades de forma
                 integral, a fin de alcanzar un nivel óptimo de convivencia con su entorno y en su vida futura.
@@ -40,7 +40,7 @@
             </p>
         </div>
     </section>
-    <main class="sec-nosotros">
+    <main class="img-back py-4">
         <h2 class="text-center">Nuestro Equipo</h2>
         <div class="content-nosotros container">
             <div class="img-nosotros">
@@ -88,7 +88,7 @@
             <button class="btn btn-outline-light" id="showFormOpinion">Dejar comentario o sugerencia ></button>
         </div>
     </section>
-    <div class="sec-form-opinion">
+    <div class="sec-form-opinion img-back py-4">
         <form action="" class="form-opinion container">
             <div class="container mx-auto">
                 <div class="group">

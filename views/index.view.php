@@ -26,7 +26,7 @@
     <div class="content-bienvenida">
       <h2>Bienvenid@s</h2>
       <hr>
-      <p class="text-bienvenida">
+      <p>
         El jardín de niños Villa Infantil María Isabel le da las más cordial bienvenida a sus pequeños.
         Ponemos a su disposición los servicios para el adecuado desarrollo de sus hijos en diversas
         áreas como la convivencia, idiomas y valores para que sus niños tengan un desarrollo sano y
@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <section class="sec-primaria py-3 py-lg-4">
+  <section class="img-back py-3 py-lg-4">
     <div class="row container mx-auto">
       <div class="col-12 col-md-5 col-lg-6 text-primaria">
         <p class="pb-2">
@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <section class="sec-avisos py-4">
+  <section class="img-back py-4">
     <div class="row container mx-auto">
       <div class="col-12 col-md-8 col-lg-7 container">
         <h2 class="text-center">Avisos</h2>
@@ -179,11 +179,9 @@
     </div>
   </section>
 
-  <section class="sec-eventos">
-    <div class="header-section">
-      <h2 class="text-center pt-4">Últimos eventos</h2>
-    </div>
-    <div class="container row py-3 mx-auto">
+  <section class="img-back">
+    <h2 class="text-center pt-4">Últimos eventos</h2>
+    <div class="sec-eventos container row py-3 mx-auto">
       <div class="col-12 col-lg-4 pb-3">
         <article class="card shadow-sm">
           <img src="<?php echo PATH; ?>img/img-evento-nov-2019.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
@@ -233,6 +231,7 @@
       </div>
     </div>
   </section>
+  
   <?php require 'footer.view.php'; ?>
 
   <!--Archivos javascript para bootstrap -->

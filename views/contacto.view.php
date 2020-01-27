@@ -20,7 +20,8 @@
             <div class="text-contact pb-3">
                 <h3>Para más información</h3>
                 <hr>
-                <p class="mt-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
+                <p class="my-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
+                <p>Ó bien comunicate al <span>21 67 74 36</span> en el horario de atención</p>
             </div>
             <form action="" class="form-contact">
                 <div class="container mx-auto">

@@ -820,6 +820,10 @@ footer .sec-footer .redes a:hover {
   flex-basis: 100%;
 }
 
+.text-contact p span{
+  font-weight: bolder;
+}
+
 @media (min-width: 768px) {
   .content-contact {
     justify-content: space-between;
@@ -1180,3 +1184,59 @@ button.btn {
 .text-aviso ol li:last-of-type {
   padding-bottom: 0;
 }
+
+/*Educational Offer Page*/
+.img-inscrip {
+  background-image: url("../img/img5.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+}
+
+.img-inscrip:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, #089588, #03224e);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+.content-inscrip{
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+
+.content-inscrip h4,.content-inscrip h5{
+  color: #fff;
+}
+
+.content-service p{
+  font-size: 1rem;
+  text-align: justify;
+  padding-top: 0.625rem;
+  line-height: 1.7;
+}
+
+@media(min-width: 992px) {
+  .content-service p{
+    font-size: 18px;
+    padding-top: 20px;
+    line-height: 2;
+  }
+}
+
+@media(min-width: 1200px) {
+  .content-service img{
+    height: 400px;
+    width: 600px;
+  }
+}
+
+
+

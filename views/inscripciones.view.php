@@ -15,6 +15,17 @@
 <body>
     <?php require 'nav-bar.view.php'; ?>
 
+    <section class="img-back-blue h-md-back-2 py-4">
+        <div class="content-back-blue container mx-auto">
+            <h2>Proceso de Inscripción</h2>
+            <hr>
+            <p class="text-back-blue">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
+                amet impedit nulla qui, fugiat earum perferendis iusto vitae.(definir).
+            </p>
+        </div>
+    </section>
+
     <?php require 'footer.view.php'; ?>
 
     <!--Archivos javascript para bootstrap -->

@@ -14,7 +14,7 @@
         <div class="menu-link">
             <a href="<?php echo PATH;?>">INICIO</a>
             <a href="<?php echo PATH;?>nosotros.php">NOSOTROS</a>
-            <a href="<?php echo PATH;?>oferta-educativa.php" class="opc">OFERTA EDUCATIVA</a>
+            <a href="<?php echo PATH;?>oferta-educativa.php" class="opc">NUESTROS SERVICIOS</a>
             <a href="<?php echo PATH;?>" class="logo-center">
                 <img src="img/logo-kinder.png" alt="Logotipo de la escuela">
             </a>

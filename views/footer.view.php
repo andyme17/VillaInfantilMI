@@ -12,7 +12,7 @@
                 <hr>
                 <ul>
                     <li><a href="<?php echo PATH;?>nosotros.php">Nosotros</a></li>
-                    <li><a href="<?php echo PATH;?>oferta-educativa.php">Oferta Educativa</a></li>
+                    <li><a href="<?php echo PATH;?>oferta-educativa.php">Nuestros Servicios</a></li>
                     <li><a href="<?php echo PATH;?>inscripciones.php">Inscripciones</a></li>
                     <li><a href="<?php echo PATH;?>instalaciones.php">Instalaciones</a></li>
                     <li><a href="#">Nivel Primaria </a></li>

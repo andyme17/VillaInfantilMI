@@ -210,7 +210,7 @@ header {
   );
   color: #fff;
 }
-/*Efectos del menu */
+/*Menu Effects*/
 .headroom {
   transition: transform 0.3s ease;
 }
@@ -603,7 +603,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .calificacion {
@@ -637,7 +637,8 @@ header {
   }
 }
 
-.sec-testimonios h2 {
+.sec-testimonios h2,.sec-testimonios h5,
+.sec-testimonios p,.sec-testimonios h4{
   position: relative;
   color: #ffffff;
 }
@@ -1127,10 +1128,6 @@ button.btn {
 }
 
 /*Opinion form*/
-#formViewHide {
-  display: none;
-}
-
 .form-opinion {
   position: relative;
   background-color: #9ad4d486;

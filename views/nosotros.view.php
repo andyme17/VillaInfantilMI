@@ -64,16 +64,16 @@
                     <p> Directora General</p>
                 </div>
                 <div class="col-12 col-md-4 pb-4 pb-md-0">
-                    <img src="<?php echo PATH; ?>img\imgp-directora-tec.jpg" alt="Fotografía de personal administrativo">
+                    <img src="<?php echo PATH; ?>img\imgp-directora-admin.jpg" alt="Fotografía de personal administrativo">
                     <h5>Lic. Perla Susana Beltrán</h5>
                     <hr>
-                    <p>Directora Técnica</p>
+                    <p> Directora Administrativa</p>
                 </div>
                 <div class="col-12 col-md-4">
-                    <img src="<?php echo PATH; ?>img\imgp-coordinadora.jpg" alt="Fotografía de personal administrativo">
+                    <img src="<?php echo PATH; ?>img\imgp-directora-tec.jpg" alt="Fotografía de personal administrativo">
                     <h5>M.B.A. Alba Selene Chávez</h5>
                     <hr>
-                    <p> Coordinadora General</p>
+                    <p> Directora Técnica</p>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
             <button class="btn btn-outline-light" id="showFormOpinion">Dejar comentario o sugerencia ></button>
         </div>
     </section>
-    <div class="sec-form-opinion img-back py-4">
+    <section class="sec-form-opinion img-back py-4">
         <form action="" class="form-opinion container">
             <div class="container mx-auto">
                 <div class="group">
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </section>
 
     <?php require 'footer.view.php'; ?>
 

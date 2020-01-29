@@ -108,9 +108,14 @@
     </div>
   </section>
 
-  <section class="sec-testimonios">
+  <section class="sec-testimonios pb-4">
     <h2 class="text-center pt-4">Testimonios</h2>
     <div class="row container mx-auto py-4">
+      <h5 class="text-center mb-4">
+        En la búsqueda de mejorar su experiencia con nosotros al final de cada ciclo
+        escolar se realiza una encuesta para manifestar sus comentarios, observaciones
+        y sugerencias.
+      </h5>
       <div class="col-12 col-lg-4 pb-3">
         <div class="card text-center shadow-sm">
           <div class="card-body">
@@ -177,6 +182,34 @@
         </div>
       </div>
     </div>
+    <div class="row container mx-auto">
+      <div class="col-12 text-center">
+        <p class="mb-2"> De igual forma, puedes dejarnos tu opinión dando clic en el siguiente enlace. </p>
+        <h4 class="mb-4">!Recuerda, tu opinión es muy importante!</h4>
+        <button class="btn btn-outline-light" id="showFormOpinion">Dejar comentario o sugerencia ></button>
+      </div>
+    </div>
+  </section>
+  <section class="sec-form-opinion img-back py-4">
+    <form action="" class="form-opinion container">
+      <div class="container mx-auto">
+        <div class="group">
+          <input type="text" name="" id="" required><span class="barra"></span>
+          <label for="">Nombre completo:</label>
+        </div>
+        <div class="group">
+          <input type="email" name="" id="" required><span class="barra"></span>
+          <label for="">Correo electrónico:</label>
+        </div>
+        <div class="group">
+          <textarea name="" id="" rows="2" required></textarea><span class="barra"></span>
+          <label for="">Mensaje:</label>
+        </div>
+        <div class="text-md-right">
+          <button type="submit" class="btn btn-primary">Enviar comentario ></button>
+        </div>
+      </div>
+    </form>
   </section>
 
   <section class="img-back">
@@ -193,8 +226,8 @@
             <p class="card-text">
               Some quick example text to build on the card title and make up the bulk of the card's content.
               Some quick example text to build on the card title and make up the bulk of the card's content.
-              Some quick example text.              
-            </p>            
+              Some quick example text.
+            </p>
           </div>
         </article>
       </div>
@@ -207,11 +240,11 @@
               <hr>
             </div>
             <p class="card-text">
-              Con un emocionante concurso, elegimos al “Rey Catrín” y “Reina Catrina” de nuestro evento, 
-              al que todos los niños asistieron con un disfraz inspirado en ese famoso personaje creado 
+              Con un emocionante concurso, elegimos al “Rey Catrín” y “Reina Catrina” de nuestro evento,
+              al que todos los niños asistieron con un disfraz inspirado en ese famoso personaje creado
               por José Guadalupe Posada.
             </p>
-            </div>
+          </div>
         </article>
       </div>
       <div class="col-12 col-lg-4">
@@ -223,7 +256,7 @@
               <hr>
             </div>
             <p class="card-text">
-              Fomentando el gusto por la lectura nuestros pequeños y sus papás participaron en la feria del libro 
+              Fomentando el gusto por la lectura nuestros pequeños y sus papás participaron en la feria del libro
               donde escucharon cuentos y pudieron adquirir un libro con sus propios ahorros.
             </p>
           </div>
@@ -231,7 +264,7 @@
       </div>
     </div>
   </section>
-  
+
   <?php require 'footer.view.php'; ?>
 
   <!--Archivos javascript para bootstrap -->

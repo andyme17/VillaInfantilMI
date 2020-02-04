@@ -40,7 +40,7 @@
   <section class="img-oferta mt-md-4">
     <div class="container text-oferta">
       <h4>Conoce nuestra oferta educativa así como los diferentes servicios con los que contamos</h4>
-      <a href="<?php echo PATH; ?>oferta-educativa.php" class="btn btn-outline-light mt-4">Ver más ></a>
+      <a href="<?php echo PATH; ?>servicios.php" class="btn btn-outline-light mt-4">Ver más ></a>
     </div>
   </section>
 

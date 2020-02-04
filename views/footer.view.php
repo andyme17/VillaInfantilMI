@@ -42,7 +42,7 @@
                         <i class="fas fa-phone icon"></i>
                     </div>
                     <div class="col-10 pl-4 pl-lg-3">
-                        <p>21 67 74 36</p>
+                        <p>55 21 67 74 36</p>
                     </div>
                 </div>
                 <div class="redes row pl-4 pt-2">

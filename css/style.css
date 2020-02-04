@@ -312,7 +312,7 @@ header {
 }
 
 .img-back-blue {
-  background-image: url("../img/img1.JPG");
+  background-image: url("../img/img1.jpg");
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -790,7 +790,7 @@ footer .sec-footer .redes a:hover {
 /********Page contacto.php**********/
 
 .sec-contact {
-  background-image: url("../img/img1.JPG");
+  background-image: url("../img/img1.jpg");
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1223,17 +1223,156 @@ button.btn {
 @media(min-width: 992px) {
   .content-service p{
     font-size: 18px;
-    padding-top: 20px;
+    padding-top: 5px;
     line-height: 2;
   }
 }
 
 @media(min-width: 1200px) {
-  .content-service img{
-    height: 400px;
-    width: 600px;
+  .content-service p{
+    padding-top: 0.625rem;
+    
   }
 }
+
+.img-serv{
+  width: 150px;
+}
+
+.text-horario{
+  font-weight: 700;
+  color: #117a8b;
+  font-size: 18px
+}
+
+.content-model p{
+  font-weight: 600;
+  text-align: center;
+}
+
+/*After school section*/
+.sec-after{
+  background: #dcf1f4;
+}
+
+.content-after{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media(min-width: 768px) {
+  .content-after{
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .content-after .item-extra{
+    flex-basis: calc(33.3% - 1rem);
+  }
+}
+
+.item-extra{
+  flex: 0 0 100%; 
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background: #000000;
+}
+
+.item-extra img{
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+.item-extra .content-extra{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content-extra h4{
+  width: 80%;
+}
+
+.item-extra .content-extra:before {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  bottom: 50%;
+  left: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0; 
+  background-color: #ffffff;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; 
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+.item-extra h4{
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.item-extra:hover img{
+  opacity: 0.3;
+} 
+
+
+.item-extra:hover .content-extra h4{
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.item-extra:hover .content-extra:before {
+  background: rgba(255, 255, 255, 0);
+  top: 50px;
+  bottom: 50px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+@media(min-width: 768px) {
+  .item-extra:hover .content-extra:before{
+    top: 20px;
+    bottom: 20px;
+  } 
+}
+
+@media(min-width: 1024px) {
+  .item-extra:hover .content-extra:before{
+    top: 40px;
+    bottom: 40px;
+  } 
+}
+
+@media(min-width: 1200px) {
+  .item-extra:hover .content-extra:before{
+    top: 50px;
+    bottom: 50px;
+  } 
+}
+
 
 
 

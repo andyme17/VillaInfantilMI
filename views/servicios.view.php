@@ -39,27 +39,27 @@
                 </div>
             </div>
             <div class="row pt-4 content-model">
-                <div class="col-12 col-md-4 pb-4">
+                <div class="opc-model col-12 col-md-4 pb-4">
                     <img src="<?php echo PATH; ?>img/img1-service.png" alt="" class="img-fluid img-serv">
                     <p>Programa establecido por la SEP</p>
                 </div>
-                <div class="col-12 col-md-4 pb-4">
+                <div class="opc-model col-12 col-md-4 pb-4">
                     <img src="<?php echo PATH; ?>img/img2-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
                     <p>Inglés</p>
                 </div>
-                <div class="col-12 col-md-4 pb-4">
+                <div class="opc-model col-12 col-md-4 pb-4">
                     <img src="<?php echo PATH; ?>img/img3-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
                     <p>Francés</p>
                 </div>
-                <div class="col-12 col-md-4 pb-4">
+                <div class="opc-model col-12 col-md-4 pb-4">
                     <img src="<?php echo PATH; ?>img/img4-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
                     <p>Educación Física</p>
                 </div>
-                <div class="col-12 col-md-4 pb-4">
+                <div class="opc-model col-12 col-md-4 pb-4">
                     <img src="<?php echo PATH; ?>img/img5-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
                     <p>Educación Musical</p>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="opc-model col-12 col-md-4">
                     <img src="<?php echo PATH; ?>img/img6-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
                     <p class="pt-1">Computación</p>
                 </div>

@@ -15,6 +15,20 @@
 <body>
   <?php require 'nav-bar.view.php'; ?>
 
+  <!-- Ventana emergente -->
+  <div id="modalBanner" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="float-right py-2 px-1">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <img src="<?php echo PATH; ?>img/banner.jpg" class="img-fluid" alt="Anuncios">  
+      </div>
+    </div>
+  </div>
+
   <section class="banner">
     <div class="banner-content">
       <p class="header-banner">VILLA INFANTIL MARÍA ISABEL</p>

@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('#modalBanner').modal('show');
+
 	var header = document.getElementById('header');
     var headroom = new Headroom(header);
 

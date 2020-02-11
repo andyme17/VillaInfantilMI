@@ -107,13 +107,27 @@ ol {
   transition: all 1s;
 }
 
+.btn-secondary{
+  background-color: #85a2b8!important;
+  border-color: transparent !important;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 .btn-primary:hover {
   box-shadow: 20rem 0 #17a2b8 inset, -20rem 0 #17a2b8 inset !important;
   border-color: #17a2b8 !important;
 }
 
+.btn-secondary:hover{
+  box-shadow: 20rem 0 #437092 inset, -20rem 0 #437092 inset !important;
+  border-color: #437092 !important;
+}
+
 .btn-primary.focus,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-secondary.focus,
+.btn-secondary:focus { 
   box-shadow: none !important;
 }
 
@@ -1045,6 +1059,11 @@ form .group {
   margin: 2.1rem auto;
 }
 
+.fi .two-group{
+  position: relative;
+  margin: 1rem auto;
+}
+
 input,
 textarea {
   font-family: "Roboto", sans-serif;
@@ -1113,6 +1132,10 @@ label {
   label {
     font-size: 1.125rem;
   }
+}
+
+.two-group label{
+  left: 1.625rem;  
 }
 
 input:focus ~ .barra:before,
@@ -1643,5 +1666,104 @@ button.btn {
   } 
 }
 
+/*Inscripctions page*/
+.f1 {
+  padding: 25px; 
+  background: #fff;
+  text-align: center;
+}
 
+.f1-steps { 
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px; 
+}
 
+.f1-progress { 
+  position: absolute; 
+  top: 24px; 
+  left: 0; 
+  width: 100%;
+  height: 1px; 
+  background: #ddd; 
+}
+
+.f1-progress-line { 
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  height: 1px; 
+  background: #17a2b8;
+}
+
+.f1-step { 
+  position: relative; 
+  float: left;
+  width: 33.333333%;
+  padding: 0 5px; 
+}
+
+.f1-step-icon {
+  display: inline-block;
+  width: 40px; 
+  height: 40px; 
+  margin-top: 4px;
+  background: #ddd;
+  font-size: 16px;
+  color: #fff; 
+  line-height: 40px;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.f1-step.activated .f1-step-icon {
+  background: #fff; 
+  border: 1px solid #17a2b8; 
+  color: #17a2b8; 
+  line-height: 38px;
+}
+
+.f1-step.active .f1-step-icon {
+  width: 48px; 
+  height: 48px;
+  margin-top: 0;
+  background: #17a2b8;
+  font-size: 22px; 
+  line-height: 48px;
+}
+
+.f1-step p { 
+  color: #ccc; 
+}
+
+.f1-step.activated p { 
+  color: #17a2b8;
+}
+.f1-step.active p {
+  color: #17a2b8;
+}
+
+.f1 fieldset { 
+  display: none;
+  text-align: left;
+}
+
+.f1-buttons { 
+  text-align: right; 
+}
+
+.f1 .input-error { 
+  border-color:  #f35b3f;
+}
+
+.list-doc ol li{
+  padding-left: 5px;
+  line-height: 2;
+}
+
+@media(min-width: 768px) {
+  .list-doc ol li{
+    font-size: 18px;
+  }
+}

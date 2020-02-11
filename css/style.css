@@ -1151,7 +1151,7 @@ textarea:focus ~ .barra:before {
 
 .barra:before {
   content: "";
-  height: 0.125rem;
+  height: 0.20rem;
   width: 0%;
   bottom: 0;
   position: absolute;
@@ -1753,8 +1753,8 @@ button.btn {
   text-align: right; 
 }
 
-.f1 .input-error { 
-  border-color:  #f35b3f;
+.input-error { 
+  color: #dc3545;
 }
 
 .list-doc ol li{
@@ -1766,4 +1766,21 @@ button.btn {
   .list-doc ol li{
     font-size: 18px;
   }
+}
+
+.alert{
+  padding: 1rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.alert.error{
+  background: #F2DEDE;
+  border: 1px solid #a94442;
+  color: #a94442;
+}
+
+.alert.successful{
+  background-color: #4CAF50;
 }

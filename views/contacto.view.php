@@ -23,26 +23,37 @@
                 <p class="my-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
                 <p>Ó bien comunicate al <span>21 67 74 36</span> en el horario de atención</p>
             </div>
-            <form action="" class="form-contact">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form-contact" novalidate>
                 <div class="container mx-auto">
                     <div class="group">
-                        <input type="text" name="" id="" required><span class="barra"></span>
-                        <label for="">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value="<?php if(!$enviado && isset($nombre)) echo $nombre;?>"><span class="barra"></span>
+                        <label for="">Nombre completo:</label>  
+                        <?php if(!empty($error_nombre)): ?>
+                            <small class="input-error"><?php echo $error_nombre;?></small>
+                        <?php endif?>                                                          
                     </div>
                     <div class="group">
-                        <input type="text" name="" id="" required><span class="barra"></span>
-                        <label for="">Apellidos:</label>
-                    </div>
-                    <div class="group">
-                        <input type="email" name="" id="" required><span class="barra"></span>
+                        <input type="text" name="email" id="email" required="" autocomplete="off" value="<?php if(!$enviado && isset($email)) echo $email;?>"><span class="barra"></span>
                         <label for="">Correo electrónico:</label>
+                        <?php if(!empty($error_email)): ?>
+                            <small class="input-error"><?php echo $error_email;?></small>
+                        <?php endif?>                                      
                     </div>
                     <div class="group">
-                        <textarea name="" id="" rows="3" required></textarea><span class="barra"></span>
+                        <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"><?php if(!$enviado && isset($mensaje)) echo $mensaje;?></textarea><span class="barra"></span>
                         <label for="">Mensaje:</label>
+                        <?php if(!empty($error_mensaje)): ?>
+                            <small class="input-error"><?php echo $error_mensaje;?></small>     
+                        <?php endif?>                            
                     </div>
+                                    
+                    <?php if(!empty($enviado)): ?>
+                        <div class="alert successful">
+                            <p>Enviado correctamente</p>
+                        </div>
+                    <?php endif?>    
                     <div class="text-md-right">
-                        <button type="submit" class="btn btn-primary">Enviar ></button>
+                        <button type="submit" name="submit" class="btn btn-primary">Enviar ></button>
                     </div>
                 </div>
             </form>

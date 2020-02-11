@@ -110,7 +110,7 @@ $(document).ready(function(){
     $('.f1').on('submit', function(e) {
     	
     	// fields validation
-    	$(this).find('input[type="text"], input[type="email"], textarea').each(function() {
+    /* 	$(this).find('input[type="text"], input[type="email"], textarea').each(function() {
     		if( $(this).val() == "" ) {
     			e.preventDefault();
     			$(this).addClass('input-error');
@@ -118,7 +118,7 @@ $(document).ready(function(){
     		else {
     			$(this).removeClass('input-error');
     		}
-    	});
+    	}); */
 	});
 });
 

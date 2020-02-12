@@ -15,7 +15,7 @@ $(document).ready(function(){
 			$ (".menu-link").css({"left": "-100%"});			
 		}
 	})	
-
+ 
 	$('.sec-form-opinion').hide();
 
 	$("#showFormOpinion").click(function(){
@@ -24,7 +24,7 @@ $(document).ready(function(){
 		$(this).text(function(i, text){
 			return text === "Dejar comentario o sugerencia >" ? "Ocultar sección para comentario" : "Dejar comentario o sugerencia >";
 		})
-	});
+	}); 
 
 	//Slide gallery
 

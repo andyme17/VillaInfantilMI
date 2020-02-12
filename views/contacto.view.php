@@ -51,7 +51,8 @@
                     <div class="alert-successful" id="content-alert">
                         <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>                        
                     </div>
-                    <?php endif?>    
+                    <?php endif?>
+                        
                     <div class="text-md-right">
                         <button type="submit" name="submit" class="btn btn-primary">Enviar ></button>
                     </div>

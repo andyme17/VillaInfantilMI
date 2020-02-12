@@ -1153,7 +1153,7 @@ textarea:focus ~ .barra:before {
 
 .barra:before {
   content: "";
-  height: 0.2rem;
+  height: 0.15rem;
   width: 0%;
   bottom: 0;
   position: absolute;
@@ -1767,19 +1767,11 @@ button.btn {
   }
 }
 
-.alert {
+.alert-successful {
   padding: 1rem;
   color: #fff;
   margin-bottom: 20px;
   font-size: 14px;
-}
-
-.alert.error {
-  background: #f2dede;
-  border: 1px solid #a94442;
-  color: #a94442;
-}
-
-.alert.successful {
+  border: 1px solid #4caf4fa2;
   background-color: #4caf50;
 }

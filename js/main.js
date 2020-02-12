@@ -34,10 +34,11 @@ $(document).ready(function(){
 		autoSlide: true,		
 		maxHeight: 560
 	});
+
 });
 
 $(document).ready(function(){
-	
+		
 	function bar_progress(progress_line_object, direction) {
 		var number_of_steps = progress_line_object.data('number-of-steps');
 		var now_value = progress_line_object.data('now-value');
@@ -110,7 +111,7 @@ $(document).ready(function(){
     $('.f1').on('submit', function(e) {
     	
     	// fields validation
-    /* 	$(this).find('input[type="text"], input[type="email"], textarea').each(function() {
+    	$(this).find('input[type="text"], input[type="email"], textarea').each(function() {
     		if( $(this).val() == "" ) {
     			e.preventDefault();
     			$(this).addClass('input-error');
@@ -118,7 +119,7 @@ $(document).ready(function(){
     		else {
     			$(this).removeClass('input-error');
     		}
-    	}); */
+    	}); 
 	});
 });
 

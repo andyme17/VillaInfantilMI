@@ -48,9 +48,9 @@
                     </div>
                                     
                     <?php if(!empty($enviado)): ?>
-                        <div class="alert successful">
-                            <p>Enviado correctamente</p>
-                        </div>
+                    <div class="alert-successful">
+                        <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>                        
+                    </div>
                     <?php endif?>    
                     <div class="text-md-right">
                         <button type="submit" name="submit" class="btn btn-primary">Enviar ></button>

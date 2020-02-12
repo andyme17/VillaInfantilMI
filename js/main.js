@@ -105,21 +105,12 @@ $(document).ready(function(){
     		// show previous step
     		$(this).prev().fadeIn();
     	});
-    });
-    
-    // submit
-    $('.f1').on('submit', function(e) {
-    	
-    	// fields validation
-    	$(this).find('input[type="text"], input[type="email"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			e.preventDefault();
-    			$(this).addClass('input-error');
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	}); 
-	});
+    });   
+});
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $("#content-alert").fadeOut(1500);
+    },3000);   
 });
 

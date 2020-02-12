@@ -48,7 +48,7 @@
                     </div>
                                     
                     <?php if(!empty($enviado)): ?>
-                    <div class="alert-successful">
+                    <div class="alert-successful" id="content-alert">
                         <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>                        
                     </div>
                     <?php endif?>    

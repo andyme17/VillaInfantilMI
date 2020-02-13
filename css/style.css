@@ -293,6 +293,10 @@ header {
     display: block;
   }
 
+  .menu .container-menu .logo .btn-menu:hover{
+    color: #03224e;
+  }
+
   .menu .container-menu {
     width: 100%;
   }

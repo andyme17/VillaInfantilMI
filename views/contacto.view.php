@@ -21,7 +21,7 @@
                 <h3>Para más información</h3>
                 <hr>
                 <p class="my-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
-                <p>Ó bien comunicate al <span>21 67 74 36</span> en el horario de atención</p>
+                <p>Ó bien comunicate al <span>55 21 67 74 36</span> en el horario de atención</p>
             </div>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form-contact" novalidate>
                 <div class="container mx-auto">

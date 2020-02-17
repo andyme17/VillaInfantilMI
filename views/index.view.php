@@ -100,13 +100,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="<?php echo PATH; ?>img/img1.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>img/img-instalacion1.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="<?php echo PATH; ?>img/img4.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>img/img-instalacion2.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="<?php echo PATH; ?>img/img5.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>img/img-instalacion3.jpg" class="d-block img-fluid" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

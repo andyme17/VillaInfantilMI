@@ -56,7 +56,7 @@
             </div>
             <p>
                 Para ofrecerte más informes sobre el lugar y horario de visita
-                consulta el siguiente enlace, o bien dejanos un mensaje(verificar).
+                consulta el siguiente enlace, o bien dejanos un mensaje.
             </p>
             <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos ></a>
         </div>
@@ -72,5 +72,4 @@
     <script src="js/pgwslideshow.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>

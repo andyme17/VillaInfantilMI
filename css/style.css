@@ -374,7 +374,7 @@ header {
 }
 
 .img-back-blue {
-  background-image: url("../img/img1.jpg");
+  background-image: url("../img/img-instalacion1.jpg");
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -503,55 +503,55 @@ header {
 
 @-webkit-keyframes banner {
   0% {
-    background-image: url("../img/img2.jpg");
+    background-image: url("../img/img-banner1.jpg");
   }
   25% {
-    background-image: url("../img/img2.jpg");
+    background-image: url("../img/img-banner1.jpg");
   }
   26% {
-    background-image: url("../img/img-evento.jpg");
+    background-image: url("../img/img-banner2.jpg");
   }
   50% {
-    background-image: url("../img/img-evento.jpg");
+    background-image: url("../img/img-banner2.jpg");
   }
   51% {
-    background-image: url("../img/img5.jpg");
+    background-image: url("../img/img-banner3.jpg");
   }
   75% {
-    background-image: url("../img/img5.jpg");
+    background-image: url("../img/img-banner3.jpg");
   }
   76% {
-    background-image: url("../img/img1.jpg");
+    background-image: url("../img/img-instalacion1.jpg");
   }
   100% {
-    background-image: url("../img/img1.jpg");
+    background-image: url("../img/img-instalacion1.jpg");
   }
 }
 
 @keyframes banner {
   0% {
-    background-image: url("../img/img2.jpg");
+    background-image: url("../img/img-banner1.jpg");
   }
   25% {
-    background-image: url("../img/img2.jpg");
+    background-image: url("../img/img-banner1.jpg");
   }
   26% {
-    background-image: url("../img/img-evento.jpg");
+    background-image: url("../img/img-banner2.jpg");
   }
   50% {
-    background-image: url("../img/img-evento.jpg");
+    background-image: url("../img/img-banner2.jpg");
   }
   51% {
-    background-image: url("../img/img5.jpg");
+    background-image: url("../img/img-banner3.jpg");
   }
   75% {
-    background-image: url("../img/img5.jpg");
+    background-image: url("../img/img-banner3.jpg");
   }
   76% {
-    background-image: url("../img/img1.jpg");
+    background-image: url("../img/img-instalacion1.jpg");
   }
   100% {
-    background-image: url("../img/img1.jpg");
+    background-image: url("../img/img-instalacion1.jpg");
   }
 }
 
@@ -585,7 +585,7 @@ header {
 
 /*Educative offer section*/
 .img-oferta {
-  background-image: url("../img/img4.jpg");
+  background-image: url("../img/img-instalacion2.jpg");
   background-position: center center;
   background-size: cover;
   height: 15.625rem;
@@ -949,7 +949,7 @@ footer .sec-footer .redes a:hover {
 /********Page contacto.php**********/
 
 .sec-contact {
-  background-image: url("../img/img1.jpg");
+  background-image: url("../img/img-instalacion1.jpg");
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1756,8 +1756,9 @@ button.btn {
   text-align: right;
 }
 
-.input-error {
+.input-error{
   color: #dc3545;
+  font-weight: 600;
 }
 
 .list-doc ol li {

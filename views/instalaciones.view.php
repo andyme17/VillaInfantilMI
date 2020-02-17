@@ -39,9 +39,6 @@
                     <img src="<?php echo PATH; ?>img/img-instalacion3.jpg">
                 </li>
                 <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion1.jpg">
-                </li>
-                <li>
                     <img src="<?php echo PATH; ?>img/img-instalacion5.jpg">
                 </li>
             </ul>

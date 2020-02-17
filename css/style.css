@@ -687,7 +687,7 @@ header {
 
 @media (min-width: 1024px) {
   .text-primaria p {
-    font-size: 22px;
+    font-size: 1.375rem;
     text-align: left;
     line-height: 2;
   }
@@ -819,7 +819,7 @@ header {
   }
 
   .sec-eventos .card {
-    height: 500px;
+    height: 31.25rem;
   }
 }
 
@@ -1264,7 +1264,7 @@ button.btn {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 
 .img-nosotros,
@@ -1282,7 +1282,7 @@ button.btn {
 }
 
 .text-nosotros {
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 .text-nosotros p {
@@ -1322,13 +1322,13 @@ button.btn {
 
 @media (min-width: 1024px) {
   .content-nosotros {
-    padding: 20px 20px 0;
+    padding: 1.25rem 1.25rem 0;
   }
 }
 
 @media (min-width: 1200px) {
   .content-nosotros {
-    padding: 20px 45px 0;
+    padding: 1.25rem 2.8125rem 0;
   }
 
   .img-nosotros {
@@ -1350,8 +1350,8 @@ button.btn {
 }
 
 .sec-admin img {
-  width: 200px;
-  padding: 10px;
+  width: 12.5rem;
+  padding: 0.625rem;
 }
 .sec-admin hr {
   width: 30%;
@@ -1371,7 +1371,7 @@ button.btn {
   background-color: #9ad4d486;
   width: 90%;
   padding-bottom: 0.625rem;
-  padding-top: 1px;
+  padding-top: 0.0625rem;
   border-radius: 0.0625rem;
 }
 
@@ -1397,7 +1397,7 @@ button.btn {
 
 .pgwSlideshow .ps-list {
   border-top: 0 !important;
-  box-shadow: 0 10px 10px -5px #b3b2b2 inset !important;
+  box-shadow: 0 0.625rem 0.625rem -0.3125rem #b3b2b2 inset !important;
   background: #ccc9c9 !important;
 }
 
@@ -1412,7 +1412,7 @@ button.btn {
   line-height: 2;
   font-size: 1rem;
   text-align: justify;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   color: #363535;
 }
 
@@ -1456,13 +1456,13 @@ button.btn {
 
 /*educatioanl model section*/
 .img-serv {
-  width: 150px;
+  width: 9.375rem;
 }
 
 .text-horario {
   font-weight: 700;
   color: #117a8b;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .content-model p {
@@ -1481,8 +1481,8 @@ button.btn {
 
 @media (min-width: 992px) {
   .content-service p {
-    font-size: 18px;
-    padding-top: 5px;
+    font-size: 1.125rem;
+    padding-top: 0.3125rem;
     line-height: 2;
   }
 }
@@ -1573,9 +1573,9 @@ button.btn {
 .item-extra .content-extra:before {
   position: absolute;
   top: 30%;
-  right: 30px;
+  right: 1.875rem;
   bottom: 30%;
-  left: 30px;
+  left: 1.875rem;
   border-top: 1px solid rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   content: "";
@@ -1641,8 +1641,8 @@ button.btn {
 
 .item-extra:hover .content-extra:before {
   background: rgba(255, 255, 255, 0);
-  top: 50px;
-  bottom: 50px;
+  top: 3.125rem;
+  bottom: 3.125rem;
   opacity: 1;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
@@ -1650,28 +1650,28 @@ button.btn {
 
 @media (min-width: 768px) {
   .item-extra:hover .content-extra:before {
-    top: 20px;
-    bottom: 20px;
+    top: 1.25rem;
+    bottom: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .item-extra:hover .content-extra:before {
-    top: 30px;
-    bottom: 30px;
+    top: 1.875rem;
+    bottom: 1.875rem;
   }
 }
 
 @media (min-width: 1200px) {
   .item-extra:hover .content-extra:before {
-    top: 50px;
-    bottom: 50px;
+    top: 3.125rem;
+    bottom: 3.125rem;
   }
 }
 
 /*Inscripctions page*/
 .f1 {
-  padding: 25px;
+  padding: 1.5625rem;
   background: #fff;
   text-align: center;
 }
@@ -1679,15 +1679,15 @@ button.btn {
 .f1-steps {
   overflow: hidden;
   position: relative;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .f1-progress {
   position: absolute;
-  top: 24px;
+  top: 1.5rem;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 0.0625rem;
   background: #ddd;
 }
 
@@ -1695,7 +1695,7 @@ button.btn {
   position: absolute;
   top: 0;
   left: 0;
-  height: 1px;
+  height: 0.0625rem;
   background: #17a2b8;
 }
 
@@ -1703,18 +1703,18 @@ button.btn {
   position: relative;
   float: left;
   width: 33.333333%;
-  padding: 0 5px;
+  padding: 0 0.3125rem;
 }
 
 .f1-step-icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin-top: 4px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.25rem;
   background: #ddd;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
-  line-height: 40px;
+  line-height: 2.5rem;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1722,18 +1722,18 @@ button.btn {
 
 .f1-step.activated .f1-step-icon {
   background: #fff;
-  border: 1px solid #17a2b8;
+  border: 0.0625rem solid #17a2b8;
   color: #17a2b8;
-  line-height: 38px;
+  line-height: 2.375rem;
 }
 
 .f1-step.active .f1-step-icon {
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   margin-top: 0;
   background: #17a2b8;
-  font-size: 22px;
-  line-height: 48px;
+  font-size: 1.375rem;
+  line-height: 3rem;
 }
 
 .f1-step p {
@@ -1762,21 +1762,21 @@ button.btn {
 }
 
 .list-doc ol li {
-  padding-left: 5px;
+  padding-left: 0.3125rem;
   line-height: 2;
 }
 
 @media (min-width: 768px) {
   .list-doc ol li {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 .alert-successful {
   padding: 1rem;
   color: #fff;
-  margin-bottom: 20px;
-  font-size: 14px;
-  border: 1px solid #4caf4fa2;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #4caf4fa2;
   background-color: #4caf50;
 }

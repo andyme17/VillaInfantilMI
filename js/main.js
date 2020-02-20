@@ -75,7 +75,8 @@ $(document).ready(function(){
     		else {
     			$(this).removeClass('input-error');
     		}
-    	});
+		});
+		
     	// fields validation
     	
     	if( next_step ) {

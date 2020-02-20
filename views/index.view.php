@@ -247,7 +247,7 @@
     <div class="sec-eventos container row py-3 mx-auto">
       <div class="col-12 col-lg-4 pb-3">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH; ?>img/img-evento-nov-2019.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>img/img-evento1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Pastorela</h5>
@@ -263,7 +263,7 @@
       </div>
       <div class="col-12 col-lg-4 pb-3">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH; ?>img/img-evento-nov-2019.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>img/img-evento1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Día de muertos</h5>
@@ -279,7 +279,7 @@
       </div>
       <div class="col-12 col-lg-4">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH; ?>img/img-evento-nov-2019.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>img/img-evento1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Feria del libro</h5>

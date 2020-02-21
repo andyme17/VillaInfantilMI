@@ -76,19 +76,19 @@
             </p>
             <div class="content-after container pt-3">
                 <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/img7-service.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
+                    <img src="<?php echo PATH; ?>img/imgs-ballet.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
                     <div class="content-extra">
-                        <h4>Lima Lama</h4>
+                        <h4>Ballet</h4>
                     </div>
                 </div>
                 <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/img8-service.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
+                    <img src="<?php echo PATH; ?>img/imgs-zumba.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
                     <div class="content-extra">
                         <h4>Zumba Kids</h4>
                     </div>
                 </div>
                 <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/img9-service.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
+                    <img src="<?php echo PATH; ?>img/imgs-taekwondo.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
                     <div class="content-extra">
                         <h4>Taekwondo</h4>
                     </div>

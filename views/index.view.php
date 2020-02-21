@@ -24,7 +24,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img src="<?php echo PATH; ?>img/banner.jpg" class="img-fluid" alt="Anuncios">
+        <img src="<?php echo PATH; ?>img/banner-inicial.jpg" class="img-fluid" alt="Anuncios">
       </div>
     </div>
   </div>
@@ -247,7 +247,23 @@
     <div class="sec-eventos container row py-3 mx-auto">
       <div class="col-12 col-lg-4 pb-3">
         <article class="card shadow-sm">
-          <img src="<?php echo PATH; ?>img/img-evento1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>img/evento-feb.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <div class="card-body">
+            <div class="card-title text-center">
+              <h5>Día del amor y la amistad</h5>
+              <hr>
+            </div>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+              Some quick example text.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-lg-4 pb-3">
+        <article class="card shadow-sm">
+          <img src="<?php echo PATH; ?>img/evento-dic.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Pastorela</h5>
@@ -261,7 +277,7 @@
           </div>
         </article>
       </div>
-      <div class="col-12 col-lg-4 pb-3">
+      <div class="col-12 col-lg-4">
         <article class="card shadow-sm">
           <img src="<?php echo PATH; ?>img/img-evento1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
@@ -273,21 +289,6 @@
               Con un emocionante concurso, elegimos al “Rey Catrín” y “Reina Catrina” de nuestro evento,
               al que todos los niños asistieron con un disfraz inspirado en ese famoso personaje creado
               por José Guadalupe Posada.
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="col-12 col-lg-4">
-        <article class="card shadow-sm">
-          <img src="<?php echo PATH; ?>img/img-evento1.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <div class="card-title text-center">
-              <h5>Feria del libro</h5>
-              <hr>
-            </div>
-            <p class="card-text">
-              Fomentando el gusto por la lectura nuestros pequeños y sus papás participaron en la feria del libro
-              donde escucharon cuentos y pudieron adquirir un libro con sus propios ahorros.
             </p>
           </div>
         </article>

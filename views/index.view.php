@@ -131,7 +131,7 @@
         y sugerencias.
       </h5>
       <div class="col-12 col-lg-4 pb-3">
-        <div class="card text-center shadow-sm">
+        <div class="card text-center shadow">
           <div class="card-body">
             <div class="card-title">
               <h5 class="card-title">Rosa María Meza Iglesias</h5>
@@ -153,15 +153,16 @@
         </div>
       </div>
       <div class="col-12 col-lg-4 pb-3">
-        <div class="card text-center shadow-sm">
+        <div class="card text-center shadow">
           <div class="card-body">
             <div class="card-title">
-              <h5>Encuesta a padres de familia ciclo 2019</h5>
+              <h5>Zaira Rebollo</h5>
               <hr>
             </div>
             <blockquote class="card-text">
-              “Gracias por todas las atenciones. La felicidad de mi hija es la
-              de su papá y la mía.”
+              “...el Amor, respeto y cuidado que tienen las especialistas con los niños,
+              forman un muy buen equipo ... además la enseñanza es personalizada!,
+              yo estoy muy contenta! porque mi hija estudie ahí”
             </blockquote>
             <div class="calificacion text-center">
               <i class="fas fa-star"></i>
@@ -174,7 +175,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-4">
-        <div class="card text-center shadow-sm">
+        <div class="card text-center shadow">
           <div class="card-body">
             <div class="card-title">
               <h5>Angélica González Martínez</h5>
@@ -205,36 +206,20 @@
     </div>
   </section>
   <section class="sec-form-opinion img-back py-4">
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form-opinion container" novalidate>
+    <form action="" method="post" class="form-opinion container" novalidate>
       <div class="container mx-auto">
         <div class="group">
-          <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value="<?php if (!$enviado && isset($nombre)) echo $nombre; ?>"><span class="barra"></span>
+          <input type="text" name="nombre" id="nombre" required="" autocomplete="off"><span class="barra"></span>
           <label for="">Nombre completo:</label>
-          <?php if (!empty($error_nombre)) : ?>
-            <small class="input-error"><?php echo $error_nombre; ?></small>
-          <?php endif ?>
         </div>
         <div class="group">
-          <input type="text" name="email" id="email" required="" autocomplete="off" value="<?php if (!$enviado && isset($email)) echo $email; ?>"><span class="barra"></span>
+          <input type="text" name="email" id="email" required="" autocomplete="off"><span class="barra"></span>
           <label for="">Correo electrónico:</label>
-          <?php if (!empty($error_email)) : ?>
-            <small class="input-error"><?php echo $error_email; ?></small>
-          <?php endif ?>
         </div>
         <div class="group">
           <textarea name="" id="" rows="2" required></textarea><span class="barra"></span>
           <label for="">Mensaje:</label>
-          <?php if (!empty($error_mensaje)) : ?>
-            <small class="input-error"><?php echo $error_mensaje; ?></small>
-          <?php endif ?>
         </div>
-
-        <?php if (!empty($enviado)) : ?>
-          <div class="alert-successful" id="content-alert">
-            <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>
-          </div>
-        <?php endif ?>
-
         <div class="text-md-right">
           <button type="submit" class="btn btn-primary">Enviar comentario ></button>
         </div>
@@ -245,8 +230,8 @@
   <section class="img-back">
     <h2 class="text-center pt-4">Últimos eventos</h2>
     <div class="sec-eventos container row py-3 mx-auto">
-      <div class="col-12 col-lg-4 pb-3">
-        <article class="card shadow-sm">
+      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
+        <article class="card shadow">
           <img src="<?php echo PATH; ?>img/evento-feb.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
@@ -254,15 +239,32 @@
               <hr>
             </div>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-              Some quick example text.
+              Para conmemorar el día de la amistad, nuestros alumnos realizaron un intercambio
+              de playeritas y convivieron compartiendo su lunch con todos, como buenos amigos.
+              También se tomaron lindas fotos con un tierno fondo que sus maestras prepararon 
+              con mucho cariño para la ocasión.
             </p>
           </div>
         </article>
       </div>
-      <div class="col-12 col-lg-4 pb-3">
-        <article class="card shadow-sm">
+      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
+        <article class="card shadow">
+          <img src="<?php echo PATH; ?>img/evento-enero.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <div class="card-body">
+            <div class="card-title text-center">
+              <h5>Día de Reyes</h5>
+              <hr>
+            </div>
+            <p class="card-text">
+              Los Reyes Magos también visitaron nuestras instalaciones de Villa Infantil y 
+              nuestros pequeños recibieron un presente al regresar a clases después de las
+              fiestas decembrinas. ¡Estuvimos muy emocionados y felices!
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
+        <article class="card shadow">
           <img src="<?php echo PATH; ?>img/evento-dic.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
@@ -270,25 +272,9 @@
               <hr>
             </div>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-              Some quick example text.
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="col-12 col-lg-4">
-        <article class="card shadow-sm">
-          <img src="<?php echo PATH; ?>img/evento-nov.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <div class="card-title text-center">
-              <h5>Día de muertos</h5>
-              <hr>
-            </div>
-            <p class="card-text">
-              Con un emocionante concurso, elegimos al “Rey Catrín” y “Reina Catrina” de nuestro evento,
-              al que todos los niños asistieron con un disfraz inspirado en ese famoso personaje creado
-              por José Guadalupe Posada.
+              Nuestros alumnos presentaron la divertida pastorela “entre pastores y diabluras” 
+              en el teatro de la Unidad Santa Fe, donde hicieron gala de su talento y gracia para bailar,
+              entreteniendo a familiares y amigos de la comunidad Villa Infantil y Jesús Romero Flores.
             </p>
           </div>
         </article>

@@ -796,36 +796,35 @@ header {
   color: #ffab00;
 }
 
+
+@media(min-width: 768px) {
+  .sec-testimonios button.btn{
+    width: 60%;
+  }       
+}
+
+@media(min-width: 992px) {
+  .sec-testimonios button.btn{
+    width: 50%;
+  }       
+}
+
 /*Last events section*/
 .card-title h5 {
   color: #03224e;
 }
 
-@media (min-width: 768px) {
-  .sec-eventos .card {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sec-eventos .card {
-    width: 100%;
-    margin: 0;
-  }
-
-  .sec-eventos .card img {
-    height: auto;
-  }
-
-  .sec-eventos .card {
-    height: 31.25rem;
-  }
+.sec-eventos .card{
+  height: 555px;
 }
 
 .sec-eventos .card-text {
   font-size: 1rem !important;
   text-align: justify;
+}
+
+.far.fa-calendar-alt{
+  color: #f8b624;
 }
 
 /**********footer***********/

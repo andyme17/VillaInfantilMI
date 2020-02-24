@@ -15,11 +15,11 @@
 <body>
     <?php require 'nav-bar.view.php'; ?>
 
-    <section class="img-back-blue h-md-back-3 py-4">
+    <section class="img-back-blue h-md-back-2 py-4">
         <div class="content-back-blue container mx-auto">
             <div class="row">
                 <div class="col-12">
-                    <h2>Oferta Educativa</h2>
+                    <h2>Nuestros servicios</h2>
                     <hr>
                     <p class="text-back-blue">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
@@ -109,7 +109,7 @@
         </div>
     </div>
 
-    <section class="img-inscrip py-4">
+    <section class="img-inscrip py-4 py-lg-5">
         <div class="container content-inscrip mx-auto">
             <h4 class="mb-3">¿Te interesa formar parte de la comunidad de Villa Infantil María Isabel?</h4>
             <h5>Inscríbete y se parte de nuestra comunidad</h5>
@@ -121,7 +121,7 @@
         <div class="content-service container mx-auto">
             <div class="row">
                 <div class="col-12 col-md-8 offset-md-2 col-lg-7 offset-lg-0 col-xl-7 order-2 ">
-                    <img class="img-fluid pt-3 pt-lg-0" src="<?php echo PATH; ?>img/img-servicio-comida.jpg" alt="Foto del servicio de comida del preescolar">
+                    <img class="img-fluid pt-3 pt-lg-0" src="<?php echo PATH; ?>img/imgs-comida.jpg" alt="Foto del servicio de comida del preescolar">
                 </div>
                 <div class="col-12 col-lg-5 order-lg-2 py-xl-4">
                     <h3>Comedor</h3>

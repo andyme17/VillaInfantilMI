@@ -39,8 +39,23 @@
                     <img src="<?php echo PATH; ?>img/img-instalacion3.jpg">
                 </li>
                 <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion4.jpg">
+                </li>
+                <li>
                     <img src="<?php echo PATH; ?>img/img-instalacion5.jpg">
                 </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion6.jpg">
+                </li>           
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion7.jpg">
+                </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion8.jpg">
+                </li>
+                <li>
+                    <img src="<?php echo PATH; ?>img/img-instalacion9.jpg">
+                </li>              
             </ul>
         </div>
     </main>

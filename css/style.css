@@ -1453,7 +1453,9 @@ button.btn {
   color: #fff;
 }
 
-/*educatioanl model section*/
+/**************service page************/
+
+/*educational model section*/
 .img-serv {
   width: 9.375rem;
 }
@@ -1617,7 +1619,7 @@ button.btn {
 }
 
 .item-extra img {
-  opacity: 0.3;
+  opacity: 0.45;
 }
 
 @media (min-width: 1200px) {

@@ -169,6 +169,10 @@ ol {
   opacity: 0.7 !important;
 }
 
+.close:hover{
+  color: #fcc224!important;
+}
+
 /*Navegation menu*/
 header {
   background: -webkit-linear-gradient(#f8b524, #fcc224);
@@ -430,6 +434,13 @@ header {
 }
 
 /*Banner*/
+
+@media (min-width: 1200px) {
+  .modal-content img {
+    height: 500px;
+  }
+}
+
 .banner {
   position: relative;
   width: 100%;
@@ -814,8 +825,10 @@ header {
   color: #03224e;
 }
 
-.sec-eventos .card{
-  height: 555px;
+@media(min-width: 1024px){
+  .sec-eventos .card{
+    height: 580px;
+  }
 }
 
 .sec-eventos .card-text {

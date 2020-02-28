@@ -233,32 +233,19 @@
       <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
         <article class="card shadow">
           <img src="<?php echo PATH; ?>img/evento-feb.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
+          <div class="card-body">          
             <div class="card-title text-center">
               <h5>Día del amor y la amistad</h5>
-              <hr>
-            </div>
+              <hr>              
+            </div>            
             <p class="card-text">
               Para conmemorar el día de la amistad, nuestros alumnos realizaron un intercambio
               de playeritas y convivieron compartiendo su lunch con todos, como buenos amigos.
               También se tomaron lindas fotos con un tierno fondo que sus maestras prepararon 
               con mucho cariño para la ocasión.
             </p>
-          </div>
-        </article>
-      </div>
-      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
-        <article class="card shadow">
-          <img src="<?php echo PATH; ?>img/evento-enero.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <div class="card-title text-center">
-              <h5>Día de Reyes</h5>
-              <hr>
-            </div>
-            <p class="card-text">
-              Los Reyes Magos también visitaron nuestras instalaciones de Villa Infantil y 
-              nuestros pequeños recibieron un presente al regresar a clases después de las
-              fiestas decembrinas. ¡Estuvimos muy emocionados y felices!
+            <p class="card-text text-right pt-3">
+              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Febrero 2020</small>
             </p>
           </div>
         </article>
@@ -266,6 +253,25 @@
       <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
         <article class="card shadow">
           <img src="<?php echo PATH; ?>img/evento-dic.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <div class="card-body">
+            <div class="card-title text-center">
+              <h5>Día de reyes</h5>
+              <hr>
+            </div>
+            <p class="card-text">
+              Los Reyes Magos también visitaron nuestras instalaciones de Villa Infantil y 
+              nuestros pequeños recibieron un presente al regresar a clases después de las
+              fiestas decembrinas. ¡Estuvimos muy emocionados y felices!
+            </p>
+            <p class="card-text text-right pt-3">
+              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Diciembre 2020</small>
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
+        <article class="card shadow">
+          <img src="<?php echo PATH; ?>img/evento-nov.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Pastorela</h5>
@@ -276,12 +282,14 @@
               en el teatro de la Unidad Santa Fe, donde hicieron gala de su talento y gracia para bailar,
               entreteniendo a familiares y amigos de la comunidad Villa Infantil y Jesús Romero Flores.
             </p>
+            <p class="card-text text-right pt-3">
+              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Noviembre 2020</small>
+            </p>
           </div>
         </article>
       </div>
     </div>
   </section>
-
   <?php require 'footer.view.php'; ?>
 
   <!--Archivos javascript para bootstrap -->

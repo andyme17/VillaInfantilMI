@@ -169,8 +169,8 @@ ol {
   opacity: 0.7 !important;
 }
 
-.close:hover{
-  color: #fcc224!important;
+.close:hover {
+  color: #fcc224 !important;
 }
 
 /*Navegation menu*/
@@ -297,7 +297,7 @@ header {
     display: block;
   }
 
-  .menu .container-menu .logo .btn-menu:hover{
+  .menu .container-menu .logo .btn-menu:hover {
     color: #03224e;
   }
 
@@ -807,17 +807,16 @@ header {
   color: #ffab00;
 }
 
-
-@media(min-width: 768px) {
-  .sec-testimonios button.btn{
+@media (min-width: 768px) {
+  .sec-testimonios button.btn {
     width: 60%;
-  }       
+  }
 }
 
-@media(min-width: 992px) {
-  .sec-testimonios button.btn{
+@media (min-width: 992px) {
+  .sec-testimonios button.btn {
     width: 50%;
-  }       
+  }
 }
 
 /*Last events section*/
@@ -825,8 +824,8 @@ header {
   color: #03224e;
 }
 
-@media(min-width: 1024px){
-  .sec-eventos .card{
+@media (min-width: 1024px) {
+  .sec-eventos .card {
     height: 580px;
   }
 }
@@ -836,7 +835,7 @@ header {
   text-align: justify;
 }
 
-.far.fa-calendar-alt{
+.far.fa-calendar-alt {
   color: #f8b624;
 }
 
@@ -1075,11 +1074,6 @@ footer .sec-footer .redes a:hover {
 form .group {
   position: relative;
   margin: 2.1rem auto;
-}
-
-.fi .two-group {
-  position: relative;
-  margin: 1rem auto;
 }
 
 input,
@@ -1684,6 +1678,32 @@ button.btn {
 }
 
 /*Inscripctions page*/
+.f1 fieldset h5 {
+  color: #17a2b8;
+}
+
+.p-label {
+  color: #03224e;
+  font-weight: 600;
+  padding: 1.5rem 0 0.5rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .p-label {
+    padding:0;
+  }
+}
+
+.p-label2 {
+  color: #03224e;
+  font-weight: 600;
+}
+
+.f1 fieldset .form-row .group {
+  position: relative;
+  margin: 1rem 0;
+}
+
 .f1 {
   padding: 1.5625rem;
   background: #fff;
@@ -1768,9 +1788,10 @@ button.btn {
 
 .f1-buttons {
   text-align: right;
+  margin-top: 30px;
 }
 
-.input-error{
+.input-error {
   color: #dc3545;
   font-weight: 600;
 }

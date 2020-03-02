@@ -34,7 +34,7 @@
         }
 
         if(!$error_nombre && !$error_email && !$error_mensaje){
-            $enviar_a = 'andy_me17133781@hotmail.com';
+            $enviar_a = 'villa.infantil.mi@live.com.mx';
             $asunto = 'Correo enviado desde página villainfantilmi.edu.mx';
             $mensaje_enviado = "De: $nombre \n";
             $mensaje_enviado .= "Correo: $email \n";

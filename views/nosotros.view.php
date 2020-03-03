@@ -112,13 +112,15 @@
 
   <?php require 'footer.view.php'; ?>
 
-  <!--Archivos javascript para bootstrap -->
+  <!-- JavaScript files for Bootstrap 4 -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/headroom.min.js"></script>
-  <script src="js/pgwslideshow.min.js"></script>
-  <script src="js/main.js"></script>
+  
+  <!-- Custom javascript files -->
+  <script src="js/nav-bar.js"></script>
+  <script src="js/form-opinion.js"></script>
 </body>
 
 </html>

@@ -26,33 +26,33 @@
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form-contact" novalidate>
                 <div class="container mx-auto">
                     <div class="group">
-                        <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value="<?php if(!$enviado && isset($nombre)) echo $nombre;?>"><span class="barra"></span>
-                        <label for="">Nombre completo:</label>  
-                        <?php if(!empty($error_nombre)): ?>
-                            <small class="input-error"><?php echo $error_nombre;?></small>
-                        <?php endif?>                                                          
+                        <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value="<?php if (!$enviado && isset($nombre)) echo $nombre; ?>"><span class="barra"></span>
+                        <label for="">Nombre completo:</label>
+                        <?php if (!empty($error_nombre)) : ?>
+                            <small class="input-error"><?php echo $error_nombre; ?></small>
+                        <?php endif ?>
                     </div>
                     <div class="group">
-                        <input type="text" name="email" id="email" required="" autocomplete="off" value="<?php if(!$enviado && isset($email)) echo $email;?>"><span class="barra"></span>
+                        <input type="text" name="email" id="email" required="" autocomplete="off" value="<?php if (!$enviado && isset($email)) echo $email; ?>"><span class="barra"></span>
                         <label for="">Correo electrónico:</label>
-                        <?php if(!empty($error_email)): ?>
-                            <small class="input-error"><?php echo $error_email;?></small>
-                        <?php endif?>                                      
+                        <?php if (!empty($error_email)) : ?>
+                            <small class="input-error"><?php echo $error_email; ?></small>
+                        <?php endif ?>
                     </div>
                     <div class="group">
-                        <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"><?php if(!$enviado && isset($mensaje)) echo $mensaje;?></textarea><span class="barra"></span>
+                        <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"><?php if (!$enviado && isset($mensaje)) echo $mensaje; ?></textarea><span class="barra"></span>
                         <label for="">Mensaje:</label>
-                        <?php if(!empty($error_mensaje)): ?>
-                            <small class="input-error"><?php echo $error_mensaje;?></small>     
-                        <?php endif?>                            
+                        <?php if (!empty($error_mensaje)) : ?>
+                            <small class="input-error"><?php echo $error_mensaje; ?></small>
+                        <?php endif ?>
                     </div>
-                                    
-                    <?php if(!empty($enviado)): ?>
-                    <div class="alert-successful" id="content-alert">
-                        <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>                        
-                    </div>
-                    <?php endif?>
-                        
+
+                    <?php if (!empty($enviado)) : ?>
+                        <div class="alert-successful" id="content-alert">
+                            <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>
+                        </div>
+                    <?php endif ?>
+
                     <div class="text-md-right">
                         <button type="submit" name="submit" class="btn btn-primary">Enviar ></button>
                     </div>
@@ -79,11 +79,21 @@
 
     <?php require 'footer.view.php'; ?>
 
-    <!--Archivos javascript para bootstrap -->
+    <!-- JavaScript files for Bootstrap 4 -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/headroom.min.js"></script>
-    <script src="js/main.js"></script>
+
+    <!-- Custom javascript files -->
+    <script src="js/nav-bar.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $("#content-alert").fadeOut(1500);
+            }, 3000);
+        });
+    </script>
 </body>
+
 </html>

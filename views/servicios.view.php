@@ -22,8 +22,7 @@
                     <h2>Nuestros servicios</h2>
                     <hr>
                     <p class="text-back-blue">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
-                        amet impedit nulla qui, fugiat earum perferendis iusto vitae.(definir).
+                        Ofrecemos una amplia gama de actividades para el desarrollo integral de los pequeños.
                     </p>
                 </div>
             </div>

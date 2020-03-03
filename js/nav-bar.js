@@ -1,11 +1,7 @@
-$(document).ready(function(){
-	/*activating the modal for the index page banner*/
-	$('#modalBanner').modal('show');
-
-	/**
-	 * Navbar script 
-	 */
-	
+/**
+ * Navbar script
+ */
+$(document).ready(function(){	
 	var header = document.getElementById('header');
     var headroom = new Headroom(header);
 
@@ -20,24 +16,7 @@ $(document).ready(function(){
 			$ (".btn-menu i").removeClass("fas fa-times").addClass("fas fa-bars");
 			$ (".menu-link").css({"left": "-100%"});			
 		}
-	})	
- 
-	/**
-	 * Slide gallery script
-	 */
-	
-	var pgwSlideshow = $('.pgwSlideshow').pgwSlideshow();//puglin is initialized for gallery
-	
-	pgwSlideshow.reload({//configuring the plugin
-		autoSlide: true,		
-		maxHeight: 560
-	});
-
+	})		
 });
 
-$(document).ready(function() {
-    setTimeout(function() {
-        $("#content-alert").fadeOut(1500);
-    },3000);   
-});
 

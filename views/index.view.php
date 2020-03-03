@@ -24,7 +24,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img src="<?php echo PATH; ?>img/banner-inicial.jpg" class="img-fluid" alt="Anuncios">
+        <img src="<?php echo PATH; ?>img/banner-inicial.png" class="img-fluid" alt="Anuncios">
       </div>
     </div>
   </div>
@@ -100,13 +100,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="<?php echo PATH; ?>img/img-instalacion1.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>img/img-aviso.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
               <img src="<?php echo PATH; ?>img/img-instalacion2.jpg" class="d-block img-fluid" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="<?php echo PATH; ?>img/img-instalacion3.jpg" class="d-block img-fluid" alt="...">
+              <img src="<?php echo PATH; ?>img/img-aviso.jpg" class="d-block img-fluid" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -233,15 +233,15 @@
       <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
         <article class="card shadow">
           <img src="<?php echo PATH; ?>img/evento-feb.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">          
+          <div class="card-body">
             <div class="card-title text-center">
               <h5>Día del amor y la amistad</h5>
-              <hr>              
-            </div>            
+              <hr>
+            </div>
             <p class="card-text">
               Para conmemorar el día de la amistad, nuestros alumnos realizaron un intercambio
               de playeritas y convivieron compartiendo su lunch con todos, como buenos amigos.
-              También se tomaron lindas fotos con un tierno fondo que sus maestras prepararon 
+              También se tomaron lindas fotos con un tierno fondo que sus maestras prepararon
               con mucho cariño para la ocasión.
             </p>
             <p class="card-text text-right pt-3">
@@ -252,14 +252,14 @@
       </div>
       <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
         <article class="card shadow">
-          <img src="<?php echo PATH; ?>img/evento-dic.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>img/evento-enero.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Día de reyes</h5>
               <hr>
             </div>
             <p class="card-text">
-              Los Reyes Magos también visitaron nuestras instalaciones de Villa Infantil y 
+              Los Reyes Magos también visitaron nuestras instalaciones de Villa Infantil y
               nuestros pequeños recibieron un presente al regresar a clases después de las
               fiestas decembrinas. ¡Estuvimos muy emocionados y felices!
             </p>
@@ -271,14 +271,14 @@
       </div>
       <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
         <article class="card shadow">
-          <img src="<?php echo PATH; ?>img/evento-nov.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
+          <img src="<?php echo PATH; ?>img/evento-dic.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
           <div class="card-body">
             <div class="card-title text-center">
               <h5>Pastorela</h5>
               <hr>
             </div>
             <p class="card-text">
-              Nuestros alumnos presentaron la divertida pastorela “entre pastores y diabluras” 
+              Nuestros alumnos presentaron la divertida pastorela “entre pastores y diabluras”
               en el teatro de la Unidad Santa Fe, donde hicieron gala de su talento y gracia para bailar,
               entreteniendo a familiares y amigos de la comunidad Villa Infantil y Jesús Romero Flores.
             </p>
@@ -292,12 +292,21 @@
   </section>
   <?php require 'footer.view.php'; ?>
 
-  <!--Archivos javascript para bootstrap -->
+  <!-- JavaScript files for Bootstrap 4 -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/headroom.min.js"></script>
-  <script src="js/main.js"></script>
+
+  <!-- Custom javascript files -->
+  <script src="js/nav-bar.js"></script>
+  <script src="js/form-opinion.js"></script>
+  <script>
+    $(document).ready(function() {
+      /*activating the modal for the index page banner*/
+      $('#modalBanner').modal('show');
+    });
+  </script>
 </body>
 
 </html>

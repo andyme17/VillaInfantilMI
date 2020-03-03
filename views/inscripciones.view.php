@@ -20,8 +20,7 @@
             <h2>Proceso de Inscripción</h2>
             <hr>
             <p class="text-back-blue">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
-                amet impedit nulla qui, fugiat earum perferendis iusto vitae.(definir).
+                A continuación vamos a guíarlo paso a paso a tráves del proceso de inscripción:
             </p>
         </div>
     </section>
@@ -260,14 +259,25 @@
                                 <li>Comprobante de domicilio</li>
                             </ol>
                             <div class="f1-buttons">
-                                <button type="button" class="btn btn-secondary btn-previous">
-                                    < Anterior</button> </div> </fieldset> </form> </div> </div> </div> </main> <?php require 'footer.view.php'; ?> <!--Archivos javascript para bootstrap -->
-                                        <script src="js/jquery-3.4.1.min.js"></script>
-                                        <script src="js/popper.min.js"></script>
-                                        <script src="js/bootstrap.min.js"></script>
-                                        <script src="js/headroom.min.js"></script>
-                                        <script src="js/main.js"></script>
-                                        <script src="js/step-form.js"></script>
+                                <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <?php require 'footer.view.php'; ?>
+    
+    <!-- JavaScript files for Bootstrap 4 -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/headroom.min.js"></script>
+
+    <!-- Custom javascript files -->
+    <script src="js/main.js"></script>
+    <script src="js/step-form.js"></script>
 </body>
 
 </html>

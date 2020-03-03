@@ -26,7 +26,7 @@
                         <i class="fas fa-map-marker-alt icon"></i>
                     </div>
                     <div class="col-10 pl-4 pl-lg-3">
-                        <p>Morelos 11, Santa Fe. Alvaro Obregon, CP 01210 Ciudad de México, CDMX</p>
+                        <p>Morelos 7 Bis, Industrias Militares de Sedena, Álvaro Obregón, 01210 Ciudad de México, CDMX.</p>
                     </div>
                 </div>
                 <div class="row pl-2 pb-3">

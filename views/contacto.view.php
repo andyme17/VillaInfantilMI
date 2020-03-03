@@ -66,7 +66,7 @@
             <hr>
         </div>
         <div class="row mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15054.663685714198!2d-99.2383028!3d19.383613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa6f7611bce0a3484!2sCOLEGIO%20JESUS%20ROMERO%20FLORES!5e0!3m2!1ses-419!2smx!4v1579163498719!5m2!1ses-419!2smx" width="1140" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.666693651444!2d-99.24070738509407!3d19.383579586912237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201019f246fed%3A0xcbf660f79c002ef6!2sJard%C3%ADn%20de%20ni%C3%B1os%20Villa%20Infantil%20Mar%C3%ADa%20Isabel!5e0!3m2!1ses-419!2smx!4v1583200652807!5m2!1ses-419!2smx" width="1140" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
         <div class="content-horario py-4">
             <div class="header-horario">

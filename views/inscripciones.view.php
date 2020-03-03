@@ -50,30 +50,31 @@
                             <p class="text-center pb-4">Completa el siguiente formulario:</p>
                             <div class="container mx-auto">
                                 <h5><i class="fas fa-caret-right"></i>&nbsp;&nbsp;Datos del alumno</h5>
-                                <!--  grade  -->
-                                <p class="p-label">Inscripción a:</p>
-                                <div class="form-row text-center">
-                                    <div class="col-6 col-md-4">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="grado" id="k1" value="k1">
-                                            <p class="form-check-label" for="k1">1°Kinder</p>
+
+                                <div class="content-radio mt-3">
+                                    <p class="p-label">Inscripción a:</p>
+                                    <div class="form-row mt-2 ml-1">
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                <p class="form-check-label" for="exampleRadios1">1° Kinder</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="grado" id="k2" value="k2">
-                                            <p class="form-check-label" for="k2">2°Kinder</p>
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                <p class="form-check-label" for="exampleRadios1">2° Kinder</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="grado" id="k3" value="k3">
-                                            <p class="form-check-label" for="k3">3°Kinder</p>
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                <p class="form-check-label" for="exampleRadios1">3° Kinder</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="form-row mt-4">
+                                <div class="form-row">
                                     <div class="group col-md-6">
                                         <input type="text" name="ap-paterno" id="ap-paterno" required><span class="barra"></span>
                                         <label for="ap-paterno">Apellido paterno:</label>
@@ -98,29 +99,30 @@
                                         <input type="text" name="" id="" required><span class="barra"></span>
                                         <label for="">CURP:</label>
                                     </div>
-                                    <!-- gender -->
                                     <div class="col-12 col-md-3 py-3 py-md-0">
-                                        <div class="form-row pl-2 pl-md-1">
-                                            <div class="col-6 col-md-12 pb-2">
-                                                <p class="p-label2">Género:</p>
-                                            </div>
-                                            <div class="col-6 col-md-12 pl-md-2">
-                                                <div class="form-check form-check-inline ">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                    <P class="form-check-label" for="inlineRadio1">F</P>
+                                        <div class="content-radio">
+                                            <p class="p-label">Género:</p>
+                                            <div class="form-row mt-2 ml-1">
+                                                <div class="col-6 col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <p class="form-check-label" for="exampleRadios1">F</p>
+                                                    </div>
                                                 </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                    <P class="form-check-label" for="inlineRadio2">M</P>
+                                                <div class="col-6 col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <p class="form-check-label" for="exampleRadios1">M</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-row">
+                                <div class="form-row mt-2">
                                     <div class="col-12 col-md-7 col-lg-5">
-                                        <div class="form-group">
-                                            <p for="exampleFormControlSelect1" class="p-label">Lugar de nacimiento</p>
+                                        <div class="form-group ml-2">
+                                            <p for="exampleFormControlSelect1" class="p-label mb-2">Lugar de nacimiento</p>
                                             <select class="form-control form-control-sm" id="exampleFormControlSelect1">
                                                 <option>selecciona una opción</option>
                                                 <option>CDMX</option>
@@ -139,31 +141,7 @@
                                         <label for="">Tipo de sangre:</label>
                                     </div>
                                 </div>
-
-                                <div class="form-row mt-3">
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-row pl-2 pl-md-1">
-                                            <div class="col-6 col-md-12 pb-2">
-                                                <p class="p-label2">¿Ha estado inscrito en otra escuela?</p>
-                                            </div>
-                                            <div class="col-6 col-md-12 pl-md-2">
-                                                <div class="form-check form-check-inline ">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                    <P class="form-check-label" for="inlineRadio1">Si</P>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                    <P class="form-check-label" for="inlineRadio2">No</P>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="group col-12 col-md-6">
-                                        <input type="text" name="" id="" required><span class="barra"></span>
-                                        <label for="">Escuela de procedencia:</label>
-                                    </div>
-                                </div>
-                                <p class="p-label">Domicilio particular:</p>
+                                <p class="p-label mt-3">Domicilio particular:</p>
                                 <div class="form-row mt-2">
                                     <div class="group col-12 col-md-6">
                                         <input type="text" name="" id="" required><span class="barra"></span>
@@ -196,6 +174,31 @@
                                     <div class="group col-12 col-md-6">
                                         <input type="text" name="" id="" required><span class="barra"></span>
                                         <label for="">Código Postal:</label>
+                                    </div>
+                                </div> 
+                                <div class="form-row mt-3">
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="content-radio">
+                                            <p class="p-label">¿Estaba inscrito en otra escuela?</p>
+                                            <div class="form-row mt-2 ml-1">
+                                                <div class="col-6 col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <p class="form-check-label" for="exampleRadios1">Si</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-md-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <p class="form-check-label" for="exampleRadios1">No</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="group col-12 col-md-6">
+                                        <input type="text" name="" id="" required><span class="barra"></span>
+                                        <label for="">Escuela de procedencia:</label>
                                     </div>
                                 </div>
                                 <div class="f1-buttons">
@@ -259,25 +262,16 @@
                                 <li>Comprobante de domicilio</li>
                             </ol>
                             <div class="f1-buttons">
-                                <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-    <?php require 'footer.view.php'; ?>
-    
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
+                                <button type="button" class="btn btn-secondary btn-previous">
+                                    < Anterior</button> </div> </fieldset> </form> </div> </div> </div> </main> <?php require 'footer.view.php'; ?> <!-- JavaScript files for Bootstrap 4 -->
+                                        <script src="js/jquery-3.4.1.min.js"></script>
+                                        <script src="js/popper.min.js"></script>
+                                        <script src="js/bootstrap.min.js"></script>
+                                        <script src="js/headroom.min.js"></script>
 
-    <!-- Custom javascript files -->
-    <script src="js/main.js"></script>
-    <script src="js/step-form.js"></script>
+                                        <!-- Custom javascript files -->
+                                        <script src="js/main.js"></script>
+                                        <script src="js/step-form.js"></script>
 </body>
 
 </html>

@@ -1076,7 +1076,7 @@ form .group {
   margin: 2.1rem auto;
 }
 
-input,
+input[type="text"],
 textarea {
   font-family: "Roboto", sans-serif;
   color: #646161;
@@ -1089,28 +1089,28 @@ textarea {
   resize: none;
 }
 
-.form-contact input,
+.form-contact input[type="text"],
 .form-contact textarea {
   background-color: #f7f9f9;
 }
 
 @media (min-width: 768px) {
-  input,
+  input[type="text"],
   textarea {
     font-size: 1.125rem;
   }
 }
 
-input:focus,
+input[type="text"]:focus,
 textarea:focus {
   outline: none;
   color: #03224e;
 }
 
-input:focus ~ label,
-input:valid ~ label,
-textarea:focus ~ label,
-textarea:valid ~ label {
+input[type="text"]:focus ~ label.float-label,
+input[type="text"]:valid ~ label.float-label,
+textarea:focus ~ label.float-label,
+textarea:valid ~ label.float-label {
   position: absolute;
   top: -0.875rem;
   font-size: 1rem;
@@ -1119,15 +1119,15 @@ textarea:valid ~ label {
 }
 
 @media (min-width: 768px) {
-  input:focus ~ label,
-  input:valid ~ label,
-  textarea:focus ~ label,
-  textarea:valid ~ label {
+  input[type="text"]:focus ~ label.float-label,
+  input[type="text"]:valid ~ label.float-label,
+  textarea:focus ~ label.float-label,
+  textarea:valid ~ label.float-label {
     font-size: 1.125rem;
   }
 }
 
-label {
+label.float-label {
   font-family: "Roboto", sans-serif;
   color: #03224e;
   font-size: 1rem;
@@ -1141,16 +1141,16 @@ label {
 }
 
 @media (min-width: 768px) {
-  label {
+  label.float-label {
     font-size: 1.125rem;
   }
 }
 
-.two-group label {
+.two-group label.float-label {
   left: 1.625rem;
 }
 
-input:focus ~ .barra:before,
+input[type="text"]:focus ~ .barra:before,
 textarea:focus ~ .barra:before {
   width: 100%;
 }
@@ -1406,6 +1406,14 @@ button.btn {
   box-shadow: 0 0.625rem 0.625rem -0.3125rem #b3b2b2 inset !important;
   background: #ccc9c9 !important;
 }
+
+.pgwSlideshow .ps-list .ps-next {
+  z-index: 10;
+}  
+
+.pgwSlideshow .ps-list .ps-prev {
+  z-index: 10;
+} 
 
 /*Privacy Notice Page*/
 .text-aviso {
@@ -1682,22 +1690,11 @@ button.btn {
   color: #17a2b8;
 }
 
-.content-radio{
-  position: relative;
-  padding-left: 0.5rem;
-
-}
 
 .p-label {
   color: #03224e;
   font-weight: 600;  
 }
-
-.form-check-input {
-  margin-left: -4.25rem!important;
-}
-
-
 
 .p-label2 {
   color: #03224e;

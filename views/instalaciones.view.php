@@ -90,7 +90,7 @@
             var pgwSlideshow = $('.pgwSlideshow').pgwSlideshow(); //puglin is initialized for gallery
 
             pgwSlideshow.reload({ //configuring the plugin
-                autoSlide: true,
+                autoSlide: false,
                 maxHeight: 560
             });
         });

@@ -27,21 +27,21 @@
                 <div class="container mx-auto">
                     <div class="group">
                         <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value="<?php if (!$enviado && isset($nombre)) echo $nombre; ?>"><span class="barra"></span>
-                        <label for="">Nombre completo:</label>
+                        <label for="nombre" class="float-label">Nombre completo:</label>
                         <?php if (!empty($error_nombre)) : ?>
                             <small class="input-error"><?php echo $error_nombre; ?></small>
                         <?php endif ?>
                     </div>
                     <div class="group">
                         <input type="text" name="email" id="email" required="" autocomplete="off" value="<?php if (!$enviado && isset($email)) echo $email; ?>"><span class="barra"></span>
-                        <label for="">Correo electrónico:</label>
+                        <label for="email" class="float-label">Correo electrónico:</label>
                         <?php if (!empty($error_email)) : ?>
                             <small class="input-error"><?php echo $error_email; ?></small>
                         <?php endif ?>
                     </div>
                     <div class="group">
                         <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"><?php if (!$enviado && isset($mensaje)) echo $mensaje; ?></textarea><span class="barra"></span>
-                        <label for="">Mensaje:</label>
+                        <label for="mensaje" class="float-label">Mensaje:</label>
                         <?php if (!empty($error_mensaje)) : ?>
                             <small class="input-error"><?php echo $error_mensaje; ?></small>
                         <?php endif ?>
@@ -49,7 +49,7 @@
 
                     <?php if (!empty($enviado)) : ?>
                         <div class="alert-successful" id="content-alert">
-                            <p>Mensaje enviado correctamente &nbsp;&nbsp;&nbsp;<i class="fas fa-check"></i></p>
+                            <p>Mensaje enviado correctamente &nbsp;<i class="fas fa-check"></i></p>
                         </div>
                     <?php endif ?>
 

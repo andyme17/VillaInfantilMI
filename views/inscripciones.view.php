@@ -51,26 +51,20 @@
                             <div class="container mx-auto">
                                 <h5><i class="fas fa-caret-right"></i>&nbsp;&nbsp;Datos del alumno</h5>
 
-                                <div class="content-radio mt-3">
+                                <div class="cont-radio rad-3">
                                     <p class="p-label">Inscripción a:</p>
-                                    <div class="form-row mt-2 ml-1">
+                                    <div class="form-row">
                                         <div class="col-6 col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                <p class="form-check-label" for="exampleRadios1">1° Kinder</p>
-                                            </div>
+                                            <input type="radio" id="primero" name="grado" value="primero">
+                                            <label for="primero">1° Kinder</label>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                <p class="form-check-label" for="exampleRadios1">2° Kinder</p>
-                                            </div>
+                                            <input type="radio" id="segundo" name="grado" value="segundo">
+                                            <label for="segundo">2° Kinder</label>
                                         </div>
                                         <div class="col-6 col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                <p class="form-check-label" for="exampleRadios1">3° Kinder</p>
-                                            </div>
+                                            <input type="radio" id="tercero" name="grado" value="tercero">
+                                            <label for="tercero">3° Kinder</label>
                                         </div>
                                     </div>
                                 </div>
@@ -100,16 +94,16 @@
                                         <label for="">CURP:</label>
                                     </div>
                                     <div class="col-12 col-md-3 py-3 py-md-0">
-                                        <div class="content-radio">
+                                        <div class="cont-radio rad-gen">
                                             <p class="p-label">Género:</p>
-                                            <div class="form-row mt-2 ml-1">
-                                                <div class="col-6 col-md-4">
+                                            <div class="form-row">
+                                                <div class="col-6">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                                         <p class="form-check-label" for="exampleRadios1">F</p>
                                                     </div>
                                                 </div>
-                                                <div class="col-6 col-md-4">
+                                                <div class="col-6">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                                         <p class="form-check-label" for="exampleRadios1">M</p>
@@ -178,16 +172,16 @@
                                 </div> 
                                 <div class="form-row mt-3">
                                     <div class="col-12 col-md-6 mb-3">
-                                        <div class="content-radio">
+                                        <div class="cont-radio rad-es">
                                             <p class="p-label">¿Estaba inscrito en otra escuela?</p>
-                                            <div class="form-row mt-2 ml-1">
-                                                <div class="col-6 col-md-4">
+                                            <div class="form-row">
+                                                <div class="col-6">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                                         <p class="form-check-label" for="exampleRadios1">Si</p>
                                                     </div>
                                                 </div>
-                                                <div class="col-6 col-md-4">
+                                                <div class="col-6">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                                         <p class="form-check-label" for="exampleRadios1">No</p>
@@ -262,16 +256,24 @@
                                 <li>Comprobante de domicilio</li>
                             </ol>
                             <div class="f1-buttons">
-                                <button type="button" class="btn btn-secondary btn-previous">
-                                    < Anterior</button> </div> </fieldset> </form> </div> </div> </div> </main> <?php require 'footer.view.php'; ?> <!-- JavaScript files for Bootstrap 4 -->
-                                        <script src="js/jquery-3.4.1.min.js"></script>
-                                        <script src="js/popper.min.js"></script>
-                                        <script src="js/bootstrap.min.js"></script>
-                                        <script src="js/headroom.min.js"></script>
+                                <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <?php require 'footer.view.php'; ?> <!-- JavaScript files for Bootstrap 4 -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/headroom.min.js"></script>
+    <script src="js/nav-bar.js"></script>
 
-                                        <!-- Custom javascript files -->
-                                        <script src="js/main.js"></script>
-                                        <script src="js/step-form.js"></script>
+    <!-- Custom javascript files -->
+    <script src="js/main.js"></script>
+    <script src="js/step-form.js"></script>
 </body>
 
 </html>

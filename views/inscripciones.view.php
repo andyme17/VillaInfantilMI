@@ -28,7 +28,7 @@
     <main class="img-back py-3 py-md-4">
         <div class="container">
             <div class="row">
-                <div class="col-12 offset-xl-1 col-xl-10">
+                <div class="col-12 offset-lg-1 col-lg-10">
                     <form role="form" action="" method="post" class="f1 shadow">
                         <div class="f1-steps pb-4">
                             <div class="f1-progress">
@@ -52,7 +52,7 @@
                                 <h5 class="pb-3"><i class="fas fa-caret-right"></i>&nbsp;&nbsp;Datos del alumno</h5>
 
                                 <div class="form-radio">
-                                    <p class="p-label">Inscripción a:</p>
+                                    <label>Inscripción a:</label>
                                     <div class="form-row pt-2 text-center">
                                         <div class="col-6 col-sm-4">
                                             <input type="radio" id="primero" name="grado" value="primero">
@@ -74,7 +74,7 @@
                                         <label for="ap-pat-alu" class="float-label">Apellido paterno:</label>
                                     </div>
                                     <div class="group col-sm-6">
-                                        <input type="text" name="ap-materno" id="ap-materno" required><span class="barra"></span>
+                                        <input type="text" name="ap-mat-alu" id="ap-mat-alu" required><span class="barra"></span>
                                         <label for="ap-mat-alu" class="float-label">Apellido materno:</label>
                                     </div>
                                 </div>
@@ -93,8 +93,8 @@
                                         <input type="text" name="curp" id="curp" required><span class="barra"></span>
                                         <label for="curp" class="float-label">CURP:</label>
                                     </div>
-                                    <div class="form-radio col-12 col-sm-3">
-                                        <p class="p-label">Género:</p>
+                                    <div class="form-radio col-12 col-sm-3 mt-2 mt-md-0">
+                                        <label>Género:</label>
                                         <div class="form-row pt-2 pt-sm-0 pb-sm-2 text-center">
                                             <div class="col-6">
                                                 <input type="radio" id="f" name="genero" value="f">
@@ -103,14 +103,14 @@
                                             <div class="col-6">
                                                 <input type="radio" id="m" name="genero" value="m">
                                                 <label for="m">M</label>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row mt-2 mt-md-3">
                                     <div class="col-12 col-sm-7 col-lg-5">
                                         <div class="form-group ml-2">
-                                            <p for="lugar-nac" class="p-label mb-2">Lugar de nacimiento</p>
+                                            <label for="lugar-nac" class="mb-2">Lugar de nacimiento</label>
                                             <select class="form-control form-control-sm" id="lugar-nac">
                                                 <option>selecciona una opción</option>
                                                 <option>CDMX</option>
@@ -165,8 +165,8 @@
                                     </div>
                                 </div>
                                 <div class="form-row mt-md-2">
-                                    <div class="col-12 col-md-6 col-lg-5">
-                                        <p class="p-label">¿Estuvo inscrito en otra escuela? </p>
+                                    <div class="col-12 col-md-6 col-lg-5 mt-2 mt-md-0">
+                                        <label>¿Estuvo inscrito en otra escuela? </label>
                                         <div class="form-row pt-2 pt-sm-0 pb-sm-2 text-center">
                                             <div class="col-6">
                                                 <input type="radio" id="si-esc-proc" name="esc-proc" value="si-esc-proc">
@@ -175,15 +175,15 @@
                                             <div class="col-6">
                                                 <input type="radio" id="no-esc-proc" name="esc-proc" value="no-esc-proc">
                                                 <label for="no-esc-proc">No</label>
-                                            </div>                                            
+                                            </div>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                     <div class="group col-12 col-md-6 col-lg-7">
                                         <input type="text" name="esc-procedencia" id="esc-procedencia" required><span class="barra"></span>
                                         <label for="esc-procedencia" class="float-label">Escuela de procedencia:</label>
                                     </div>
                                 </div>
-                                <div class="f1-buttons">
+                                <div class="f1-button">
                                     <button type="button" class="btn btn-primary btn-next">Siguiente ></button>
                                 </div>
                             </div>
@@ -192,42 +192,110 @@
                         <fieldset>
                             <h4 class="text-center pb-3">Pre-registro</h4>
                             <p class="text-center pb-4">Completa el siguiente formulario:</p>
-                            <p>Datos del padre o tutor</p>
-                            <div class="group">
-                                <input type="text" name="" id="" required><span class="barra"></span>
-                                <label for="">Nombre completo:</label>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="two-group">
-                                        <input type="text" name="" id="" required><span class="barra"></span>
-                                        <label for="">Edad:</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-8">
-                                    <div class="two-group">
-                                        <input type="text" name="" id="" required><span class="barra"></span>
-                                        <label for="">Ocupación:</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group">
-                                <input type="text" name="" id="" required><span class="barra"></span>
-                                <label for="">Tel. y ext. de oficina:</label>
-                            </div>
-                            <div class="group">
-                                <input type="text" name="" id="" required><span class="barra"></span>
-                                <label for="">Tel. Celular:</label>
-                            </div>
-                            <div class="group">
-                                <input type="email" name="" id="" required><span class="barra"></span>
-                                <label for="">Correo electrónico:</label>
-                            </div>
 
-                            <div class="f1-buttons">
-                                <button type="button" class="btn btn-secondary btn-previous">
-                                    < Anterior</button> <button type="button" class="btn btn-primary btn-next">Enviar >
-                                </button>
+                            <div class="container mx-auto">
+                                <h5 class="pb-3"><i class="fas fa-caret-right"></i>&nbsp;&nbsp;Datos del padre, madre o tutor</h5>
+
+                                <div class="form-row mt-1 mt-md-3">
+                                    <div class="group col-12 col-sm-6">
+                                        <input type="text" name="ap-pat-tutor" id="ap-pat-tutor" required><span class="barra"></span>
+                                        <label for="ap-pat-tutor" class="float-label">Apellido paterno:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-6">
+                                        <input type="text" name="ap-mat-tutor" id="ap-mat-tutor" required><span class="barra"></span>
+                                        <label for="ap-mat-tutor" class="float-label">Apellido materno:</label>
+                                    </div>
+                                </div>
+                                <div class="form-row mt-2">
+                                    <div class="group col-12 col-sm-8">
+                                        <input type="text" name="nombre-tutor" id="nombre-tutor" required><span class="barra"></span>
+                                        <label for="nombre-tutor" class="float-label">Nombre(s):</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-4">
+                                        <input type="text" name="edad-tutor" id="edad-tutor" required><span class="barra"></span>
+                                        <label for="edad-tutor" class="float-label">Edad:</label>
+                                    </div>
+                                </div>
+                                <div class="form-row mt-2 mt-md-3">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group ml-1">
+                                            <label for="grado-estudio" class="mb-2">Último grado de estudios:</label>
+                                            <select class="form-control form-control-sm" id="grado-estudio">
+                                                <option value="0">Selecciona una opción</option>
+                                                <option value="1">Ninguna</option>
+                                                <option value="2">Preescolar</option>
+                                                <option value="3">Primaria</option>
+                                                <option value="4">Secundaria</option>
+                                                <option value="5">Preparatoria o bachillerato</option>
+                                                <option value="6">Carrera técnica con preparatoria terminada</option>
+                                                <option value="7">Licenciatura</option>
+                                                <option value="87">Maestría o Doctorado</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="group col-12 col-sm-6">
+                                        <input type="text" name="ocupacion" id="ocupacion" required><span class="barra"></span>
+                                        <label for="ocupacion" class="float-label">Ocupación:</label>
+                                    </div>
+                                </div>
+                                <p class="p-label">Domicilio particular:</p>
+                                <div class="form-row">
+                                    <div class="group col-12 col-sm-7 col-md-6">
+                                        <input type="text" name="calle-tutor" id="calle-tutor" required><span class="barra"></span>
+                                        <label for="calle-tutor" class="float-label">Calle:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-5 col-md-3">
+                                        <input type="text" name="num-int-tutor" id="num-int-tutor" required><span class="barra"></span>
+                                        <label for="num-int-tutor" class="float-label">No. interior:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-5 col-md-3">
+                                        <input type="text" name="num-ext-tutor" id="num-ext-tutor" required><span class="barra"></span>
+                                        <label for="num-ext-tutor" class="float-label">No. exterior:</label>
+                                    </div>
+                                </div>
+                                <div class="form-row mt-md-2">
+                                    <div class="group col-12 col-sm-7">
+                                        <input type="text" name="colonia-tutor" id="colonia-tutor" required><span class="barra"></span>
+                                        <label for="colonia-tutor" class="float-label">Colonia:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-5">
+                                        <input type="text" name="alcaldia-tutor" id="alcaldia-tutor" required><span class="barra"></span>
+                                        <label for="alcaldia-tutor" class="float-label">Alcaldía o municipio:</label>
+                                    </div>
+                                </div>
+                                <div class="form-row mt-md-2">
+                                    <div class="group col-12 col-sm-8">
+                                        <input type="text" name="entidad-tutor" id="entidad-tutor" required><span class="barra"></span>
+                                        <label for="entidad-tutor" class="float-label">Entidad federativa:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-4">
+                                        <input type="text" name="cp-tutor" id="cp-tutor" required><span class="barra"></span>
+                                        <label for="cp-tutor" class="float-label">Código Postal:</label>
+                                    </div>
+                                </div>
+                                <p class="p-label">Datos de contacto:</p>
+                                <div class="form-row mt-md-2">
+                                    <div class="group col-12 col-sm-6 col-md-4">
+                                        <input type="text" name="tel-fijo" id="tel-fijo" required><span class="barra"></span>
+                                        <label for="tel-fijo" class="float-label">Teléfono Fijo:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-6 col-md-4">
+                                        <input type="text" name="tel-cel" id="tel-cel" required><span class="barra"></span>
+                                        <label for="tel-cel" class="float-label">Teléfono Celular:</label>
+                                    </div>
+                                    <div class="group col-12 col-sm-6 col-md-4">
+                                        <input type="text" name="tel-ofi" id="tel-ofi" required><span class="barra"></span>
+                                        <label for="tel-ofi" class="float-label">Teléfono de Oficina:</label>
+                                    </div>
+                                    <div class="group col-12 col-md-8">
+                                        <input type="text" name="email-tutor" id="email-tutor" required><span class="barra"></span>
+                                        <label for="email-tutor" class="float-label">Correo Electrónico:</label>
+                                    </div>
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
+                                    <button type="button" class="btn btn-primary btn-next">Enviar ></button>
+                                </div>
                             </div>
                         </fieldset>
 
@@ -244,17 +312,27 @@
                                 <li>Comprobante de domicilio</li>
                             </ol>
                             <div class="f1-buttons">
-                                <button type="button" class="btn btn-secondary btn-previous">
-                                    < Anterior</button> </div> </fieldset> </form> </div> </div> </div> </main> <?php require 'footer.view.php'; ?> <!-- JavaScript files for Bootstrap 4 -->
-                                        <script src="js/jquery-3.4.1.min.js"></script>
-                                        <script src="js/popper.min.js"></script>
-                                        <script src="js/bootstrap.min.js"></script>
-                                        <script src="js/headroom.min.js"></script>
-                                        <script src="js/nav-bar.js"></script>
+                                <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <?php require 'footer.view.php'; ?> 
+    
+    <!-- JavaScript files for Bootstrap 4 -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/headroom.min.js"></script>
+    <script src="js/nav-bar.js"></script>
 
-                                        <!-- Custom javascript files -->
-                                        <script src="js/main.js"></script>
-                                        <script src="js/step-form.js"></script>
+    <!-- Custom javascript files -->
+    <script src="js/main.js"></script>
+    <script src="js/step-form.js"></script>
 </body>
 
 </html>

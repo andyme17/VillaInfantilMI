@@ -1691,18 +1691,40 @@ button.btn {
 }
 
 .p-label {
-  color: #03224e;
+  font-family: "Roboto", sans-serif;
+  color: #6c757d;
   font-weight: 600;  
+  margin: 1rem 0 1rem 0.3rem;
+}
+
+label{
+  font-family: "Roboto", sans-serif;
+  color: #03224e;
+  font-size: 1rem;
+  font-weight: 500;  
+}
+
+@media (min-width: 768px) {
+  label{
+    font-size: 1.125rem;
+  }
 }
 
 .form-radio{
   margin-left: 0.3rem;
 }
 
+.form-radio .form-row label{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #212529;
+}
 
+.f1 select{
+  font-family: "Roboto", sans-serif;
+}
 
 .f1 fieldset .form-row .group {
-  position: relative;
   margin: 1rem 0;
 }
 
@@ -1788,9 +1810,51 @@ button.btn {
   text-align: left;
 }
 
-.f1-buttons {
+.f1-button{
   text-align: right;
   margin-top: 30px;
+}
+
+.f1-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.f1-button button.btn,.f1-buttons button.btn {
+  width: auto;  
+  padding: 0.5rem 1rem!important;
+}
+
+@media(min-width: 576px) {
+  .f1-buttons {
+    justify-content: space-evenly;        
+  }
+
+  .f1-buttons button.btn {
+    width: 46%;  
+    padding: 0.5rem 0!important;
+  }
+}
+
+@media(min-width: 768px) {
+  .f1-buttons {
+    margin-top: 50px;
+  }
+
+  .f1-buttons button.btn {
+    width: 35%;      
+  }
+}
+
+@media(min-width: 1200px) {
+  .f1-buttons {
+    margin-top: 55px;
+  }
+
+  .f1-buttons button.btn {
+    width: 30%;      
+  }
 }
 
 .input-error {

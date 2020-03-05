@@ -1690,16 +1690,16 @@ button.btn {
   color: #17a2b8;
 }
 
-
 .p-label {
   color: #03224e;
   font-weight: 600;  
 }
 
-.p-label2 {
-  color: #03224e;
-  font-weight: 600;
+.form-radio{
+  margin-left: 0.3rem;
 }
+
+
 
 .f1 fieldset .form-row .group {
   position: relative;

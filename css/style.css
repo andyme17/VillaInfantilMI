@@ -119,10 +119,10 @@ ol {
   border-color: #17a2b8 !important;
 }
 
-.btn-secondary:hover {
+/* .btn-secondary:hover {
   box-shadow: 20rem 0 #437092 inset, -20rem 0 #437092 inset !important;
   border-color: #437092 !important;
-}
+} */
 
 .btn-primary.focus,
 .btn-primary:focus,
@@ -225,8 +225,8 @@ header {
   font-weight: 500;
   font-size: 1.125rem;
   vertical-align: middle;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .menu .menu-link a.opc {
@@ -1112,7 +1112,7 @@ input[type="text"]:valid ~ label.float-label,
 textarea:focus ~ label.float-label,
 textarea:valid ~ label.float-label {
   position: absolute;
-  top: -0.875rem;
+  top: -1rem;
   font-size: 1rem;
   font-weight: 500;
   color: #1393a8;
@@ -1694,7 +1694,7 @@ button.btn {
   font-family: "Roboto", sans-serif;
   color: #6c757d;
   font-weight: 600;  
-  margin: 1rem 0 1rem 0.3rem;
+  margin: 1rem 0 1.4rem 0.3rem;
 }
 
 label{
@@ -1793,7 +1793,7 @@ label{
   font-size: 1.375rem;
   line-height: 3rem;
 }
-
+/* 
 .f1-step p {
   color: #ccc;
 }
@@ -1804,7 +1804,7 @@ label{
 .f1-step.active p {
   color: #17a2b8;
 }
-
+ */
 .f1 fieldset {
   display: none;
   text-align: left;
@@ -1815,13 +1815,24 @@ label{
   margin-top: 30px;
 }
 
+@media(min-width: 768px ) {
+  .f1-button{
+    text-align: right;
+    margin-top: 50px;
+  }
+
+  .f1-button button.btn {
+    width: 40%;
+  }
+}
+
 .f1-buttons {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between; 
 }
 
-.f1-button button.btn,.f1-buttons button.btn {
+.f1-buttons button.btn {
   width: auto;  
   padding: 0.5rem 1rem!important;
 }
@@ -1862,22 +1873,34 @@ label{
   font-weight: 600;
 }
 
-.list-doc ol li {
-  padding-left: 0.3125rem;
-  line-height: 2;
-}
-
-@media (min-width: 768px) {
-  .list-doc ol li {
-    font-size: 1.125rem;
-  }
-}
-
-.alert-successful {
+.alert-successful{
   padding: 1rem;
   color: #fff;
   margin-bottom: 1.25rem;
   font-size: 0.875rem;
   border: 0.0625rem solid #4caf4fa2;
   background-color: #4caf50;
+}
+
+.fa-file-pdf{
+  color:#fcc224;
+  font-size: 120px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 5px;
+}
+
+.fa-file-pdf:hover{
+  font-size: 130px;
+  color: #17a2b8;
+}
+
+.link-pdf{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 2.5rem;
+}
+
+a.link-pdf{
+  color: #03224e;
 }

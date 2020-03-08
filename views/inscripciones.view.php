@@ -8,7 +8,7 @@
     <title>Villa Infantil María Isabel</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -93,7 +93,7 @@
                                         <input type="text" name="curp" id="curp" required><span class="barra"></span>
                                         <label for="curp" class="float-label">CURP:</label>
                                     </div>
-                                    <div class="form-radio col-12 col-sm-3 mt-2 mt-md-0">
+                                    <div class="form-radio col-12 col-sm-3 mt-2 mt-sm-0">
                                         <label>Género:</label>
                                         <div class="form-row pt-2 pt-sm-0 pb-sm-2 text-center">
                                             <div class="col-6">
@@ -110,9 +110,9 @@
                                 <div class="form-row mt-2 mt-md-3">
                                     <div class="col-12 col-sm-7 col-lg-5">
                                         <div class="form-group ml-2">
-                                            <label for="lugar-nac" class="mb-2">Lugar de nacimiento</label>
+                                            <label for="lugar-nac">Lugar de nacimiento</label>
                                             <select class="form-control form-control-sm" id="lugar-nac">
-                                                <option>selecciona una opción</option>
+                                                <option>Selecciona una opción</option>
                                                 <option>CDMX</option>
                                                 <option>Estado de México</option>
                                                 <option>Otro</option>
@@ -120,7 +120,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="group col-12 col-sm-5 col-lg-4">
+                                    <div class="group col-12 col-sm-5 col-lg-4 form-line">
                                         <input type="text" name="religion" id="religion" required><span class="barra"></span>
                                         <label for="religion" class="float-label">Religion:</label>
                                     </div>
@@ -129,7 +129,7 @@
                                         <label for="tipo-s" class="float-label">Tipo de sangre:</label>
                                     </div>
                                 </div>
-                                <p class="p-label mt-3">Domicilio particular:</p>
+                                <p class="p-label">Domicilio particular:</p>
                                 <div class="form-row mt-2">
                                     <div class="group col-12 col-sm-7 col-md-6">
                                         <input type="text" name="calle-alu" id="calle-alu" required><span class="barra"></span>
@@ -164,11 +164,11 @@
                                         <label for="cp-alu" class="float-label">Código Postal:</label>
                                     </div>
                                 </div>
-                                <div class="form-row mt-md-2">
-                                    <div class="col-12 col-md-6 col-lg-5 mt-2 mt-md-0">
+                                <div class="form-row mt-md-3">
+                                    <div class="col-12 col-md-6 col-lg-5 mt-2 mt-sm-0">
                                         <label>¿Estuvo inscrito en otra escuela? </label>
                                         <div class="form-row pt-2 pt-sm-0 pb-sm-2 text-center">
-                                            <div class="col-6">
+                                            <div class="col-6"> 
                                                 <input type="radio" id="si-esc-proc" name="esc-proc" value="si-esc-proc">
                                                 <label for="si-esc-proc">Si</label>
                                             </div>
@@ -184,9 +184,9 @@
                                     </div>
                                 </div>
                                 <div class="f1-button">
-                                    <button type="button" class="btn btn-primary btn-next">Siguiente ></button>
+                                    <button type="button" class="btn btn-secondary btn-next">Siguiente ></button>
                                 </div>
-                            </div>
+                            </div> 
                         </fieldset>
 
                         <fieldset>
@@ -219,7 +219,7 @@
                                 <div class="form-row mt-2 mt-md-3">
                                     <div class="col-12 col-sm-6">
                                         <div class="form-group ml-1">
-                                            <label for="grado-estudio" class="mb-2">Último grado de estudios:</label>
+                                            <label for="grado-estudio" class="">Último grado de estudios:</label>
                                             <select class="form-control form-control-sm" id="grado-estudio">
                                                 <option value="0">Selecciona una opción</option>
                                                 <option value="1">Ninguna</option>
@@ -293,27 +293,33 @@
                                     </div>
                                 </div>
                                 <div class="f1-buttons">
-                                    <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
-                                    <button type="button" class="btn btn-primary btn-next">Enviar ></button>
+                                    <button type="button" class="btn btn-primary btn-previous">< Anterior</button>
+                                    <button type="button" class="btn btn-secondary btn-next">Siguiente ></button>
                                 </div>
                             </div>
                         </fieldset>
 
                         <fieldset class="list-doc">
-                            <h4 class="text-center pb-4">Acude a nuestras instalaciones</h4>
-                            <p class="pb-3">
-                                Una vez concluido con el Pre-Registro, acude a nuestras instalaciones
-                                para concluir con el proceso de inscripción presentando la siguiente documentación:
-                            </p>
-                            <ol>
-                                <li>Acta de nacimiento del niño</li>
-                                <li>Identificación oficial del padre o tutor (INE)</li>
-                                <li>Fotografías del niño</li>
-                                <li>Comprobante de domicilio</li>
-                            </ol>
-                            <div class="f1-buttons">
-                                <button type="button" class="btn btn-secondary btn-previous">< Anterior</button>
-                            </div>
+                            <div class="container mx-auto">
+                                <div class="row">
+                                    <div class="col-12 offset-md-1 col-md-10 text-center">
+                                        <h4 class="pb-4">Acude a nuestras instalaciones</h4>
+                                        <p class="p-3">
+                                            Una vez concluido el formulario de Pre-Registro, acude a nuestras instalaciones
+                                            para concluir con el proceso de inscripción presentando la documentación solicitada
+                                            en el siguiente documento:
+                                        </p>
+                                        <a href="pdf/documentacion_requerida.pdf" class="link-pdf" download="documentacion_requerida.pdf">
+                                            <i class="far fa-file-pdf"></i>
+                                            <small>Da click en la imagen para descargar</small>    
+                                        </a>                                                                                                                                                
+                                        <div class="f1-buttons">
+                                            <button type="button" class="btn btn-primary btn-previous">< Anterior</button>
+                                            <button type="button" class="btn btn-secondary btn-next">Finalizar ></button>
+                                        </div>                
+                                    </div>
+                                </div>
+                            </div>                                       
                         </fieldset>
                     </form>
                 </div>

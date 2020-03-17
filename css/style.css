@@ -119,10 +119,10 @@ ol {
   border-color: #17a2b8 !important;
 }
 
-/* .btn-secondary:hover {
+.btn-secondary:hover {
   box-shadow: 20rem 0 #437092 inset, -20rem 0 #437092 inset !important;
   border-color: #437092 !important;
-} */
+} 
 
 .btn-primary.focus,
 .btn-primary:focus,
@@ -158,7 +158,7 @@ ol {
   }
 }
 
-.modal-content {
+.init.modal-content {
   background-color: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -169,8 +169,12 @@ ol {
   opacity: 0.7 !important;
 }
 
-.close:hover {
+.init .close:hover {
   color: #fcc224 !important;
+}
+
+.modal-form .close:hover {
+  color: #03224e!important;
 }
 
 /*Navegation menu*/
@@ -1372,25 +1376,103 @@ button.btn {
 }
 
 /*Opinion form*/
+
 .form-opinion {
-  position: relative;
-  background-color: #9ad4d486;
-  width: 90%;
-  padding-bottom: 0.625rem;
-  padding-top: 0.0625rem;
-  border-radius: 0.0625rem;
+  position: relative;  
 }
 
-@media (min-width: 1024px) {
-  .form-opinion {
-    width: 70%;
-  }
+.form-opinion .group{
+  margin: 1.5rem 0;
 }
 
-.form-opinion input,
-.form-opinion textarea {
-  background-color: #cae8e8;
+.modal-form .modal-content{
+  border: 0!important;
+  border-radius: 0!important;
 }
+
+.modal-form .modal-header{
+  background: #f4a700!important;
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+}
+
+.form-star{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.8rem;
+}
+
+.clasificacion{
+  direction: rtl;/* right to left */
+  unicode-bidi: bidi-override;/* bidi de bidireccional */
+}
+
+.label-star{
+  color: #6e6e6e;
+  font-size: 30px;
+}
+
+.label-star:hover{
+  color: #f4a700;
+}
+
+.label-star:hover,
+.label-star:hover ~ label {
+  color: orange;
+}
+
+.clasificacion input[type="radio"]{
+  display:none;
+}
+
+.clasificacion input[type="radio"]:checked ~ label{
+  color: orange;
+}
+
+.btn-form-opinion{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-form-opinion button.btn{
+  width: auto!important;  
+  padding: 0.5rem 1rem!important;
+}
+
+.btn-form-opinion>* {
+  margin: .25rem;
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+#error-nombre, #error-email, 
+#error-votacion, #error-mensaje{
+  color: #a82626;
+  text-align: left;
+  font-size: 14px;
+  padding: 0.5rem;
+  display: none;
+  transition: all .5s ease;
+}  
+
+/* Notificaciones 
+.notificacion{
+  color: #a82626;
+  text-align: left;
+  font-size: 14px;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity .5s ease;
+}*/
+
+.visible{
+  opacity: 1;
+}
+
 
 /*Page gallery*/
 .sec-gallery .pgwSlideshow {

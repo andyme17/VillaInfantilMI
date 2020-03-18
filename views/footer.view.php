@@ -15,7 +15,7 @@
                     <li><a href="<?php echo PATH;?>servicios.php">Nuestros Servicios</a></li>
                     <li><a href="<?php echo PATH;?>inscripciones.php">Inscripciones</a></li>
                     <li><a href="<?php echo PATH;?>instalaciones.php">Instalaciones</a></li>
-                    <li><a href="#">Nivel Primaria </a></li>
+                    <li><a href="https://colegiojesusromero.edu.mx/" target="_blank">Nivel Primaria </a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
@@ -34,7 +34,7 @@
                         <i class="fas fa-envelope icon"></i>
                     </div>
                     <div class="col-10 pl-4 pl-lg-3">
-                        <p>villa.infantil.mi@live.com.mx</p>
+                        <a href="mailto:villa.infantil.mi@live.com.mxsubject=feedback"><p>villa.infantil.mi@live.com.mx</p></a>
                     </div>
                 </div>
                 <div class="row pl-2 pb-3">
@@ -47,8 +47,8 @@
                 </div>
                 <div class="redes row pl-4 pt-2">
                     <h5>Siguenos en:</h5>
-                    <a href="https://www.facebook.com/Villa-Infantil-Maria-Isabel-813116022199232/"><i class="fab fa-facebook icon-2 ml-4"></i></a>
-                    <a href="#"> <i class="fab fa-twitter icon-2 ml-4"></i></a>
+                    <a href="https://www.facebook.com/Villa-Infantil-Maria-Isabel-813116022199232/" target="_blank"><i class="fab fa-facebook icon-2 ml-4"></i></a>
+                    <a href="https://twitter.com/?lang=es" target="_blank"> <i class="fab fa-twitter icon-2 ml-4"></i></a>
                 </div>
             </div>
         </div>

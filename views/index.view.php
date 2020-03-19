@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="google-site-verification" content="x7i-1eQfu-xEuD6jxgrEJD3LJAi5do0R7iRzlfy9Y_4" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -252,8 +253,12 @@
                       <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"></textarea><span class="barra"></span>
                       <label for="mensaje" class="float-label">Mensaje:</label>                      
                       <div id="error-mensaje"></div>
-                    </div>                   
-                   
+                    </div>
+                    
+                    <div class="successful" id="successful">
+                      <p>Mensaje enviado correctamente&nbsp;<i class="fas fa-check"></i></p>
+                    </div> 
+
                     <div class="btn-form-opinion">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">
                         < Cerrar</button>

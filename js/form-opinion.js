@@ -19,6 +19,7 @@ function leerFormulario(e){
         email = document.getElementById('email'),
         mensaje = document.getElementById('mensaje'),
         votacion = document.getElementsByName('votacion');
+        btnForm = document.getElementById('btnForm');
 
     //error divs
     var errorNombre = document.getElementById('error-nombre'),
@@ -87,7 +88,8 @@ function leerFormulario(e){
         datosComentario.append('email',email.value);
         datosComentario.append('votacion',valor_votacion);
         datosComentario.append('mensaje',mensaje.value);
-        
+        datosComentario.append('submit',btnForm.value);
+
         console.log(...datosComentario);
 
         enviarComentario(datosComentario);       
@@ -107,7 +109,7 @@ function enviarComentario(datos){
         if(this.status === 200){
             const respuesta = JSON.parse(xhr.responseText); 
 
-            console.log(xhr.responseText);
+            console.log(respuesta);
         }
     }
 

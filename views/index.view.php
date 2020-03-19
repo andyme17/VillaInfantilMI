@@ -253,9 +253,12 @@
                       <label for="mensaje" class="float-label">Mensaje:</label>                      
                       <div id="error-mensaje"></div>
                     </div>                   
+                   
                     <div class="btn-form-opinion">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        < Cerrar</button> <button type="submit" class="btn btn-primary" id="btn-formOpinion" name="submit">Enviar >
+                        < Cerrar</button>
+                        <input type="hidden" id="btnForm" value="enviar">
+                        <button type="submit" class="btn btn-primary" name="submit">Enviar >
                       </button>
                     </div>
                   </form>

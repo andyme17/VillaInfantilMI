@@ -65,7 +65,7 @@
           El Jardín de Niños María Isabel nace como una institución hermana del <span> Colegio
             Jesús Romero Flores</span> que ofrece una educación de calidad a <span>nivel primaria</span>.
         </p>
-        <a href="#" class="btn btn-primary mt-3 btn-sec-1">Visítanos > </a>
+        <a href="https://colegiojesusromero.edu.mx/" target="_blank" class="btn btn-primary mt-3 btn-sec-1">Visítanos > </a>
       </div>
       <div class="col-12 col-md-7 col-lg-6 img-primaria">
         <img src="<?php echo PATH; ?>img/img-primaria.jpg" class="img-fluid" alt="Fotografía de la primaria">

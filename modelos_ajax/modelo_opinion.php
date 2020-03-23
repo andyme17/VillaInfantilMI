@@ -3,7 +3,8 @@
     header("Content-type: application/json; charset=utf-8");
 
     #false por defecto, nos evitará 5 líneas de código innecesarias
-     $respuesta=false;
+    $respuesta=false;
+
     if (isset($_POST['submit'])) {
         $nombre = filter_var(trim($_POST['nombre']), FILTER_SANITIZE_STRING);
         $email  = $_POST['email'];
@@ -13,6 +14,7 @@
         $mensaje = htmlspecialchars($_POST['mensaje']);
         $mensaje .= trim($mensaje);
         $mensaje .= stripslashes($mensaje); 
+
         #Definimos $respuesta en el if evitando el else interior
         if (!empty($nombre) && !empty($email) && !empty($votacion) && !empty($mensaje)) {
             $email_to = "ame171337@gmail.com";
@@ -24,7 +26,14 @@
             $email_message .= "\n Comentario o sugerencia: " . $mensaje;
 
             $header = "De: " . $email . "\r\n";
+
             #mail podría fallar, pase lo que pase, la variable será true o false
+           /*Esto se descomenta cuando se realicen pruebas  
+            if(mail($email_to, $email_subject, $email_message, $header)){
+                $respuesta =  true;
+            } */
+
+            //las siguientes dos líneas se tienen que comentar o bien eliminar al final
             mail($email_to, $email_subject, $email_message, $header); 
             $respuesta =  true;
         }

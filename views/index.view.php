@@ -210,26 +210,26 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modalCenterTitle">Dejanos un comentario o sugerencia</h5>
+                <h5 class="modal-title" id="modalCenterTitle">Dejanos un comentario ó sugerencia</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
                 <div class="container">
-                  <form action="" method="POST" class="form-opinion" id="form-opinion" novalidate>
+                  <form action="#" method="POST" class="form-opinion" id="form-opinion" novalidate>
                     <div class="group">
                       <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value=""><span class="barra"></span>
-                      <label for="nombre" class="float-label">Nombre completo:</label>   
+                      <label for="nombre" class="float-label">Nombre completo: <span class="text-danger">*</span></label>   
                       <div id="error-nombre"></div>                  
                     </div>
                     <div class="group">
                       <input type="text" name="email" id="email" required="" autocomplete="off" value=""><span class="barra"></span>
-                      <label for="email" class="float-label">Correo electrónico:</label>                      
+                      <label for="email" class="float-label">Correo electrónico: <span class="text-danger">*</span></label>                      
                       <div id="error-email"></div>
                     </div>
                     <div class="form-star">
-                      <label for="" class="">Calificanos:</label>
+                      <label for="" class="">Calificanos: <span class="text-danger">*</span></label>
                       <p class="clasificacion">
                         <!-- first star -->
                         <input id="radio1" class="input-star" type="radio" name="votacion" value="5">
@@ -251,18 +251,19 @@
                     <div id="error-votacion"></div>
                     <div class="group">
                       <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"></textarea><span class="barra"></span>
-                      <label for="mensaje" class="float-label">Mensaje:</label>                      
+                      <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>                      
                       <div id="error-mensaje"></div>
                     </div>
-                    
-                    <div class="row mb-3" id="loaders">                      
+                    <div class="text-left">
+                      <small class="text-secondary">* Todos los campos son obligatorios</small>
+                    </div>
+                    <div id="loaders">                      
                       <img id="spinner" src="img/spinner.gif">
                     </div>
-
                     <div class="btn-form-opinion">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">
                         < Cerrar</button>
-                      <button type="submit" class="btn btn-primary" id="btnForm" name="submit" value="enviar">Enviar >
+                      <button type="submit" class="btn btn-form-primary" id="btnForm" name="submit" value="enviar">Enviar >
                       </button>
                     </div>
                   </form>
@@ -270,7 +271,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> <!-- termina modal -->
       </div>
     </div>
   </section>
@@ -352,7 +353,7 @@
   <script>
     $(document).ready(function() {
       /*activating the modal for the index page banner*/
-      //$('#modalBanner').modal('show');
+      $('#modalBanner').modal('show');
     });
   </script>
 </body>

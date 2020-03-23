@@ -84,10 +84,12 @@ function validarCampo(){
     if(email.value !== '' && nombre.value !== '' && mensaje.value !== ''){        
         if(document.querySelectorAll('.error').length === 0){
             console.log('el campo no esta vacio');
+            btnForm.className = 'btn btn-primary';
             btnForm.disabled = false;       
         }      
     }else{
        btnForm.disabled = true;
+       btnForm.className = 'btn btn-form-primary';
     }
 }
 
@@ -119,11 +121,7 @@ function leerFormulario(e){
          datosComentario.append('mensaje',mensaje.value);
          datosComentario.append('submit',btnForm.value);
  
-         console.log(...datosComentario);
- 
-        enviarComentario(datosComentario); 
-        
-           
+        enviarComentario(datosComentario);            
     }       
 }   
 
@@ -152,27 +150,33 @@ function enviarComentario(datos){
     xhr.send(datos);
 }
 
-
 //Notificacion exitosa
 function notificacionCorrecta(){
     //se muestra al presionar el boton de enviar 
-    const spinnerGif = document.querySelector('#spinner');
+    const spinnerGif = document.getElementById('spinner');
     spinnerGif.style.display = 'block';
 
     //gif que envia email
-     const enviado = document.createElement('img');
-     enviado.src = 'img/mail.gif';
-     enviado.style.display = 'block';
+    const enviado = document.createElement('img');
+    enviado.src = 'img/mail.gif';
+    enviado.style.display = 'block';
 
-      //ocultar spinner y mostrar gif de enviado
-      setTimeout(function(){
+    const textEnviado = document.createElement('p');
+    textEnviado.textContent = 'Mensaje enviado correctamente';
+
+
+    //ocultar spinner y mostrar gif de enviado
+    setTimeout(function(){
         spinnerGif.style.display = 'none';
-        document.querySelector('#loaders').appendChild(enviado);
+        document.getElementById('loaders').appendChild(enviado);
+        document.getElementById('loaders').appendChild(textEnviado);
         setTimeout(function(){
+            textEnviado.remove();
             enviado.remove();
             formOpinion.reset();
             btnForm.disabled = true;
-        },4000);
+            btnForm.className = 'btn btn-form-primary';
+        },5000);
     },3000);         
 }
 

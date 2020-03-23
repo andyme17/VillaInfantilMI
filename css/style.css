@@ -1473,29 +1473,25 @@ button.btn {
 } 
 
 #loaders {
-  text-align: center;
+  text-align: center; 
+  margin: 1.5rem 0;
+}
+
+#loaders p{
+  color: #03224e;
+  font-weight: 700;
 }
 
 #loaders img {
-  height: 110px;
+  height: 95px;
   margin: 0 auto;
   /* display: none; */
 }
 
 #spinner {
   display: none;
-  height: 110px;
+  height: 90px;
 }
-
-/* Notificaciones 
-.notificacion{
-  color: #a82626;
-  text-align: left;
-  font-size: 14px;
-  padding: 0.5rem;
-  opacity: 0;
-  transition: opacity .5s ease;
-}*/
 
 /*Page gallery*/
 .sec-gallery .pgwSlideshow {

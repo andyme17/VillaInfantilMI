@@ -114,6 +114,19 @@ ol {
   transition: all 1s;
 }
 
+.btn-form-primary {
+  background-color: #03224e !important;
+  border-color: transparent !important;
+  color: #fff;
+  opacity: 0.65;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.btn-form-primary:hover{
+  color: #fff;
+}
+
 .btn-primary:hover {
   box-shadow: 20rem 0 #17a2b8 inset, -20rem 0 #17a2b8 inset !important;
   border-color: #17a2b8 !important;
@@ -1449,7 +1462,7 @@ button.btn {
   margin-left: 0.25rem;
 }
 
-#error-nombre, #error-email, 
+#error-nombre, #error-email,
 #error-votacion, #error-mensaje{
   color: #a82626;
   text-align: left;
@@ -1457,7 +1470,22 @@ button.btn {
   padding: 0.5rem;
   display: none;
   transition: all .5s ease;
-}  
+} 
+
+#loaders {
+  text-align: center;
+}
+
+#loaders img {
+  height: 110px;
+  margin: 0 auto;
+  /* display: none; */
+}
+
+#spinner {
+  display: none;
+  height: 110px;
+}
 
 /* Notificaciones 
 .notificacion{
@@ -1468,11 +1496,6 @@ button.btn {
   opacity: 0;
   transition: opacity .5s ease;
 }*/
-
-.visible{
-  opacity: 1;
-}
-
 
 /*Page gallery*/
 .sec-gallery .pgwSlideshow {
@@ -1955,13 +1978,20 @@ label{
   font-weight: 600;
 }
 
-.alert-successful{
+.successful{
   padding: 1rem;
   color: #fff;
   margin-bottom: 1.25rem;
   font-size: 0.875rem;
   border: 0.0625rem solid #4caf4fa2;
   background-color: #4caf50;
+  transition: opacity 0.6s ease-in-out;
+  display: none; 
+  opacity: 0;
+}
+
+.visible{
+  opacity: 1;
 }
 
 .fa-file-pdf{

@@ -217,7 +217,7 @@
               </div>
               <div class="modal-body">
                 <div class="container">
-                  <form action="#" method="POST" class="form-opinion" id="form-opinion" novalidate>
+                  <form action="" method="POST" class="form-opinion" id="form-opinion" novalidate>
                     <div class="group">
                       <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value=""><span class="barra"></span>
                       <label for="nombre" class="float-label">Nombre completo:</label>   
@@ -255,15 +255,14 @@
                       <div id="error-mensaje"></div>
                     </div>
                     
-                    <div class="successful" id="successful">
-                      <p>Mensaje enviado correctamente&nbsp;<i class="fas fa-check"></i></p>
-                    </div> 
+                    <div class="row mb-3" id="loaders">                      
+                      <img id="spinner" src="img/spinner.gif">
+                    </div>
 
                     <div class="btn-form-opinion">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">
                         < Cerrar</button>
-                        <input type="hidden" id="btnForm" value="enviar">
-                        <button type="submit" class="btn btn-primary" name="submit">Enviar >
+                      <button type="submit" class="btn btn-primary" id="btnForm" name="submit" value="enviar">Enviar >
                       </button>
                     </div>
                   </form>
@@ -353,7 +352,7 @@
   <script>
     $(document).ready(function() {
       /*activating the modal for the index page banner*/
-      $('#modalBanner').modal('show');
+      //$('#modalBanner').modal('show');
     });
   </script>
 </body>

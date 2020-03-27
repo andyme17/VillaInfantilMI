@@ -1,5 +1,5 @@
 /**
- * Script for opinion form 
+ * Script for contact form 
 */
 
 //form fields
@@ -8,12 +8,11 @@ const nombre = document.getElementById('nombre'),
       mensaje = document.getElementById('mensaje'),        
       btnForm = document.getElementById('btnForm');
         
-const formOpinion = document.getElementById('form-opinion');
+const formContact = document.getElementById('form-contact');
 
 //error divs
 var errorNombre = document.getElementById('error-nombre'),
-    errorEmail = document.getElementById('error-email'),
-    errorVotacion = document.getElementById('error-votacion'),
+    errorEmail = document.getElementById('error-email'),    
     errorMensaje = document.getElementById('error-mensaje');
 
 //expresiones regulares
@@ -28,8 +27,9 @@ function eventListener(){
 
     nombre.addEventListener('blur',validarCampo);
     email.addEventListener('blur',validarCampo);
-    mensaje.addEventListener('blur',validarCampo);      
-    formOpinion.addEventListener('submit', leerFormulario);
+    mensaje.addEventListener('blur',validarCampo);  
+    
+    formContact.addEventListener('submit', leerFormulario);
 }
 
 function inicioApp(){
@@ -96,41 +96,25 @@ function validarCampo(){
 function leerFormulario(e){
     e.preventDefault();
 
-    let votacion = document.getElementsByName('votacion');
-
-    for (var i=0; i<votacion.length; i++) {
-        if (votacion[i].checked == true) {
-            var valor_votacion = votacion[i].value;        
-        }
-    }
-
-    if(!valor_votacion){  
-        errorVotacion.style.display = 'block';
-        errorVotacion.innerHTML = 'Por favor, califica nuestro servicio.';
-
-        setTimeout(()=>{
-            errorVotacion.style.display = 'none';
-        },3000);
-    } else {
-        //hace una llamada ajax  
-         const datosComentario = new FormData();
-         datosComentario.append('nombre',nombre.value);
-         datosComentario.append('email',email.value);
-         datosComentario.append('votacion',valor_votacion);
-         datosComentario.append('mensaje',mensaje.value);
-         datosComentario.append('submit',btnForm.value);
+    //hace una llamada ajax  
+    const datosContacto = new FormData();
+    
+    datosContacto.append('nombre',nombre.value);
+    datosContacto.append('email',email.value);    
+    datosContacto.append('mensaje',mensaje.value);
+    datosContacto.append('submit',btnForm.value);
  
-        enviarComentario(datosComentario);            
-    }       
+    enviarContacto(datosContacto);            
+           
 }   
 
 //enviando los datos por ajax
-function enviarComentario(datos){
+function enviarContacto(datos){
     //creando objeto    
     const xhr = new XMLHttpRequest();
 
     //abriendo conexion
-    xhr.open('POST','modelos_ajax/modelo_opinion.php', true);
+    xhr.open('POST','modelos_ajax/modelo_contacto.php', true);
 
     //se pasan los datos
     xhr.onload = function(){
@@ -172,7 +156,7 @@ function notificacionCorrecta(){
         setTimeout(function(){
             textEnviado.remove();
             enviado.remove();
-            formOpinion.reset();
+            formContact.reset();
             btnForm.disabled = true;
             btnForm.className = 'btn btn-form-primary';
         },5000);

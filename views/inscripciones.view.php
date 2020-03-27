@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Villa Infantil María Isabel</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
     <?php require 'nav-bar.view.php'; ?>
 
     <section class="img-back-blue h-md-back-2 py-4">
@@ -29,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 offset-lg-1 col-lg-10">
-                    <form role="form" action="" method="post" class="f1 shadow">
+                    <form role="form" action="" method="post" class="f1 shadow" novalidate>
                         <div class="f1-steps pb-4">
                             <div class="f1-progress">
                                 <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -125,7 +110,7 @@
                                         <label for="religion" class="float-label">Religion:</label>
                                     </div>
                                     <div class="group col-12 col-sm-4 col-lg-3 ml-sm-1 ml-lg-0">
-                                        <input type="text" name="tipo-s" id="tipo-s" required><span class="barra"></span>
+                                        <input type="text" name="tipo-s" id="tipo-sangre" required><span class="barra"></span>
                                         <label for="tipo-s" class="float-label">Tipo de sangre:</label>
                                     </div>
                                 </div>
@@ -184,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="f1-button">
-                                    <button type="button" class="btn btn-secondary btn-next">Siguiente ></button>
+                                    <button type="button" class="btn btn-form-primary btn-next">Siguiente ></button>
                                 </div>
                             </div> 
                         </fieldset>
@@ -337,7 +322,6 @@
     <script src="js/nav-bar.js"></script>
 
     <!-- Custom javascript files -->
-    <script src="js/main.js"></script>
     <script src="js/step-form.js"></script>
 </body>
 

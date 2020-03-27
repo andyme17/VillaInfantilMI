@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta name="google-site-verification" content="x7i-1eQfu-xEuD6jxgrEJD3LJAi5do0R7iRzlfy9Y_4" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Villa Infantil María Isabel</title>
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
   <?php require 'nav-bar.view.php'; ?>
 
   <!-- Ventana emergente -->
@@ -126,11 +110,6 @@
   <section class="sec-testimonios pb-4">
     <h2 class="text-center pt-4">Testimonios</h2>
     <div class="row container mx-auto py-4">
-      <h5 class="text-center mb-4">
-        En la búsqueda de mejorar su experiencia con nosotros al final de cada ciclo
-        escolar se realiza una encuesta para manifestar sus comentarios, observaciones
-        y sugerencias.
-      </h5>
       <div class="col-12 col-lg-4 pb-3">
         <div class="card text-center shadow">
           <div class="card-body">
@@ -200,8 +179,6 @@
     </div>
     <div class="row container mx-auto">
       <div class="col-12 text-center">
-        <p class="mb-2"> De igual forma, puedes dejarnos tu opinión dando clic en el siguiente enlace. </p>
-        <h4 class="mb-4">!Recuerda, tu opinión es muy importante!</h4>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#formOpinion">Dejar comentario o sugerencia ></button>
 

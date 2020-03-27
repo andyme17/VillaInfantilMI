@@ -12,34 +12,68 @@ $(document).ready(function(){
 		}
 		progress_line_object.attr('style', 'width: ' + new_value + '%;').data('now-value', new_value);
 	}
-
+	
 	$('.f1 fieldset:first').fadeIn('slow');
 
-	$('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
-    	$(this).removeClass('input-error');
-    });
-    
+
+	
+	//$('.f1 .btn-next').attr('disabled','disabled');
+
+	function alerta(idInput,textAlert){
+        $('#' + idInput).next().after('<div id="error">'+ textAlert +'</div>');
+	}
+	
+	function colorSpan(idInput){
+		$('#' + idInput).next().removeClass('barra').addClass('barra-error');	
+	}
+
+	function colorSpanRemove(idInput){
+		$('#' + idInput).next().removeClass('barra-error').addClass('barra');
+	}
+	
+	$('input').focus(function(){
+
+		$('#error').remove();
+		$(this).next().removeClass('barra-error').addClass('barra');
+		
+	});
+
     // next step
     $('.f1 .btn-next').on('click', function() {
-    	var parent_fieldset = $(this).parents('fieldset');
+		var parent_fieldset = $(this).parents('fieldset');
+		console.log(parent_fieldset);
     	var next_step = true;
     	// navigation steps / progress steps
     	var current_active_step = $(this).parents('.f1').find('.f1-step.active');
-    	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
-    	
-    	// fields validation
-    	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-    			next_step = false;
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-		});
-		
-    	// fields validation
-    	
+		var progress_line = $(this).parents('.f1').find('.f1-progress-line');
+	
+		// fields validation
+	   	/* parent_fieldset.find('input[type="text"]').on('blur',function(){
+
+		   }); */
+			
+			/* console.log($(this));
+			if($(this).attr("name") == "ap-pat-alu" || $(this).attr("name") == "ap-mat-alu"){
+				if( $(this).val() == "" || !$(this).val().match(namePattern)  ) {
+					colorSpan($(this));
+					alerta($(this),"Por favor, ingresa un apellido");		
+					next_step = false;
+				}else {
+					colorSpanRemove($(this));
+				}	
+			}else if($(this).attr("name") == "nombre-alu"){
+				if( $(this).val() == "" || !$(this).val().match(namePattern)  ) {
+					colorSpan($(this));
+					alerta($(this),"Por favor, ingresa el nombre del alumno");		
+					next_step = false;
+				}else {
+					colorSpanRemove($(this));
+				}
+			}else if()	 */
+			
+	
+
+		// fields validation
     	if( next_step ) {
     		parent_fieldset.fadeOut(400, function() {
     			// change icons
@@ -49,8 +83,7 @@ $(document).ready(function(){
     			// show next step
 	    		$(this).next().fadeIn();
 	    	});
-    	}
-    	
+    	}    	
     });
     
     // previous step
@@ -67,5 +100,21 @@ $(document).ready(function(){
     		// show previous step
     		$(this).prev().fadeIn();
     	});
-    });   
+	});  
+	
+	/*  // submit
+	 $('.f1').on('submit', function(e) {
+    	
+    	// fields validation
+    	$(this).find('input[type="text"], input[type="password"], textarea').each(function() {
+    		if( $(this).val() == "" ) {
+    			e.preventDefault();
+    			$(this).addClass('input-error');
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+    	// fields validation  	
+    });   */
 });

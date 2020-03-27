@@ -9,20 +9,18 @@
         $nombre = filter_var(trim($_POST['nombre']), FILTER_SANITIZE_STRING);
         $email  = $_POST['email'];
         $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-        $email .= filter_var($email, FILTER_VALIDATE_EMAIL);
-        $votacion = $_POST['votacion'];
+        $email .= filter_var($email, FILTER_VALIDATE_EMAIL);        
         $mensaje = htmlspecialchars($_POST['mensaje']);
         $mensaje .= trim($mensaje);
         $mensaje .= stripslashes($mensaje); 
 
         #Definimos $respuesta en el if evitando el else interior
-        if (!empty($nombre) && !empty($email) && !empty($votacion) && !empty($mensaje)) {
+        if (!empty($nombre) && !empty($email) && !empty($mensaje)) {
             $email_to = "villa.infantil.mi@live.com.mx";
             $email_subject = "Comentario o sugerencia del servicio del Jardín de Niños Villa Infantil MI";
             $email_message = "Contenido del mensaje: \n\n";
             $email_message .= "Nombre: " . $nombre;
             $email_message .= "\n Correo: " . $email;
-            $email_message .= "\n Calificación: " . $votacion . "estrellas";
             $email_message .= "\n Comentario o sugerencia: " . $mensaje;
 
             $header = "De: " . $email . "\r\n";

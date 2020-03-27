@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Villa Infantil María Isabel</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
     <?php require 'nav-bar.view.php'; ?>
 
     <main class="sec-contact py-4">
@@ -21,40 +6,33 @@
                 <h3>Para más información</h3>
                 <hr>
                 <p class="my-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
-                <p>Ó bien comunicate al <span>55 21 67 74 36</span> en el horario de atención</p>
+                <p>Ó bien comunicate al <span>55 21 67 74 36</span> en horario de 8:00 a.m a 4 p.m</p>
             </div>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form-contact" novalidate>
+            <form action="#" method="post" class="form-contact" id="form-contact" novalidate>
                 <div class="container mx-auto">
                     <div class="group">
-                        <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value="<?php if (!$enviado && isset($nombre)) echo $nombre; ?>"><span class="barra"></span>
-                        <label for="nombre" class="float-label">Nombre completo:</label>
-                        <?php if (!empty($error_nombre)) : ?>
-                            <small class="input-error"><?php echo $error_nombre; ?></small>
-                        <?php endif ?>
+                        <input type="text" name="nombre" id="nombre" required="" autocomplete="off"><span class="barra"></span>
+                        <label for="nombre" class="float-label">Nombre completo: <span class="text-danger">*</span></label>
+                        <div id="error-nombre"></div>                       
                     </div>
                     <div class="group">
-                        <input type="text" name="email" id="email" required="" autocomplete="off" value="<?php if (!$enviado && isset($email)) echo $email; ?>"><span class="barra"></span>
-                        <label for="email" class="float-label">Correo electrónico:</label>
-                        <?php if (!empty($error_email)) : ?>
-                            <small class="input-error"><?php echo $error_email; ?></small>
-                        <?php endif ?>
+                        <input type="text" name="email" id="email" required="" autocomplete="off"><span class="barra"></span>
+                        <label for="email" class="float-label">Correo electrónico: <span class="text-danger">*</span></label>
+                        <div id="error-email"></div>
                     </div>
                     <div class="group">
-                        <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"><?php if (!$enviado && isset($mensaje)) echo $mensaje; ?></textarea><span class="barra"></span>
-                        <label for="mensaje" class="float-label">Mensaje:</label>
-                        <?php if (!empty($error_mensaje)) : ?>
-                            <small class="input-error"><?php echo $error_mensaje; ?></small>
-                        <?php endif ?>
+                        <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"></textarea><span class="barra"></span>
+                        <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label> 
+                        <div id="error-mensaje"></div>                      
                     </div>
-
-                    <?php if (!empty($enviado)) : ?>
-                        <div class="alert-successful" id="content-alert">
-                            <p>Mensaje enviado correctamente &nbsp;<i class="fas fa-check"></i></p>
-                        </div>
-                    <?php endif ?>
-
+                    <div class="text-left">
+                      <small class="text-secondary">* Todos los campos son obligatorios</small>
+                    </div>
+                    <div id="loaders">                      
+                      <img id="spinner" src="img/spinner.gif">
+                    </div>   
                     <div class="text-md-right">
-                        <button type="submit" name="submit" class="btn btn-primary">Enviar ></button>
+                        <button type="submit" name="submit" class="btn btn-form-primary" id="btnForm">Enviar ></button>
                     </div>
                 </div>
             </form>
@@ -87,13 +65,7 @@
 
     <!-- Custom javascript files -->
     <script src="js/nav-bar.js"></script>
-    <script>
-        $(document).ready(function() {
-            setTimeout(function() {
-                $("#content-alert").fadeOut(1500);
-            }, 3000);
-        });
-    </script>
+    <script src="js/form-contact.js"></script>             
 </body>
 
 </html>

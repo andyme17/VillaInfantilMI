@@ -1807,7 +1807,7 @@ button.btn {
 }
 
 /*Inscripctions page*/
-.f1 fieldset h5 {
+.f1 h5 {
   color: #17a2b8;
 }
 
@@ -1845,153 +1845,18 @@ label{
   font-family: "Roboto", sans-serif;
 }
 
-.f1 fieldset .form-row .group {
+.f1 .form-row .group {
   margin: 1rem 0;
 }
 
 .f1 {
   padding: 1.5625rem;
   background: #fff;
-  text-align: center;
-}
-
-.f1-steps {
-  overflow: hidden;
-  position: relative;
-  margin-top: 0.625rem;
-}
-
-.f1-progress {
-  position: absolute;
-  top: 1.5rem;
-  left: 0;
-  width: 100%;
-  height: 0.0625rem;
-  background: #ddd;
-}
-
-.f1-progress-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.0625rem;
-  background: #17a2b8;
-}
-
-.f1-step {
-  position: relative;
-  float: left;
-  width: 33.333333%;
-  padding: 0 0.3125rem;
-}
-
-.f1-step-icon {
-  display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: 0.25rem;
-  background: #ddd;
-  font-size: 1rem;
-  color: #fff;
-  line-height: 2.5rem;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.f1-step.activated .f1-step-icon {
-  background: #fff;
-  border: 0.0625rem solid #17a2b8;
-  color: #17a2b8;
-  line-height: 2.375rem;
-}
-
-.f1-step.active .f1-step-icon {
-  width: 3rem;
-  height: 3rem;
-  margin-top: 0;
-  background: #17a2b8;
-  font-size: 1.375rem;
-  line-height: 3rem;
-}
-/* 
-.f1-step p {
-  color: #ccc;
-}
-
-.f1-step.activated p {
-  color: #17a2b8;
-}
-.f1-step.active p {
-  color: #17a2b8;
-}
- */
-.f1 fieldset {
-  display: none;
-  text-align: left;
 }
 
 .f1-button{
   text-align: right;
   margin-top: 30px;
-}
-
-@media(min-width: 768px ) {
-  .f1-button{
-    text-align: right;
-    margin-top: 50px;
-  }
-
-  .f1-button button.btn {
-    width: 40%;
-  }
-}
-
-.f1-buttons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between; 
-}
-
-.f1-buttons button.btn {
-  width: auto;  
-  padding: 0.5rem 1rem!important;
-}
-
-@media(min-width: 576px) {
-  .f1-buttons {
-    justify-content: space-evenly;        
-  }
-
-  .f1-buttons button.btn {
-    width: 46%;  
-    padding: 0.5rem 0!important;
-  }
-}
-
-@media(min-width: 768px) {
-  .f1-buttons {
-    margin-top: 50px;
-  }
-
-  .f1-buttons button.btn {
-    width: 35%;      
-  }
-}
-
-@media(min-width: 1200px) {
-  .f1-buttons {
-    margin-top: 55px;
-  }
-
-  .f1-buttons button.btn {
-    width: 30%;      
-  }
-}
-
-.input-error {
-  color: #dc3545;
-  font-weight: 600;
 }
 
 .successful{
@@ -2032,3 +1897,4 @@ label{
 a.link-pdf{
   color: #03224e;
 }
+

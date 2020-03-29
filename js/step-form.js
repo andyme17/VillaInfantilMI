@@ -41,18 +41,13 @@ $(document).ready(function(){
     // next step
     $('.f1 .btn-next').on('click', function() {
 		var parent_fieldset = $(this).parents('fieldset');
-		console.log(parent_fieldset);
-    	var next_step = true;
+		var next_step = true;
     	// navigation steps / progress steps
     	var current_active_step = $(this).parents('.f1').find('.f1-step.active');
 		var progress_line = $(this).parents('.f1').find('.f1-progress-line');
 	
 		// fields validation
-	   	/* parent_fieldset.find('input[type="text"]').on('blur',function(){
-
-		   }); */
-			
-			/* console.log($(this));
+		parent_fieldset.find('input[type="text"]').each(function() {	
 			if($(this).attr("name") == "ap-pat-alu" || $(this).attr("name") == "ap-mat-alu"){
 				if( $(this).val() == "" || !$(this).val().match(namePattern)  ) {
 					colorSpan($(this));
@@ -69,8 +64,8 @@ $(document).ready(function(){
 				}else {
 					colorSpanRemove($(this));
 				}
-			}else if()	 */
-			
+			}
+		});	
 	
 
 		// fields validation

@@ -7,7 +7,7 @@ const nombre = document.getElementById('nombre'),
       email = document.getElementById('email'),
       mensaje = document.getElementById('mensaje'),        
       btnForm = document.getElementById('btnForm');
-        
+
 const formOpinion = document.getElementById('form-opinion');
 
 //error divs
@@ -28,7 +28,8 @@ function eventListener(){
 
     nombre.addEventListener('blur',validarCampo);
     email.addEventListener('blur',validarCampo);
-    mensaje.addEventListener('blur',validarCampo);      
+    mensaje.addEventListener('blur',validarCampo);  
+       
     formOpinion.addEventListener('submit', leerFormulario);
 }
 

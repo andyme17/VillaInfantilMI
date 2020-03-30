@@ -21,7 +21,7 @@
             $email_message = "Contenido del mensaje: \n\n";
             $email_message .= " Nombre: " . $nombre;
             $email_message .= "\n Correo: " . $email;
-            $email_message .= "\n Comentario o sugerencia: " . $mensaje;
+            $email_message .= "\n Mensaje: " . $mensaje;
 
             $header = "De: " . $email . "\r\n";
 

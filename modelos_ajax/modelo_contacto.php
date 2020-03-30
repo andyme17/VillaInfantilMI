@@ -19,7 +19,7 @@
             $email_to = "villa.infantil.mi@live.com.mx";
             $email_subject = "Comentario o sugerencia del servicio del Jardín de Niños Villa Infantil MI";
             $email_message = "Contenido del mensaje: \n\n";
-            $email_message .= "Nombre: " . $nombre;
+            $email_message .= " Nombre: " . $nombre;
             $email_message .= "\n Correo: " . $email;
             $email_message .= "\n Comentario o sugerencia: " . $mensaje;
 

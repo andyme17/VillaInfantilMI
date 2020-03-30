@@ -9,11 +9,11 @@
         $nombre = filter_var(trim($_POST['nombre']), FILTER_SANITIZE_STRING);
         $email  = $_POST['email'];
         $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-        $email .= filter_var($email, FILTER_VALIDATE_EMAIL);
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         $votacion = $_POST['votacion'];
         $mensaje = htmlspecialchars($_POST['mensaje']);
-        $mensaje .= trim($mensaje);
-        $mensaje .= stripslashes($mensaje); 
+        $mensaje = trim($mensaje);
+        $mensaje = stripslashes($mensaje); 
 
         #Definimos $respuesta en el if evitando el else interior
         if (!empty($nombre) && !empty($email) && !empty($votacion) && !empty($mensaje)) {

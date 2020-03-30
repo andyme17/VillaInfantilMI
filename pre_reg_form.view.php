@@ -57,11 +57,11 @@
         }
 
         h4 {
-            color: #17a2b8;
+            color: #03224e;
         }
 
         .separador {
-            background-color: #03224e;
+            background-color: #17a2b8;
             height: 2.5px;
             margin: 3px 0;
         }
@@ -201,7 +201,7 @@
         </div>
     </div>
 
-    <h2>SOLICITUD DE INSCRIPCIÓN</h2>
+    <h2>SOLICITUD DE PRE-INSCRIPCIÓN</h2>
 
     <div class="container">
         <h4>Datos del alumno</h4>
@@ -211,7 +211,7 @@
             <tr>
                 <td class="text-left">Inscripción a:</td>
                 <td class="w-10"></td>
-                <td>1° Kinder</td>
+                <td>1° </td>
                 <td class="w-20 campo">X</td>
                 <td>2° Kinder</td>
                 <td class="w-20 campo">X</td>

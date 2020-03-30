@@ -17,7 +17,7 @@
         #Definimos $respuesta en el if evitando el else interior
         if (!empty($nombre) && !empty($email) && !empty($mensaje)) {
             $email_to = "villa.infantil.mi@live.com.mx";
-            $email_subject = "Comentario o sugerencia del servicio del Jardín de Niños Villa Infantil MI";
+            $email_subject = "Solicitud de Informes desde villainfantilmi.edu.mx";
             $email_message = "Contenido del mensaje: \n\n";
             $email_message .= " Nombre: " . $nombre;
             $email_message .= "\n Correo: " . $email;
@@ -26,14 +26,13 @@
             $header = "De: " . $email . "\r\n";
 
             #mail podría fallar, pase lo que pase, la variable será true o false
-           /*Esto se descomenta cuando se realicen pruebas  
             if(mail($email_to, $email_subject, $email_message, $header)){
                 $respuesta =  true;
-            } */
+            } 
 
             //las siguientes dos líneas se tienen que comentar o bien eliminar al final
-            mail($email_to, $email_subject, $email_message, $header); 
-            $respuesta =  true;
+            //mail($email_to, $email_subject, $email_message, $header); 
+            //$respuesta =  true;
         }
     }
     

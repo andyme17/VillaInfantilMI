@@ -266,25 +266,6 @@
             </tr>
         </table>
 
-        <table class="datos-3 my-15">
-            <tr>
-                <td>¿Ha estado inscrito en otra escuela?</td>
-                <td class="w-10"></td>
-                <td>No</td>
-                <td class="campo w-20">X</td>
-                <td class="w-10"></td>
-                <td>Si</td>
-                <td class="campo w-20">X</td>
-            </tr>
-        </table>
-
-        <table class="datos-3 my-15">
-            <tr>
-                <td>Nombre de la escuela de procedencia:</td>
-                <td class="campo w-380">svaiyfbasu</td>
-            </tr>
-        </table>
-
         <p class="p-10">Domicilio particular</p>
 
         <table class="datos-3 my-15">
@@ -313,6 +294,25 @@
                 <td class="w-250 campo">Soyaniquilpan de Juárez</td>
                 <td>Código Postal: </td>
                 <td class="w-60 campo">1520</td>
+            </tr>
+        </table>
+
+        <table class="datos-3 my-15">
+            <tr>
+                <td>¿Ha estado inscrito en otra escuela?</td>
+                <td class="w-10"></td>
+                <td>No</td>
+                <td class="campo w-20">X</td>
+                <td class="w-10"></td>
+                <td>Si</td>
+                <td class="campo w-20">X</td>
+            </tr>
+        </table>
+
+        <table class="datos-3 my-15">
+            <tr>
+                <td>Nombre de la escuela de procedencia:</td>
+                <td class="campo w-380">svaiyfbasu</td>
             </tr>
         </table>
 

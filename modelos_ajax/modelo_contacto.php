@@ -28,11 +28,7 @@
             #mail podría fallar, pase lo que pase, la variable será true o false
             if(mail($email_to, $email_subject, $email_message, $header)){
                 $respuesta =  true;
-            } 
-
-            //las siguientes dos líneas se tienen que comentar o bien eliminar al final
-            //mail($email_to, $email_subject, $email_message, $header); 
-            //$respuesta =  true;
+            }            
         }
     }
     

@@ -201,6 +201,8 @@
         </div>
     </div>
 
+    <?php var_dump($_POST); ?>
+
     <h2>SOLICITUD DE PRE-INSCRIPCIÓN</h2>
 
     <div class="container">

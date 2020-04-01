@@ -1475,7 +1475,9 @@ button.btn {
 }
 
 #error-nombre, #error-email,
-#error-votacion, #error-mensaje{
+#error-votacion, #error-mensaje,
+#error-genero,#error-grado
+{
   color: #a82626;
   text-align: left;
   font-size: 14px;
@@ -1484,7 +1486,7 @@ button.btn {
   transition: all .5s ease;
 } 
 
-#error{
+.error{
   color: #a82626;
   text-align: left;
   font-size: 14px;
@@ -1807,6 +1809,31 @@ button.btn {
 }
 
 /*Inscripctions page*/
+.content-form{
+  position: relative;
+}
+
+.f1{
+  position: relative;
+  padding: 1.5625rem;
+  background: #fff;
+  top: 0;
+  left: 0px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#list-doc{
+  position: relative;
+  padding: 1.5625rem;
+  background: #fff;
+  display: none;
+  top: 0;
+  left: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .f1 h5 {
   color: #17a2b8;
 }
@@ -1847,11 +1874,6 @@ label{
 
 .f1 .form-row .group {
   margin: 1rem 0;
-}
-
-.f1 {
-  padding: 1.5625rem;
-  background: #fff;
 }
 
 .f1-button{
@@ -1898,3 +1920,6 @@ a.link-pdf{
   color: #03224e;
 }
 
+input#esc-procedencia:disabled {
+  background-color: #adb5bd0f;
+}

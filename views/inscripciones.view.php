@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 offset-lg-2 col-lg-8">
-                    <form action="#" method="" class="f1 shadow" id="form-inscrip" novalidate>
+                    <form action="" method="post" class="f1 shadow" id="form-inscrip" novalidate>
                         <h4 class="text-center pb-3">Pre-registro</h4>
                         <p class="text-center pb-4">Completa el siguiente formulario:</p>
                         <div class="container">
@@ -298,7 +298,7 @@
                             <small>Da click en la imagen para descargar</small>
                         </a>
                         <div class="f1-buttons">
-                           <button type="button" class="btn btn-primary" id="btn-fin">Finalizar ></button>
+                            <a class="btn btn-primary" href="<?php echo PATH;?>inscripciones.php">Enviar ></a>                       
                         </div>
                     </div>    
                 </div>

@@ -27,6 +27,8 @@ $(document).ready(function (){
     }
   })
 
+  
+
   //enviamos el formulario
   $('#btnForm').on('click', function (e) {
 
@@ -160,7 +162,7 @@ $(document).ready(function (){
           esc_procedencia = 'NO APLICA';
         }
       
-      const datos= new FormData();
+     const datos= new FormData();
         datos.append('grado',v_grado);
         datos.append('ap_pat_alu',ap_pat_alu);
         datos.append('ap_mat_alu',ap_mat_alu);
@@ -231,7 +233,7 @@ $(document).ready(function (){
       }
     })
 
-  }
+  } 
 
 });
  

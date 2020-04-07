@@ -80,7 +80,7 @@
                                 <div class="col-12 col-sm-7 col-lg-5">
                                     <div class="form-group ml-2">
                                         <label for="lugar-nac">Lugar de nacimiento</label>
-                                        <select class="form-control form-control-sm" id="lugar-nac">
+                                        <select class="form-control form-control-sm" name="lugar-nac" id="lugar-nac">
                                             <option value="">Selecciona una opción</option>
                                             <option value="Aguascalientes">Aguascalientes</option>
                                             <option value="Baja California">Baja California</option>
@@ -317,6 +317,21 @@
 
     <!-- Custom javascript files -->
     <script src="js/form-inscripcion.js"></script>
+    <script>
+    $(document).ready(function (){
+        $('#esc-procedencia').attr('disabled', 'disabled');
+    
+        $('input[name="esc-proc"]').on('click', function () {
+            if ($(this).val() == 'si') {
+            $('#esc-procedencia').removeAttr('disabled');
+            $('#esc-procedencia').focus();
+            } else {
+            $('#esc-procedencia').attr('disabled', 'disabled');
+            }
+        })
+
+    });
+    </script>
     </body>
 
     </html>

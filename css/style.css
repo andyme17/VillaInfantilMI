@@ -20,15 +20,27 @@ body {
   padding-top: 6.25rem;
 }
 
+body#login{
+  padding-top: 0!important;
+}
+
 @media (min-width: 768px) {
   body {
     padding-top: 6.5rem;
+  }
+  
+  body#login{
+    padding-top: 0!important;
   }
 }
 
 @media (min-width: 1024px) {
   body {
     padding-top: 7.5rem;
+  }
+ 
+  body#login{
+    padding-top: 0!important;
   }
 }
 
@@ -419,6 +431,10 @@ header {
   left: 0;
   right: 0;
   opacity: 0.8;
+}
+
+.h-total{
+  height: 100vh;
 }
 
 .content-back-blue {
@@ -1078,16 +1094,22 @@ footer .sec-footer .redes a:hover {
   color: #fff;
 }
 
-.form-contact {
+.form-contact{
   background-color: #f7f9f9;
   width: 80%;
   padding-bottom: 0.625rem;
   border-radius: 0.0625rem;
 }
 
+.form-login{
+  background-color: #ffffff; 
+  padding: 0.625rem 0 1rem 0;
+  border-radius: 0.0625rem;
+}
+
 @media (min-width: 1024px) {
   .form-contact,
-  .form-opinion {
+  .form-opinion{
     padding: 0 1.25rem 0.625rem;
   }
 }
@@ -1097,7 +1119,7 @@ form .group {
   margin: 2.1rem auto;
 }
 
-input[type="text"],
+input[type="text"],input[type="password"],
 textarea {
   font-family: "Roboto", sans-serif;
   color: #646161;
@@ -1116,18 +1138,20 @@ textarea {
 }
 
 @media (min-width: 768px) {
-  input[type="text"],
+  input[type="text"],input[type="password"],
   textarea {
     font-size: 1.125rem;
   }
 }
 
-input[type="text"]:focus,
+input[type="text"]:focus,input[type="password"]:focus,
 textarea:focus {
   outline: none;
   color: #03224e;
 }
 
+input[type="password"]:focus ~ label.float-label,
+input[type="password"]:valid ~ label.float-label,
 input[type="text"]:focus ~ label.float-label,
 input[type="text"]:valid ~ label.float-label,
 textarea:focus ~ label.float-label,
@@ -1140,6 +1164,8 @@ textarea:valid ~ label.float-label {
 }
 
 @media (min-width: 768px) {
+  input[type="password"]:focus ~ label.float-label,
+  input[type="password"]:valid ~ label.float-label,
   input[type="text"]:focus ~ label.float-label,
   input[type="text"]:valid ~ label.float-label,
   textarea:focus ~ label.float-label,
@@ -1172,6 +1198,7 @@ label.float-label {
 }
 
 input[type="text"]:focus ~ .barra:before,
+input[type="password"]:focus ~ .barra:before,
 textarea:focus ~ .barra:before {
   width: 100%;
 }
@@ -1223,6 +1250,16 @@ button.btn {
   button.btn {
     width: 50%;
     display: inline-block;
+  }
+
+  #btnLogin{
+    width: 60%;
+  }
+}
+
+@media(min-width: 992px){
+  #btnLogin{
+    width: 70%;
   }
 }
 
@@ -1402,7 +1439,7 @@ button.btn {
 }
 
 /*Opinion form*/
-.form-opinion {
+.form-opinion,.form-login {
   position: relative;  
 }
 
@@ -1478,13 +1515,23 @@ button.btn {
 #error-votacion, #error-mensaje,
 #error-genero,#error-grado
 {
-  color: #a82626;
+  color: #dc3545;
   text-align: left;
   font-size: 14px;
   padding: 0.5rem;
   display: none;
   transition: all .5s ease;
 } 
+
+.error-login{
+  padding: 0.1rem;
+  color: #fff;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  border: none;
+  background-color: #dc3545;
+  transition: opacity 0.6s ease-in-out;
+}
 
 .error{
   color: #a82626;

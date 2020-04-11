@@ -10,12 +10,6 @@ const nombre = document.getElementById('nombre'),
 
 const formOpinion = document.getElementById('form-opinion');
 
-/* let radio1 = document.getElementById('radio1');
-let radio2 = document.getElementById('radio2');
-let radio3 = document.getElementById('radio3');
-let radio4 = document.getElementById('radio4');
-let radio5 = document.getElementById('radio5');
- */
 //error divs
 var errorNombre = document.getElementById('error-nombre'),
     errorEmail = document.getElementById('error-email'),
@@ -110,7 +104,7 @@ function leerFormulario(e){
         if (votacion[i].checked == true) {
             var valor_votacion = votacion[i].value;        
         }
-    }
+    } 
 
     if(!valor_votacion){  
         errorVotacion.style.display = 'block';

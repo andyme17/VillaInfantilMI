@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 offset-lg-2 col-lg-8">
-                    <form action="" method="post" class="f1 shadow" id="form-inscrip" novalidate>
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="f1 shadow" id="form-inscrip" novalidate>
                         <h4 class="text-center pb-3">Pre-registro</h4>
                         <p class="text-center pb-4">Completa el siguiente formulario:</p>
                         <div class="container">
@@ -36,17 +36,22 @@
                                         <label for="tercero">3° Kinder</label>
                                     </div>                                    
                                 </div>
+                                <div id="error-grado"></div>
                             </div>
                             <div class="form-row pt-1 pt-3">
                                 <div class="group col-sm-6">
-                                    <input type="text" name="ap-pat-alu" id="ap-pat-alu"  autocomplete="off" required><span class="barra"></span>
-                                    <label for="ap-pat-alu" class="float-label" id="text-label">Apellido paterno:</label>                                    
+                                    <input type="text" name="ap-pat-alu" id="ap-pat-alu" autocomplete="off" title="Introduce el apelido paterno" required><span class="barra"></span>
+                                    <label for="ap-pat-alu" class="float-label">Apellido paterno:</label>
+                                    <div id="error-ape-1"></div>                                                                 
                                 </div>
                                 <div class="group col-sm-6">
-                                    <input type="text" name="ap-mat-alu" id="ap-mat-alu"  autocomplete="off" required><span class="barra"></span>
-                                    <label for="ap-mat-alu" class="float-label" id="text-label-2">Apellido materno:</label>                                    
+                                    <input type="text" name="ap-mat-alu" id="ap-mat-alu"  autocomplete="off" title="Introduce el apellido materno" required><span class="barra"></span>
+                                    <label for="ap-mat-alu" class="float-label">Apellido materno:</label> 
+                                    <div id="error-ape-2"></div>                                    
                                 </div>
                             </div>
+                                              
+                            <!-- 
                             <div class="form-row mt-2">
                                 <div class="group col-sm-8">
                                     <input type="text" name="nombre-alu" id="nombre-alu" autocomplete="off" required><span class="barra"></span>
@@ -75,7 +80,7 @@
                                         </div>
                                     </div>                                    
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="form-row mt-2 mt-md-3">
                                 <div class="col-12 col-sm-7 col-lg-5">
                                     <div class="form-group ml-2">
@@ -114,18 +119,22 @@
                                             <option value="	Veracruz">Veracruz</option>
                                             <option value="Yucatán">Yucatán</option>
                                             <option value="Zacatecas">Zacatecas</option>
-                                        </select>                                        
+                                        </select>   
+                                        <div id="error-lugar"></div>                                     
                                     </div>
                                 </div>
                                 <div class="group col-12 col-sm-5 col-lg-4 form-line">
                                     <input type="text" name="religion" id="religion" autocomplete="off" required><span class="barra"></span>
-                                    <label for="religion" class="float-label" id="text-label-6">Religion:</label>                                    
+                                    <label for="religion" class="float-label">Religion:</label>
+                                    <div id="error-religion"></div>                                    
                                 </div>
                                 <div class="group col-12 col-sm-4 col-lg-3 ml-sm-1 ml-lg-0">
-                                    <input type="text" name="tipo-s" id="tipo-sangre" autocomplete="off" required><span class="barra"></span>
-                                    <label for="tipo-s" class="float-label" id="text-label-7">Tipo de sangre:</label>                                    
+                                    <input type="text" name="tipo-s" id="tipo-s" autocomplete="off" required><span class="barra"></span>
+                                    <label for="tipo-s" class="float-label">Tipo de sangre:</label>  
+                                    <div id="error-tipo"></div>                                  
                                 </div>
                             </div>
+                            <!--
                             <p class="p-label">Domicilio particular:</p>
                             <div class="form-row mt-2">
                                 <div class="group col-12 col-sm-7 col-md-6">
@@ -162,26 +171,29 @@
                                     <label for="cp-alu" class="float-label" id="text-label-14">Código Postal:</label>
                                     <div id="error-cp-alu"></div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="form-row mt-md-3">
                                 <div class="col-12 col-md-6 col-lg-5 mt-2 mt-sm-0">
                                     <label>¿Estuvo inscrito en otra escuela? </label>
                                     <div class="form-row pt-2 pt-sm-0 pb-sm-2 text-center" id="campo-radio-2">
                                         <div class="col-6">
-                                            <input type="radio" id="si-esc-proc" name="esc-proc" value="si">
-                                            <label for="si-esc-proc">Si</label>
+                                            <input type="radio" id="si" name="esc-proc" value="si">
+                                            <label for="si">Si</label>
                                         </div>
                                         <div class="col-6">
-                                            <input type="radio" id="no-esc-proc" name="esc-proc" value="no">
-                                            <label for="no-esc-proc">No</label>
+                                            <input type="radio" id="no" name="esc-proc" value="no">
+                                            <label for="no">No</label>
                                         </div>                                        
-                                    </div>                                 
+                                    </div>    
+                                    <div id="error-esc"></div>                             
                                 </div>
                                 <div class="group col-12 col-md-6 col-lg-7">
                                     <input type="text" name="esc-procedencia" id="esc-procedencia" autocomplete="off" required><span class="barra"></span>
-                                    <label for="esc-procedencia" class="float-label" id="text-label-15">Escuela de procedencia:</label>
+                                    <label for="esc-procedencia" class="float-label">Escuela de procedencia:</label>
+                                    <div id="error-proc"></div>
                                 </div>
                             </div>
+                            <!--
 
                             <h5 class="py-3"><i class="fas fa-caret-right"></i>&nbsp;&nbsp;Datos del padre, madre o tutor</h5>
 
@@ -280,27 +292,13 @@
                                     <input type="text" name="email-tutor" id="email-tutor" autocomplete="off" required><span class="barra"></span>
                                     <label for="email-tutor" class="float-label" id="text-label-31">Correo Electrónico:</label>
                                 </div>
-                            </div>
+                            </div> -->
+                            <p id="mensajeError"></p>
                             <div class="f1-button">
-                                <button type="submit" class="btn btn-form-primary" id="btnForm" name="submit" value="enviar">Enviar ></button>
+                                <button type="submit" class="btn btn-primary" id="btnForm" name="submit" value="enviar">Enviar ></button>
                             </div>
                         </div>                        
-                    </form>
-                    <div class="col-12 offset-md-1 col-md-10 text-center shadow" id="list-doc">
-                        <h4 class="pb-4">Acude a nuestras instalaciones</h4>
-                        <p class="p-3">
-                            Una vez concluido el formulario de Pre-Registro, acude a nuestras instalaciones
-                            para concluir con el proceso de inscripción presentando la documentación solicitada
-                            en el siguiente documento:
-                        </p>
-                        <a href="<?php echo PATH; ?>pdf/Requisitos-Villa.pdf" class="link-pdf" download="documentacion_requerida.pdf">
-                            <i class="far fa-file-pdf"></i>
-                            <small>Da click en la imagen para descargar</small>
-                        </a>
-                        <div class="f1-buttons">
-                            <a class="btn btn-primary" href="<?php echo PATH;?>inscripciones.php">Enviar ></a>                       
-                        </div>
-                    </div>    
+                    </form>                    
                 </div>
             </div>
         </div>     
@@ -317,21 +315,6 @@
 
     <!-- Custom javascript files -->
     <script src="js/form-inscripcion.js"></script>
-    <script>
-    $(document).ready(function (){
-        $('#esc-procedencia').attr('disabled', 'disabled');
-    
-        $('input[name="esc-proc"]').on('click', function () {
-            if ($(this).val() == 'si') {
-            $('#esc-procedencia').removeAttr('disabled');
-            $('#esc-procedencia').focus();
-            } else {
-            $('#esc-procedencia').attr('disabled', 'disabled');
-            }
-        })
-
-    });
-    </script>
     </body>
 
     </html>

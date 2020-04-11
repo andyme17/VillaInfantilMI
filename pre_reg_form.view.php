@@ -201,7 +201,7 @@
         </div>
     </div>
 
-    <?php var_dump($_POST); ?>
+    <?php echo $esc_procedencia; ?>
 
     <h2>SOLICITUD DE PRE-INSCRIPCIÓN</h2>
 

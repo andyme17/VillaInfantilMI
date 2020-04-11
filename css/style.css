@@ -1513,7 +1513,6 @@ button.btn {
 
 #error-nombre, #error-email,
 #error-votacion, #error-mensaje,
-#error-genero,#error-grado
 {
   color: #dc3545;
   text-align: left;
@@ -1864,21 +1863,12 @@ button.btn {
   position: relative;
   padding: 1.5625rem;
   background: #fff;
-  top: 0;
-  left: 0px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 #list-doc{
   position: relative;
   padding: 1.5625rem;
   background: #fff;
-  display: none;
-  top: 0;
-  left: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .f1 h5 {

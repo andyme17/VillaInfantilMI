@@ -11,7 +11,7 @@
         return $dato;
     }
 
-    function validarNum($dato)
+    function validar($dato)
     {
         $dato = trim($dato);
         $dato = htmlspecialchars($dato);
@@ -20,20 +20,51 @@
     }
 
     if (isset($_POST['submit'])) {
-        $grado = $_POST['grado'];
+        $grado = validar($_POST['grado']);
         $ap_pat_alu = validarText($_POST['ap-pat-alu']);
         $ap_mat_alu = validarText($_POST['ap-mat-alu']);
-        $lugar_nac = $_POST['lugar-nac'];
-        $tipo_s = $_POST['tipo-s'];
+        $nombre_alu = validarText($_POST['nombre-alu']);
+        $edad_alu = validar($_POST['edad-alu']);
+        $curp = validarText($_POST['curp']);
+        $genero = validarText($_POST['genero']);
+        $lugar_nac = validarText($_POST['lugar-nac']);
         $religion = validarText($_POST['religion']);
-        $esc_proc = $_POST['esc-proc'];
-        $esc_procedencia = !empty($_POST['esc-procedencia']) ? $_POST['esc-procedencia']  : 'NO APLICA';
-        $email_tutor = "villa.infantil.mi@live.com.mx";
+        $tipo_s = validar($_POST['tipo-s']);       
+        $calle_alu = validar($_POST['calle-alu']);
+        $num_int_alu = validar($_POST['num-int-alu']);
+        $num_ext_alu = validar($_POST['num-ext-alu']);
+        $colonia_alu = validar($_POST['colonia-alu']);
+        $alcaldia_alu = validarText($_POST['alcaldia-alu']);
+        $entidad_alu = validarText($_POST['entidad-alu']);
+        $cp_alu = validar($_POST['cp-alu']);
+        $esc_proc = validar($_POST['esc-proc']);
+        $esc_procedencia = !empty($_POST['esc-procedencia']) ? validarText($_POST['esc-procedencia'])  : 'NO APLICA';
+        $ap_pat_tutor = validarText($_POST['ap-pat-tutor']);
+        $ap_mat_tutor = validarText($_POST['ap-mat-tutor']);
+        $nombre_tutor = validarText($_POST['nombre-tutor']);
+        $edad_tutor = validar($_POST['edad-tutor']);
+        $grado_estudio = validarText($_POST['grado-estudio']);
+        $ocupacion = validarText($_POST['ocupacion']);
+        $calle_tutor = validar($_POST['calle-tutor']);
+        $num_int_tutor = validar($_POST['num-int-tutor']);
+        $num_ext_tutor = validar($_POST['num-ext-tutor']);
+        $colonia_tutor = validar($_POST['colonia-tutor']);
+        $alcaldia_tutor = validarText($_POST['alcaldia-tutor']);
+        $entidad_tutor = validarText($_POST['entidad-tutor']);
+        $cp_tutor = validar($_POST['cp-tutor']);
+        $tel_fijo = validar($_POST['tel-fijo']);
+        $tel_cel = validar($_POST['tel-cel']);
+        $tel_ofi = validar($_POST['tel-ofi']);
+        $email_tutor = validar($_POST['email-tutor']);
 
-        if (
-            !empty($grado) && !empty($ap_pat_alu) && !empty($ap_pat_alu) && !empty($lugar_nac) && !empty($tipo_s) &&
-            !empty($religion) && !empty($esc_proc) && !empty($esc_procedencia) //&& !empty($email_tutor)
-        ) {
+        
+        if (!empty($grado) && !empty($ap_pat_alu) && !empty($ap_mat_alu) && !empty($nombre_alu) && !empty($edad_alu) && !empty($curp) &&
+            !empty($genero) && !empty($lugar_nac) && !empty($tipo_s) && !empty($religion) && !empty($calle_alu) && !empty($num_int_alu) &&
+            !empty($num_ext_alu) && !empty($colonia_alu) && !empty($alcaldia_alu) && !empty($entidad_alu) && !empty($cp_alu) &&
+            !empty($esc_proc) && !empty($esc_procedencia) && !empty($ap_pat_tutor) && !empty($ap_mat_tutor) && !empty($nombre_tutor) &&
+            !empty($edad_tutor) && !empty($grado_estudio) && !empty($ocupacion) && !empty($calle_tutor) && !empty($num_int_tutor) &&
+            !empty($num_ext_tutor) && !empty($colonia_tutor) && !empty($alcaldia_tutor) && !empty($entidad_tutor) && !empty($cp_tutor) &&
+            !empty($tel_fijo) && !empty($tel_cel) && !empty($tel_ofi) && !empty($email_tutor)) {
 
             //recogiendo el contenido del otro fichero 
             ob_start(); //buffer que recoge el contenido del fichero de abajo
@@ -44,13 +75,13 @@
             $html2pdf->setDefaultFont('Arial');
             $html2pdf->writeHTML($html);
 
-            $email_to = "villa.infantil.mi@live.com.mx";
-            $subject = "Solicitud de Pre-Inscripción desde villainfantilmi.edu.mx";
+            $email_to = "zunosan.ricardo506@gmail.com";
+            $subject = "Solicitud de Pre-Inscripción de ". $nombre_alu. " ".$ap_pat_alu." ".$ap_mat_alu;
             
             $message = "<p>Consulte el archivo adjunto.</p>";
             $separator = md5(time());
             $eol = PHP_EOL;
-            $filename = "pre_inscripcion.pdf";
+            $filename = $nombre_alu."_".$ap_pat_alu."_".$ap_mat_alu.".pdf";
             $pdfdoc = $html2pdf->output('', 'S');
             $attachment = chunk_split(base64_encode($pdfdoc));
         

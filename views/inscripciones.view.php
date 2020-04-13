@@ -49,23 +49,24 @@
                                     <label for="ap-mat-alu" class="float-label">Apellido materno:</label> 
                                     <div id="error-ape-2"></div>                                    
                                 </div>
-                            </div>
-                                              
-                            <!-- 
+                            </div>               
                             <div class="form-row mt-2">
                                 <div class="group col-sm-8">
                                     <input type="text" name="nombre-alu" id="nombre-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="nombre-alu" class="float-label" id="text-label-3">Nombre(s):</label>                                    
+                                    <label for="nombre-alu" class="float-label">Nombre(s):</label>
+                                    <div id="error-nombre-1"></div>                                    
                                 </div>
                                 <div class="group col-sm-4">
                                     <input type="text" name="edad-alu" id="edad-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="edad-alu" class="float-label" id="text-label-4">Edad:</label>
+                                    <label for="edad-alu" class="float-label">Edad:</label>
+                                    <div id="error-edad-1"></div>
                                 </div>
                             </div>
                             <div class="form-row mt-2">
                                 <div class="group col-12 col-sm-8">
                                     <input type="text" name="curp" id="curp" autocomplete="off" required><span class="barra"></span>
-                                    <label for="curp" class="float-label" id="text-label-5">CURP:</label>                                    
+                                    <label for="curp" class="float-label">CURP:</label>   
+                                    <div id="error-curp"></div>                                 
                                 </div>
                                 <div class="form-radio col-12 col-sm-3 mt-2 mt-sm-0">
                                     <label>Género:</label>
@@ -78,9 +79,10 @@
                                             <input type="radio" id="m" name="genero" value="m">
                                             <label for="m">M</label>                                            
                                         </div>
-                                    </div>                                    
+                                    </div>  
+                                    <div id="error-genero"></div>                                  
                                 </div>
-                            </div>-->
+                            </div>
                             <div class="form-row mt-2 mt-md-3">
                                 <div class="col-12 col-sm-7 col-lg-5">
                                     <div class="form-group ml-2">
@@ -134,44 +136,49 @@
                                     <div id="error-tipo"></div>                                  
                                 </div>
                             </div>
-                            <!--
+                            
                             <p class="p-label">Domicilio particular:</p>
                             <div class="form-row mt-2">
                                 <div class="group col-12 col-sm-7 col-md-6">
                                     <input type="text" name="calle-alu" id="calle-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="calle-alu" class="float-label" id="text-label-8">Calle:</label>                                    
+                                    <label for="calle-alu" class="float-label">Calle:</label>
+                                    <div id="error-calle-1"></div>                                    
                                 </div>
                                 <div class="group col-12 col-sm-5 col-md-3">
                                     <input type="text" name="num-int-alu" id="num-int-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="num-int-alu" class="float-label" id="text-label-9">No. interior:</label>                                 
+                                    <label for="num-int-alu" class="float-label">No. interior:</label>
+                                    <div id="error-int-1"></div>                                  
                                 </div>
                                 <div class="group col-12 col-sm-5 col-md-3">
                                     <input type="text" name="num-ext-alu" id="num-ext-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="num-ext-alu" class="float-label" id="text-label-10">No. exterior:</label>                                   
+                                    <label for="num-ext-alu" class="float-label">No. exterior:</label>
+                                    <div id="error-ext-1"></div>                                    
                                 </div>
-                            </div>
+                            </div>                            
                             <div class="form-row mt-md-2">
                                 <div class="group col-12 col-sm-7">
                                     <input type="text" name="colonia-alu" id="colonia-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="colonia-alu" class="float-label" id="text-label-11">Colonia:</label>                                    
+                                    <label for="colonia-alu" class="float-label">Colonia:</label>
+                                    <div id="error-colonia-1"></div>                                    
                                 </div>
                                 <div class="group col-12 col-sm-5">
                                     <input type="text" name="alcaldia-alu" id="alcaldia-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="alcaldia-alu" class="float-label" id="text-label-12">Alcaldía o municipio:</label>                                   
+                                    <label for="alcaldia-alu" class="float-label">Alcaldía o municipio:</label> 
+                                    <div id="error-alca-1"></div>                                  
                                 </div>
                             </div>
                             <div class="form-row mt-md-2">
                                 <div class="group col-12 col-sm-8">
                                     <input type="text" name="entidad-alu" id="entidad-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="entidad-alu" class="float-label" id="text-label-13">Entidad federativa:</label>
-                                    <div id="error-enti-alu"></div>
+                                    <label for="entidad-alu" class="float-label">Entidad federativa:</label>
+                                    <div id="error-enti-1"></div>
                                 </div>
                                 <div class="group col-12 col-sm-4">
                                     <input type="text" name="cp-alu" id="cp-alu" autocomplete="off" required><span class="barra"></span>
-                                    <label for="cp-alu" class="float-label" id="text-label-14">Código Postal:</label>
-                                    <div id="error-cp-alu"></div>
+                                    <label for="cp-alu" class="float-label">Código Postal:</label>
+                                    <div id="error-cp-1"></div>
                                 </div>
-                            </div>-->
+                            </div>
                             <div class="form-row mt-md-3">
                                 <div class="col-12 col-md-6 col-lg-5 mt-2 mt-sm-0">
                                     <label>¿Estuvo inscrito en otra escuela? </label>
@@ -193,106 +200,122 @@
                                     <div id="error-proc"></div>
                                 </div>
                             </div>
-                            <!--
-
+                          
                             <h5 class="py-3"><i class="fas fa-caret-right"></i>&nbsp;&nbsp;Datos del padre, madre o tutor</h5>
 
                             <div class="form-row mt-1 mt-md-3">
                                 <div class="group col-12 col-sm-6">
                                     <input type="text" name="ap-pat-tutor" id="ap-pat-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="ap-pat-tutor" class="float-label" id="text-label-16">Apellido paterno:</label>
+                                    <label for="ap-pat-tutor" class="float-label">Apellido paterno:</label>
+                                    <div id="error-ape-3"></div> 
                                 </div>
                                 <div class="group col-12 col-sm-6">
                                     <input type="text" name="ap-mat-tutor" id="ap-mat-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="ap-mat-tutor" class="float-label" id="text-label-17">Apellido materno:</label>
+                                    <label for="ap-mat-tutor" class="float-label">Apellido materno:</label>
+                                    <div id="error-ape-4"></div> 
                                 </div>
                             </div>
                             <div class="form-row mt-2">
                                 <div class="group col-12 col-sm-8">
                                     <input type="text" name="nombre-tutor" id="nombre-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="nombre-tutor" class="float-label" id="text-label-18">Nombre(s):</label>
+                                    <label for="nombre-tutor" class="float-label">Nombre(s):</label>
+                                    <div id="error-nombre-2"></div>
                                 </div>
                                 <div class="group col-12 col-sm-4">
                                     <input type="text" name="edad-tutor" id="edad-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="edad-tutor" class="float-label" id="text-label-19">Edad:</label>
+                                    <label for="edad-tutor" class="float-label">Edad:</label>
+                                    <div id="error-edad-2"></div>
                                 </div>
-                            </div>
+                            </div>                                    
                             <div class="form-row mt-2 mt-md-3">
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group ml-1">
                                         <label for="grado-estudio" class="">Último grado de estudios:</label>
-                                        <select class="form-control form-control-sm" id="grado-estudio">
+                                        <select class="form-control form-control-sm"  name="grado-estudio" id="grado-estudio">
                                             <option value="">Selecciona una opción</option>
                                             <option value="Ninguno">Ninguno</option>
                                             <option value="Preescolar">Preescolar</option>
                                             <option value="Primaria">Primaria</option>
                                             <option value="Secundaria">Secundaria</option>
-                                            <option value="Preparatoria o bachillerato">Preparatoria o bachillerato</option>
+                                            <option value="Preparatoria o Bachillerato">Preparatoria o Bachillerato</option>
                                             <option value="Carrera tecnica">Carrera técnica</option>
                                             <option value="Licenciatura">Licenciatura</option>
-                                            <option value="Maestría o Doctorado">Maestría o Doctorado</option>
+                                            <option value="Maestria o Doctorado">Maestría o Doctorado</option>
                                         </select>
+                                        <div id="error-estudio"></div>  
                                     </div>
                                 </div>
                                 <div class="group col-12 col-sm-6">
-                                    <input type="text" name="ocupacion" id="ocupacion" required><span class="barra"></span>
-                                    <label for="ocupacion" class="float-label" id="text-label-20">Ocupación:</label>
+                                    <input type="text" name="ocupacion" id="ocupacion" autocomplete="off" required><span class="barra"></span>
+                                    <label for="ocupacion" class="float-label">Ocupación:</label>
+                                    <div id="error-ocupacion"></div>
                                 </div>
-                            </div>
+                            </div> 
                             <p class="p-label">Domicilio particular:</p>
                             <div class="form-row">
                                 <div class="group col-12 col-sm-7 col-md-6">
                                     <input type="text" name="calle-tutor" id="calle-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="calle-tutor" class="float-label" id="text-label-21">Calle:</label>
+                                    <label for="calle-tutor" class="float-label">Calle:</label>
+                                    <div id="error-calle-2"></div> 
                                 </div>
                                 <div class="group col-12 col-sm-5 col-md-3">
                                     <input type="text" name="num-int-tutor" id="num-int-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="num-int-tutor" class="float-label" id="text-label-22">No. interior:</label>
+                                    <label for="num-int-tutor" class="float-label">No. interior:</label>
+                                    <div id="error-int-2"></div> 
                                 </div>
                                 <div class="group col-12 col-sm-5 col-md-3">
                                     <input type="text" name="num-ext-tutor" id="num-ext-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="num-ext-tutor" class="float-label" id="text-label-23">No. exterior:</label>
+                                    <label for="num-ext-tutor" class="float-label">No. exterior:</label>
+                                    <div id="error-ext-2"></div>   
                                 </div>
                             </div>
                             <div class="form-row mt-md-2">
                                 <div class="group col-12 col-sm-7">
                                     <input type="text" name="colonia-tutor" id="colonia-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="colonia-tutor" class="float-label" id="text-label-24">Colonia:</label>
+                                    <label for="colonia-tutor" class="float-label">Colonia:</label>
+                                    <div id="error-colonia-2"></div>   
                                 </div>
                                 <div class="group col-12 col-sm-5">
-                                    <input type="text" name="alcaldia-tutor" id="alcaldia-tutor" required><span class="barra"></span>
-                                    <label for="alcaldia-tutor" class="float-label" id="text-label-25">Alcaldía o municipio:</label>
+                                    <input type="text" name="alcaldia-tutor" id="alcaldia-tutor" autocomplete="off" required><span class="barra"></span>
+                                    <label for="alcaldia-tutor" class="float-label">Alcaldía o municipio:</label>
+                                    <div id="error-alca-2"></div>
                                 </div>
                             </div>
                             <div class="form-row mt-md-2">
                                 <div class="group col-12 col-sm-8">
                                     <input type="text" name="entidad-tutor" id="entidad-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="entidad-tutor" class="float-label" id="text-label-26">Entidad federativa:</label>
+                                    <label for="entidad-tutor" class="float-label">Entidad federativa:</label>
+                                    <div id="error-enti-2"></div>
                                 </div>
                                 <div class="group col-12 col-sm-4">
                                     <input type="text" name="cp-tutor" id="cp-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="cp-tutor" class="float-label" id="text-label-27">Código Postal:</label>
+                                    <label for="cp-tutor" class="float-label">Código Postal:</label>
+                                    <div id="error-cp-2"></div>
                                 </div>
                             </div>
                             <p class="p-label">Datos de contacto:</p>
                             <div class="form-row mt-md-2">
                                 <div class="group col-12 col-sm-6 col-md-4">
                                     <input type="text" name="tel-fijo" id="tel-fijo" autocomplete="off" required><span class="barra"></span>
-                                    <label for="tel-fijo" class="float-label" id="text-label-28">Teléfono Fijo:</label>
+                                    <label for="tel-fijo" class="float-label">Teléfono Fijo:</label>
+                                    <div id="error-tel-1"></div>
                                 </div>
                                 <div class="group col-12 col-sm-6 col-md-4">
                                     <input type="text" name="tel-cel" id="tel-cel" autocomplete="off" required><span class="barra"></span>
-                                    <label for="tel-cel" class="float-label" id="text-label-29">Teléfono Celular:</label>
+                                    <label for="tel-cel" class="float-label">Teléfono Celular:</label>
+                                    <div id="error-tel-2"></div>
                                 </div>
                                 <div class="group col-12 col-sm-6 col-md-4">
                                     <input type="text" name="tel-ofi" id="tel-ofi" autocomplete="off" required><span class="barra"></span>
-                                    <label for="tel-ofi" class="float-label" id="text-label-30">Teléfono de Oficina:</label>
+                                    <label for="tel-ofi" class="float-label">Teléfono de Oficina:</label>
+                                    <div id="error-tel-3"></div>
                                 </div>
                                 <div class="group col-12 col-md-8">
                                     <input type="text" name="email-tutor" id="email-tutor" autocomplete="off" required><span class="barra"></span>
-                                    <label for="email-tutor" class="float-label" id="text-label-31">Correo Electrónico:</label>
+                                    <label for="email-tutor" class="float-label">Correo Electrónico:</label>
+                                    <div id="error-email"></div>
                                 </div>
-                            </div> -->
+                            </div>
                             <p id="mensajeError"></p>
                             <div class="f1-button">
                                 <button type="submit" class="btn btn-primary" id="btnForm" name="submit" value="enviar">Enviar ></button>

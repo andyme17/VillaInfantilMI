@@ -1,6 +1,6 @@
 <?php require 'nav-bar.view.php'; ?>
 
-<main class="img-back py-5">
+<main class="img-back py-3 py-md-5">
     <div class="container">
         <div class="row">
             <div class="col-12 offset-lg-2 col-lg-8">
@@ -9,7 +9,7 @@
                     <h3 class="text-center text-danger">Por favor inténtelo más tarde.</h3>
                         <img src="<?php echo PATH; ?>img/icono-error.jpg" alt="Imagen de error" class="img-fluid icono-error">
                     <div class="f1-buttons">
-                        <a class="btn btn-primary mb-3" href="<?php echo PATH; ?>inscripciones.php">Regresar al formulario ></a>
+                        <a class="btn btn-primary mb-3" href="<?php echo PATH; ?>inscripciones.php">< Regresar al formulario</a>
                     </div>
                 </div>
             </div>

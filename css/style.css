@@ -1871,6 +1871,11 @@ button.btn {
   background: #fff;
 }
 
+.icono-error{
+  width: 250px;
+  margin: 40px 0;
+}
+
 .f1 h5 {
   color: #17a2b8;
 }

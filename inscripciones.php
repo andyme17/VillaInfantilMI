@@ -109,15 +109,10 @@
             $body .= "--" . $separator . "--";
         
             if (mail($email_to, $subject, $body, $headers)) {
-        
-                $msgsuccess = 'Email enviado Correctamente';
-                
-            } else {
-        
-                $msgerror = 'Email no ha sido enviado';
-            }
-            
-            header('Location: recibe.php');        
+                header('Location: recibe.php');                
+            } else {        
+                header('Location: error.php');
+            }           
         }
     }
 

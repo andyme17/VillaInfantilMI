@@ -336,10 +336,11 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/headroom.min.js"></script>
-    <script src="js/nav-bar.js"></script>
-
+    
     <!-- Custom javascript files -->
+    <script src="js/nav-bar.js"></script>
     <script src="js/form-inscripcion.js"></script>
+    
     </body>
 
     </html>

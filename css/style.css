@@ -1512,7 +1512,7 @@ button.btn {
 }
 
 #error-nombre, #error-email,
-#error-votacion, #error-mensaje,
+#error-votacion, #error-mensaje
 {
   color: #dc3545;
   text-align: left;

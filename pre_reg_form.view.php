@@ -340,7 +340,7 @@
         <table class="datos-nombre my-15">
             <tr>
                 <td class="fuente-campo"><?php if (($ap_pat_tutor)) echo strtoupper($ap_pat_tutor); ?></td>
-                <td class="fuente-campo"><?php if (($ap_mat_tutor)) echo strtoupper($ap_pat_tutor); ?></td>
+                <td class="fuente-campo"><?php if (($ap_mat_tutor)) echo strtoupper($ap_mat_tutor); ?></td>
                 <td class="fuente-campo"><?php if (($nombre_tutor)) echo strtoupper($nombre_tutor); ?></td>
             </tr>
             <tr class="campo">

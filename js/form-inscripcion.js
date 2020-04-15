@@ -4,7 +4,7 @@ var formulario = document.getElementById('form-inscrip'),
     esc_proc_no = document.getElementById('no'),
     esc_procedencia = document.getElementById('esc-procedencia');
 
-const regText = /^[ÑA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/;
+const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 const regNum = /^([0-9])*$/;
 const regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
@@ -112,20 +112,41 @@ function validaEstudio(){
   return true;
 }
 
+function validaEntidad1(){
+  var entidad_alu = document.getElementById('entidad-alu');
+  limpiarError('error-enti-1');
+
+  if(entidad_alu.value == ""){
+    error2('error-enti-1','Selecciona una opción');
+    return false;
+  }
+
+  return true;
+}
+
+function validaEntidad2(){
+  var entidad_tutor = document.getElementById('entidad-tutor');
+  limpiarError('error-enti-2');
+
+  if(entidad_tutor.value == ""){
+    error2('error-enti-2','Selecciona una opción');
+    return false;
+  }
+
+  return true;
+}
+
 function validaText(campo) {
   limpiarError('error-ape-1');
   limpiarError('error-ape-2');
   limpiarError('error-nombre-1');
-  limpiarError('error-religion');
-  limpiarError('error-tipo');
+  limpiarError('error-religion');  
   limpiarError('error-alca-1');
-  limpiarError('error-enti-1');  
   limpiarError('error-ape-3');
   limpiarError('error-ape-4');
   limpiarError('error-nombre-2');
   limpiarError('error-ocupacion');
   limpiarError('error-alca-2');
-  limpiarError('error-enti-2');
 
   if (campo.value.trim() == "" || !regText.test(campo.value.trim())) {
     if (campo.name == "ap-pat-alu") {
@@ -134,15 +155,11 @@ function validaText(campo) {
       error(campo, 'error-ape-2', "Ingrese un apellido.");      
     }else if(campo.name == "religion"){
       error(campo,'error-religion', "Ingrese una religión de lo contrario coloca ninguna.");
-    }else if(campo.name == "tipo-s"){
-      error(campo,'error-tipo', "Ingrese un tipo de sangre.");
     }else if(campo.name == "nombre-alu"){
       error(campo,'error-nombre-1', "Ingrese un nombre.");
     }else if(campo.name == "alcaldia-alu"){
       error(campo,'error-alca-1','Ingrese una alcaldía o municipio'); 
-    }else if(campo.name == "entidad-alu"){
-      error(campo,'error-enti-1','Ingrese una entidad federativa');
-    }if (campo.name == "ap-pat-tutor") {
+    }else if (campo.name == "ap-pat-tutor") {
       error(campo, 'error-ape-3', "Ingrese un apellido.");      
     }else if (campo.name == "ap-mat-tutor") {
       error(campo, 'error-ape-4', "Ingrese un apellido.");      
@@ -152,9 +169,7 @@ function validaText(campo) {
       error(campo,'error-ocupacion', "Ingrese una ocupación.");
     }else if(campo.name == "alcaldia-tutor"){
       error(campo,'error-alca-2','Ingrese una alcaldía o municipio'); 
-    }else if(campo.name == "entidad-tutor"){
-      error(campo,'error-enti-2','Ingrese una entidad federativa');
-    } 
+    }
 
     return false;
   }
@@ -213,7 +228,8 @@ function validaCampoVacio(campo){
   limpiarError('error-int-2');
   limpiarError('error-ext-2');
   limpiarError('error-colonia-2');
- 
+  limpiarError('error-tipo');
+
   if (campo.value.trim() == "") {
     if (campo.name == "calle-alu") {
       error(campo, 'error-calle-1', "Ingrese una calle.");      
@@ -231,7 +247,10 @@ function validaCampoVacio(campo){
       error(campo,'error-ext-2', "Ingrese un número exterior.");
     }else if(campo.name == "colonia-tutor"){
       error(campo, 'error-colonia-2', 'Ingrese una colonia.');
+    }else if(campo.name == "tipo-s"){
+      error(campo,'error-tipo', "Ingrese un tipo de sangre.");
     }
+
     return false;
   }
   return true;
@@ -279,20 +298,19 @@ function validaTel(campo){
 } 
  
 function validaEmail(){
-  limpiarError('error-email');
+  limpiarError('error-correo');
   var email_tutor = document.getElementById('email-tutor');
 
   if(email_tutor.value.trim() == ""){
-    error(email_tutor, 'error-email',"Ingrese un correo electrónico.");
+    error(email_tutor, 'error-correo',"Ingrese un correo electrónico.");
     return false;
   }else if(!regEmail.test(email_tutor.value.trim())){
-    error(email_tutor, 'error-email', 'Ingrese un correo electrónico válido.');
+    error(email_tutor, 'error-correo', 'Ingrese un correo electrónico válido.');
     return false;
   }
 
   return true;
 }
-
 
 function error(elemento, div_error, mensaje) {
   document.getElementById(div_error).textContent = mensaje;
@@ -322,7 +340,6 @@ function validar(e) {
       num_ext_alu = document.getElementById('num-ext-alu'),
       colonia_alu = document.getElementById('colonia-alu'),
       alcaldia_alu = document.getElementById('alcaldia-alu'),
-      entidad_alu = document.getElementById('entidad-alu'),
       cp_alu = document.getElementById('cp-alu'),
       ap_pat_tutor = document.getElementById('ap-pat-tutor'),
       ap_mat_tutor = document.getElementById('ap-mat-tutor'),
@@ -333,20 +350,19 @@ function validar(e) {
       num_int_tutor = document.getElementById('num-int-tutor'),
       num_ext_tutor = document.getElementById('num-ext-tutor'),
       colonia_tutor = document.getElementById('colonia-tutor'),
-      alcaldia_tutor = document.getElementById('alcaldia-tutor'),
-      entidad_tutor = document.getElementById('entidad-tutor'),
+      alcaldia_tutor = document.getElementById('alcaldia-tutor'),      
       cp_tutor = document.getElementById('cp-tutor'),
       tel_fijo = document.getElementById('tel-fijo'),
       tel_cel = document.getElementById('tel-cel'),
       tel_ofi = document.getElementById('tel-ofi');
       
   if (validaGrado() && validaText(ap_pat_alu) && validaText(ap_mat_alu) && validaText(nombre_alu) && validaEdad(edad_alu) &&
-      validaCurp() && validaGenero() && validaLugar() && validaText(religion) && validaText(tipo_s) && validaCampoVacio(calle_alu) &&
+      validaCurp() && validaGenero() && validaLugar() && validaText(religion) && validaCampoVacio(tipo_s) && validaCampoVacio(calle_alu) &&
       validaCampoVacio(num_int_alu) && validaCampoVacio(num_ext_alu) && validaCampoVacio(colonia_alu) && validaText(alcaldia_alu) &&
-      validaText(entidad_alu) && validaCp(cp_alu) && validaRadioEsc() && validaText(ap_pat_tutor) && validaText(ap_mat_tutor) &&
+      validaEntidad1() && validaCp(cp_alu) && validaRadioEsc() && validaText(ap_pat_tutor) && validaText(ap_mat_tutor) &&
       validaText(nombre_tutor) && validaEdad(edad_tutor) && validaEstudio() && validaText(ocupacion) && validaCampoVacio(calle_tutor) &&
       validaCampoVacio(num_int_tutor) && validaCampoVacio(num_ext_tutor) && validaCampoVacio(colonia_tutor) && validaText(alcaldia_tutor) &&
-      validaText(entidad_tutor) && validaCp(cp_tutor) && validaTel(tel_fijo) && validaTel(tel_cel) && validaTel(tel_ofi) && validaEmail() &&
+      validaEntidad2() && validaCp(cp_tutor) && validaTel(tel_fijo) && validaTel(tel_cel) && validaTel(tel_ofi) && validaEmail() &&
       confirm("Pulsa aceptar para continuar con el proceso de inscripción")) {     
       
       return true;

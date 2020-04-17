@@ -226,9 +226,10 @@
                       </p>                      
                     </div>
                     <div id="error-votacion"></div>
-                    <div class="group">
-                      <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off"></textarea><span class="barra"></span>
-                      <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>                      
+                    <div class="group pt-2 pb-3">
+                      <textarea name="mensaje" id="mensaje" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(200);"></textarea><span class="barra"></span>
+                      <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
+                      <div id="res" class="text-secondary text-right">0 caracter/s</div>                      
                       <div id="error-mensaje"></div>
                     </div>
                     <div class="text-left">

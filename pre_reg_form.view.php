@@ -186,16 +186,7 @@
             border: 1px solid #363535;
             text-align: center;
         }
-
-        .salto-1 {
-            background-color: #17a2b8;
-            height: 50px;
-        }
-
-        .salto-2 {
-            background-color: #f5d787;
-            height: 20px;
-        }
+       
     </style>
 </head>
 

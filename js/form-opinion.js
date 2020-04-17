@@ -39,6 +39,36 @@ function inicioApp(){
     btnForm.disabled = true;
 }
 
+function countChar(){
+		
+    var total=200;
+
+    setTimeout(function(){
+        var respuesta = document.getElementById('res');
+        var cantidad = mensaje.value.length;
+
+        respuesta.innerHTML = cantidad + ' caractere/s, te quedan ' + (total - cantidad) ;
+        if(cantidad >= total){       
+            respuesta.classList.remove('text-secondary');   
+            respuesta.classList.add('text-danger');
+        }
+        else {
+            respuesta.classList.remove('text-danger'); 
+            respuesta.classList.add('text-secondary');
+        }
+    },10);
+
+}
+
+function limita(maximoCaracteres) {
+    if(mensaje.value.length >= maximoCaracteres ) {
+      return false;
+    }
+    else {
+      return true;
+    }
+}
+
 function validarCampo(){
     //se valida la longitud del campo y no este vacio     
 
@@ -50,8 +80,7 @@ function validarCampo(){
             nombre.focus();
         }else{
             errorNombre.style.display = 'none';
-            errorNombre.classList.remove('error');
-            console.log(this.value);
+            errorNombre.classList.remove('error');           
         }         
     }else if(this.name === 'email'){
         if(email.value.trim() === ''){
@@ -64,8 +93,7 @@ function validarCampo(){
             errorEmail.innerHTML = 'Por favor, ingresa un correo valido.';  
             errorEmail.classList.add('error');  
             email.focus(); 
-        }else{
-            console.log(this.value);
+        }else{            
             errorEmail.style.display = 'none';
             errorEmail.classList.remove('error');  
         }       
@@ -78,13 +106,12 @@ function validarCampo(){
         }else{
             errorMensaje.style.display = 'none';
             errorMensaje.classList.remove('error');
-            console.log(this.value);
+            
         }       
     }
   
     if(email.value !== '' && nombre.value !== '' && mensaje.value !== ''){        
         if(document.querySelectorAll('.error').length === 0){
-            console.log('el campo no esta vacio');
             btnForm.className = 'btn btn-primary';
             btnForm.disabled = false;       
         }      
@@ -144,6 +171,8 @@ function enviarComentario(datos){
                         
             //reseteamos formulario
             formOpinion.reset();
+            document.getElementById('res').innerHTML = 0 + ' caractere/s, te quedan ' + 200;
+
         }        
     }
 

@@ -802,8 +802,8 @@ header {
   }
 }
 
-@media (min-width: 1024px) {
-  .sec-testimonios .card {
+@media(min-width: 992px){
+  .sec-testimonios .card{
     width: 100%;
     margin: 0;
     height: 19.6875rem;
@@ -828,7 +828,7 @@ header {
 
 @media (min-width: 1200px) {
   .sec-testimonios .card {
-    height: 16.875rem;
+    height: 18.875rem;
   }
 }
 
@@ -1533,7 +1533,7 @@ button.btn {
 }
 
 .error{
-  color: #a82626;
+  color: #a82626!important;
   text-align: left;
   font-size: 14px;
   padding: 0.5rem;

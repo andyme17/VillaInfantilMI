@@ -402,7 +402,7 @@ header {
   opacity: 0.8;
 }
 
-.img-back h2 {
+.img-back h2{
   position: relative;
 }
 
@@ -1965,3 +1965,137 @@ a.link-pdf{
 input#esc-procedencia:disabled {
   background-color: #adb5bd0f;
 }
+
+/**Gestor**/
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;  
+  color: #03224e;  
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  transition: all 0.3s;
+  background: #fbc025;
+  margin-left: -250px;
+  z-index: 500;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  display: flex;
+  background-color: #f3b523;
+  align-items: center;  
+}
+
+.sidebar-header p{
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.sidebar-header .fas.fa-user-circle{
+  font-size: 30px;
+}
+
+#sidebar ul li a,#sidebar ul p {
+  padding: 10px 20px;
+  font-size: 20px;
+  display: block;
+  background: linear-gradient(360deg,#f8b72a, #fcc224);
+}
+
+#sidebar ul li a:hover{
+  background: -webkit-linear-gradient(
+    bottom,
+    rgb(23, 162, 184) 0%,
+    rgb(1, 161, 221) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgb(23, 162, 184) 0%,
+    rgb(1, 161, 221) 100%
+  );
+  color: #fff; 
+}
+
+#sidebar a[aria-expanded="true"] {
+    color: #fff;
+    background: #1194a9;
+}
+
+#sidebar a[data-toggle="collapse"] {
+    position: relative;
+} 
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#sidebar ul li ul li a{
+  font-size: 0.9em !important;
+  padding-left: 40px !important;
+  background:rgba(251, 206, 84, 0.95)!important;
+  border-bottom: 1px solid #f9db89;  
+}
+
+#sidebar ul li ul li a:hover{
+  color: #fff;
+  background: linear-gradient(
+    0deg,
+    rgb(23, 162, 184) 0%,
+    rgb(1, 161, 221) 100%
+  )!important;
+}
+
+#sidebar ul p {
+  padding: 10px 20px;
+  font-size: 20px;
+  display: block;
+  background: #fec746;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.content-init{
+  position: relative;  
+  height: 80vh;
+}
+
+.img-init{  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.img-init img:first-of-type{
+  width: 250px;
+}
+
+.img-init img:last-of-type{
+  width: 200px;
+}
+
+#sidebar ul li .fas{
+  padding-right: 5px;
+}
+
+#sidebar ul li .fas.fa-sign-out-alt{
+  padding-left: 67px;
+  padding-right: 0px;
+}
+

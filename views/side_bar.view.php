@@ -1,4 +1,8 @@
     <nav id="sidebar">
+        <div id="dismiss">
+            <p><i class="fas fa-arrow-left pr-1"></i> Ocultar</p>
+        </div>
+
         <div class="sidebar-header">
             <i class="fas fa-user-circle"></i>
             <p>Administrador</p>
@@ -70,5 +74,6 @@
             </li>
         </ul>
     </nav>
+
 
   

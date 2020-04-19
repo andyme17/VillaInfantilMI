@@ -16,24 +16,43 @@
 <body id="login">
     <div class="wrapper">
         <?php require 'side_bar.view.php'; ?>
-        <div id="content" class="img-back">
-            <div class="content-init">
+        <div id="content">
+           
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-bars pr-1"></i>
+                    <span>Menú</span>
+                </button>
                 <h1 class="my-5 text-center">Bienvenido</h1>
                 <div class="img-init">
                     <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     <img src="<?php echo PATH; ?>img/logo-mascota-kinder.png" class="img-fluid">
                 </div>
-            </div>
-        </div>
+            
 
-       
+        </div>
     </div>
+
 
     <!-- JavaScript files for Bootstrap 4 -->
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                
+                
+            });
+            $('#dismiss').on('click', function () {
+                $('#sidebar').removeClass('active');                            
+            });
+            
+
+
+        });
+    </script>
 </body>
 
 </html>

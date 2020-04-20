@@ -9,12 +9,15 @@
         </div>
 
         <ul>
+            <li class="">
+                <a href="<?php echo PATH; ?>admin"><i class="fas fa-home"></i> Inicio</i></a>
+            </li>
             <p>Páginas</p>
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-home"></i> Inicio</a>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="pl-2 fas fa-file-invoice"></i> Index</a>
                 <ul class="collapse" id="homeSubmenu">
                     <li>
-                        <a href="#">Mensaje de bienvenida</a>
+                        <a href="<?php echo PATH;?>admin/editar_mensaje_bienvenida.php">Mensaje de bienvenida</a>
                     </li>
                     <li>
                         <a href="#">Avisos</a>

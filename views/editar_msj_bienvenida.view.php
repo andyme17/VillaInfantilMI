@@ -22,14 +22,31 @@
                     <i class="fas fa-bars pr-1"></i>
                     <span>Menú</span>
                 </button>
-                <h1 class="my-5 mb-md-3 text-center">Bienvenido</h1>
-                <div class="img-init">
-                    <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
-                    <img src="<?php echo PATH; ?>img/logo-mascota-kinder.png" class="img-fluid">
+                <div class="img-init-2">
+                    <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">                    
+                </div>                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 offset-xl-1 col-xl-10">
+                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow" id="form-msj" novalidate>
+                                <h3 class="mt-1 mb-3 text-center">Editar > Mensaje de Bienvenida > Página Principal</h3>
+                                <div class="group pt-3">
+                                    <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off"></textarea><span class="barra"></span>
+                                    <label for="mensaje" class="float-label">Mensaje: </label>
+                                    <div id="error-mensaje"></div>
+                                </div>
+                                <div class="btn-right">
+                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar ></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
+
 
     <!-- JavaScript files for Bootstrap 4 -->
     <script src="../js/jquery-3.4.1.min.js"></script>

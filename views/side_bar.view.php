@@ -20,13 +20,13 @@
                         <a href="<?php echo PATH;?>admin/editar_mensaje_bienvenida.php">Mensaje de bienvenida</a>
                     </li>
                     <li>
-                        <a href="#">Avisos</a>
+                        <a href="<?php echo PATH;?>admin/editar_avisos.php">Avisos</a>
                     </li>
                     <li>
-                        <a href="#">Testimonios</a>
+                        <a href="<?php echo PATH;?>admin/testimonios.php">Testimonios</a>
                     </li>
                     <li>
-                        <a href="#">Eventos</a>
+                        <a href="<?php echo PATH;?>admin/eventos.php">Eventos</a>
                     </li>
                 </ul>
             </li>

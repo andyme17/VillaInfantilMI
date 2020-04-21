@@ -2219,15 +2219,27 @@ button.btn.btn-info.btn-side-bar{
   margin-left: 0;
 }
 
-#form-msj{
+#form-gestor{
   padding: 15px;
   background: #fff;
-  margin-top: 65px;
+  margin-top: 40px;
 }
 
 @media(min-width: 576px) {
-  #form-msj{
-    padding: 20px;
+  #form-gestor{
+    padding: 20px;    
+  }
+}
+
+@media(min-width: 1024px) {
+  #form-gestor{
+    margin-top: 60px;
+  }
+}
+
+@media(min-width: 1200px) {
+  #form-gestor{
+    margin-top: 5px;
   }
 }
 
@@ -2236,9 +2248,23 @@ button.btn.btn-info.btn-side-bar{
   justify-content: flex-end;
 }
 
-#form-msj button.btn.btn-primary {
+#content button.btn{
   width: auto!important;
-  padding: .375rem 2rem!important;  
+  padding: .375rem .75rem!important;
+}
+
+@media(min-width: 1024px) {  
+  .cont-h{
+    position: relative;
+    height: 40px;
+  }    
+}
+
+@media(min-width: 1200px) {
+  .cont-h{
+    position: relative;
+    height: 20px;
+  } 
 }
 
 .img-init-2{
@@ -2256,3 +2282,28 @@ button.btn.btn-info.btn-side-bar{
     width: 80px;
   }
 }
+
+.cont-item{
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-opc{
+  display: flex;
+  justify-content: space-between;
+}
+
+#content a.btn{
+  padding: 6px 8px 6px 12px!important;
+  display: inline-block!important;
+}
+
+@media(min-width: 576px) {
+  .btn-opc{
+    text-align: right;
+    display: block;
+  }
+}
+
+

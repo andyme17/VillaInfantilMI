@@ -18,21 +18,24 @@
         <?php require 'side_bar.view.php'; ?>
         <div id="content">
             <div class="content-1">
-                <button type="button" id="sidebarCollapse" class="btn btn-info btn-side-bar">
-                    <i class="fas fa-bars pr-1"></i>
-                    <span>Menú</span>
-                </button>
-                <div class="img-init-2">
-                    <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">                    
-                </div>                
+                <div class="cont-h">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info btn-side-bar">
+                        <i class="fas fa-bars pr-1"></i>
+                        <span>Menú</span>
+                    </button>
+                    <div class="img-init-2">
+                        <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
+                    </div>
+                </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 offset-xl-1 col-xl-10">
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow" id="form-msj" novalidate>
-                                <h3 class="mt-1 mb-3 text-center">Editar > Mensaje de Bienvenida > Página Principal</h3>
-                                <div class="group pt-3">
-                                    <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off"></textarea><span class="barra"></span>
-                                    <label for="mensaje" class="float-label">Mensaje: </label>
+                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
+                                <h3 class="mt-1 mb-4 text-center">Editar Mensaje de Bienvenida</h3>
+                                <div class="group pt-3 pt-md-4">
+                                    <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(400);"></textarea><span class="barra"></span>
+                                    <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
+                                    <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 400</div>
                                     <div id="error-mensaje"></div>
                                 </div>
                                 <div class="btn-right">
@@ -47,13 +50,42 @@
         </div>
     </div>
 
-
     <!-- JavaScript files for Bootstrap 4 -->
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
+    <script>
+        var mensaje = document.getElementById('mensaje');
+        function countChar() {
+
+            var total = 400;
+
+            setTimeout(function() {
+                var respuesta = document.getElementById('res');
+                var cantidad = mensaje.value.length;
+
+                respuesta.innerHTML = cantidad + ' caractere/s, te quedan ' + (total - cantidad);
+                if (cantidad >= total) {
+                    respuesta.classList.remove('text-secondary');
+                    respuesta.classList.add('text-danger');
+                } else {
+                    respuesta.classList.remove('text-danger');
+                    respuesta.classList.add('text-secondary');
+                }
+            }, 10);
+
+        }
+
+        function limita(maximoCaracteres) {
+            if (mensaje.value.length >= maximoCaracteres) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
 </body>
 
 </html>

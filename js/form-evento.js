@@ -1,6 +1,6 @@
 var formulario = document.getElementById('form-gestor'),
-    descripcion = document.getElementById('descripcion'),
-    titulo = document.getElementById('titulo');
+    descripcion = document.getElementById('descripcion');
+    
 
 const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
@@ -43,15 +43,25 @@ function limita(maximoCaracteres) {
     }
 }
 
-function validaText(campo) {
+function validaTitulo() {
+    var titulo = document.getElementById('titulo');
     limpiarError('error-titulo');
 
-    if (campo.value.trim() == "" || !regText.test(campo.value.trim())) {
-        if (campo.name == "titulo") {
-            error(campo, 'error-titulo', "Ingrese el título del evento.");
-        } else if (campo.name == "descripcion") {
-            error(campo, 'error-desc', "Ingrese la descripción del evento.");
-        }
+    if (titulo.value.trim() == "" || !regText.test(titulo.value.trim())) {
+        error(titulo, 'error-titulo', "Ingrese el título del evento.");
+        return false;
+    }
+    return true;
+}
+
+function validaDesc(campo){
+    limpiarError('error-desc');
+
+    if(campo.value.trim() == ""){
+        error(campo, 'error-desc', "Ingrese la descripción del evento.");
+        return false;
+    } else if (campo.value.trim().length > 300){
+        error(campo, 'error-desc', "La descripción sólo puede tener máximo 300 caracteres.");
         return false;
     }
     return true;
@@ -69,8 +79,8 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {
-    if (validaText(titulo) && validaText(descripcion) && confirm("Pulsa aceptar para actualizar la sección de eventos")) {
-
+   // e.preventDefault();
+    if (validaTitulo(titulo) && validaDesc(descripcion) && confirm("Pulsa aceptar para actualizar la sección de eventos")) {
         return true;
     } else {
         e.preventDefault();

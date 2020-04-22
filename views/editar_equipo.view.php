@@ -31,22 +31,25 @@
                     <div class="row">
                         <div class="col-12 offset-xl-1 col-xl-10">
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
-                                <h3 class="mt-1 mb-4 text-center">Editar Mensaje de Bienvenida</h3>
+                                <h3 class="mt-1 mb-4 text-center">Editar Sección: Nuestro Equipo</h3>
                                 <div class="group pt-3 pt-md-4">
-                                    <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(400);"></textarea><span class="barra"></span>
+                                    <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(290);"></textarea><span class="barra"></span>
                                     <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
-                                    <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 400</div>
+                                    <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 290</div>
                                     <div id="error-msj"></div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="thumb">Fotografía: <span class="text-danger">*</span></label>
+                                    <input type="file" name="thumb" class="form-control-file mb-3" id="thumb">
+                                </div>
                                 <div class="btn-right">
-                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar ></button>
+                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Actualizar ></button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -56,12 +59,13 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
-
+    
     <script>
         var mensaje = document.getElementById('mensaje');
 
         function countChar() {
-            var total = 400;
+            var total = 290;
+
             setTimeout(function() {
                 var respuesta = document.getElementById('res');
                 var cantidad = mensaje.value.length;
@@ -94,8 +98,8 @@
                 document.getElementById("error-msj").className = "error";
                 campo.focus();
                 return false;
-            } else if (campo.value.trim().length > 400) {
-                document.getElementById("error-msj").textContent = "El mensaje sólo puede tener máximo 400 caracteres.";
+            } else if (campo.value.trim().length > 290) {
+                document.getElementById("error-msj").textContent = "El mensaje sólo puede tener máximo 290 caracteres.";
                 document.getElementById("error-msj").className = "error";
                 campo.focus();                
                 return false;
@@ -106,7 +110,7 @@
             return true;
         }
 
-        function validar(e) {
+        function validar(e) {           
             if (validaMensaje(mensaje) && confirm("Pulsa aceptar para actualizar el mensaje")) {
                 return true;
             } else {

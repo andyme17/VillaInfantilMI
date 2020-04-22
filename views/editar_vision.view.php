@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col-12 offset-xl-1 col-xl-10">
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
-                                <h3 class="mt-1 mb-4 text-center">Editar Mensaje de Bienvenida</h3>
+                                <h3 class="mt-1 mb-4 text-center">Editar Visión</h3>
                                 <div class="group pt-3 pt-md-4">
                                     <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(400);"></textarea><span class="barra"></span>
                                     <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
@@ -46,7 +46,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -56,12 +55,13 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
-
+    
     <script>
         var mensaje = document.getElementById('mensaje');
 
         function countChar() {
             var total = 400;
+
             setTimeout(function() {
                 var respuesta = document.getElementById('res');
                 var cantidad = mensaje.value.length;
@@ -106,7 +106,7 @@
             return true;
         }
 
-        function validar(e) {
+        function validar(e) {           
             if (validaMensaje(mensaje) && confirm("Pulsa aceptar para actualizar el mensaje")) {
                 return true;
             } else {

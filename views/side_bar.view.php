@@ -17,16 +17,16 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="pl-2 fas fa-file-invoice"></i> Index</a>
                 <ul class="collapse" id="homeSubmenu">
                     <li>
-                        <a href="<?php echo PATH;?>admin/editar_mensaje_bienvenida.php">Mensaje de bienvenida</a>
+                        <a href="<?php echo PATH; ?>admin/editar_mensaje_bienvenida.php">Mensaje de bienvenida</a>
                     </li>
                     <li>
-                        <a href="<?php echo PATH;?>admin/editar_avisos.php">Avisos</a>
+                        <a href="<?php echo PATH; ?>admin/editar_avisos.php">Avisos</a>
                     </li>
                     <li>
-                        <a href="<?php echo PATH;?>admin/testimonios.php">Testimonios</a>
+                        <a href="<?php echo PATH; ?>admin/testimonios.php">Testimonios</a>
                     </li>
                     <li>
-                        <a href="<?php echo PATH;?>admin/eventos.php">Eventos</a>
+                        <a href="<?php echo PATH; ?>admin/eventos.php">Eventos</a>
                     </li>
                 </ul>
             </li>
@@ -34,16 +34,16 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> Nosotros</a>
                 <ul class="collapse" id="pageSubmenu">
                     <li>
-                        <a href="#">Mensaje de inicio</a>
+                        <a href="<?php echo PATH; ?>admin/editar_mensaje_nosotros.php">Mensaje de inicio</a>
                     </li>
                     <li>
-                        <a href="#">Visión</a>
+                        <a href="<?php echo PATH; ?>admin/editar_vision.php">Visión</a>
                     </li>
                     <li>
-                        <a href="#">Nuestro equipo</a>
+                        <a href="<?php echo PATH; ?>admin/editar_mensaje_equipo.php">Nuestro equipo</a>
                     </li>
                     <li>
-                        <a href="#">Personal Administrativo</a>
+                        <a href="<?php echo PATH; ?>admin/personal_admin.php">Personal Administrativo</a>
                     </li>
                 </ul>
             </li>
@@ -51,32 +51,18 @@
                 <a href="#pageServicios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-tasks"></i> Servicios</a>
                 <ul class="collapse" id="pageServicios">
                     <li>
-                        <a href="#">Nuevo servicio</a>
+                        <a href="<?php echo PATH; ?>admin/servicios_after.php">Servicios Afterschool</a>
                     </li>
                     <li>
-                        <a href="#">Eliminar servicio</a>
-                    </li>
-                    <li>
-                        <a href="#">Modificar servicio</a>
+                        <a href="<?php echo PATH; ?>admin/servicio_comida.php">Servicio de comida</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#pageInsta" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-school"></i> Instalaciones</a>
-                <ul class="collapse" id="pageInsta">
-                    <li>
-                        <a href="#">Nueva imagen</a>
-                    </li>
-                    <li>
-                        <a href="#">Eliminar imagen</a>
-                    </li>
-                </ul>
+                <a href="<?php echo PATH; ?>admin/instalaciones.php"><i class="fas fa-school"></i> Instalaciones</a>
             </li>
             <li class="cerrar">
                 <a href="<?php echo PATH; ?>cerrar.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
             </li>
         </ul>
     </nav>
-
-
-  

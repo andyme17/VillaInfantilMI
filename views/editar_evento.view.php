@@ -41,7 +41,7 @@
                                     <textarea name="descripcion" id="descripcion" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(300);"></textarea><span class="barra"></span>
                                     <label for="descripcion" class="float-label">Breve descripción: <span class="text-danger">*</span></label>
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 300</div>
-                                    <div id="error-descripcion"></div>
+                                    <div id="error-desc"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="thumb">Fotografía del evento: <span class="text-danger">*</span></label>
@@ -51,7 +51,7 @@
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
                                 <div class="btn-right">
-                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Editar evento ></button>
+                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Editar ></button>
                                 </div>
                             </form>
                         </div>

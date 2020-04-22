@@ -1363,8 +1363,9 @@ button.btn {
   line-height: 1.8;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content-nosotros {
+    padding: 1.25rem 1.25rem 0;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1390,12 +1391,6 @@ button.btn {
 
   .text-nosotros p {
     line-height: 2;
-  }
-}
-
-@media (min-width: 1024px) {
-  .content-nosotros {
-    padding: 1.25rem 1.25rem 0;
   }
 }
 
@@ -2289,7 +2284,7 @@ button.btn.btn-info.btn-side-bar{
   margin-bottom: 20px;
 }
 
-.btn-opc{
+.btn-opc, .btn-opc-card{
   display: flex;
   justify-content: space-between;
 }
@@ -2304,6 +2299,37 @@ button.btn.btn-info.btn-side-bar{
     text-align: right;
     display: block;
   }
+
+  .btn-opc-card{
+    text-align: center;
+    justify-content: space-evenly;
+  } 
 }
 
+.cont-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
+}
+
+.cont-card img{
+  width: 150px;
+  height: 180px;
+}
+
+#content .card .cont-card{
+  height: 250px;
+}
+/* 
+.text-contact,
+.form-contact {
+
+flex-grow: 0;
+
+flex-shrink: 0;
+
+flex-basis: 100%;
+}
+ */

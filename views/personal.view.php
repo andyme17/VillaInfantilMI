@@ -29,7 +29,7 @@
                 </div>
                 <div class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Personal Administrativo</h3>
-                    <a href="<?php echo PATH; ?>admin/nuevo_testimonio.php" class="btn btn-success mb-4 mb-md-5">
+                    <a href="<?php echo PATH; ?>admin/nuevo_personal.php" class="btn btn-success mb-4 mb-md-5">
                         <i class="fas fa-plus-circle pr-2"></i><span>Agregar</span>
                     </a>
 

@@ -112,9 +112,6 @@
                     <p>
                         A partir del mes de febrero, pondremos a su disposición el servicio de comedor dentro de las instalaciones
                         de Villa Infantil, a fin de poder brindarles una alternativa cómoda y saludable para este propósito.
-                    </p>
-                    <h5 class="mt-3 mt-xl-4">Menu Variados</h5>
-                    <p>
                         Con asesoría nutricional, tendremos menús variados y balanceados, para asegurar un aporte calórico adecuado,
                         además de un excelente sabor para los niños.
                     </p>

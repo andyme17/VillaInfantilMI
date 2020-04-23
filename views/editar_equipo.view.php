@@ -33,14 +33,15 @@
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
                                 <h3 class="mt-1 mb-4 text-center">Editar Sección: Nuestro Equipo</h3>
                                 <div class="group pt-3 pt-md-4">
-                                    <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(290);"></textarea><span class="barra"></span>
+                                    <textarea name="mensaje" id="mensaje" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(290);"></textarea><span class="barra"></span>
                                     <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 290</div>
                                     <div id="error-msj"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="thumb">Fotografía: <span class="text-danger">*</span></label>
-                                    <input type="file" name="thumb" class="form-control-file mb-3" id="thumb">
+                                    <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>958 x 627 px</b> Tamaño:  <b>menor a 200 KB</b>" onchange="validaImagen(this);">
+                                    <div id="error-thumb"></div>
                                 </div>
                                 <div class="btn-right">
                                     <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Actualizar ></button>
@@ -59,65 +60,13 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
-    
+
+    <!-- Custom javascript files -->
+    <script src="../js/form-equipo.js"></script>
     <script>
-        var mensaje = document.getElementById('mensaje');
-
-        function countChar() {
-            var total = 290;
-
-            setTimeout(function() {
-                var respuesta = document.getElementById('res');
-                var cantidad = mensaje.value.length;
-
-                respuesta.innerHTML = cantidad + ' caractere/s, te quedan ' + (total - cantidad);
-                if (cantidad >= total) {
-                    respuesta.classList.remove('text-secondary');
-                    respuesta.classList.add('text-danger');
-                } else {
-                    respuesta.classList.remove('text-danger');
-                    respuesta.classList.add('text-secondary');
-                }
-            }, 10);
-
-        }
-
-        function limita(maximoCaracteres) {
-            if (mensaje.value.length >= maximoCaracteres) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        document.getElementById("btnForm").addEventListener('click', validar, false);
-
-        function validaMensaje(campo) {
-            if (campo.value.trim() == "") {
-                document.getElementById("error-msj").textContent = "Ingrese el mensaje.";
-                document.getElementById("error-msj").className = "error";
-                campo.focus();
-                return false;
-            } else if (campo.value.trim().length > 290) {
-                document.getElementById("error-msj").textContent = "El mensaje sólo puede tener máximo 290 caracteres.";
-                document.getElementById("error-msj").className = "error";
-                campo.focus();                
-                return false;
-            }else{
-                document.getElementById("error-msj").textContent = "";
-                document.getElementById("error-msj").className = "";
-            }
-            return true;
-        }
-
-        function validar(e) {           
-            if (validaMensaje(mensaje) && confirm("Pulsa aceptar para actualizar el mensaje")) {
-                return true;
-            } else {
-                e.preventDefault();
-                return false;
-            }
-        }
+        $(document).ready(function() {
+            $('#thumb').tooltip('show');
+        });           
     </script>
 </body>
 

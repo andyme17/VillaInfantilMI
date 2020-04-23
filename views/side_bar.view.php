@@ -54,7 +54,7 @@
                         <a href="<?php echo PATH; ?>admin/servicios_after.php">Servicios Afterschool</a>
                     </li>
                     <li>
-                        <a href="<?php echo PATH; ?>admin/servicio_comida.php">Servicio de comida</a>
+                        <a href="<?php echo PATH; ?>admin/editar_servicio_comida.php">Servicio de comida</a>
                     </li>
                 </ul>
             </li>

@@ -45,9 +45,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="thumb">Fotografía del evento: <span class="text-danger">*</span></label>
-                                    <input type="file" name="thumb" class="form-control-file mb-3" id="thumb">
+                                    <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>960 x 720 px</b> Tamaño:  <b>menor a 250 KB</b>" onchange="validaImagen(this);">
+                                    <div id="error-thumb"></div>
                                 </div>
-                                <div class="text-left">
+                                <div class="text-left mt-3">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
                                 <div class="btn-right">
@@ -70,6 +71,9 @@
   
     <!-- Custom javascript files -->
     <script src="../js/form-evento.js"></script>
+    <script>
+        $('#thumb').tooltip('show');
+    </script>
 </body>
 
 </html>

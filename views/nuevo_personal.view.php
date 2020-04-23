@@ -33,7 +33,7 @@
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" class="shadow mb-5" id="form-gestor" novalidate>
                                 <h3 class="mt-1 mb-4 text-center">Nuevo Miembro</h3>
                                 <div class="group pb-2">
-                                    <input type="text" name="nombre" id="nombre" autocomplete="off" title="Ejemplo, Lic. Juan Pérez" required><span class="barra"></span>
+                                    <input type="text" name="nombre" id="nombre" autocomplete="off" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ejemplo: <b>Lic. Juan Pérez</b>" required><span class="barra"></span>
                                     <label for="nombre" class="float-label">Nombre completo: <span class="text-danger">*</span></label>
                                     <div id="error_nombre"></div>
                                 </div>
@@ -43,8 +43,9 @@
                                     <div id="error_cargo"></div>
                                 </div>                                
                                 <div class="form-group">
-                                    <label for="thumb">Fotografía del evento: <span class="text-danger">*</span></label>
-                                    <input type="file" name="thumb" class="form-control-file mb-3" id="thumb">
+                                    <label for="thumb">Fotografía: <span class="text-danger">*</span></label>
+                                    <input type="file" name="thumb" class="form-control-file mb-3" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>300 x 360 px</b> Tamaño:  <b>menor a 50 KB</b>" onchange="validaImagen(this);">
+                                    <div id="error-thumb"></div>
                                 </div>
                                 <div class="text-left">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
@@ -69,6 +70,12 @@
   
     <!-- Custom javascript files -->
     <script src="../js/form-personal.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#thumb').tooltip('show');
+            $('#nombre').tooltip('show');
+        });       
+    </script>
 </body>
 
 </html>

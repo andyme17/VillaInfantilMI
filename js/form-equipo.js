@@ -108,8 +108,7 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {    
-    if (validaMsj(mensaje) && validaImagen2() &&
-        confirm("Pulsa aceptar para actualizar la sección")) {
+    if (validaMsj(mensaje) && validaImagen2() && confirm("Pulsa aceptar para actualizar la sección")) {
         return true;
     } else {
         e.preventDefault();

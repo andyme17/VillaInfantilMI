@@ -29,25 +29,24 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 offset-xl-1 col-xl-10">
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
-                                <h3 class="mt-1 mb-4 text-center">Editar Sección: Nuestro Equipo</h3>
-                                <div class="group pt-3 pt-md-4">
-                                    <textarea name="mensaje" id="mensaje" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(290);"></textarea><span class="barra"></span>
-                                    <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
-                                    <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 290</div>
-                                    <div id="error-msj"></div>
+                        <div class="col-12 offset-md-1 col-md-10">
+                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" class="shadow mb-5" id="form-gestor" novalidate>
+                                <h3 class="mt-1 mb-4 text-center">Nuevo Servicio</h3>
+                                <div class="group pb-2">
+                                    <input type="text" name="servicio" id="servicio" autocomplete="off" required><span class="barra"></span>
+                                    <label for="servicio" class="float-label">Servicio: <span class="text-danger">*</span></label>
+                                    <div id="error-servicio"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="thumb">Fotografía: <span class="text-danger">*</span></label>
-                                    <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>958 x 627 px</b> Tamaño:  <b>menor a 200 KB</b>" onchange="validaImagen(this);">
+                                <div class="form-group pl-2">
+                                    <label for="thumb">Imagen del servicio: <span class="text-danger">*</span></label>
+                                    <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>627 x 417 px</b> Tamaño:  <b>menor a 125 KB</b>" onchange="validaImagen(this);">
                                     <div id="error-thumb"></div>
                                 </div>
-                                <div class="text-left">
+                                <div class="text-left mt-3">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
                                 <div class="btn-right">
-                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Actualizar ></button>
+                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Agregar ></button>
                                 </div>
                             </form>
                         </div>
@@ -63,13 +62,11 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
-
+  
     <!-- Custom javascript files -->
-    <script src="../js/form-equipo.js"></script>
+    <script src="../js/form-servicio.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#thumb').tooltip('show');
-        });           
+        $('#thumb').tooltip('show');
     </script>
 </body>
 

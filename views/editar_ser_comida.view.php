@@ -43,6 +43,9 @@
                                     <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>1248 x 693 px</b> Tamaño:  <b>menor a 175 KB</b>" onchange="validaImagen(this);">
                                     <div id="error-thumb"></div>
                                 </div>
+                                <div class="text-left">
+                                    <small class="text-secondary">* Todos los campos son obligatorios</small>
+                                </div>
                                 <div class="btn-right">
                                     <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Actualizar ></button>
                                 </div>

@@ -120,7 +120,7 @@ function limpiarError(div_error) {
 
 function validar(e) {
     if (validaTitulo() && validaDesc(descripcion) && validaImagen2() &&
-        confirm("Pulsa aceptar para actualizar la sección de eventos")) {
+        confirm("Pulsa aceptar para actualizar la sección de eventos.")) {
         return true;
     } else {
         e.preventDefault();

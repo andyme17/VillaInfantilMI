@@ -1,6 +1,5 @@
-var formulario = document.getElementById('form-gestor'),
-    mensaje = document.getElementById('mensaje');
-
+var formulario = document.getElementById('form-gestor');
+    
 eventListener();
 
 function eventListener() {
@@ -10,47 +9,6 @@ function eventListener() {
 
 function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
-}
-
-function countChar() {
-
-    var total = 400;
-
-    setTimeout(function () {
-        var respuesta = document.getElementById('res');
-        var cantidad = mensaje.value.length;
-
-        respuesta.innerHTML = cantidad + ' caractere/s, te quedan ' + (total - cantidad);
-        if (cantidad >= total) {
-            respuesta.classList.remove('text-secondary');
-            respuesta.classList.add('text-danger');
-        } else {
-            respuesta.classList.remove('text-danger');
-            respuesta.classList.add('text-secondary');
-        }
-    }, 10);
-
-}
-
-function limita(maximoCaracteres) {
-    if (mensaje.value.length >= maximoCaracteres) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
-function validaMsj(campo){
-    limpiarError('error-msj');
-
-    if(campo.value.trim() == ""){
-        error(campo, 'error-msj', "Ingrese el mensaje.");
-        return false;
-    } else if (campo.value.trim().length > 400){
-        error(campo, 'error-msj', "La descripción sólo puede tener máximo 400 caracteres.");
-        return false;
-    }
-    return true;
 }
 
 function validaImagen(obj){
@@ -68,8 +26,8 @@ function validaImagen(obj){
     else {
         var img = new Image();
         img.onload = function () {
-            if (this.width.toFixed(0) != 1248 && this.height.toFixed(0) != 693) {
-                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 1248 x 693px.'); 
+            if (this.width.toFixed(0) != 1048 && this.height.toFixed(0) != 694) {
+                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 1248 x 694px.'); 
                 document.getElementById('thumb').value = "";               
             }
             else if (uploadFile.size > 175000){
@@ -106,8 +64,7 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {        
-    if (validaMsj(mensaje) && validaImagen2() &&
-        confirm("Pulsa aceptar para actualizar la sección")) {
+    if (validaImagen2() && confirm("Pulsa aceptar para agregar la fotografía.")) {
         return true;
     } else {
         e.preventDefault();

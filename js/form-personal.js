@@ -82,7 +82,7 @@ function limpiarError(div_error) {
 
 function validar(e) {    
     if (validaText(nombre) && validaText(cargo) && validaImagen2() &&
-        confirm("Pulsa aceptar para actualizar la sección de personal")) {
+        confirm("Pulsa aceptar para actualizar la sección de personal.")) {
         return true;
     } else {
         e.preventDefault();

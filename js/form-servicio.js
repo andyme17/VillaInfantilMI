@@ -1,5 +1,6 @@
-var formulario = document.getElementById('form-gestor'),
-    mensaje = document.getElementById('mensaje');
+var formulario = document.getElementById('form-gestor');
+
+const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
 eventListener();
 
@@ -12,42 +13,12 @@ function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
 }
 
-function countChar() {
+function validaServicio() {
+    var servicio = document.getElementById('servicio');
+    limpiarError('error-servicio');
 
-    var total = 400;
-
-    setTimeout(function () {
-        var respuesta = document.getElementById('res');
-        var cantidad = mensaje.value.length;
-
-        respuesta.innerHTML = cantidad + ' caractere/s, te quedan ' + (total - cantidad);
-        if (cantidad >= total) {
-            respuesta.classList.remove('text-secondary');
-            respuesta.classList.add('text-danger');
-        } else {
-            respuesta.classList.remove('text-danger');
-            respuesta.classList.add('text-secondary');
-        }
-    }, 10);
-
-}
-
-function limita(maximoCaracteres) {
-    if (mensaje.value.length >= maximoCaracteres) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
-function validaMsj(campo){
-    limpiarError('error-msj');
-
-    if(campo.value.trim() == ""){
-        error(campo, 'error-msj', "Ingrese el mensaje.");
-        return false;
-    } else if (campo.value.trim().length > 400){
-        error(campo, 'error-msj', "La descripción sólo puede tener máximo 400 caracteres.");
+    if (servicio.value.trim() == "" || !regText.test(servicio.value.trim())) {
+        error(servicio, 'error-servicio', "Ingrese el nombre del servicio.");
         return false;
     }
     return true;
@@ -68,12 +39,12 @@ function validaImagen(obj){
     else {
         var img = new Image();
         img.onload = function () {
-            if (this.width.toFixed(0) != 1248 && this.height.toFixed(0) != 693) {
-                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 1248 x 693px.'); 
+            if (this.width.toFixed(0) != 627 && this.height.toFixed(0) != 417) {
+                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 627 x 417px.'); 
                 document.getElementById('thumb').value = "";               
             }
-            else if (uploadFile.size > 175000){
-                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 175 KB');                
+            else if (uploadFile.size > 125000){
+                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 125 KB');                
                 document.getElementById('thumb').value = "";               
             }else{
                 limpiarError('error-thumb');
@@ -88,7 +59,7 @@ function validaImagen2(){
     limpiarError('error-thumb');
 
     if(thumb.value == ""){
-        error(thumb,'error-thumb','Ingrese la fotografía del servicio');
+        error(thumb,'error-thumb','Ingrese la imagen del servicio');
         return false;
     }
     return true;  
@@ -105,9 +76,8 @@ function limpiarError(div_error) {
     document.getElementById(div_error).className = "";
 }
 
-function validar(e) {        
-    if (validaMsj(mensaje) && validaImagen2() &&
-        confirm("Pulsa aceptar para actualizar la sección")) {
+function validar(e) {
+    if (validaServicio() && validaImagen2() && confirm("Pulsa aceptar para agregar el servicio.")) {
         return true;
     } else {
         e.preventDefault();

@@ -38,6 +38,9 @@
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 400</div>
                                     <div id="error-msj"></div>
                                 </div>
+                                <div class="text-left">
+                                    <small class="text-secondary">* Todos los campos son obligatorios</small>
+                                </div>
                                 <div class="btn-right">
                                     <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar ></button>
                                 </div>

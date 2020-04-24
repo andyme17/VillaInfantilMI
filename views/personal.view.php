@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="btn-opc-card mt-3">
                                     <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php"><i class="fas fa-edit"></i> Editar</a>
-                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i></i> Eliminar</a>
+                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="btn-opc-card mt-3">
                                     <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php"><i class="fas fa-edit"></i> Editar</a>
-                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i></i> Eliminar</a>
+                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                 </div>
                             </div>
                         </div><div class="col-12 col-md-6 col-xl-4">
@@ -68,13 +68,10 @@
                                 </div>
                                 <div class="btn-opc-card mt-3">
                                     <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php"><i class="fas fa-edit"></i> Editar</a>
-                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i></i> Eliminar</a>
+                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                 </div>
                             </div>
                         </div>
-                        
-
-
                     </div>
                 </div>
             </div>

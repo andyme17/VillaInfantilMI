@@ -114,7 +114,7 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {
-    if (validaNombre(nombre) && validaEmail() && validaCal() && validaMsj(mensaje) && confirm("Pulsa aceptar para actualizar la sección de testimonios")) {
+    if (validaNombre(nombre) && validaEmail() && validaCal() && validaMsj(mensaje) && confirm("Pulsa aceptar para actualizar la sección de testimonios.")) {
         return true;
     } else {
         e.preventDefault();

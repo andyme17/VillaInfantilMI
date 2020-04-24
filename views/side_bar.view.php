@@ -17,6 +17,9 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="pl-2 fas fa-file-invoice"></i> Index</a>
                 <ul class="collapse" id="homeSubmenu">
                     <li>
+                        <a href="<?php echo PATH; ?>admin/editar_banner.php">Editar banner de inicio</a>
+                    </li>
+                    <li>
                         <a href="<?php echo PATH; ?>admin/editar_mensaje_bienvenida.php">Mensaje de bienvenida</a>
                     </li>
                     <li>

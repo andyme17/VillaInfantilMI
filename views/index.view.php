@@ -291,7 +291,7 @@
               fiestas decembrinas. ¡Estuvimos muy emocionados y felices!
             </p>
             <p class="card-text text-right pt-3">
-              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Diciembre 2020</small>
+              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Enero 2020</small>
             </p>
           </div>
         </article>
@@ -310,7 +310,7 @@
               entreteniendo a familiares y amigos de la comunidad Villa Infantil y Jesús Romero Flores.
             </p>
             <p class="card-text text-right pt-3">
-              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Noviembre 2020</small>
+              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Diciembre 2019</small>
             </p>
           </div>
         </article>

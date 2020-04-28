@@ -104,14 +104,16 @@
     <section class="img-back py-4">
         <div class="content-service container mx-auto">
             <div class="row">
-                <div class="col-12 col-md-8 offset-md-2 col-lg-7 offset-lg-0 col-xl-7 order-2 ">
+                <div class="col-12 col-md-6 order-2">
                     <img class="img-fluid pt-3 pt-lg-0" src="<?php echo PATH; ?>img/imgs-comida.jpg" alt="Foto del servicio de comida del preescolar">
                 </div>
-                <div class="col-12 col-lg-5 order-lg-2 py-xl-4">
+                <div class="col-12 col-md-6 pt-xl-5 order-md-2">
                     <h3>Comedor</h3>
                     <p>
                         A partir del mes de febrero, pondremos a su disposición el servicio de comedor dentro de las instalaciones
-                        de Villa Infantil, a fin de poder brindarles una alternativa cómoda y saludable para este propósito.
+                        de Villa Infantil, a fin de poder brindarles una alternativa cómoda y saludable para este propósito.                        
+                    </p>
+                    <p>
                         Con asesoría nutricional, tendremos menús variados y balanceados, para asegurar un aporte calórico adecuado,
                         además de un excelente sabor para los niños.
                     </p>

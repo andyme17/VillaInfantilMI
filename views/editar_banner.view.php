@@ -34,7 +34,7 @@
                                 <h3 class="mt-1 mb-5 text-center">Editar imagen de banner</h3>
                                 <div class="form-group">
                                     <label for="thumb">Imagen:<span class="text-danger">*</span></label>
-                                    <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg,.png" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato: <b>jpg/jpeg/png</b> Dimensiones:  <b>1280 x 558 px</b> Tamaño:  <b>menor a 500 KB</b>" onchange="validaImagen(this);">
+                                    <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg,.png" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato: <b>jpg/jpeg/png</b> Dimensiones:  <b>1280 x 558 px</b> Tamaño:  <b>menor a 490 KB</b>" onchange="validaImagen(this);">
                                     <div id="error-thumb"></div>
                                 </div>
                                 <div class="text-left">

@@ -14,7 +14,7 @@ function iniciar() {
 
 function countChar() {
 
-    var total = 400;
+    var total = 360;
 
     setTimeout(function () {
         var respuesta = document.getElementById('res');
@@ -46,8 +46,8 @@ function validaMsj(campo){
     if(campo.value.trim() == ""){
         error(campo, 'error-msj', "Ingrese el mensaje.");
         return false;
-    } else if (campo.value.trim().length > 400){
-        error(campo, 'error-msj', "La descripción sólo puede tener máximo 400 caracteres.");
+    } else if (campo.value.trim().length > 360){
+        error(campo, 'error-msj', "La descripción sólo puede tener máximo 360 caracteres.");
         return false;
     }
     return true;
@@ -73,8 +73,11 @@ function validaImagen(obj){
                 document.getElementById('thumb').value = "";               
             }
             else if (uploadFile.size > 175000){
-                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 175 KB');                
+                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 170 KB');                
                 document.getElementById('thumb').value = "";               
+            }else if(uploadFile.name.length > 200){
+                error(obj,'error-thumb','El nombre del archivo no debe exceder los 200 caracteres. Por favor, modifica el nombre.');                
+                document.getElementById('thumb').value = "";    
             }else{
                 limpiarError('error-thumb');
             }

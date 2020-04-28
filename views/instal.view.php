@@ -69,7 +69,8 @@
                                 <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
                             </div>
                         </div>               
-                    </div>                    
+                    </div>  
+                    <?php require '../paginacion.php';?>                  
                 </div>
             </div>
         </div>

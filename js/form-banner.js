@@ -29,10 +29,12 @@ function validaImagen(obj){
             if (this.width.toFixed(0) != 1280 && this.height.toFixed(0) != 558) {
                 error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 1280 x 558 px.'); 
                 document.getElementById('thumb').value = "";               
-            }
-            else if (uploadFile.size > 500000){
-                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 500 KB');                
+            }else if (uploadFile.size > 500000){
+                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 490 KB');                
                 document.getElementById('thumb').value = "";               
+            }else if(uploadFile.name.length > 200){
+                error(obj,'error-thumb','El nombre del archivo no debe exceder los 200 caracteres. Por favor, modifica el nombre.');                
+                document.getElementById('thumb').value = "";    
             }else{
                 limpiarError('error-thumb');
             }

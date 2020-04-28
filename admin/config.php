@@ -5,3 +5,14 @@
         'usuario' => 'admin',
         'password' => hash('sha512','123')
     );
+
+    $config_gestor = array(
+        'img_por_pagina' => '6',
+        'carpeta_img' => 'img/'
+    );
+
+    $bd_config = array(
+        'base_datos' => 'villa',
+        'usuario' => 'root',
+        'pass' => ''
+    );

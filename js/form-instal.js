@@ -27,12 +27,15 @@ function validaImagen(obj){
         var img = new Image();
         img.onload = function () {
             if (this.width.toFixed(0) != 1048 && this.height.toFixed(0) != 694) {
-                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 1248 x 694px.'); 
+                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 1048 x 694px.'); 
                 document.getElementById('thumb').value = "";               
             }
-            else if (uploadFile.size > 175000){
-                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 175 KB');                
+            else if (uploadFile.size > 120000){
+                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 115 KB');                
                 document.getElementById('thumb').value = "";               
+            }else if(uploadFile.name.length > 200){
+                error(obj,'error-thumb','El nombre del archivo no debe exceder los 200 caracteres. Por favor, modifica el nombre.');                
+                document.getElementById('thumb').value = "";    
             }else{
                 limpiarError('error-thumb');
             }

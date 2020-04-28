@@ -88,6 +88,9 @@ function validaImagen(obj){
             else if (uploadFile.size > 260000){
                 error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 250 KB');                
                 document.getElementById('thumb').value = "";               
+            }else if(uploadFile.name.length > 200){
+                error(obj,'error-thumb','El nombre del archivo no debe exceder los 200 caracteres. Por favor, modifica el nombre.');                
+                document.getElementById('thumb').value = "";    
             }else{
                 limpiarError('error-thumb');
             }

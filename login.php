@@ -3,6 +3,7 @@
     $error = '';
 
     require 'admin/config.php';
+    require 'functions.php';
 
     if(isset($_SESSION['admin'])){
         header('Location:' . PATH .'admin');
@@ -10,7 +11,7 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){//si los datos fueron enviados
         $usuario = limpiarDatos($_POST['usuario']);
-        $pass = hash('sha512',$_POST['pass']); 
+        $pass = hash('sha512',limpiarDatos($_POST['pass'])); 
 
         if($usuario == $panel_admin['usuario'] && $pass == $panel_admin['password']){
             $_SESSION['admin'] = $panel_admin['usuario'];
@@ -18,15 +19,8 @@
         }else{
             $error .= '<p>Datos incorrectos</p>';
         }
-
-    }
-
-    function limpiarDatos($datos){
-        $datos = trim($datos);
-        $datos = stripslashes($datos);
-        $datos = htmlspecialchars($datos);
-        return $datos;
     }
 
     require 'views/login.view.php';
     
+    //nl2br(); cuando encuentra un espacio agrega un br al final

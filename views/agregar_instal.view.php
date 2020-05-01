@@ -27,10 +27,10 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <div class="row">
                         <div class="col-12 offset-xl-1 col-xl-10">
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
+                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
                                 <h3 class="mt-1 mb-5 text-center">Agregar fotografía a galería de instalaciones</h3>
                                 <div class="form-group">
                                     <label for="thumb">Fotografía: <span class="text-danger">*</span></label>
@@ -46,7 +46,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </main>
             </div>
         </div>
     </div>

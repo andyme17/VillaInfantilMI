@@ -13,30 +13,11 @@
     <main class="img-back py-4">
         <div class="sec-gallery container">
             <ul class="pgwSlideshow">
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion2.jpg">
-                </li>
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion3.jpg">
-                </li>
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion4.jpg">
-                </li>
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion5.jpg">
-                </li>
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion6.jpg">
-                </li>           
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion7.jpg">
-                </li>
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion8.jpg">
-                </li>
-                <li>
-                    <img src="<?php echo PATH; ?>img/img-instalacion9.jpg">
-                </li>              
+                <?php foreach($imagenes as $imagen):?>
+                    <li>
+                        <img src="<?php echo PATH; ?>img/<?php echo $imagen['thumb'];?>">
+                    </li>
+                <?php endforeach;?>                         
             </ul>
         </div>
     </main>
@@ -74,7 +55,7 @@
             var pgwSlideshow = $('.pgwSlideshow').pgwSlideshow(); //puglin is initialized for gallery
 
             pgwSlideshow.reload({ //configuring the plugin
-                autoSlide: false,
+                autoSlide: true,
                 maxHeight: 560
             });
         });

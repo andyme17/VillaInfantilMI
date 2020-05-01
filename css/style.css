@@ -2497,47 +2497,68 @@ button.btn.btn-info.btn-side-bar {
 /* --- Paginacion --- */
 
 .paginacion {
-	margin-bottom: 30px;
+  margin: 25px 0;  
 }
 
 .paginacion ul {
 	list-style: none;
-	text-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .paginacion ul li {
-	display: inline-block;
-	margin:0 5px;
-	color:#fff;
+  margin: 0 5px;  
+  border: 1px solid #fbc025;  
+  line-height: 2;  
 }
 
-.paginacion ul li a {
-	display: block;
-	padding: 5px 20px;
-	background: #03224e;
-  color:#fff;
+.paginacion ul li a{
+  display: block;
+  padding: 12px;  
+  color: #03224e;
   font-size: 1.15rem;
-  font-weight: 600;
-}
+  font-weight: 600;  
+} 
 
 .paginacion ul li a:hover {
   background: #f8b524;
-  color: #03224e;
-	text-decoration: none;
+  color: #03224e;	 
 }
 
-.paginacion ul .active {
-  background: #f8b524;
-  color: #03224e;
-	padding: 10px 20px;
-}
-
-.paginacion ul .disabled{
-	background: #a8a8a8;
-	padding:10px 20px;
+.paginacion ul li.disabled{
+	background: #fff5da;
+	padding: 5px 12px;
 	cursor: not-allowed;
 }
 
-.paginacion ul .disabled:hover {
-	background: #a8a8a8;
+.paginacion ul li.disabled:hover {
+	background: #fff5da;
+}
+
+.paginacion ul li.active {
+  background: #f8b524;
+  color: #03224e;	
+  padding: 2px 12px;
+  line-height: 2;
+  font-size: 1.15rem;
+  font-weight: 600;  
+}
+
+@media(min-width: 1024px) {
+  .paginacion {
+    margin: 20px 0 25px;  
+  }
+
+  .paginacion ul li a{    
+    padding: 5px 12px;       
+  } 
+
+  .paginacion ul li.active {
+    padding: 5px 12px;     
+  }
+
+  .paginacion ul li.disabled{
+    padding: 7px 12px;    
+  }
 }

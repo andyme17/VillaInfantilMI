@@ -27,51 +27,47 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
-                    <h3 class="mt-1 mb-2 text-center">Instalaciones</h3>
+
+                <main class="container">
+                    <h3 class="my-3 mt-xl-0 text-center">Instalaciones</h3>
                     <a href="<?php echo PATH; ?>admin/agregar_instalacion.php" class="btn btn-success mb-4 ml-4">
                         <i class="fas fa-plus-circle pr-2"></i><span>Agregar fotografía</span>
                     </a>
                     <div class="content-after-2 container">
-                        <div class="item-extra-2 mb-3">
-                            <img src="<?php echo PATH; ?>img/img-instalacion1.jpg" class="img-fluid">
-                            <div class="content-extra">
-                                <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                        <?php foreach ($imagenes as $imagen) : ?>
+                            <div class="item-extra-2 mb-3">
+                                <img src="<?php echo PATH; ?>img/<?php echo $imagen['thumb']; ?>" class="img-fluid">
+                                <div class="content-extra">
+                                    <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instalacion.php?id=<?php echo $imagen['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item-extra-2 mb-3">
-                            <img src="<?php echo PATH; ?>img/img-instalacion2.jpg" class="img-fluid">
-                            <div class="content-extra">
-                                <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                            </div>
-                        </div>
-                        <div class="item-extra-2 mb-3">
-                            <img src="<?php echo PATH; ?>img/img-instalacion3.jpg" class="img-fluid">
-                            <div class="content-extra">
-                                <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                            </div>
-                        </div>    
-                        <div class="item-extra-2 mb-3">
-                            <img src="<?php echo PATH; ?>img/img-instalacion4.jpg" class="img-fluid">
-                            <div class="content-extra">
-                                <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                            </div>
-                        </div>
-                        <div class="item-extra-2 mb-3">
-                            <img src="<?php echo PATH; ?>img/img-instalacion5.jpg" class="img-fluid">
-                            <div class="content-extra">
-                                <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                            </div>
-                        </div>
-                        <div class="item-extra-2 mb-3">
-                            <img src="<?php echo PATH; ?>img/img-instalacion6.jpg" class="img-fluid">
-                            <div class="content-extra">
-                                <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_instal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                            </div>
-                        </div>               
-                    </div>  
-                    <?php require '../paginacion.php';?>                  
-                </div>
+                        <?php endforeach; ?>
+                    </div>                    
+                </main>
+                
+                <section class="container paginacion">
+                    <?php $numero_paginas = numero_paginas($config_gestor['img_x_pagina'], $conexion); ?>
+                    <ul>
+                        <?php if (pagina_actual() === 1) : ?>
+                            <li class="disabled"><i class="fas fa-angle-double-left"></i></li>
+                        <?php else : ?>
+                            <li><a href="instalaciones.php?p=<?php echo pagina_actual() - 1; ?>"><i class="fas fa-angle-double-left"></i></a></li>
+                        <?php endif; ?>
+
+                        <?php for ($i = 1; $i <= $numero_paginas; $i++) : ?>
+                            <?php if (pagina_actual() === $i) : ?>
+                                <li class="active"><?php echo $i; ?></li>
+                            <?php else : ?>
+                                <li><a href="instalaciones.php?p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                        <?php if (pagina_actual() == $numero_paginas) : ?>
+                            <li class="disabled"><i class="fas fa-angle-double-right"></i></li>
+                        <?php else : ?>
+                            <li><a href="instalaciones.php?p=<?php echo pagina_actual() + 1; ?>"><i class="fas fa-angle-double-right"></i></a></li>
+                        <?php endif; ?>
+                    </ul>
+                </section>
             </div>
         </div>
     </div>

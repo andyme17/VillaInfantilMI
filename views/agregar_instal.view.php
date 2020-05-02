@@ -62,8 +62,8 @@
     <script src="../js/form-instal.js"></script>
     <script>
         $(document).ready(function() {
-            $('#thumb').tooltip('show');
-        });           
+            $('#thumb').tooltip('show');           
+        });
     </script>
 </body>
 

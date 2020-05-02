@@ -7,7 +7,7 @@
     );
 
     $config_gestor = array(
-        'img_x_pagina' => '6',
+        'items_x_pag' => '6',
         'carpeta_img' => 'img/'
     );
 

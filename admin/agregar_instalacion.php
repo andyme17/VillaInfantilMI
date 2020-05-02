@@ -27,7 +27,7 @@
             ':thumb' => $_FILES['thumb']['name']
         ));
 
-        header('Location:'.PATH.'admin/instalaciones.php');
+        header('Location:'.PATH.'admin/instalaciones.php');       
     }
 
     require '../views/agregar_instal.view.php';

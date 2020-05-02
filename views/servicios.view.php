@@ -50,7 +50,7 @@
             </div>
         </div>
     </main>
-    
+
     <div class="sec-after py-4">
         <div class="container text-center">
             <h3 class="text-center">Clases Afterschool</h3>
@@ -59,37 +59,15 @@
                 horario escolar, con el fin de complementar el desarrollo de sus hijos.
             </p>
             <div class="content-after container pt-3">
-                <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/imgs-ballet.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
-                    <div class="content-extra">
-                        <h4>Ballet</h4>
+                <?php foreach ($servicios as $servicio) : ?>
+                    <div class="item-extra mb-3">
+                        <img src="<?php echo PATH; ?>img/<?php echo $servicio['thumb'];?>" alt="Imagen ilustrativa de <?php echo $servicio['nombre'];?>" class="img-fluid">
+                        <div class="content-extra">
+                            <h4><?php echo $servicio['nombre'];?></h4>
+                        </div>
                     </div>
-                </div>
-                <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/imgs-zumba.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
-                    <div class="content-extra">
-                        <h4>Zumba Kids</h4>
-                    </div>
-                </div>
-                <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/imgs-taekwondo.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
-                    <div class="content-extra">
-                        <h4>Taekwondo</h4>
-                    </div>
-                </div>
-                <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/img10-service.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
-                    <div class="content-extra">
-                        <h4>Regularización en Inglés</h4>
-                    </div>
-                </div>
-                <div class="item-extra mb-3">
-                    <img src="<?php echo PATH; ?>img/img11-service.jpg" alt="Imagen ilustrativa de lima lama" class="img-fluid">
-                    <div class="content-extra">
-                        <h4>Regularización en Francés</h4>
-                    </div>
-                </div>
-            </div>           
+                <?php endforeach; ?>              
+            </div>
         </div>
     </div>
 
@@ -111,7 +89,7 @@
                     <h3>Comedor</h3>
                     <p>
                         A partir del mes de febrero, pondremos a su disposición el servicio de comedor dentro de las instalaciones
-                        de Villa Infantil, a fin de poder brindarles una alternativa cómoda y saludable para este propósito.                        
+                        de Villa Infantil, a fin de poder brindarles una alternativa cómoda y saludable para este propósito.
                     </p>
                     <p>
                         Con asesoría nutricional, tendremos menús variados y balanceados, para asegurar un aporte calórico adecuado,
@@ -141,6 +119,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/headroom.min.js"></script>
     <script src="js/nav-bar.js"></script>
-</body>
+    </body>
 
-</html>
+    </html>

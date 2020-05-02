@@ -15,6 +15,12 @@
         $dato = stripslashes($dato);
         return $dato;
     }
+    
+    function comprobarSession(){
+        if(!isset($_SESSION['admin'])){
+            header('Location: ../login.php');
+        }
+    }
 
     function fecha($fecha){
         $timestamp = strtotime($fecha);
@@ -31,19 +37,19 @@
         return isset($_GET['p']) ? (int)$_GET['p'] : 1;
     }
     
-    function obt_instal_gestor($img_x_pagina, $conexion){
-        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $img_x_pagina) - $img_x_pagina : 0;
-        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM galeria LIMIT $inicio,$img_x_pagina");
+    function obt_instal_gestor($items_x_pag, $conexion){
+        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
+        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM galeria LIMIT $inicio,$items_x_pag");
         $sentencia->execute();
         return $sentencia->fetchAll();
     }
     
-    function numero_paginas($img_x_pagina,$conexion){
+    function numero_paginas($items_x_pag,$conexion){
         $total_img = $conexion->prepare('SELECT FOUND_ROWS() as total');
         $total_img->execute();
         $total_img = $total_img->fetch()['total']; 
 
-        $numero_paginas = ceil($total_img/$img_x_pagina);
+        $numero_paginas = ceil($total_img/$items_x_pag);
         return $numero_paginas;
     }
 
@@ -53,9 +59,17 @@
         return $sentencia->fetchAll();
     }
 
-    function comprobarSession(){
-        if(!isset($_SESSION['admin'])){
-            header('Location: ../login.php');
-        }
+    function obt_serv_after($conexion){
+        $sentencia = $conexion->prepare("SELECT * FROM servicio_after");
+        $sentencia->execute();
+        return $sentencia->fetchAll(); 
     }
+
+    function obt_serv_after_gestor($items_x_pag,$conexion){
+        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
+        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM servicio_after LIMIT $inicio,$items_x_pag");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
+    }
+    
 ?>

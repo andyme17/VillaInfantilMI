@@ -11,10 +11,10 @@
         header('Location:'.PATH.'error.php');
     }
 
-    $imagenes = obt_instal_gestor($config_gestor['img_x_pagina'],$conexion);
+    $imagenes = obt_instal_gestor($config_gestor['items_x_pag'],$conexion);
 
     if(!$imagenes){
-        header('Location:'.PATH.'error.php');
+       header('Location:'.PATH.'error.php');
     }    
 
     require '../views/instal.view.php';

@@ -5,8 +5,8 @@
 
     comprobarSession();
 
-    $conexion = conexion($bd_config); 
-
+    $conexion = conexion($bd_config);
+    
     if(!$conexion){
         header('Location:'.PATH.'error.php');
     }
@@ -17,13 +17,13 @@
         header('Location: '.PATH.'admin/instalaciones.php');
     }
 
-    $statement = $conexion->prepare('SELECT thumb FROM galeria WHERE id=:id');
-    $statement->execute(array('id'=> $id));
+    $statement = $conexion->prepare('SELECT thumb FROM servicio_after WHERE id=:id');
+    $statement->execute(array('id'=>$id));
     $result = $statement->fetch();
-    
-    $statement1 = $conexion->prepare('DELETE FROM galeria WHERE id=:id');
-    $statement1->execute(array('id' => $id)); 
-    
+
+    $statement1 = $conexion->prepare('DELETE FROM servicio_after WHERE id=:id');
+    $statement1->execute(array('id'=>$id));
+
     unlink('../img/'.$result['thumb']);
 
-    header('Location: '.PATH.'admin/instalaciones.php');
+    header('Location: '.PATH.'/admin/servicios_after.php');

@@ -1,7 +1,7 @@
   <?php require 'nav-bar.view.php'; ?>
 
   <!-- Ventana emergente -->
-  <div id="modalBanner" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <section id="modalBanner" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
       <div class="init modal-content">
         <div class="float-right py-2 px-1">
@@ -9,10 +9,10 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img src="<?php echo PATH; ?>img/banner-inicial.png" class="img-fluid" alt="Anuncios">
+        <img src="<?php echo PATH; ?>img/<?php echo $banner['thumb'];?>" class="img-fluid" alt="Anuncios">
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="banner">
     <div class="banner-content">
@@ -25,11 +25,7 @@
     <div class="content-bienvenida">
       <h2>Bienvenid@s</h2>
       <hr>
-      <p>
-        El jardín de niños Villa Infantil María Isabel le da las más cordial bienvenida a sus pequeños.
-        Ponemos a su disposición los servicios para el adecuado desarrollo de sus hijos en diversas
-        áreas como la convivencia, idiomas y valores para que sus niños tengan un desarrollo sano y
-        obtengan las habilidades que les permitirán continuar con su proceso de maduración.</p>
+      <p><?php echo nl2br($welcome_msg['descripcion']); ?></p>
     </div>
     <div class="img-bienvenida pt-3 pt-lg-0 ml-lg-5">
       <img src="<?php echo PATH; ?>img/mascota-kinder.png" alt="Logotipo de la mascota de la escuela">

@@ -30,11 +30,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 offset-xl-1 col-xl-10">
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
+                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" class="shadow mb-sm-5" id="form-gestor" novalidate>
                                 <h3 class="mt-1 mb-5 text-center">Editar imagen de banner</h3>
+                                <input type="hidden" name="seccion" value="<?php echo $banner['seccion'];?>">
                                 <div class="form-group">
                                     <label for="thumb">Imagen:<span class="text-danger">*</span></label>
                                     <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg,.png" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato: <b>jpg/jpeg/png</b> Dimensiones:  <b>1280 x 558 px</b> Tamaño:  <b>menor a 490 KB</b>" onchange="validaImagen(this);">
+                                    <input type="hidden" name="thumb-guardada" value="<?php echo $banner['thumb'];?>">
                                     <div id="error-thumb"></div>
                                 </div>
                                 <div class="text-left">

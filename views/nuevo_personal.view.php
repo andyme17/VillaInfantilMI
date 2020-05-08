@@ -51,6 +51,7 @@
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
                                 <div class="btn-right">
+                                    <input type="hidden" id="action" value="new">
                                     <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Agregar ></button>
                                 </div>
                             </form>

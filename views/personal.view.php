@@ -29,49 +29,34 @@
                 </div>
                 <div class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Personal Administrativo</h3>
-                    <a href="<?php echo PATH; ?>admin/nuevo_personal.php" class="btn btn-success mb-4 mb-md-5">
-                        <i class="fas fa-plus-circle pr-2"></i><span>Agregar</span>
-                    </a>
+                    <div class="row mb-4 mb-md-5">
+                        <div class="col-12 col-md-3 col-xl-2">
+                            <a href="<?php echo PATH; ?>admin/nuevo_personal.php" id="btnAgregar" class="btn btn-success">
+                                <i class="fas fa-plus-circle pr-2"></i><span>Agregar</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-9 col-xl-10">
+                            <p class="text-center text-md-left mt-3 mt-md-0 text-danger">Recuerda que sólo se permite publicar <b>3 miembros del personal administrativo</b>,
+                            para añadir a un nuevo miembro debes eliminar alguno de los existentes.</p>
+                        </div>                        
+                    </div>
 
                     <div class="row">
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="card p-3">
-                                <div class="cont-card">
-                                    <img src="<?php echo PATH; ?>img\imgp-directora-grnl.jpg" alt="Fotografía de personal administrativo">
-                                    <h5>Lic. María Isabel Rincón</h5>
-                                    <p> Directora General</p>
-                                </div>
-                                <div class="btn-opc-card mt-3">
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php"><i class="fas fa-edit"></i> Editar</a>
-                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="card p-3">
-                                <div class="cont-card">
-                                    <img src="<?php echo PATH; ?>img\imgp-directora-grnl.jpg" alt="Fotografía de personal administrativo">
-                                    <h5>Lic. María Isabel Rincón</h5>
-                                    <p> Directora General</p>
-                                </div>
-                                <div class="btn-opc-card mt-3">
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php"><i class="fas fa-edit"></i> Editar</a>
-                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                        <?php foreach ($personal as $persona) : ?>
+                            <div class="col-12 col-md-6 col-xl-4 pb-3">
+                                <div class="card p-3" id="card">
+                                    <div class="cont-card">
+                                        <img src="<?php echo PATH; ?>img/<?php echo $persona['thumb']; ?>" alt="Fotografía de personal administrativo">
+                                        <h5><?php echo $persona['nombre']; ?></h5>
+                                        <p><?php echo $persona['cargo']; ?></p>
+                                    </div>
+                                    <div class="btn-opc-card mt-3">
+                                        <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php?id=<?php echo $persona['id'];?>"><i class="fas fa-edit"></i> Editar</a>
+                                        <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php?id=<?php echo $persona['id'];?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div><div class="col-12 col-md-6 col-xl-4">
-                            <div class="card p-3">
-                                <div class="cont-card">
-                                    <img src="<?php echo PATH; ?>img\imgp-directora-grnl.jpg" alt="Fotografía de personal administrativo">
-                                    <h5>Lic. María Isabel Rincón</h5>
-                                    <p> Directora General</p>
-                                </div>
-                                <div class="btn-opc-card mt-3">
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php"><i class="fas fa-edit"></i> Editar</a>
-                                    <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php"><i class="fas fa-trash-alt"></i> Eliminar</a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -84,6 +69,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
+
+    
 </body>
 
 </html>

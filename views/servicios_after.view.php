@@ -33,13 +33,13 @@
                         <i class="fas fa-plus-circle pr-2"></i><span>Agregar servicio</span>
                     </a>
                     <div class="content-after-2 container">
-                        <?php foreach ($servicios as $servicio) : ?>
+                        <?php foreach ($after_service as $service) : ?>
                             <div class="item-extra-2 mb-3">
-                                <img src="<?php echo PATH; ?>img/<?php echo $servicio['thumb']; ?>" alt="Imagen ilustrativa de <?php echo $servicio['name']; ?>" class="img-fluid">
+                                <img src="<?php echo PATH; ?>img/<?php echo $service['thumb']; ?>" alt="Imagen ilustrativa de <?php echo $service['name']; ?>" class="img-fluid">
                                 <div class="content-extra-2">
-                                    <h5 class="mt-5 mt-sm-4 mt-md-5"><?php echo $servicio['nombre']; ?></h5>
+                                    <h5 class="mt-5 mt-sm-4 mt-md-5"><?php echo $service['nombre']; ?></h5>
                                     <div class="cont-btn">
-                                        <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_servicio.php?id=<?php echo $servicio['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                        <a class="btn btn-outline-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_servicio.php?id=<?php echo $service['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                 </main>
 
                 <section class="container paginacion">
-                    <?php $numero_paginas = numero_paginas($config_gestor['items_x_pag'], $conexion); ?>
+                    <?php $numero_paginas = num_pag_serv($config_gestor['items_x_pag'], $conexion); ?>
                     <?php if ($numero_paginas > 1) : ?>
                         <ul>
                             <?php if (pagina_actual() === 1) : ?>

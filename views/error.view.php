@@ -7,7 +7,7 @@
                 <div class="col-12 offset-md-1 col-md-10 text-center shadow" id="list-doc">
                     <h2 class="py-4 text-center text-danger">Error de conexión</h2>
                     <h3 class="text-center text-danger">Por favor inténtelo más tarde.</h3>
-                        <img src="<?php echo PATH; ?>img/icono-error.jpg" alt="Imagen de error" class="img-fluid icono-error">
+                    <img src="<?php echo PATH; ?>img/icono-error.jpg" alt="Imagen de error" class="img-fluid icono-error">
                     <div class="f1-buttons">
                         <a class="btn btn-primary mb-3" href="<?php echo PATH; ?>inscripciones.php">< Regresar al formulario</a>
                     </div>

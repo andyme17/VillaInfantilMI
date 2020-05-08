@@ -34,7 +34,7 @@
                         <i class="fas fa-plus-circle pr-2"></i><span>Agregar fotografía</span>
                     </a>
                     <div class="content-after-2 container">
-                        <?php foreach ($imagenes as $imagen) : ?>
+                        <?php foreach ($imagenes as $imagen): ?>
                             <div class="item-extra-2 mb-3">
                                 <img src="<?php echo PATH; ?>img/<?php echo $imagen['thumb']; ?>" class="img-fluid">
                                 <div class="content-extra">
@@ -46,7 +46,7 @@
                 </main>
                 
                 <section class="container paginacion">
-                    <?php $numero_paginas = numero_paginas($config_gestor['items_x_pag'], $conexion); ?>
+                    <?php $numero_paginas = num_pag_instal($config_gestor['items_x_pag'], $conexion); ?>
                     <ul>
                         <?php if (pagina_actual() === 1) : ?>
                             <li class="disabled"><i class="fas fa-angle-double-left"></i></li>

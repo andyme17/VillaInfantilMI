@@ -4,23 +4,14 @@
     <div class="content-back-blue container mx-auto">
       <h2>¿Quiénes Somos?</h2>
       <hr>
-      <p class="text-back-blue">
-        Villa Infantil María Isabel somos un equipo de profesionales especializados en educación infantil,
-        que tiene como <span>MISIÓN</span> lograr que los niños de edad preescolar desarrollen sus capacidades de forma
-        integral, a fin de alcanzar un nivel óptimo de convivencia con su entorno y en su vida futura.
-      </p>
+      <p class="text-back-blue"><?php echo $init_msg['descripcion'];?></p>
     </div>
   </section>
   <section class="vision container py-4">
     <h2 class="text-center">Visión</h2>
     <hr>
     <div class="row mx-auto">
-      <p class="text-vision">
-        Ser una escuela con la mejor calidad, personal altamente calificado y la infraestructura adecuada,
-        que permita brindar a los niños y niñas de edad preescolar las herramientas necesarias para desarrollar
-        sus capacidades intelectuales, de autonomía y valores universales como el respeto, la responsabilidad,
-        el bien común y la honestidad, siendo reconocida en la comunidad donde se desempeña.
-      </p>
+      <p class="text-vision"><?php echo $vision_msg['descripcion'];?></p>
     </div>
   </section>
   <main class="img-back py-4">
@@ -30,34 +21,20 @@
         <img src="<?php echo PATH ?>img/imgp-kinder.jpg" class="img-nosotros img-fluid" alt="Imagen del personal del kinder">
       </div>
       <div class="text-nosotros">
-        <p>
-          El Jardín de Niños Villa Infantil María Isabel se encuentra en un continuo
-          proceso de mejora, tanto en sus instalaciones como en sus planes de estudio
-          y mecánicas de trabajo, esto también incluye a padres de familia.
-        </p>
+        <p><?php echo $team_msg['descripcion'];?></p>
       </div>
     </div>
     <div class="sec-admin container mx-auto pt-3 pt-md-5">
       <h3 class="text-center">Personal Administrativo</h3>
       <div class="row text-center pt-2">
-        <div class="col-12 col-md-4 pb-4 pb-md-0">
-          <img src="<?php echo PATH; ?>img\imgp-directora-grnl.jpg" alt="Fotografía de personal administrativo">
-          <h5>Lic. María Isabel Rincón</h5>
-          <hr>
-          <p> Directora General</p>
-        </div>
-        <div class="col-12 col-md-4 pb-4 pb-md-0">
-          <img src="<?php echo PATH; ?>img\imgp-directora-admin.jpg" alt="Fotografía de personal administrativo">
-          <h5>M.B.A. Alba Selene Chávez</h5>
-          <hr>
-          <p> Directora Administrativa</p>
-        </div>
-        <div class="col-12 col-md-4">
-          <img src="<?php echo PATH; ?>img\imgp-directora-tec.jpg" alt="Fotografía de personal administrativo">
-          <h5>Lic. Perla Susana Beltrán</h5>
-          <hr>
-          <p> Directora Técnica</p>
-        </div>
+        <?php foreach($personal as $persona):?>
+          <div class="col-12 col-md-4 pb-4 pb-md-0">
+            <img src="<?php echo PATH; ?>img/<?php echo $persona['thumb']?>" alt="Fotografía de personal administrativo">
+            <h5><?php echo $persona['nombre'];?></h5>
+            <hr>
+            <p><?php echo $persona['cargo'];?></p>
+          </div>  
+        <?php endforeach;?>         
       </div>
     </div>
   </main>

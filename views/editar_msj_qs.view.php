@@ -32,8 +32,10 @@
                         <div class="col-12 offset-xl-1 col-xl-10">
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
                                 <h3 class="mt-1 mb-4 text-center">Editar Mensaje ¿Quiénes somos?</h3>
+                                <input type="hidden" name="seccion" value="<?php echo $init_msg['seccion']; ?>">
                                 <div class="group pt-3 pt-md-4">
-                                    <textarea name="mensaje" id="mensaje" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(300);"></textarea><span class="barra"></span>
+                                    <textarea name="mensaje" id="mensaje" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(300);"><?php echo $init_msg['descripcion']; ?></textarea><span class="barra"></span>
+                                    <input type="hidden" name="mensaje_guardado" value="<?php echo $init_msg['descripcion']; ?>">
                                     <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 300</div>
                                     <div id="error-msj"></div>
@@ -60,7 +62,12 @@
     <script src="../js/side-bar.js"></script>
     
     <script>
-        var mensaje = document.getElementById('mensaje');
+        var mensaje = document.getElementById('mensaje'),
+            flag = false;
+
+        mensaje.addEventListener('change',function(){
+            return flag = true;
+        });
 
         function countChar() {
             var total = 300;
@@ -78,7 +85,6 @@
                     respuesta.classList.add('text-secondary');
                 }
             }, 10);
-
         }
 
         function limita(maximoCaracteres) {
@@ -92,12 +98,7 @@
         document.getElementById("btnForm").addEventListener('click', validar, false);
 
         function validaMensaje(campo) {
-            if (campo.value.trim() == "") {
-                document.getElementById("error-msj").textContent = "Ingrese el mensaje.";
-                document.getElementById("error-msj").className = "error";
-                campo.focus();
-                return false;
-            } else if (campo.value.trim().length > 300) {
+            if (campo.value.trim().length > 300) {
                 document.getElementById("error-msj").textContent = "El mensaje sólo puede tener máximo 300 caracteres.";
                 document.getElementById("error-msj").className = "error";
                 campo.focus();                
@@ -110,11 +111,20 @@
         }
 
         function validar(e) {           
-            if (validaMensaje(mensaje) && confirm("Pulsa aceptar para actualizar el mensaje")) {
-                return true;
-            } else {
-                e.preventDefault();
-                return false;
+            if (flag === false) {
+                if (confirm("Deseas salir sin realizar ningún cambio.")) {
+                    return true;
+                } else {
+                    e.preventDefault();
+                    return false;
+                }
+            }else{
+                if (validaMensaje(mensaje) && confirm("Pulsa aceptar para actualizar el mensaje.")) {
+                    return true;
+                } else {
+                    e.preventDefault();
+                    return false;
+                }
             }
         }
     </script>

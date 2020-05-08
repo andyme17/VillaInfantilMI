@@ -37,7 +37,7 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> Nosotros</a>
                 <ul class="collapse" id="pageSubmenu">
                     <li>
-                        <a href="<?php echo PATH; ?>admin/editar_mensaje_nosotros.php">Mensaje de inicio</a>
+                        <a href="<?php echo PATH; ?>admin/editar_mensaje_quienes_somos.php">Mensaje de inicio</a>
                     </li>
                     <li>
                         <a href="<?php echo PATH; ?>admin/editar_vision.php">Visión</a>

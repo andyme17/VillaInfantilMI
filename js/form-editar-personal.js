@@ -1,3 +1,5 @@
+var formulario = document.getElementById('form-gestor');
+
 const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
 eventListener();
@@ -8,7 +10,7 @@ function eventListener() {
 }
 
 function iniciar() {
-    document.getElementById("btnForm").addEventListener('click',validar, false);
+    document.getElementById("btnForm").addEventListener('click', validar, false);
 }
 
 function validaText(campo) {
@@ -60,17 +62,6 @@ function validaImagen(obj){
     }                 
 }
 
-function validaImagen2(){
-    var  thumb = document.getElementById('thumb');
-    limpiarError('error-thumb');
-
-    if(thumb.value == ""){
-        error(thumb,'error-thumb','Ingrese la fotografía.');
-        return false;
-    }
-    return true;  
-}
-   
 function error(elemento, div_error, mensaje) {
     document.getElementById(div_error).textContent = mensaje;
     document.getElementById(div_error).className = "error";
@@ -83,22 +74,10 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {    
-    var action = document.getElementById('action').value;
-
-    if(action === 'new'){
-        if (validaText(nombre) && validaText(cargo) && validaImagen2() &&
-        confirm("Pulsa aceptar para añadir un nuevo miembro al personal.")) {
+    if (validaText(nombre) && validaText(cargo) && confirm("Pulsa aceptar para actualizar la sección de personal.")) {
         return true;
     } else {
         e.preventDefault();
         return false;
     }
-    }else{
-        if (validaText(nombre) && validaText(cargo) && confirm("Pulsa aceptar para actualizar la sección de personal.")) {
-            return true;
-        } else {
-            e.preventDefault();
-            return false;
-        }
-    }   
 }

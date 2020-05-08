@@ -29,13 +29,13 @@
         header('Location:'.PATH.'admin/'); 
     }else{
         /*getting message*/
-        $vision_msg = obt_contenido($conexion,'contenido_texto','sec-vision');
+        $init_msg = obt_contenido($conexion,'contenido_texto','sec-quienes-somos');
 
-        if(!$vision_msg){
+        if(!$init_msg){
             header('Location: error.php');
         } 
         
-        $vision_msg = $vision_msg[0];
+        $init_msg = $init_msg[0];
     }
 
-    require '../views/editar_vision.view.php';
+    require '../views/editar_msj_qs.view.php';

@@ -8,7 +8,7 @@
     $conexion = conexion($bd_config);
     
     if(!$conexion){
-        header('Location:'.PATH.'error.php');
+        header('Location: error.php');
     }
 
     $id = limpiarDatos($_GET['id']);
@@ -17,10 +17,12 @@
         header('Location: '.PATH.'admin/instalaciones.php');
     }
 
+    /*getting thumb name*/
     $statement = $conexion->prepare('SELECT thumb FROM servicio_after WHERE id=:id');
     $statement->execute(array('id'=>$id));
     $result = $statement->fetch();
 
+    /*removing service*/
     $statement1 = $conexion->prepare('DELETE FROM servicio_after WHERE id=:id');
     $statement1->execute(array('id'=>$id));
 

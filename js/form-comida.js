@@ -109,7 +109,7 @@ function validar(e) {
             return false;
         }
     }else{
-        if (validaMsj(mensaje) && confirm("Pulsa aceptar para actualizar la sección")) {
+        if (validaMsj(mensaje) && confirm("Pulsa aceptar para actualizar la sección.")) {
             return true;
         } else {
             e.preventDefault();

@@ -32,19 +32,11 @@
             $thumb = $_FILES['thumb']['name'];            
         }
 
-        /*modifying text*/ 
-        $statement = $conexion->prepare('UPDATE contenido_texto SET descripcion = :descripcion WHERE seccion = :seccion');
-        $statement->execute(array(
-            ':descripcion' => $mensaje,
-            ':seccion' => "$seccion"
-        ));  
-        
+        /*modifying text*/
+        update_content_text($conexion,$mensaje,$seccion);
+
         /*modifying thumb*/
-        $statement2 = $conexion->prepare('UPDATE contenido_img SET thumb = :thumb WHERE seccion = :seccion');
-        $statement2->execute(array(
-            ':thumb' => $thumb,
-            ':seccion' => "$seccion"
-        ));    
+        update_content_img($conexion,$thumb,$seccion);
        
         header('Location:'.PATH.'admin/');
     }else{

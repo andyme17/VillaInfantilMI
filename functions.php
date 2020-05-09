@@ -102,5 +102,21 @@
         $statement->execute(array(':seccion'=> "$seccion"));
         $resultado = $statement->fetchAll();
         return ($resultado) ? $resultado : false; 
-    }        
+    }  
+    
+    function update_content_text($conexion,$mensaje,$seccion){
+        $statement = $conexion->prepare('UPDATE contenido_texto SET descripcion = :descripcion WHERE seccion = :seccion');
+        $statement->execute(array(
+            ':descripcion' => $mensaje,
+            ':seccion' => "$seccion"
+        ));       
+    }
+    
+    function update_content_img($conexion,$thumb,$seccion){
+        $statement = $conexion->prepare('UPDATE contenido_img SET thumb = :thumb WHERE seccion = :seccion');
+        $statement->execute(array(
+            ':thumb' => $thumb,
+            ':seccion' => "$seccion"
+        ));       
+    }
 ?>

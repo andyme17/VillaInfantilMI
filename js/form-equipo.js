@@ -1,7 +1,5 @@
-var formulario = document.getElementById('form-gestor'),
-    mensaje = document.getElementById('mensaje');
-
-const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+var mensaje = document.getElementById('mensaje')
+    flag = false;
 
 eventListener();
 
@@ -13,6 +11,10 @@ function eventListener() {
 function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
 }
+
+mensaje.addEventListener('change',function(){
+    return flag = true;
+});
 
 function countChar() {
 
@@ -31,7 +33,6 @@ function countChar() {
             respuesta.classList.add('text-secondary');
         }
     }, 10);
-
 }
 
 function limita(maximoCaracteres) {
@@ -45,10 +46,7 @@ function limita(maximoCaracteres) {
 function validaMsj(campo){
     limpiarError('error-msj');
 
-    if(campo.value.trim() == ""){
-        error(campo, 'error-msj', "Ingrese el mensaje.");
-        return false;
-    } else if (campo.value.trim().length > 290){
+    if (campo.value.trim().length > 290){
         error(campo, 'error-msj', "La descripción sólo puede tener máximo 290 caracteres.");
         return false;
     }
@@ -86,17 +84,6 @@ function validaImagen(obj){
         img.src = URL.createObjectURL(uploadFile);
     }                 
 }
-
-function validaImagen2(){
-    var  thumb = document.getElementById('thumb');
-    limpiarError('error-thumb');
-
-    if(thumb.value == ""){
-        error(thumb,'error-thumb','Ingrese la fotografía del evento');
-        return false;
-    }
-    return true;  
-}
    
 function error(elemento, div_error, mensaje) {
     document.getElementById(div_error).textContent = mensaje;
@@ -109,11 +96,22 @@ function limpiarError(div_error) {
     document.getElementById(div_error).className = "";
 }
 
-function validar(e) {    
-    if (validaMsj(mensaje) && validaImagen2() && confirm("Pulsa aceptar para actualizar la sección")) {
-        return true;
-    } else {
-        e.preventDefault();
-        return false;
+function validar(e) {
+    var thumb = document.getElementById('thumb');
+
+    if (flag === false && thumb.value == "") {
+        if (confirm("Deseas salir sin realizar ningún cambio.")) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
+    }else{
+        if (validaMsj(mensaje) && confirm("Pulsa aceptar para actualizar la sección.")) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
     }
 }

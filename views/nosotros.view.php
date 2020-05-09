@@ -18,7 +18,7 @@
     <h2 class="text-center">Nuestro Equipo</h2>
     <div class="content-nosotros container">
       <div class="img-nosotros">
-        <img src="<?php echo PATH ?>img/imgp-kinder.jpg" class="img-nosotros img-fluid" alt="Imagen del personal del kinder">
+        <img src="<?php echo PATH ?>img/<?php echo $team_thumb['thumb'];?>" class="img-nosotros img-fluid" alt="Imagen del personal del kinder">
       </div>
       <div class="text-nosotros">
         <p><?php echo $team_msg['descripcion'];?></p>

@@ -35,6 +35,15 @@
 
     $team_msg = $team_msg[0];
 
+    /**our team message section */
+    $team_thumb = obt_contenido($conexion, 'contenido_img', 'sec-equipo');
+
+    if (!$team_thumb) {
+        header('Location:' . PATH . 'error.php');
+    }
+
+    $team_thumb = $team_thumb[0];
+
     /**administrative staff section*/
     $personal = obt_personal($conexion);
 

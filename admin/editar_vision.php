@@ -20,12 +20,9 @@
             header('Location:'.PATH.'admin/');
         }
 
-        $statement = $conexion->prepare('UPDATE contenido_texto SET descripcion = :descripcion WHERE seccion = :seccion');
-        $statement->execute(array(
-            ':descripcion' => $mensaje,
-            ':seccion' => "$seccion"
-        ));    
-       
+        /*modifying text*/
+        update_content_text($conexion,$mensaje,$seccion);
+
         header('Location:'.PATH.'admin/'); 
     }else{
         /*getting message*/

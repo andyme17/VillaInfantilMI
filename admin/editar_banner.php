@@ -27,13 +27,10 @@
 
             $thumb = $_FILES['thumb']['name'];            
         } 
-        
-        $statement = $conexion->prepare('UPDATE contenido_img SET thumb = :thumb WHERE seccion = :seccion');
-        $statement->execute(array(
-            ':thumb' => $thumb,
-            ':seccion' => "$seccion"
-        ));
 
+        /*modifying thumb*/
+        update_content_img($conexion,$thumb,$seccion);
+      
         header('Location:'.PATH.'admin/');
     }else{
         /*getting banner*/

@@ -37,27 +37,27 @@
                         </div>
                         <div class="col-12 col-md-9 col-xl-10">
                             <p class="text-center text-md-left mt-3 mt-md-0 text-danger">Recuerda que sólo se permite publicar <b>3 miembros del personal administrativo</b>,
-                            para añadir a un nuevo miembro debes eliminar alguno de los existentes.</p>
-                        </div>                        
+                                para añadir a un nuevo miembro debes eliminar alguno de los existentes.</p>
+                        </div>
                     </div>
 
-                    <div class="row">
+                    <main class="row" id="content-card">
                         <?php foreach ($personal as $persona) : ?>
-                            <div class="col-12 col-md-6 col-xl-4 pb-3">
-                                <div class="card p-3" id="card">
+                            <div class="col-12 col-md-6 col-xl-4 pb-3" id="card">
+                                <div class="card p-3">
                                     <div class="cont-card">
                                         <img src="<?php echo PATH; ?>img/<?php echo $persona['thumb']; ?>" alt="Fotografía de personal administrativo">
                                         <h5><?php echo $persona['nombre']; ?></h5>
                                         <p><?php echo $persona['cargo']; ?></p>
                                     </div>
                                     <div class="btn-opc-card mt-3">
-                                        <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php?id=<?php echo $persona['id'];?>"><i class="fas fa-edit"></i> Editar</a>
-                                        <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php?id=<?php echo $persona['id'];?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                        <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php?id=<?php echo $persona['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
+                                        <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php?id=<?php echo $persona['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                     </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    </div>
+                    </main>
                 </div>
             </div>
         </div>
@@ -69,8 +69,19 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
+    <script>
+        var contenedor = document.getElementById('content-card');
 
-    
+        console.log(contenedor.children);
+
+        if(contenedor.childElementCount >= 3){
+            $('#btnAgregar').addClass('disabled');
+            console.log('no se puede');
+        }else{
+            $('#btnAgregar').removeClass('disabled');
+            console.log('se puede');
+        } 
+    </script>
 </body>
 
 </html>

@@ -119,4 +119,17 @@
             ':seccion' => "$seccion"
         ));       
     }
+
+    function obt_testimonio($conexion){
+        $statement = $conexion->prepare("SELECT * FROM testimonio");
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
+   /*  function obt_serv_after_gestor($items_x_pag,$conexion){
+        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
+        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM servicio_after LIMIT $inicio,$items_x_pag");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
+    } */
 ?>

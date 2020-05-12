@@ -75,11 +75,9 @@
         console.log(contenedor.children);
 
         if(contenedor.childElementCount >= 3){
-            $('#btnAgregar').addClass('disabled');
-            console.log('no se puede');
+            $('#btnAgregar').addClass('disabled');            
         }else{
-            $('#btnAgregar').removeClass('disabled');
-            console.log('se puede');
+            $('#btnAgregar').removeClass('disabled');           
         } 
     </script>
 </body>

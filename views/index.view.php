@@ -9,7 +9,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img src="<?php echo PATH; ?>img/<?php echo $banner['thumb'];?>" class="img-fluid" alt="Anuncios">
+        <img src="<?php echo PATH; ?>img/<?php echo $banner['thumb']; ?>" class="img-fluid" alt="Anuncios">
       </div>
     </div>
   </section>
@@ -106,72 +106,25 @@
   <section class="sec-testimonios pb-4">
     <h2 class="text-center pt-4">Testimonios</h2>
     <div class="row container mx-auto py-4">
-      <div class="col-12 col-lg-4 pb-3">
-        <div class="card text-center shadow">
-          <div class="card-body">
-            <div class="card-title">
-              <h5 class="card-title">Rosa María Meza Iglesias</h5>
-              <hr>
-            </div>
-            <blockquote class="card-text">
-              “... está súper completo Villa Infantil pues
-              es personalizado con personal capacitado, precio excelente y sobre
-              todo calidad en educación. Recomendable para que los pequeños aprendan.”
-            </blockquote>
-            <div class="calificacion text-center">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+      <?php foreach ($testimonios as $testimonio) : ?>
+        <div class="col-12 col-lg-4 pb-3">
+          <div class="card text-center shadow">
+            <div class="card-body">
+              <div class="card-title">
+                <h5 class="card-title"><?php echo $testimonio['nombre']; ?></h5>
+                <hr>
+              </div>
+              <blockquote class="card-text"><?php echo $testimonio['mensaje']; ?></blockquote>
+              <div class="calificacion text-center">
+                <?php for ($i = 0; $i < $testimonio['votacion']; $i++) : ?>
+                  <i class="fas fa-star"></i>
+                <?php endfor; ?>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-4 pb-3">
-        <div class="card text-center shadow">
-          <div class="card-body">
-            <div class="card-title">
-              <h5>Zaira Rebollo</h5>
-              <hr>
-            </div>
-            <blockquote class="card-text">
-              “...el Amor, respeto y cuidado que tienen las especialistas con los niños,
-              forman un muy buen equipo ... además la enseñanza es personalizada!,
-              yo estoy muy contenta! porque mi hija estudie ahí”
-            </blockquote>
-            <div class="calificacion text-center">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4">
-        <div class="card text-center shadow">
-          <div class="card-body">
-            <div class="card-title">
-              <h5>Angélica González Martínez</h5>
-              <hr>
-            </div>
-            <blockquote class="card-text">
-              “Recomiendo ampliamente el jardín de niños Villa Infantil,
-              el trato tanto a los pequeños como a los papás es el mejor,
-              las maestras son un amor, pacientes y comprometidas.”
-            </blockquote>
-            <div class="calificacion text-center">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php endforeach; ?>
+    </div>
     </div>
     <div class="row container mx-auto">
       <div class="col-12 text-center">
@@ -193,12 +146,12 @@
                   <form action="#" method="POST" class="form-opinion" id="form-opinion" novalidate>
                     <div class="group">
                       <input type="text" name="nombre" id="nombre" required="" autocomplete="off" value=""><span class="barra"></span>
-                      <label for="nombre" class="float-label">Nombre completo: <span class="text-danger">*</span></label>   
-                      <div id="error-nombre"></div>                  
+                      <label for="nombre" class="float-label">Nombre completo: <span class="text-danger">*</span></label>
+                      <div id="error-nombre"></div>
                     </div>
                     <div class="group">
                       <input type="text" name="email" id="email" required="" autocomplete="off" value=""><span class="barra"></span>
-                      <label for="email" class="float-label">Correo electrónico: <span class="text-danger">*</span></label>                      
+                      <label for="email" class="float-label">Correo electrónico: <span class="text-danger">*</span></label>
                       <div id="error-email"></div>
                     </div>
                     <div class="form-star">
@@ -219,25 +172,24 @@
                         <!-- fifth star -->
                         <input id="radio5" class="input-star" type="radio" name="votacion" value="1">
                         <label for="radio5" class="label-star">&#9733;</label>
-                      </p>                      
+                      </p>
                     </div>
                     <div id="error-votacion"></div>
                     <div class="group pt-2 pb-3">
                       <textarea name="mensaje" id="mensaje" rows="4" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(200);"></textarea><span class="barra"></span>
                       <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
-                      <div id="res" class="text-secondary text-right">0 caracter/s</div>                      
+                      <div id="res" class="text-secondary text-right">0 caracter/s</div>
                       <div id="error-mensaje"></div>
                     </div>
                     <div class="text-left">
                       <small class="text-secondary">* Todos los campos son obligatorios</small>
                     </div>
-                    <div id="loaders">                      
+                    <div id="loaders">
                       <img id="spinner" src="img/spinner.gif">
                     </div>
                     <div class="btn-form-opinion">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        < Cerrar</button>
-                      <button type="submit" class="btn btn-form-primary" id="btnForm" name="submit" value="enviar">Enviar >
+                        < Cerrar</button> <button type="submit" class="btn btn-form-primary" id="btnForm" name="submit" value="enviar">Enviar >
                       </button>
                     </div>
                   </form>
@@ -253,64 +205,23 @@
   <section class="img-back">
     <h2 class="text-center pt-4">Últimos eventos</h2>
     <div class="sec-eventos container row py-3 mx-auto">
-      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
-        <article class="card shadow">
-          <img src="<?php echo PATH; ?>img/evento-feb.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <div class="card-title text-center">
-              <h5>Día del amor y la amistad</h5>
-              <hr>
+      <?php foreach ($eventos as $evento) : ?>
+        <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
+          <article class="card shadow">
+            <img src="<?php echo PATH; ?>img/<?php echo $evento['thumb'];?>" class="card-img-top" alt="Imagen ilustrativa del evento">
+            <div class="card-body">
+              <div class="card-title text-center">
+                <h5><?php echo $evento['titulo'];?></h5>
+                <hr>
+              </div>
+              <p class="card-text"><?php echo $evento['descripcion'];?></p>
+              <p class="card-text text-right pt-3">
+                <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en <?php echo fecha($evento['fecha']);?></small>
+              </p>
             </div>
-            <p class="card-text">
-              Para conmemorar el día de la amistad, nuestros alumnos realizaron un intercambio
-              de playeritas y convivieron compartiendo su lunch con todos, como buenos amigos.
-              También se tomaron lindas fotos con un tierno fondo que sus maestras prepararon
-              con mucho cariño para la ocasión.
-            </p>
-            <p class="card-text text-right pt-3">
-              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Febrero 2020</small>
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
-        <article class="card shadow">
-          <img src="<?php echo PATH; ?>img/evento-enero.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <div class="card-title text-center">
-              <h5>Día de reyes</h5>
-              <hr>
-            </div>
-            <p class="card-text">
-              Los Reyes Magos también visitaron nuestras instalaciones de Villa Infantil y
-              nuestros pequeños recibieron un presente al regresar a clases después de las
-              fiestas decembrinas. ¡Estuvimos muy emocionados y felices!
-            </p>
-            <p class="card-text text-right pt-3">
-              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Enero 2020</small>
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
-        <article class="card shadow">
-          <img src="<?php echo PATH; ?>img/evento-dic.jpg" class="card-img-top" alt="Imagen ilustrativa del evento">
-          <div class="card-body">
-            <div class="card-title text-center">
-              <h5>Pastorela</h5>
-              <hr>
-            </div>
-            <p class="card-text">
-              Nuestros alumnos presentaron la divertida pastorela “entre pastores y diabluras”
-              en el teatro de la Unidad Santa Fe, donde hicieron gala de su talento y gracia para bailar,
-              entreteniendo a familiares y amigos de la comunidad Villa Infantil y Jesús Romero Flores.
-            </p>
-            <p class="card-text text-right pt-3">
-              <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en Diciembre 2019</small>
-            </p>
-          </div>
-        </article>
-      </div>
+          </article>
+        </div>
+      <?php endforeach; ?>
     </div>
   </section>
   <?php require 'footer.view.php'; ?>
@@ -330,6 +241,6 @@
       $('#modalBanner').modal('show');
     });
   </script>
-</body>
+  </body>
 
-</html>
+  </html>

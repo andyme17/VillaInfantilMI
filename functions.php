@@ -121,7 +121,26 @@
     }
 
     function obt_testimonio($conexion){
-        $statement = $conexion->prepare("SELECT * FROM testimonio");
+        $statement = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM testimonio LIMIT 3");
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
+    function num_items($conexion){
+        $total = $conexion->prepare('SELECT FOUND_ROWS() as total_coment');
+        $total->execute();
+        $total = $total->fetch()['total_coment'];         
+        return $total;
+    }
+
+    function obt_testimonio_x_id($conexion,$id){
+        $resultado = $conexion->query("SELECT * FROM testimonio WHERE id = $id LIMIT 1");
+        $resultado = $resultado->fetchAll();
+        return ($resultado) ? $resultado : false;
+    }
+
+    function obt_evento($conexion){
+        $statement = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM evento ORDER BY fecha DESC LIMIT 3");
         $statement->execute();
         return $statement->fetchAll();
     }

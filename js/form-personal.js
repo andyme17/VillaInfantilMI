@@ -83,16 +83,18 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {    
-    var action = document.getElementById('action').value;
+    var action = document.getElementById('action').value,
+        nombre = document.getElementById('nombre'),
+        cargo = document.getElementById('cargo');
 
     if(action === 'new'){
         if (validaText(nombre) && validaText(cargo) && validaImagen2() &&
-        confirm("Pulsa aceptar para añadir un nuevo miembro al personal.")) {
-        return true;
-    } else {
-        e.preventDefault();
-        return false;
-    }
+            confirm("Pulsa aceptar para añadir un nuevo miembro al personal.")) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
     }else{
         if (validaText(nombre) && validaText(cargo) && confirm("Pulsa aceptar para actualizar la sección de personal.")) {
             return true;

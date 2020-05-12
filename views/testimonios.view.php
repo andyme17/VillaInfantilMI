@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body id="login">
     <div class="wrapper">
         <?php require 'side_bar.view.php'; ?>
@@ -28,34 +29,41 @@
                 </div>
                 <div class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Testimonios</h3>
-                    <div class="row">
-                        <div class="col-12 offset-md-1 col-md-10 mb-sm-4">
-                            <a href="<?php echo PATH;?>admin/nuevo_testimonio.php" class="btn btn-success mb-4 mb-md-5">
-                                <i class="fas fa-plus-circle pr-2"></i><span>Nuevo Testimonio</span>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-3 col-xl-2">
+                            <a href="<?php echo PATH; ?>admin/nuevo_testimonio.php" id="btnAgregar" class="btn btn-success">
+                                <i class="fas fa-plus-circle pr-2"></i><span>Agregar</span>
                             </a>
-                            <div class="cont-item shadow">
-                                <h5 class="mb-4">Nombre</h5>
-                                <div class="btn-opc">
-                                    <a class="btn btn-warning pr-2 mr-2" href="#"><i class="fas fa-eye"></i> Ver</a>
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH;?>admin/editar_testimonio.php"><i class="fas fa-edit"></i> Editar</a>
-                                </div>
-                            </div>
-                            <div class="cont-item shadow">
-                                <h5 class="mb-4">Nombre </h5>
-                                <div class="btn-opc">
-                                    <a class="btn btn-warning pr-2 mr-2" href="#"><i class="fas fa-eye"></i> Ver</a>
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH;?>admin/editar_testimonio.php"><i class="fas fa-edit"></i> Editar</a>
-                                </div>
-                            </div>
-                            <div class="cont-item shadow">
-                                <h5 class="mb-4">Nombre</h5>
-                                <div class="btn-opc">
-                                    <a class="btn btn-warning pr-2 mr-2" href="#"><i class="fas fa-eye"></i> Ver</a>
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH;?>admin/editar_testimonio.php"><i class="fas fa-edit"></i> Editar</a>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="col-12 col-md-9 col-xl-10">
+                            <p class="text-center text-md-left mt-3 mt-md-0 text-danger">Recuerda que sólo se permite publicar <b>3 testimonios</b>,
+                                para añadir un nuevo testimonio debes eliminar alguno de los existentes.</p>
                         </div>
                     </div>
+                    <main class="row" id="content-card">
+                        <?php foreach ($testimonios as $testimonio) : ?>
+                            <div class="col-12 col-md-6 col-xl-4 pb-3">
+                                <div class="card text-center shadow">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h5 class="card-title"><?php echo $testimonio['nombre']; ?></h5>
+                                            <hr>
+                                        </div>
+                                        <blockquote class="card-text"><?php echo $testimonio['mensaje']; ?></blockquote>
+                                        <div class="calificacion text-center">
+                                            <?php for ($i = 0; $i < $testimonio['votacion']; $i++) : ?>
+                                                <i class="fas fa-star"></i>
+                                            <?php endfor; ?>
+                                        </div>
+                                        <div class="btn-opc mt-5">
+                                            <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_testimonio.php?id=<?php echo $testimonio['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
+                                            <a class="btn btn-danger pr-2 mr-2" href="<?php echo PATH; ?>admin/eliminar_testimonio.php?id=<?php echo $testimonio['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        <?php endforeach; ?>
+                    </main>
                 </div>
             </div>
         </div>
@@ -66,7 +74,16 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>    
+    <script src="../js/side-bar.js"></script>
+    <script>
+        var contenedor = document.getElementById('content-card');
+
+        if(contenedor.childElementCount >= 3){
+            $('#btnAgregar').addClass('disabled');            
+        }else{
+            $('#btnAgregar').removeClass('disabled');           
+        } 
+    </script>
 </body>
 
 </html>

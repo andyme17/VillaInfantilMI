@@ -37,11 +37,6 @@
                                     <label for="nombre" class="float-label">Nombre: <span class="text-danger">*</span></label>
                                     <div id="error_nombre"></div>
                                 </div>
-                                <div class="group">
-                                    <input type="text" name="email" id="email" autocomplete="off" required><span class="barra"></span>
-                                    <label for="email" class="float-label">Correo Electrónico: <span class="text-danger">*</span></label>
-                                    <div id="error-correo"></div>
-                                </div>
                                 <div class="form-star">
                                     <label for="" class="">Calificación: <span class="text-danger">*</span></label>
                                     <p class="clasificacion">
@@ -73,6 +68,7 @@
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
                                 <div class="btn-right">
+                                    <input type="hidden" id="action" value="new">
                                     <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Editar ></button>
                                 </div>
                             </form>

@@ -26,7 +26,19 @@
 
    $welcome_msg = $welcome_msg[0];
 
+   /*testimonials section*/
+   $testimonios = obt_testimonio($conexion); 
+
+   if(!$testimonios){
+      header('Location: error.php');
+   }
+
+   /*events section*/
+   $eventos = obt_evento($conexion);
+   
+   if(!$eventos){
+      header('Location: error.php');
+   }
   
    require 'views/index.view.php';
-
 ?>

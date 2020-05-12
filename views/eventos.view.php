@@ -28,11 +28,25 @@
                 </div>
                 <div class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Últimos Eventos</h3>
-                    <div class="row">
-                        <div class="col-12 offset-md-1 col-md-10 mb-sm-4">
-                            <a href="<?php echo PATH;?>admin/nuevo_evento.php" class="btn btn-success mb-4 mb-md-5">
-                                <i class="fas fa-plus-circle pr-2"></i><span>Nuevo Evento</span>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-3 col-xl-2">
+                            <a href="<?php echo PATH; ?>admin/nuevo_evento.php" id="btnAgregar" class="btn btn-success">
+                                <i class="fas fa-plus-circle pr-2"></i><span>Agregar</span>
                             </a>
+                        </div>
+                        <div class="col-12 col-md-9 col-xl-10">
+                            <p class="text-center text-md-left mt-3 mt-md-0 text-danger">Recuerda que sólo se permite publicar <b>3 eventos</b>,
+                                para añadir un nuevo evento debes eliminar alguno de los existentes.</p>
+                        </div>
+                    </div>                    
+                    <main class="row" id="content-card" >
+                        <?php foreach ($eventos as $evento) : ?>
+                            <div class="col-12 col-md-6 col-xl-4 pb-3">
+                                
+                            </div>   
+                        <?php endforeach; ?>    
+                       
+                            
                             <div class="cont-item shadow">
                                 <h5 class="mb-4">Titulo del evento</h5>
                                 <div class="btn-opc">
@@ -55,7 +69,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </main>
                 </div>
             </div>
         </div>

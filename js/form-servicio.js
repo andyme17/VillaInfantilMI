@@ -1,17 +1,23 @@
-var formulario = document.getElementById('form-gestor');
+/**
+ * Script for service form 
+*/
 
+//regular expressions
 const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
 eventListener();
 
-function eventListener() {
-    //se carga aplicacion y deshabilitamos el boton  
+function eventListener() {     
     document.addEventListener('DOMContentLoaded', iniciar);
 }
 
 function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
 }
+
+document.getElementById("btnCloseForm").addEventListener('click',function(){
+    location.href="servicios_afterschool.php";
+});
 
 function validaServicio() {
     var servicio = document.getElementById('servicio');

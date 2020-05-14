@@ -1,3 +1,8 @@
+/**
+ * Script for contact form 
+*/
+
+//form fields
 var mensaje = document.getElementById('mensaje'),
     nombre = document.getElementById('nombre'),
     votacion = document.getElementsByName('votacion'),
@@ -10,6 +15,7 @@ var mensaje = document.getElementById('mensaje'),
     flag2 = false,
     flag3 = false;
 
+//regular expressions    
 const regExp = /^([0-9])*$/;
 
 eventListener();
@@ -42,7 +48,9 @@ mensaje.addEventListener('change', function () {
     return flag2 = true;
 });
 
-
+document.getElementById("btnCloseForm").addEventListener('click',function(){
+    location.href="testimonios.php";
+});
 
 function countChar() {
 
@@ -61,7 +69,6 @@ function countChar() {
             respuesta.classList.add('text-secondary');
         }
     }, 10);
-
 }
 
 function limita(maximoCaracteres) {
@@ -136,7 +143,6 @@ function validar(e) {
             return false;
         }
     }else{
-        console.log("se esta editando");
         if ((flag1 === false) && (flag2 === false) && (flag3 === false)) {
             if (confirm("Deseas salir sin realizar ningún cambio.")) {
                 return true;

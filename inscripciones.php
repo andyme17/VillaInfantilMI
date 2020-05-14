@@ -4,24 +4,21 @@
 
     use Spipu\Html2Pdf\Html2Pdf;
 
-    function validarText($dato)
-    {
+    function validarText($dato){
         $dato = trim($dato);
         $dato = quitar_tildes($dato);
         $dato = filter_var(($dato), FILTER_SANITIZE_STRING);
         return $dato;
     }
 
-    function quitar_tildes($cadena)
-    {
+    function quitar_tildes($cadena){
         $no_permitidas = array("á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú", "ñ", "À", "Ã", "Ì", "Ò", "Ù", "Ã™", "Ã ", "Ã¨", "Ã¬", "Ã²", "Ã¹", "ç", "Ç", "Ã¢", "ê", "Ã®", "Ã´", "Ã»", "Ã‚", "ÃŠ", "ÃŽ", "Ã”", "Ã›", "ü", "Ã¶", "Ã–", "Ã¯", "Ã¤", "«", "Ò", "Ã", "Ã„", "Ã‹");
         $permitidas = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "n", "N", "A", "E", "I", "O", "U", "a", "e", "i", "o", "u", "c", "C", "a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "u", "o", "O", "i", "a", "e", "U", "I", "A", "E");
         $texto = str_replace($no_permitidas, $permitidas, $cadena);
         return $texto;
     }
 
-    function validar($dato)
-    {
+    function validar($dato){
         $dato = trim($dato);
         $dato = htmlspecialchars($dato);
         $dato = stripslashes($dato);
@@ -46,7 +43,7 @@
         $alcaldia_alu = validarText($_POST['alcaldia-alu']);
         $entidad_alu = validarText($_POST['entidad-alu']);
         $cp_alu = validar($_POST['cp-alu']);
-        $esc_proc = validar($_POST['esc-proc']);
+        $esc_proc = quitar_tildes(validar($_POST['esc-proc']));
         $esc_procedencia = !empty($_POST['esc-procedencia']) ? validarText($_POST['esc-procedencia'])  : 'NO APLICA';
         $ap_pat_tutor = validarText($_POST['ap-pat-tutor']);
         $ap_mat_tutor = validarText($_POST['ap-mat-tutor']);
@@ -77,15 +74,14 @@
             !empty($tel_fijo) && !empty($tel_cel) && !empty($tel_ofi) && !empty($email_tutor)
         ) {
 
-            //recogiendo el contenido del otro fichero 
-            ob_start(); //buffer que recoge el contenido del fichero de abajo
-            require_once 'pre_reg_form.view.php'; //archivo que contiene el html del pdf
-            $html = ob_get_clean(); //el contenido del buffer se guarda en una variable
+            ob_start(); 
+            require_once 'pre_reg_form.view.php';
+            $html = ob_get_clean();
 
             $html2pdf = new Html2Pdf('P', 'A4', 'es', 'true', 'UTF8');
             $html2pdf->setDefaultFont('Arial');
             $html2pdf->writeHTML($html);
-
+           
             $email_to = "zunosan.ricardo506@gmail.com";
             $subject = "Solicitud de Pre-Inscripción de " . $nombre_alu . " " . $ap_pat_alu . " " . $ap_mat_alu;
 
@@ -95,6 +91,7 @@
             $filename = $nombre_alu . "_" . $ap_pat_alu . "_" . $ap_mat_alu . ".pdf";
 
             $pdfdoc = $html2pdf->output('', 'S');
+            
             $attachment = chunk_split(base64_encode($pdfdoc));
 
             $headers = "From: " . $email_tutor . $eol;
@@ -104,7 +101,7 @@
             $body = '';
 
             $body .= "Content-Transfer-Encoding: 7bit" . $eol;
-            $body .= "This is a MIME encoded message." . $eol; //had one more .$eol
+            $body .= "This is a MIME encoded message." . $eol; 
 
 
             $body .= "--" . $separator . $eol;

@@ -54,7 +54,7 @@
                 <a href="#pageServicios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-tasks"></i> Servicios</a>
                 <ul class="collapse" id="pageServicios">
                     <li>
-                        <a href="<?php echo PATH; ?>admin/servicios_after.php">Servicios Afterschool</a>
+                        <a href="<?php echo PATH; ?>admin/servicios_afterschool.php">Servicios Afterschool</a>
                     </li>
                     <li>
                         <a href="<?php echo PATH; ?>admin/editar_servicio_comida.php">Servicio de comida</a>

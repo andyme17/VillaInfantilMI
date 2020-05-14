@@ -127,9 +127,9 @@
     }
 
     function num_items($conexion){
-        $total = $conexion->prepare('SELECT FOUND_ROWS() as total_coment');
+        $total = $conexion->prepare('SELECT FOUND_ROWS() as total_items');
         $total->execute();
-        $total = $total->fetch()['total_coment'];         
+        $total = $total->fetch()['total_items'];         
         return $total;
     }
 
@@ -143,12 +143,11 @@
         $statement = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM evento ORDER BY fecha DESC LIMIT 3");
         $statement->execute();
         return $statement->fetchAll();
-    }
+    }    
 
-   /*  function obt_serv_after_gestor($items_x_pag,$conexion){
-        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
-        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM servicio_after LIMIT $inicio,$items_x_pag");
-        $sentencia->execute();
-        return $sentencia->fetchAll();
-    } */
+    function obt_evento_x_id($conexion,$id){
+        $resultado = $conexion->query("SELECT * FROM evento WHERE id = $id LIMIT 1");
+        $resultado = $resultado->fetchAll();
+        return ($resultado) ? $resultado : false;
+    }
 ?>

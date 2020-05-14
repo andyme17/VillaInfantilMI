@@ -1,10 +1,14 @@
+/**
+ * Script for team form 
+*/
+
+//form fields
 var mensaje = document.getElementById('mensaje')
     flag = false;
 
 eventListener();
 
 function eventListener() {
-    //se carga aplicacion y deshabilitamos el boton  
     document.addEventListener('DOMContentLoaded', iniciar);
 }
 
@@ -14,6 +18,10 @@ function iniciar() {
 
 mensaje.addEventListener('change',function(){
     return flag = true;
+});
+
+document.getElementById("btnCloseForm").addEventListener('click', function() {
+    location.href = "index.php";
 });
 
 function countChar() {

@@ -27,7 +27,7 @@
 
         header('Location:'.PATH.'admin/testimonios.php');
     }else{
-        /*getting information from staff*/
+        /*getting information from testimonials*/
         $id_testimonio = obt_id($_GET['id']);
         if(empty($id_testimonio)){
             header('Location:'.PATH.'admin/testimonios.php');

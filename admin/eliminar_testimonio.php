@@ -17,6 +17,7 @@
         header('Location: '.PATH.'admin/testimonios.php');
     }
 
+    /*removing testimonial*/
     $statement = $conexion->prepare('DELETE FROM testimonio WHERE id=:id');
     $statement->execute(array('id' => $id));
 

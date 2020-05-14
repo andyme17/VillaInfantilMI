@@ -1,9 +1,15 @@
+/**
+ * Script for inscription form 
+*/
+
+//form fields
 var formulario = document.getElementById('form-inscrip'),
     list_doc = document.getElementById('list-doc'),
     esc_proc_si = document.getElementById('si'),
     esc_proc_no = document.getElementById('no'),
     esc_procedencia = document.getElementById('esc-procedencia');
 
+//regular expressions    
 const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 const regNum = /^([0-9])*$/;
 const regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;

@@ -1,13 +1,20 @@
+/**
+ * Script for banner form 
+*/
+
 eventListener();
 
 function eventListener() {
-    //se carga aplicacion y deshabilitamos el boton  
     document.addEventListener('DOMContentLoaded', iniciar);
 }
 
 function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
 }
+
+document.getElementById("btnCloseForm").addEventListener('click',function(){
+    location.href="index.php";
+});
 
 function validaImagen(obj) {
     var uploadFile = obj.files[0];

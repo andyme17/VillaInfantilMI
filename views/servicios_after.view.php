@@ -46,7 +46,6 @@
                         <?php endforeach; ?>
                     </div>
                 </main>
-
                 <section class="container paginacion">
                     <?php $numero_paginas = num_pag_serv($config_gestor['items_x_pag'], $conexion); ?>
                     <?php if ($numero_paginas > 1) : ?>

@@ -114,7 +114,7 @@
                 <h5 class="card-title"><?php echo $testimonio['nombre']; ?></h5>
                 <hr>
               </div>
-              <blockquote class="card-text"><?php echo $testimonio['mensaje']; ?></blockquote>
+              <blockquote class="card-text"><i class="fas fa-quote-left"></i>&nbsp;&nbsp;<?php echo $testimonio['mensaje']; ?>&nbsp;&nbsp;<i class="fas fa-quote-right"></i></blockquote>
               <div class="calificacion text-center">
                 <?php for ($i = 0; $i < $testimonio['votacion']; $i++) : ?>
                   <i class="fas fa-star"></i>
@@ -214,7 +214,7 @@
                 <h5><?php echo $evento['titulo'];?></h5>
                 <hr>
               </div>
-              <p class="card-text"><?php echo $evento['descripcion'];?></p>
+              <p class="card-text"><?php echo nl2br($evento['descripcion']);?></p>
               <p class="card-text text-right pt-3">
                 <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en <?php echo fecha($evento['fecha']);?></small>
               </p>

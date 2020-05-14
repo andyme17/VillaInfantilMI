@@ -1,5 +1,7 @@
-var formulario = document.getElementById('form-gestor');
-    
+/**
+ * Script for instalations form 
+*/
+
 eventListener();
 
 function eventListener() {
@@ -10,6 +12,10 @@ function eventListener() {
 function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
 }
+
+document.getElementById("btnCloseForm").addEventListener('click',function(){
+    location.href="instalaciones.php";
+});
 
 function validaImagen(obj){
     var uploadFile = obj.files[0];

@@ -16,26 +16,23 @@ var errorNombre = document.getElementById('error-nombre'),
     errorVotacion = document.getElementById('error-votacion'),
     errorMensaje = document.getElementById('error-mensaje');
 
-//expresiones regulares
+//regular expressions
 const regexTexto = /^[a-z][a-z]*/;
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
 eventListener();
 
 function eventListener(){
-    //se carga aplicacion y deshabilitamos el boton  
     document.addEventListener('DOMContentLoaded', inicioApp);
 
     nombre.addEventListener('blur',validarCampo);
     email.addEventListener('blur',validarCampo);
     mensaje.addEventListener('blur',validarCampo);  
-   // radio1.addEventListener('change',validarCampo);
-       
+         
     formOpinion.addEventListener('submit', leerFormulario);
 }
 
-function inicioApp(){
-    //deshabilitamos boton
+function inicioApp(){    
     btnForm.disabled = true;
 }
 
@@ -70,8 +67,6 @@ function limita(maximoCaracteres) {
 }
 
 function validarCampo(){
-    //se valida la longitud del campo y no este vacio     
-
     if(this.name === 'nombre'){
         if(nombre.value.trim() === '' || !regexTexto.test(nombre.value.trim().toLowerCase())){
             errorNombre.style.display = 'block';
@@ -121,7 +116,6 @@ function validarCampo(){
     }
 }
 
-//cuando se envia el formulario
 function leerFormulario(e){
     e.preventDefault();
 
@@ -141,52 +135,41 @@ function leerFormulario(e){
             errorVotacion.style.display = 'none';
         },3000);
     } else {
-        //hace una llamada ajax  
-         const datosComentario = new FormData();
-         datosComentario.append('nombre',nombre.value);
-         datosComentario.append('email',email.value);
-         datosComentario.append('votacion',valor_votacion);
-         datosComentario.append('mensaje',mensaje.value);
-         datosComentario.append('submit',btnForm.value);
+        const datosComentario = new FormData();
+        
+        datosComentario.append('nombre',nombre.value);
+        datosComentario.append('email',email.value);
+        datosComentario.append('votacion',valor_votacion);
+        datosComentario.append('mensaje',mensaje.value);
+        datosComentario.append('submit',btnForm.value);
  
         enviarComentario(datosComentario);            
     }       
 }   
 
-//enviando los datos por ajax
 function enviarComentario(datos){
-    //creando objeto    
     const xhr = new XMLHttpRequest();
 
-    //abriendo conexion
     xhr.open('POST','modelos_ajax/modelo_opinion.php', true);
 
-    //se pasan los datos
     xhr.onload = function(){
         if(this.status === 200){
             const respuesta = JSON.parse(xhr.responseText);           
 
-            //mostramos notificacion
             notificacionCorrecta();       
-                        
-            //reseteamos formulario
             formOpinion.reset();
             document.getElementById('res').innerHTML = 0 + ' caractere/s, te quedan ' + 200;
 
         }        
     }
 
-    //se envian los datos
     xhr.send(datos);
 }
 
-//Notificacion exitosa
 function notificacionCorrecta(){
-    //se muestra al presionar el boton de enviar 
     const spinnerGif = document.getElementById('spinner');
     spinnerGif.style.display = 'block';
 
-    //gif que envia email
     const enviado = document.createElement('img');
     enviado.src = 'img/mail.gif';
     enviado.style.display = 'block';
@@ -194,8 +177,6 @@ function notificacionCorrecta(){
     const textEnviado = document.createElement('p');
     textEnviado.textContent = 'Mensaje enviado correctamente';
 
-
-    //ocultar spinner y mostrar gif de enviado
     setTimeout(function(){
         spinnerGif.style.display = 'none';
         document.getElementById('loaders').appendChild(enviado);

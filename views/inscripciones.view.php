@@ -412,7 +412,6 @@
     <!-- Custom javascript files -->
     <script src="js/nav-bar.js"></script>
     <script src="js/form-inscripcion.js"></script>
+</body>
 
-    </body>
-
-    </html>
+</html>

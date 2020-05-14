@@ -8,6 +8,7 @@
                 <p class="my-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
                 <p>Ó bien comunicate al <span>55 21 67 74 36</span> en horario de 8:00 a.m a 4 p.m</p>
             </div>
+
             <form action="#" method="post" class="form-contact" id="form-contact" novalidate>
                 <div class="container mx-auto">
                     <div class="group">
@@ -38,6 +39,7 @@
             </form>
         </div>
     </main>
+    
     <section class="sec-mac container py-4">
         <div class="text-map">
             <h3>Nos ubicamos en </h3>

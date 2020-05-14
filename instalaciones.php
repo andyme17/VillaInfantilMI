@@ -14,5 +14,4 @@
         header('Location:'.PATH.'error.php');
     }
 
-
     require 'views/instalaciones.view.php';

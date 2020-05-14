@@ -1,6 +1,17 @@
-var formulario = document.getElementById('form-gestor'),
-    descripcion = document.getElementById('descripcion');
+/**
+ * Script for events form 
+*/
 
+//form fields
+var titulo = document.getElementById('titulo'),
+    descripcion = document.getElementById('descripcion'),
+    fecha = document.getElementById('fecha'),
+    thumb = document.getElementById('thumb'),
+    flag1 = false;
+    flag2 = false;
+    flag3 = false;
+
+//regular expressions    
 const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
 eventListener();
@@ -14,8 +25,23 @@ function iniciar() {
     document.getElementById("btnForm").addEventListener('click', validar, false);
 }
 
-function countChar() {
+document.getElementById("btnCloseForm").addEventListener('click',function(){
+    location.href="eventos.php";
+});
 
+titulo.addEventListener('change', function () {
+    return flag1 = true;
+});
+
+descripcion.addEventListener('change', function () {
+    return flag2 = true;
+});
+
+fecha.addEventListener('change', function () {
+    return flag3 = true;
+});
+
+function countChar() {
     var total = 300;
 
     setTimeout(function () {
@@ -31,7 +57,6 @@ function countChar() {
             respuesta.classList.add('text-secondary');
         }
     }, 10);
-
 }
 
 function limita(maximoCaracteres) {
@@ -42,74 +67,75 @@ function limita(maximoCaracteres) {
     }
 }
 
-function validaTitulo() {
-    var titulo = document.getElementById('titulo');
+function validaCampo(campo) {
     limpiarError('error-titulo');
-
-    if (titulo.value.trim() == "" || !regText.test(titulo.value.trim())) {
-        error(titulo, 'error-titulo', "Ingrese el título del evento.");
-        return false;
-    }
-    return true;
-}
-
-function validaDesc(campo){
     limpiarError('error-desc');
 
-    if(campo.value.trim() == ""){
-        error(campo, 'error-desc', "Ingrese la descripción del evento.");
-        return false;
-    } else if (campo.value.trim().length > 300){
-        error(campo, 'error-desc', "La descripción sólo puede tener máximo 300 caracteres.");
-        return false;
+    if (campo.name == "titulo") {
+        if (campo.value.trim() == "" || !regText.test(campo.value.trim())) {
+            error(campo, 'error-titulo', "Ingrese el título del evento.");
+            return false;
+        }
+    } else if (campo.name == "descripcion") {
+        if (campo.value.trim() == "") {
+            error(campo, 'error-desc', "Ingrese la descripción del evento.");
+            return false;
+        } else if (campo.value.trim().length > 300) {
+            error(campo, 'error-desc', "La descripción sólo puede tener máximo 300 caracteres.");
+            return false;
+        }
+    } else if (campo.name == "fecha") {
+        if (campo.value.trim() == "") {
+            error(campo, 'error-fecha', "Ingrese la fecha del evento.");
+            return false;
+        }
     }
     return true;
 }
 
-function validaImagen(obj){
+function validaImagen(obj) {
     var uploadFile = obj.files[0];
-       
+
     if (!window.FileReader) {
         alert('El navegador no soporta la lectura de archivos');
         return;
     }
 
     if (!(/\.(jpg|jpeg)$/i).test(uploadFile.name)) {
-        error(obj,'error-thumb','Formato de imagen no válido.');   
+        error(obj, 'error-thumb', 'Formato de imagen no válido.');
         document.getElementById('thumb').value = "";
     }
     else {
         var img = new Image();
         img.onload = function () {
             if (this.width.toFixed(0) != 960 && this.height.toFixed(0) != 720) {
-                error(obj,'error-thumb','Las dimensiones de la fotografía deben ser de 960 x 720px.'); 
-                document.getElementById('thumb').value = "";               
+                error(obj, 'error-thumb', 'Las dimensiones de la fotografía deben ser de 960 x 720px.');
+                document.getElementById('thumb').value = "";
             }
-            else if (uploadFile.size > 260000){
-                error(obj,'error-thumb','El tamaño de la imagen no puede exceder los 250 KB');                
-                document.getElementById('thumb').value = "";               
-            }else if(uploadFile.name.length > 200){
-                error(obj,'error-thumb','El nombre del archivo no debe exceder los 200 caracteres. Por favor, modifica el nombre.');                
-                document.getElementById('thumb').value = "";    
-            }else{
+            else if (uploadFile.size > 260000) {
+                error(obj, 'error-thumb', 'El tamaño de la imagen no puede exceder los 250 KB');
+                document.getElementById('thumb').value = "";
+            } else if (uploadFile.name.length > 200) {
+                error(obj, 'error-thumb', 'El nombre del archivo no debe exceder los 200 caracteres. Por favor, modifica el nombre.');
+                document.getElementById('thumb').value = "";
+            } else {
                 limpiarError('error-thumb');
             }
         };
         img.src = URL.createObjectURL(uploadFile);
-    }                 
+    }
 }
 
-function validaImagen2(){
-    var  thumb = document.getElementById('thumb');
+function validaImagen2(campo) {    
     limpiarError('error-thumb');
 
-    if(thumb.value == ""){
-        error(thumb,'error-thumb','Ingrese la fotografía del evento');
+    if (campo.value == "") {
+        error(campo, 'error-thumb', 'Ingrese la fotografía del evento');
         return false;
     }
-    return true;  
+    return true;
 }
-   
+
 function error(elemento, div_error, mensaje) {
     document.getElementById(div_error).textContent = mensaje;
     document.getElementById(div_error).className = "error";
@@ -122,11 +148,32 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {
-    if (validaTitulo() && validaDesc(descripcion) && validaImagen2() &&
-        confirm("Pulsa aceptar para actualizar la sección de eventos.")) {
-        return true;
+    var action = document.getElementById('action').value;
+
+    if (action === "new") {
+        if (validaCampo(titulo) && validaCampo(descripcion) && validaCampo(fecha) && validaImagen2(thumb) &&
+            confirm("Pulsa aceptar para añadir un nuevo evento.")) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
     } else {
-        e.preventDefault();
-        return false;
+        if ((flag1 === false) && (flag2 === false) && (flag3 === false) && thumb.value =="") {
+            if (confirm("Deseas salir sin realizar ningún cambio.")) {
+                return true;
+            } else {
+                e.preventDefault();
+                return false;
+            }
+        } else {
+            if (validaCampo(titulo) && validaCampo(descripcion) && validaCampo(fecha) &&
+                confirm("Pulsa aceptar para actualizar la sección de eventos.")) {
+                return true;
+            } else {
+                e.preventDefault();
+                return false;
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@
     $id = limpiarDatos($_GET['id']);
 
     if(!$id){
-        header('Location: '.PATH.'admin/instalaciones.php');
+        header('Location: '.PATH.'admin/servicios_afterschool.php');
     }
 
     /*getting thumb name*/
@@ -28,4 +28,4 @@
 
     unlink('../img/'.$result['thumb']);
 
-    header('Location: '.PATH.'/admin/servicios_after.php');
+    header('Location: '.PATH.'admin/servicios_afterschool.php');

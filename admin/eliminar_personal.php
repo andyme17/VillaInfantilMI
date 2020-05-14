@@ -17,10 +17,12 @@
         header('Location: '.PATH.'admin/personal.php');
     }
 
+     /*getting thumb name*/
     $statement = $conexion->prepare('SELECT thumb FROM personal WHERE id=:id');
     $statement->execute(array('id' => $id));
     $result = $statement->fetch();
     
+    /*removing person*/
     $statement1 = $conexion->prepare('DELETE FROM personal WHERE id=:id');
     $statement1->execute(array('id' => $id));
 

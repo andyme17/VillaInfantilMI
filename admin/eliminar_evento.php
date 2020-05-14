@@ -14,18 +14,18 @@
     $id = limpiarDatos($_GET['id']);
 
     if(!$id){
-        header('Location: '.PATH.'admin/instalaciones.php');
+        header('Location: '.PATH.'admin/eventos.php');
     }
 
-    /*getting thumb name*/
-    $statement = $conexion->prepare('SELECT thumb FROM galeria WHERE id=:id');
+     /*getting thumb name*/
+    $statement = $conexion->prepare('SELECT thumb FROM evento WHERE id=:id');
     $statement->execute(array('id'=> $id));
     $result = $statement->fetch();
-    
-    /*removing instalation*/
-    $statement1 = $conexion->prepare('DELETE FROM galeria WHERE id=:id');
+
+    /*removing event*/
+    $statement1 = $conexion->prepare('DELETE FROM evento WHERE id=:id');
     $statement1->execute(array('id' => $id)); 
     
     unlink('../img/'.$result['thumb']);
 
-    header('Location: '.PATH.'admin/instalaciones.php');
+    header('Location: '.PATH.'admin/eventos.php');

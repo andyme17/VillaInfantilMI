@@ -61,12 +61,12 @@
             <div class="content-after container pt-3">
                 <?php foreach ($after_service as $service) : ?>
                     <div class="item-extra mb-3">
-                        <img src="<?php echo PATH; ?>img/<?php echo $service['thumb'];?>" alt="Imagen ilustrativa de <?php echo $service['nombre'];?>" class="img-fluid">
+                        <img src="<?php echo PATH; ?>img/<?php echo $service['thumb']; ?>" alt="Imagen ilustrativa de <?php echo $service['nombre']; ?>" class="img-fluid">
                         <div class="content-extra">
-                            <h4><?php echo $service['nombre'];?></h4>
+                            <h4><?php echo $service['nombre']; ?></h4>
                         </div>
                     </div>
-                <?php endforeach; ?>              
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-12 col-md-6 pt-xl-5 order-md-2">
                     <h3>Comedor</h3>
-                    <p><?php echo $food_service['descripcion'];?></p>
+                    <p><?php echo $food_service['descripcion']; ?></p>
                 </div>
             </div>
         </div>
@@ -104,6 +104,7 @@
             <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos ></a>
         </div>
     </section>
+
     <?php require 'footer.view.php'; ?>
 
     <!--Archivos javascript para bootstrap -->
@@ -112,6 +113,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/headroom.min.js"></script>
     <script src="js/nav-bar.js"></script>
-    </body>
+</body>
 
-    </html>
+</html>

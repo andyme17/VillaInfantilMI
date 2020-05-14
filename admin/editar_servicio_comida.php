@@ -14,14 +14,10 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $seccion = $_POST['seccion'];
         $mensaje = limpiarDatos($_POST['mensaje']);
-        $mensaje_guardado = limpiarDatos($_POST['mensaje_guardado']);
         $thumb_guardada = $_POST['thumb-guardada'];
         $thumb = $_FILES['thumb']; 
 
-        if($mensaje_guardado === $mensaje && empty($thumb['name'])){
-            $thumb = $thumb_guardada;            
-            header('Location:'.PATH.'admin/');
-        }else if(empty($thumb['name'])){
+        if(empty($thumb['name'])){
             $thumb = $thumb_guardada;            
         }else{
             $file_uploaded = '../'.$config_gestor['carpeta_img'].$_FILES['thumb']['name'];

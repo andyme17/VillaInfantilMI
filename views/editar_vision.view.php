@@ -27,7 +27,7 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <div class="row">
                         <div class="col-12 offset-xl-1 col-xl-10">
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-sm-5" id="form-gestor" novalidate>
@@ -35,7 +35,6 @@
                                 <h3 class="mt-1 mb-4 text-center">Editar Visión</h3>
                                 <div class="group pt-3 pt-md-4">
                                     <textarea name="mensaje" id="mensaje" rows="5" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(400);"><?php echo $vision_msg['descripcion']; ?></textarea><span class="barra"></span>
-                                    <input type="hidden" name="mensaje_guardado" value="<?php echo $vision_msg['descripcion']; ?>">
                                     <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 400</div>
                                     <div id="error-msj"></div>
@@ -43,13 +42,14 @@
                                 <div class="text-left">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
-                                <div class="btn-right">
-                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar ></button>
+                                <div class="btn-opc">
+                                    <button type="button" class="btn btn-secondary mr-2" id="btnCloseForm">Cancelar&nbsp;&nbsp;<i class="fas fa-times"></i></button>
+                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
+                </main>
             </div>
         </div>
     </div>
@@ -67,6 +67,10 @@
 
         mensaje.addEventListener('change',function(){
             return flag = true;
+        });
+
+        document.getElementById("btnCloseForm").addEventListener('click', function() {
+            location.href = "index.php";
         });
 
         function countChar() {

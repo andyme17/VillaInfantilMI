@@ -15,14 +15,13 @@ var errorNombre = document.getElementById('error-nombre'),
     errorEmail = document.getElementById('error-email'),    
     errorMensaje = document.getElementById('error-mensaje');
 
-//expresiones regulares
+//regular expressions
 const regexTexto = /^[a-z][a-z]*/;
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
 eventListener();
 
 function eventListener(){
-    //se carga aplicacion y deshabilitamos el boton  
     document.addEventListener('DOMContentLoaded', inicioApp);
 
     nombre.addEventListener('blur',validarCampo);
@@ -32,14 +31,11 @@ function eventListener(){
     formContact.addEventListener('submit', leerFormulario);
 }
 
-function inicioApp(){
-    //deshabilitamos boton
+function inicioApp(){    
     btnForm.disabled = true;
 }
 
 function validarCampo(){
-    //se valida la longitud del campo y no este vacio     
-
     if(this.name === 'nombre'){
         if(nombre.value.trim() === '' || !regexTexto.test(nombre.value.trim().toLowerCase())){
             errorNombre.style.display = 'block';
@@ -92,11 +88,9 @@ function validarCampo(){
     }
 }
 
-//cuando se envia el formulario
 function leerFormulario(e){
     e.preventDefault();
 
-    //hace una llamada ajax  
     const datosContacto = new FormData();
     
     datosContacto.append('nombre',nombre.value);
@@ -104,42 +98,30 @@ function leerFormulario(e){
     datosContacto.append('mensaje',mensaje.value);
     datosContacto.append('submit',btnForm.value);
  
-    enviarContacto(datosContacto);            
-           
+    enviarContacto(datosContacto);           
 }   
 
-//enviando los datos por ajax
 function enviarContacto(datos){
-    //creando objeto    
     const xhr = new XMLHttpRequest();
 
-    //abriendo conexion
     xhr.open('POST','modelos_ajax/modelo_contacto.php', true);
 
-    //se pasan los datos
     xhr.onload = function(){
         if(this.status === 200){
             const respuesta = JSON.parse(xhr.responseText);           
 
-            //mostramos notificacion
-            notificacionCorrecta();       
-                        
-            //reseteamos formulario
+            notificacionCorrecta();    
             formOpinion.reset();
         }        
     }
 
-    //se envian los datos
     xhr.send(datos);
 }
 
-//Notificacion exitosa
 function notificacionCorrecta(){
-    //se muestra al presionar el boton de enviar 
     const spinnerGif = document.getElementById('spinner');
     spinnerGif.style.display = 'block';
 
-    //gif que envia email
     const enviado = document.createElement('img');
     enviado.src = 'img/mail.gif';
     enviado.style.display = 'block';
@@ -147,8 +129,6 @@ function notificacionCorrecta(){
     const textEnviado = document.createElement('p');
     textEnviado.textContent = 'Mensaje enviado correctamente';
 
-
-    //ocultar spinner y mostrar gif de enviado
     setTimeout(function(){
         spinnerGif.style.display = 'none';
         document.getElementById('loaders').appendChild(enviado);

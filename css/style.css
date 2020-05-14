@@ -124,6 +124,7 @@ ol {
   border-color: transparent !important;
   -webkit-transition: all 1s;
   transition: all 1s;
+  color: #03224e;
 }
 
 .btn-form-primary {
@@ -147,6 +148,7 @@ ol {
 .btn-secondary:hover {
   box-shadow: 20rem 0 #437092 inset, -20rem 0 #437092 inset !important;
   border-color: #437092 !important;
+  color: #fff;
 }
 
 .btn-primary.focus,
@@ -466,7 +468,6 @@ header {
 /**********index page********/
 
 /*Modal section*/
-
 @media (min-width: 1200px) {
   .modal-content img {
     height: 500px;
@@ -867,15 +868,14 @@ header {
   }
 }
 
+.fas.fa-quote-left, .fas.fa-quote-right{
+  color: #03224e;
+  font-size: 0.9rem;
+}
+
 /*Last events section*/
 .card-title h5 {
   color: #03224e;
-}
-
-@media (min-width: 1024px) {
-  .sec-eventos .card {
-    height: 580px;
-  }
 }
 
 .sec-eventos .card-text {
@@ -1153,7 +1153,6 @@ textarea {
 }
 
 @media (min-width: 768px) {
-
   input[type="text"],
   input[type="password"],
   textarea {
@@ -1182,7 +1181,6 @@ textarea:valid~label.float-label {
 }
 
 @media (min-width: 768px) {
-
   input[type="password"]:focus~label.float-label,
   input[type="password"]:valid~label.float-label,
   input[type="text"]:focus~label.float-label,
@@ -1570,8 +1568,7 @@ button.btn {
 
 #loaders img {
   height: 95px;
-  margin: 0 auto;
-  /* display: none; */
+  margin: 0 auto; 
 }
 
 #spinner {
@@ -1579,7 +1576,8 @@ button.btn {
   height: 90px;
 }
 
-/*Page gallery*/
+/******** Page instalaciones.php ********/
+
 .sec-gallery .pgwSlideshow {
   position: relative;
 }
@@ -1602,7 +1600,7 @@ button.btn {
   z-index: 10;
 }
 
-/*Privacy Notice Page*/
+/******** Page aviso_privacidad.php ********/
 .text-aviso {
   position: relative;
 }
@@ -1674,7 +1672,6 @@ button.btn {
 }
 
 /*food service section*/
-
 .content-service p {
   font-size: 1rem;
   text-align: justify;
@@ -1872,7 +1869,7 @@ button.btn {
   }
 }
 
-/*Inscripctions page*/
+/******** inscripctions page ********/
 .content-form {
   position: relative;
 }
@@ -1980,13 +1977,14 @@ input#esc-procedencia:disabled {
   background-color: #adb5bd0f;
 }
 
-/**Gestor**/
+/******** manager page ********/
 .wrapper {
   display: flex;
   width: 100%;
   align-items: stretch;
 }
 
+/*sidebar*/
 #sidebar {
   min-width: 250px;
   max-width: 250px;
@@ -2100,6 +2098,47 @@ input#esc-procedencia:disabled {
   background: #fec746;
 }
 
+#sidebar ul li .fas {
+  padding-right: 5px;
+}
+
+#sidebar ul li .fas.fa-sign-out-alt {
+  padding-left: 67px;
+  padding-right: 0px;
+}
+
+#sidebar.active {
+  margin-left: 0;
+}
+
+@media(min-width: 1024px) {  
+  #sidebar {
+    position: relative;
+    top: 0;
+    z-index: 0;
+    min-height: 100vh;
+    margin-left: 0;
+  }
+
+  button.btn.btn-info.btn-side-bar {
+    display: none !important;
+  }
+
+  #dismiss {
+    display: none;
+  }
+
+  #sidebar .sidebar-header {
+    padding: 25px 0px 20px 20px;
+  }
+
+  #sidebar ul li a,
+  #sidebar ul p {
+    padding: 5px 20px;
+  }
+}
+
+/*main container*/
 #content {
   width: 100%;
   padding: 20px 30px;
@@ -2185,73 +2224,6 @@ button.btn.btn-info.btn-side-bar {
   .img-init img:last-of-type {
     width: 230px;
   }
-
-  #sidebar {
-    position: relative;
-    top: 0;
-    z-index: 0;
-    min-height: 100vh;
-    margin-left: 0;
-  }
-
-  button.btn.btn-info.btn-side-bar {
-    display: none !important;
-  }
-
-  #dismiss {
-    display: none;
-  }
-
-  #sidebar .sidebar-header {
-    padding: 25px 0px 20px 20px;
-  }
-
-  #sidebar ul li a,
-  #sidebar ul p {
-    padding: 5px 20px;
-  }
-}
-
-#sidebar ul li .fas {
-  padding-right: 5px;
-}
-
-#sidebar ul li .fas.fa-sign-out-alt {
-  padding-left: 67px;
-  padding-right: 0px;
-}
-
-#sidebar.active {
-  margin-left: 0;
-}
-
-#form-gestor {
-  padding: 15px;
-  background: #fff;
-  margin-top: 40px;
-}
-
-@media(min-width: 576px) {
-  #form-gestor {
-    padding: 20px;
-  }
-}
-
-@media(min-width: 1024px) {
-  #form-gestor {
-    margin-top: 60px;
-  }
-}
-
-@media(min-width: 1200px) {
-  #form-gestor {
-    margin-top: 5px;
-  }
-}
-
-.btn-right {
-  display: flex;
-  justify-content: flex-end;
 }
 
 #content button.btn {
@@ -2289,16 +2261,52 @@ button.btn.btn-info.btn-side-bar {
   }
 }
 
+/*form*/
+#form-gestor {
+  padding: 15px;
+  background: #fff;
+  margin-top: 40px;
+}
+
+@media(min-width: 576px) {
+  #form-gestor {
+    padding: 20px;
+  }
+}
+
+@media(min-width: 1024px) {
+  #form-gestor {
+    margin-top: 60px;
+  }
+}
+
+@media(min-width: 1200px) {
+  #form-gestor {
+    margin-top: 5px;
+  }
+}
+
 .cont-item {
   background: #fff;
   padding: 20px;
   margin-bottom: 20px;
 }
 
+/*buttons*/
 .btn-opc,
 .btn-opc-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+}
+
+.btn-opc {
+  margin-top: 50px;
+}
+
+.btn-opc-card {  
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0,0,0,.125);
+  margin-top: 20px;
 }
 
 #content a.btn {
@@ -2307,23 +2315,18 @@ button.btn.btn-info.btn-side-bar {
 }
 
 @media(min-width: 576px) {
-  .btn-opc {
+  .btn-opc,.btn-opc-card {
     text-align: right;
     display: block;
-  }
-
-  .btn-opc-card {
-    text-align: center;
-    justify-content: space-evenly;
-  }
+  }  
 }
 
+/*cards*/
 .cont-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .cont-card img {
@@ -2335,7 +2338,12 @@ button.btn.btn-info.btn-side-bar {
   height: 250px;
 }
 
-/*galeria de instalaciones para el gestor*/
+#content-card .card .card-text{
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/*manager gallery*/
 .content-after-2 {
   display: flex;
   flex-wrap: wrap;
@@ -2489,8 +2497,7 @@ button.btn.btn-info.btn-side-bar {
   }
 }
 
-/* --- Paginacion --- */
-
+/*Pagination*/
 .paginacion {
   margin: 25px 0;  
 }

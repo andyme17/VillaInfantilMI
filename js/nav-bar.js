@@ -1,6 +1,7 @@
 /**
  * Navbar script
  */
+
 $(document).ready(function(){	
 	var header = document.getElementById('header');
     var headroom = new Headroom(header);

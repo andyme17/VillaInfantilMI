@@ -1,10 +1,14 @@
+/**
+ * Script for food form 
+*/
+
+//form fields
 var mensaje = document.getElementById('mensaje'),
     flag = false;
 
 eventListener();
 
-function eventListener() {
-    //se carga aplicacion y deshabilitamos el boton  
+function eventListener() {    
     document.addEventListener('DOMContentLoaded', iniciar);
 }
 
@@ -14,6 +18,10 @@ function iniciar() {
 
 mensaje.addEventListener('change',function(){
     return flag = true;
+});
+
+document.getElementById("btnCloseForm").addEventListener('click',function(){
+    location.href="index.php";
 });
 
 function countChar() {
@@ -33,7 +41,6 @@ function countChar() {
             respuesta.classList.add('text-secondary');
         }
     }, 10);
-
 }
 
 function limita(maximoCaracteres) {

@@ -40,8 +40,9 @@
                                 <div class="text-left">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
-                                <div class="btn-right">
-                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Actualizar ></button>
+                                <div class="btn-opc">
+                                    <button type="button" class="btn btn-secondary mr-2" id="btnCloseForm">Cancelar&nbsp;&nbsp;<i class="fas fa-times"></i></button>
+                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                                 </div>
                             </form>
                         </div>

@@ -20,17 +20,24 @@
         
         move_uploaded_file($thumb,$file_uploaded);
         
-        $statement = $conexion->prepare(
-            'INSERT INTO personal(id,nombre,cargo,thumb)
-            VALUES (null,:nombre,:cargo,:thumb)'
-        );
+        obt_personal($conexion);
+        $num_rows = num_items($conexion);
 
-        $statement->execute(array(
-            ':nombre' => $nombre,
-            ':cargo' => $cargo,
-            ':thumb' => $_FILES['thumb']['name']
-        ));
-
+        if($num_rows < 3){
+            $statement = $conexion->prepare(
+                'INSERT INTO personal(id,nombre,cargo,thumb)
+                VALUES (null,:nombre,:cargo,:thumb)'
+            );
+    
+            $statement->execute(array(
+                ':nombre' => $nombre,
+                ':cargo' => $cargo,
+                ':thumb' => $_FILES['thumb']['name']
+            )); 
+        }else{
+            header('Location: error.php');         
+        }
+       
         header('Location:'.PATH.'admin/personal_admin.php');         
     }
 

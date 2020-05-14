@@ -27,7 +27,7 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Personal Administrativo</h3>
                     <div class="row mb-4 mb-md-5">
                         <div class="col-12 col-md-3 col-xl-2">
@@ -40,8 +40,7 @@
                                 para añadir a un nuevo miembro debes eliminar alguno de los existentes.</p>
                         </div>
                     </div>
-
-                    <main class="row" id="content-card">
+                    <div class="row" id="content-card">
                         <?php foreach ($personal as $persona) : ?>
                             <div class="col-12 col-md-6 col-xl-4 pb-3" id="card">
                                 <div class="card p-3">
@@ -50,15 +49,15 @@
                                         <h5><?php echo $persona['nombre']; ?></h5>
                                         <p><?php echo $persona['cargo']; ?></p>
                                     </div>
-                                    <div class="btn-opc-card mt-3">
-                                        <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_personal.php?id=<?php echo $persona['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
-                                        <a class="btn btn-danger pr-2" href="<?php echo PATH; ?>admin/eliminar_personal.php?id=<?php echo $persona['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                    <div class="btn-opc-card">
+                                        <a class="btn btn-primary mr-2" href="<?php echo PATH; ?>admin/editar_personal.php?id=<?php echo $persona['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
+                                        <a class="btn btn-danger" href="<?php echo PATH; ?>admin/eliminar_personal.php?id=<?php echo $persona['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                     </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    </main>
-                </div>
+                    </div>
+                </main>
             </div>
         </div>
     </div>
@@ -70,9 +69,7 @@
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
     <script>
-        var contenedor = document.getElementById('content-card');
-
-        console.log(contenedor.children);
+        var contenedor = document.getElementById('content-card');        
 
         if(contenedor.childElementCount >= 3){
             $('#btnAgregar').addClass('disabled');            

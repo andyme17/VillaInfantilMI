@@ -27,7 +27,7 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Testimonios</h3>
                     <div class="row mb-4">
                         <div class="col-12 col-md-3 col-xl-2">
@@ -40,7 +40,7 @@
                                 para añadir un nuevo testimonio debes eliminar alguno de los existentes.</p>
                         </div>
                     </div>
-                    <main class="row" id="content-card">
+                    <div class="row" id="content-card">
                         <?php foreach ($testimonios as $testimonio) : ?>
                             <div class="col-12 col-md-6 col-xl-4 pb-3">
                                 <div class="card text-center shadow">
@@ -49,22 +49,22 @@
                                             <h5 class="card-title"><?php echo $testimonio['nombre']; ?></h5>
                                             <hr>
                                         </div>
-                                        <blockquote class="card-text"><?php echo $testimonio['mensaje']; ?></blockquote>
+                                        <blockquote class="card-text"><i class="fas fa-quote-left"></i>&nbsp;&nbsp;<?php echo $testimonio['mensaje']; ?>&nbsp;&nbsp;<i class="fas fa-quote-right"></i></blockquote>
                                         <div class="calificacion text-center">
                                             <?php for ($i = 0; $i < $testimonio['votacion']; $i++) : ?>
                                                 <i class="fas fa-star"></i>
                                             <?php endfor; ?>
                                         </div>
-                                        <div class="btn-opc mt-5">
-                                            <a class="btn btn-primary pr-2" href="<?php echo PATH; ?>admin/editar_testimonio.php?id=<?php echo $testimonio['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
-                                            <a class="btn btn-danger pr-2 mr-2" href="<?php echo PATH; ?>admin/eliminar_testimonio.php?id=<?php echo $testimonio['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                        <div class="btn-opc-card">
+                                            <a class="btn btn-primary mr-1" href="<?php echo PATH; ?>admin/editar_testimonio.php?id=<?php echo $testimonio['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
+                                            <a class="btn btn-danger" href="<?php echo PATH; ?>admin/eliminar_testimonio.php?id=<?php echo $testimonio['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>                            
                         <?php endforeach; ?>
-                    </main>
-                </div>
+                    </div>
+                </main>
             </div>
         </div>
     </div>

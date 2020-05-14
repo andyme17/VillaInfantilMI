@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body id="login">
     <div class="wrapper">
         <?php require 'side_bar.view.php'; ?>
@@ -26,7 +27,7 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Últimos Eventos</h3>
                     <div class="row mb-4">
                         <div class="col-12 col-md-3 col-xl-2">
@@ -38,41 +39,34 @@
                             <p class="text-center text-md-left mt-3 mt-md-0 text-danger">Recuerda que sólo se permite publicar <b>3 eventos</b>,
                                 para añadir un nuevo evento debes eliminar alguno de los existentes.</p>
                         </div>
-                    </div>                    
-                    <main class="row" id="content-card" >
+                    </div>
+                    <div class="row" id="content-card">
                         <?php foreach ($eventos as $evento) : ?>
                             <div class="col-12 col-md-6 col-xl-4 pb-3">
-                                
-                            </div>   
-                        <?php endforeach; ?>    
-                       
-                            
-                            <div class="cont-item shadow">
-                                <h5 class="mb-4">Titulo del evento</h5>
-                                <div class="btn-opc">
-                                    <a class="btn btn-warning pr-2 mr-2" href="#"><i class="fas fa-eye"></i> Ver evento</a>
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH;?>admin/editar_evento.php"><i class="fas fa-edit"></i> Editar</a>
-                                </div>
+                                <article class="card shadow">
+                                    <img src="<?php echo PATH; ?>img/<?php echo $evento['thumb']; ?>" class="card-img-top" alt="Imagen ilustrativa del evento">
+                                    <div class="card-body">
+                                        <div class="card-title text-center">
+                                            <h5><?php echo $evento['titulo']; ?></h5>
+                                            <hr>
+                                        </div>
+                                        <p class="card-text"><?php echo nl2br($evento['descripcion']); ?></p>
+                                        <p class="card-text text-right pt-3">
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en <?php echo fecha($evento['fecha']); ?></small>
+                                        </p>
+                                        <div class="btn-opc-card">
+                                            <a class="btn btn-primary mr-1" href="<?php echo PATH; ?>admin/editar_evento.php?id=<?php echo $evento['id']; ?>"><i class="fas fa-edit"></i> Editar</a>
+                                            <a class="btn btn-danger" href="<?php echo PATH; ?>admin/eliminar_evento.php?id=<?php echo $evento['id']; ?>"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
-                            <div class="cont-item shadow">
-                                <h5 class="mb-4">Titulo del evento</h5>
-                                <div class="btn-opc">
-                                    <a class="btn btn-warning pr-2 mr-2" href="#"><i class="fas fa-eye"></i> Ver evento</a>
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH;?>admin/editar_evento.php"><i class="fas fa-edit"></i> Editar</a>
-                                </div>
-                            </div>
-                            <div class="cont-item shadow">
-                                <h5 class="mb-4">Titulo del evento</h5>
-                                <div class="btn-opc">
-                                    <a class="btn btn-warning pr-2 mr-2" href="#"><i class="fas fa-eye"></i> Ver evento</a>
-                                    <a class="btn btn-primary pr-2" href="<?php echo PATH;?>admin/editar_evento.php"><i class="fas fa-edit"></i> Editar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                </div>
+                        <?php endforeach; ?>
+                    </div>
+                </main>    
             </div>
         </div>
+    </div>
     </div>
 
     <!-- JavaScript files for Bootstrap 4 -->
@@ -80,7 +74,16 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>    
+    <script src="../js/side-bar.js"></script>
+    <script>
+        var contenedor = document.getElementById('content-card');
+
+        if(contenedor.childElementCount >= 3){
+            $('#btnAgregar').addClass('disabled');            
+        }else{
+            $('#btnAgregar').removeClass('disabled');           
+        } 
+    </script>
 </body>
 
 </html>

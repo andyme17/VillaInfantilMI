@@ -27,7 +27,7 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <div class="row">
                         <div class="col-12 offset-md-1 col-md-10">
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="shadow mb-5" id="form-gestor" novalidate>
@@ -60,7 +60,7 @@
                                 </div>
                                 <div id="error-vot"></div>
                                 <div class="group pt-3 pt-md-4">
-                                    <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(200);"><?php echo $testimonio['mensaje']; ?></textarea><span class="barra"></span>
+                                    <textarea name="mensaje" id="mensaje" rows="3" required="" autocomplete="off" onpaste="countChar();" onkeyup="countChar();" onkeypress="return limita(200);" title="No se requiere indicar comillas dobles"><?php echo $testimonio['mensaje']; ?></textarea><span class="barra"></span>
                                     <label for="mensaje" class="float-label">Mensaje: <span class="text-danger">*</span></label>
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 200</div>
                                     <div id="error-msj"></div>
@@ -68,14 +68,15 @@
                                 <div class="text-left">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
-                                <div class="btn-right">
+                                <div class="btn-opc">
                                     <input type="hidden" id="action" value="edit">
-                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Editar ></button>
+                                    <button type="button" class="btn btn-secondary mr-2" id="btnCloseForm">Cancelar&nbsp;&nbsp;<i class="fas fa-times"></i></button>
+                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Actualizar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
+                </main>
             </div>
         </div>
     </div>
@@ -89,6 +90,11 @@
 
     <!-- Custom javascript files -->
     <script src="../js/form-testimonio.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#mensaje').tooltip('show');
+        });           
+    </script>
 </body>
 
 </html>

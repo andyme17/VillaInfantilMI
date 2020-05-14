@@ -29,7 +29,7 @@
             ':thumb' => $_FILES['thumb']['name']
         ));
 
-        header('Location:'.PATH.'admin/servicios_after.php');         
+        header('Location:'.PATH.'admin/servicios_afterschool.php');         
     }
 
     require '../views/agregar_servicio.view.php';

@@ -7,6 +7,7 @@
       <p class="text-back-blue"><?php echo $init_msg['descripcion'];?></p>
     </div>
   </section>
+
   <section class="vision container py-4">
     <h2 class="text-center">Visión</h2>
     <hr>
@@ -14,8 +15,10 @@
       <p class="text-vision"><?php echo $vision_msg['descripcion'];?></p>
     </div>
   </section>
+
   <main class="img-back py-4">
     <h2 class="text-center">Nuestro Equipo</h2>
+
     <div class="content-nosotros container">
       <div class="img-nosotros">
         <img src="<?php echo PATH ?>img/<?php echo $team_thumb['thumb'];?>" class="img-nosotros img-fluid" alt="Imagen del personal del kinder">
@@ -24,6 +27,7 @@
         <p><?php echo $team_msg['descripcion'];?></p>
       </div>
     </div>
+
     <div class="sec-admin container mx-auto pt-3 pt-md-5">
       <h3 class="text-center">Personal Administrativo</h3>
       <div class="row text-center pt-2">
@@ -38,6 +42,7 @@
       </div>
     </div>
   </main>
+
   <section class="sec-opinion py-4">
     <div class="container">
       <p class="mb-4">
@@ -115,7 +120,7 @@
               </div>
             </div>
           </div>
-        </div> <!-- termina modal -->
+        </div> <!--end modal -->
     </div>
   </section>
   

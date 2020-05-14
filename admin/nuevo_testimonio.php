@@ -29,11 +29,12 @@
                 ':nombre' => $nombre,
                 ':votacion' => $votacion,
                 ':mensaje' => $mensaje
-            ));
-            header('Location:'.PATH.'admin/testimonios.php');
+            ));           
         }else{
-            header('Location:'.PATH.'admin/testimonios.php');
-        } 
+            header('Location: error.php');         
+        }
+        
+        header('Location:'.PATH.'admin/testimonios.php');         
     }
 
     require '../views/nuevo_testimonio.view.php';

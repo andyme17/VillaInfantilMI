@@ -27,7 +27,7 @@
                         <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
                     </div>
                 </div>
-                <div class="container">
+                <main class="container">
                     <div class="row">
                         <div class="col-12 offset-md-1 col-md-10">
                             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" class="shadow mb-5" id="form-gestor" novalidate>
@@ -43,6 +43,11 @@
                                     <div id="res" class="text-secondary text-right">0 caracter/s, te quedan 300</div>
                                     <div id="error-desc"></div>
                                 </div>
+                                <div class="group pb-2">
+                                    <label for="fecha" class="ml-2 mr-3">Fecha del evento: <span class="text-danger">*</span></label>
+                                    <input type="date" name="fecha" id="fecha" autocomplete="off"  value="<?php echo $evento['fecha'];?>" required><span class="barra"></span>                                   
+                                    <div id="error-fecha"></div>
+                                </div>
                                 <div class="form-group">
                                     <label for="thumb">Fotografía del evento: <span class="text-danger">*</span></label>
                                     <input type="file" name="thumb" class="form-control-file" id="thumb" accept=".jpeg,.jpg" data-html="true" data-toggle="tooltip" data-placement="top" title="Formato válido:  <b>jpg / jpeg</b> Dimensiones:  <b>960 x 720 px</b> Tamaño:  <b>menor a 250 KB</b>" onchange="validaImagen(this);">
@@ -51,13 +56,15 @@
                                 <div class="text-left mt-3">
                                     <small class="text-secondary">* Todos los campos son obligatorios</small>
                                 </div>
-                                <div class="btn-right">
-                                    <button type="submit" name="submit" class="btn btn-primary mt-3 mt-md-5" id="btnForm">Agregar ></button>
+                                <div class="btn-opc">
+                                    <input type="hidden" id="action" value="new">
+                                    <button type="button" class="btn btn-secondary mr-2" id="btnCloseForm">Cancelar&nbsp;&nbsp;<i class="fas fa-times"></i></button>
+                                    <button type="submit" name="submit" class="btn btn-primary" id="btnForm">Agregar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
+                </main>
             </div>
         </div>
     </div>

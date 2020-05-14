@@ -14,12 +14,7 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $seccion = $_POST['seccion'];
         $mensaje = limpiarDatos($_POST['mensaje']);
-        $mensaje_guardado = limpiarDatos($_POST['mensaje_guardado']);
-
-        if($mensaje_guardado === $mensaje){
-            header('Location:'.PATH.'admin/');
-        }
-
+        
         /*modifying text*/
         update_content_text($conexion,$mensaje,$seccion);
        

@@ -1,4 +1,8 @@
-//variables
+/**
+ * Script for login form 
+*/
+
+//form fields
 const usuario = document.getElementById('usuario');
 const pass = document.getElementById('pass');
 const btnLogin = document.getElementById('btnLogin');
@@ -8,25 +12,22 @@ const formLogin = document.getElementById('form-login');
 var errorUsuario = document.getElementById('error-usuario'),
     errorPass = document.getElementById('error-pass');  
 
+//regular expressions    
 const regexTexto = /^[a-z][a-z]*/;
 
 eventListener();
 
 function eventListener(){
-    //se deshabilita submit
     document.addEventListener('DOMContentLoaded',inicioApp);
 
-    //campos del formulario
     usuario.addEventListener('blur',validarCampo);
     pass.addEventListener('blur',validarCampo);
-
 }
 
 function inicioApp(){
     btnLogin.disabled = true;
 }
 
-//valida los campos
 function validarCampo(){
     if(this.name === 'usuario'){
         if(usuario.value.trim() === '' || !regexTexto.test(usuario.value.trim().toLowerCase())){

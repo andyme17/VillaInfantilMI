@@ -4,41 +4,47 @@
 
    $conexion = conexion($bd_config);
 
-   if(!$conexion){
+   if (!$conexion) {
       header('Location: error.php');
    }
 
    /*initial banner section*/
-   $banner = obt_contenido($conexion,'contenido_img','modal-banner');
+   $banner = obt_contenido($conexion, 'contenido_img', 'modal-banner');
 
-   if(!$banner){
+   if (!$banner) {
       header('Location: error.php');
    }
 
    $banner = $banner[0];
 
    /*welcome message section*/
-   $welcome_msg = obt_contenido($conexion,'contenido_texto','sec-bienvenida'); 
+   $welcome_msg = obt_contenido($conexion, 'contenido_texto', 'sec-bienvenida');
 
-   if(!$welcome_msg){
+   if (!$welcome_msg) {
       header('Location: error.php');
    }
 
    $welcome_msg = $welcome_msg[0];
 
    /*testimonials section*/
-   $testimonios = obt_testimonio($conexion); 
+   $testimonios = obt_testimonio($conexion);
 
-   if(!$testimonios){
+   if (!$testimonios) {
       header('Location: error.php');
    }
 
+   /*announcement section*/
+   $avisos = obt_aviso($conexion);
+
+   if (!$avisos) {
+      header('Location: error.php');
+   }
+   
    /*events section*/
    $eventos = obt_evento($conexion);
-   
-   if(!$eventos){
+
+   if (!$eventos) {
       header('Location: error.php');
    }
-  
+
    require 'views/index.view.php';
-?>

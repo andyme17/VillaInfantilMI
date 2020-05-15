@@ -150,4 +150,32 @@
         $resultado = $resultado->fetchAll();
         return ($resultado) ? $resultado : false;
     }
+
+    function obt_items_gestor($items_x_pag, $conexion,$tabla){
+        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
+        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM $tabla LIMIT $inicio,$items_x_pag");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
+    }
+    
+    function num_pag($items_x_pag,$conexion){
+        $total = $conexion->prepare('SELECT FOUND_ROWS() as total');
+        $total->execute();
+        $total = $total->fetch()['total']; 
+
+        $numero_paginas = ceil($total/$items_x_pag);
+        return $numero_paginas;
+    }
+
+    function obt_aviso($conexion){
+        $sentencia = $conexion->prepare("SELECT * FROM aviso");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
+    }
+
+    function obt_item_x_id($conexion,$tabla,$id){
+        $resultado = $conexion->query("SELECT * FROM $tabla WHERE id = $id LIMIT 1");
+        $resultado = $resultado->fetchAll();
+        return ($resultado) ? $resultado : false;
+    }
 ?>

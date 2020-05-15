@@ -78,14 +78,6 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/headroom.min.js"></script>
     <script src="../js/side-bar.js"></script>
-
-    <!-- Custom javascript files -->
-    <script src="../js/form-instal.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#thumb').tooltip('show');
-        });
-    </script>
 </body>
 
 </html>

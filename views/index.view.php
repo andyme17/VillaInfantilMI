@@ -70,34 +70,17 @@
   </section>
 
   <section class="img-back py-4">
-    <div class="row container mx-auto">
-      <div class="col-12 col-md-8 col-lg-7 container">
-        <h2 class="text-center">Avisos</h2>
-        <div id="carouselExampleIndicators" class="carousel slide my-3" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="<?php echo PATH; ?>img/img-aviso.jpg" class="d-block img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="<?php echo PATH; ?>img/img-instalacion2.jpg" class="d-block img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="<?php echo PATH; ?>img/img-aviso.jpg" class="d-block img-fluid" alt="...">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+    <h2 class="text-center mb-4">Avisos</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 offset-md-1 col-md-10">
+          <ul class="pgwSlideshow">
+            <?php foreach ($avisos as $aviso) : ?>
+              <li>
+                <img src="<?php echo PATH; ?>img/<?php echo $aviso['thumb']; ?>">
+              </li>
+            <?php endforeach; ?>
+          </ul>
         </div>
       </div>
     </div>
@@ -125,7 +108,7 @@
         </div>
       <?php endforeach; ?>
     </div>
-    </div>
+
     <div class="row container mx-auto">
       <div class="col-12 text-center">
         <!-- Button trigger modal -->
@@ -208,15 +191,15 @@
       <?php foreach ($eventos as $evento) : ?>
         <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4 pb-3">
           <article class="card shadow">
-            <img src="<?php echo PATH; ?>img/<?php echo $evento['thumb'];?>" class="card-img-top" alt="Imagen ilustrativa del evento">
+            <img src="<?php echo PATH; ?>img/<?php echo $evento['thumb']; ?>" class="card-img-top" alt="Imagen ilustrativa del evento">
             <div class="card-body">
               <div class="card-title text-center">
-                <h5><?php echo $evento['titulo'];?></h5>
+                <h5><?php echo $evento['titulo']; ?></h5>
                 <hr>
               </div>
-              <p class="card-text"><?php echo nl2br($evento['descripcion']);?></p>
+              <p class="card-text"><?php echo nl2br($evento['descripcion']); ?></p>
               <p class="card-text text-right pt-3">
-                <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en <?php echo fecha($evento['fecha']);?></small>
+                <small class="text-muted"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Publicado en <?php echo fecha($evento['fecha']); ?></small>
               </p>
             </div>
           </article>
@@ -232,6 +215,9 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/headroom.min.js"></script>
 
+  <!-- JavaScript file for gallery -->
+  <script src="js/pgwslideshow.min.js"></script>
+
   <!-- Custom javascript files -->
   <script src="js/nav-bar.js"></script>
   <script src="js/form-opinion.js"></script>
@@ -239,6 +225,14 @@
     $(document).ready(function() {
       /*activating the modal for the index page banner*/
       $('#modalBanner').modal('show');
+
+      /** Slide gallery script **/
+      var pgwSlideshow = $('.pgwSlideshow').pgwSlideshow(); //puglin is initialized for gallery
+      
+      pgwSlideshow.reload({ //configuring the plugin
+        autoSlide: true,
+        displayList: false
+      });
     });
   </script>
   </body>

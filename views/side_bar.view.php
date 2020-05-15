@@ -23,7 +23,7 @@
                         <a href="<?php echo PATH; ?>admin/editar_mensaje_bienvenida.php">Mensaje de bienvenida</a>
                     </li>
                     <li>
-                        <a href="<?php echo PATH; ?>admin/editar_avisos.php">Avisos</a>
+                        <a href="<?php echo PATH; ?>admin/avisos.php">Avisos</a>
                     </li>
                     <li>
                         <a href="<?php echo PATH; ?>admin/testimonios.php">Testimonios</a>

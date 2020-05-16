@@ -45,7 +45,7 @@
     $team_thumb = $team_thumb[0];
 
     /**administrative staff section*/
-    $personal = obt_personal($conexion);
+    $personal = obt_rows_3($conexion,'personal');
 
     if (!$personal) {
         header('Location:' . PATH . 'error.php');

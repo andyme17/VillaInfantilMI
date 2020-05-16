@@ -9,7 +9,7 @@
     }
 
     /*afterschool services section */
-    $after_service = obt_serv_after($conexion);
+    $after_service = obt_all($conexion,'servicio_after');
 
     if(!$after_service){
         header('Location:'.PATH.'error.php');

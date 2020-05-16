@@ -4,28 +4,29 @@
     require '../functions.php';
 
     comprobarSession();
-    
-    $conexion = conexion($bd_config); 
 
-    if(!$conexion){
+    $conexion = conexion($bd_config);
+
+    if (!$conexion) {
         header('Location: error.php');
     }
 
     $id = limpiarDatos($_GET['id']);
 
-    if(!$id){
-        header('Location: '.PATH.'admin/avisos.php');
+    if (!$id) {
+        header('Location: ' . PATH . 'admin/avisos.php');
     }
 
     /*getting thumb name*/
-    $statement = $conexion->prepare('SELECT thumb FROM aviso WHERE id=:id');
-    $statement->execute(array('id'=> $id));
-    $result = $statement->fetch();
-    
-    /*removing instalation*/
-    $statement1 = $conexion->prepare('DELETE FROM aviso WHERE id=:id');
-    $statement1->execute(array('id' => $id)); 
-    
-    unlink('../img/'.$result['thumb']);
+    $result = obt_thumb($conexion, 'aviso', $id);
 
-    header('Location: '.PATH.'admin/avisos.php');
+    if (!$result) {
+        header('Location: error.php');
+    }
+
+    /*removing instalation*/
+    delete_item($conexion, 'aviso', $id);
+
+    unlink('../img/' . $result['thumb']);
+
+    header('Location: ' . PATH . 'admin/avisos.php');

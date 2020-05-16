@@ -11,7 +11,7 @@
         header('Location: error.php');
     }
 
-    $personal = obt_personal($conexion);
+    $personal = obt_all($conexion,'personal');
 
     if(!$personal){
         header('Location: error.php');

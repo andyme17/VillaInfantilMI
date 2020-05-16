@@ -18,13 +18,14 @@
     }
 
     /*getting thumb name*/
-    $statement = $conexion->prepare('SELECT thumb FROM servicio_after WHERE id=:id');
-    $statement->execute(array('id'=>$id));
-    $result = $statement->fetch();
+    $result = obt_thumb($conexion,'servicio_after', $id);
+
+    if (!$result) {
+        header('Location: error.php');
+    }
 
     /*removing service*/
-    $statement1 = $conexion->prepare('DELETE FROM servicio_after WHERE id=:id');
-    $statement1->execute(array('id'=>$id));
+    delete_item($conexion,'servicio_after', $id);
 
     unlink('../img/'.$result['thumb']);
 

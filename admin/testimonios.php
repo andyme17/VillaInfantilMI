@@ -11,7 +11,7 @@
         header('Location: error.php');   
     }
 
-    $testimonios = obt_testimonio($conexion);
+    $testimonios = obt_all($conexion,'testimonio');
 
     if(!$testimonios){
         header('Location: error.php');

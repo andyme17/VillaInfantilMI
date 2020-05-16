@@ -41,62 +41,6 @@
         return isset($_GET['p']) ? (int)$_GET['p'] : 1;
     }
     
-    function obt_instal_gestor($items_x_pag, $conexion){
-        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
-        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM galeria LIMIT $inicio,$items_x_pag");
-        $sentencia->execute();
-        return $sentencia->fetchAll();
-    }
-    
-    function num_pag_instal($items_x_pag,$conexion){
-        $total_img = $conexion->prepare('SELECT FOUND_ROWS() as total_instal');
-        $total_img->execute();
-        $total_img = $total_img->fetch()['total_instal']; 
-
-        $numero_paginas = ceil($total_img/$items_x_pag);
-        return $numero_paginas;
-    }
-
-    function obt_instal($conexion){
-        $sentencia = $conexion->prepare("SELECT * FROM galeria");
-        $sentencia->execute();
-        return $sentencia->fetchAll();
-    }
-
-    function obt_serv_after($conexion){
-        $sentencia = $conexion->prepare("SELECT * FROM servicio_after");
-        $sentencia->execute();
-        return $sentencia->fetchAll(); 
-    }
-
-    function obt_serv_after_gestor($items_x_pag,$conexion){
-        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
-        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM servicio_after LIMIT $inicio,$items_x_pag");
-        $sentencia->execute();
-        return $sentencia->fetchAll();
-    }
-
-    function num_pag_serv($items_x_pag,$conexion){
-        $total_img = $conexion->prepare('SELECT FOUND_ROWS() as total_serv');
-        $total_img->execute();
-        $total_img = $total_img->fetch()['total_serv']; 
-
-        $numero_paginas = ceil($total_img/$items_x_pag);
-        return $numero_paginas;
-    }
-
-    function obt_personal($conexion){
-        $sentencia = $conexion->prepare("SELECT * FROM personal");
-        $sentencia->execute();
-        return $sentencia->fetchAll(); 
-    }
-    
-    function obt_personal_x_id($conexion,$id){
-        $resultado = $conexion->query("SELECT * FROM personal WHERE id = $id LIMIT 1");
-        $resultado = $resultado->fetchAll();
-        return ($resultado) ? $resultado : false;
-    }
-
     function obt_contenido($conexion,$tabla,$seccion){
         $statement = $conexion->prepare("SELECT * FROM $tabla WHERE seccion = :seccion LIMIT 1");
         $statement->execute(array(':seccion'=> "$seccion"));
@@ -120,8 +64,36 @@
         ));       
     }
 
-    function obt_testimonio($conexion){
-        $statement = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM testimonio LIMIT 3");
+    function obt_items_gestor($items_x_pag, $conexion,$tabla){
+        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
+        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM $tabla LIMIT $inicio,$items_x_pag");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
+    }
+
+    function num_pag($items_x_pag,$conexion){
+        $total = $conexion->prepare('SELECT FOUND_ROWS() as total');
+        $total->execute();
+        $total = $total->fetch()['total']; 
+
+        $numero_paginas = ceil($total/$items_x_pag);
+        return $numero_paginas;
+    }
+
+    function obt_item_x_id($conexion,$tabla,$id){
+        $resultado = $conexion->query("SELECT * FROM $tabla WHERE id = $id LIMIT 1");
+        $resultado = $resultado->fetchAll();
+        return ($resultado) ? $resultado : false;
+    }
+
+    function obt_all($conexion,$tabla){
+        $sentencia = $conexion->prepare("SELECT * FROM $tabla");
+        $sentencia->execute();
+        return $sentencia->fetchAll();
+    }
+
+    function obt_rows_3($conexion,$tabla){
+        $statement = $conexion->prepare("SELECT * FROM $tabla LIMIT 3");
         $statement->execute();
         return $statement->fetchAll();
     }
@@ -133,49 +105,20 @@
         return $total;
     }
 
-    function obt_testimonio_x_id($conexion,$id){
-        $resultado = $conexion->query("SELECT * FROM testimonio WHERE id = $id LIMIT 1");
-        $resultado = $resultado->fetchAll();
-        return ($resultado) ? $resultado : false;
-    }
-
     function obt_evento($conexion){
-        $statement = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM evento ORDER BY fecha DESC LIMIT 3");
+        $statement = $conexion->prepare("SELECT * FROM evento ORDER BY fecha DESC LIMIT 3");
         $statement->execute();
         return $statement->fetchAll();
-    }    
+    }
 
-    function obt_evento_x_id($conexion,$id){
-        $resultado = $conexion->query("SELECT * FROM evento WHERE id = $id LIMIT 1");
-        $resultado = $resultado->fetchAll();
+    function obt_thumb($conexion,$tabla,$id){
+        $statement = $conexion->prepare("SELECT thumb FROM $tabla WHERE id=:id");
+        $statement->execute(array('id'=> $id));
+        $resultado = $statement->fetch();
         return ($resultado) ? $resultado : false;
     }
 
-    function obt_items_gestor($items_x_pag, $conexion,$tabla){
-        $inicio = (pagina_actual() > 1) ? (pagina_actual() * $items_x_pag) - $items_x_pag : 0;
-        $sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM $tabla LIMIT $inicio,$items_x_pag");
-        $sentencia->execute();
-        return $sentencia->fetchAll();
+    function delete_item($conexion,$tabla,$id){
+        $statement = $conexion->prepare("DELETE FROM $tabla WHERE id=:id");
+        $statement->execute(array('id' => $id));
     }
-    
-    function num_pag($items_x_pag,$conexion){
-        $total = $conexion->prepare('SELECT FOUND_ROWS() as total');
-        $total->execute();
-        $total = $total->fetch()['total']; 
-
-        $numero_paginas = ceil($total/$items_x_pag);
-        return $numero_paginas;
-    }
-
-    function obt_aviso($conexion){
-        $sentencia = $conexion->prepare("SELECT * FROM aviso");
-        $sentencia->execute();
-        return $sentencia->fetchAll();
-    }
-
-    function obt_item_x_id($conexion,$tabla,$id){
-        $resultado = $conexion->query("SELECT * FROM $tabla WHERE id = $id LIMIT 1");
-        $resultado = $resultado->fetchAll();
-        return ($resultado) ? $resultado : false;
-    }
-?>

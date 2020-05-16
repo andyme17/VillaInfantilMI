@@ -45,7 +45,7 @@
             header('Location:'.PATH.'admin/personal_admin.php');
         } 
 
-        $personal = obt_personal_x_id($conexion,$id_personal);
+        $personal = obt_item_x_id($conexion,'personal',$id_personal);
 
         if(!$personal){
             header('Location:'.PATH.'admin/personal_admin.php');

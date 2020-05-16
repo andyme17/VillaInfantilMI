@@ -17,8 +17,7 @@
         $thumb = $_FILES['thumb'];    
         
         if(empty($thumb['name'])){
-           $thumb = $thumb_guardada;     
-           header('Location:'.PATH.'admin/');           
+           $thumb = $thumb_guardada;                       
         }else{
             $file_uploaded = '../'.$config_gestor['carpeta_img'].$_FILES['thumb']['name'];
            

@@ -1,13 +1,9 @@
     <?php require 'nav-bar.view.php'; ?>
 
-    <section class="img-back-blue h-md-back-2 py-4">
+    <section class="img-back-blue h-md-back-2">
         <div class="content-back-blue container mx-auto">
             <h2>Instalaciones</h2>
-            <hr>
-            <p class="text-back-blue">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, et nam tenetur reiciendis minus nesciunt rem
-                amet impedit nulla qui, fugiat earum perferendis iusto vitae.(definir).
-            </p>
+            <hr>            
         </div>
     </section>
     <main class="img-back py-4">

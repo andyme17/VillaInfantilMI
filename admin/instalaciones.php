@@ -11,7 +11,7 @@
         header('Location: error.php');
     }
 
-    $imagenes = obt_instal_gestor($config_gestor['items_x_pag'],$conexion);
+    $imagenes = obt_items_gestor($config_gestor['items_x_pag'],$conexion,'galeria');
 
     if(!$imagenes){
        header('Location: error.php');

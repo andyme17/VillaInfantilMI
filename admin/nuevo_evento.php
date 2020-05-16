@@ -21,7 +21,7 @@
         
         move_uploaded_file($thumb,$file_uploaded);
 
-        obt_evento($conexion);
+        obt_all($conexion,'evento');
         $num_rows = num_items($conexion);
 
         if($num_rows < 3){

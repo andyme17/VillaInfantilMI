@@ -8,7 +8,7 @@
         header('Location:'.PATH.'error.php');
     }
 
-    $imagenes = obt_instal($conexion);
+    $imagenes = obt_all($conexion,'galeria');
 
     if(!$imagenes){
         header('Location:'.PATH.'error.php');

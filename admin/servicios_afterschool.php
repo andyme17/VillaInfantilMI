@@ -12,7 +12,7 @@
     }
 
     /*showing afterschool services*/
-    $after_service = obt_serv_after_gestor($config_gestor['items_x_pag'],$conexion);
+    $after_service = obt_items_gestor($config_gestor['items_x_pag'],$conexion,'servicio_after');
 
     if(!$after_service){
         header('Location: error.php');

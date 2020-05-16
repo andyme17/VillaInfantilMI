@@ -17,14 +17,15 @@
         header('Location: '.PATH.'admin/eventos.php');
     }
 
-     /*getting thumb name*/
-    $statement = $conexion->prepare('SELECT thumb FROM evento WHERE id=:id');
-    $statement->execute(array('id'=> $id));
-    $result = $statement->fetch();
+    /*getting thumb name*/
+    $result = obt_thumb($conexion, 'evento', $id);
 
+    if (!$result) {
+        header('Location: error.php');
+    }
+    
     /*removing event*/
-    $statement1 = $conexion->prepare('DELETE FROM evento WHERE id=:id');
-    $statement1->execute(array('id' => $id)); 
+    delete_item($conexion, 'evento', $id);
     
     unlink('../img/'.$result['thumb']);
 

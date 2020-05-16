@@ -43,7 +43,7 @@
                     <div class="row" id="content-card">
                         <?php foreach ($personal as $persona) : ?>
                             <div class="col-12 col-md-6 col-xl-4 pb-3" id="card">
-                                <div class="card p-3">
+                                <div class="card p-3 shadow">
                                     <div class="cont-card">
                                         <img src="<?php echo PATH; ?>img/<?php echo $persona['thumb']; ?>" alt="Fotografía de personal administrativo">
                                         <h5><?php echo $persona['nombre']; ?></h5>

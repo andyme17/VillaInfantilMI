@@ -46,7 +46,7 @@
                 </main>
                 
                 <section class="container paginacion">
-                    <?php $numero_paginas = num_pag_instal($config_gestor['items_x_pag'], $conexion); ?>
+                    <?php $numero_paginas = num_pag($config_gestor['items_x_pag'], $conexion); ?>
                     <ul>
                         <?php if (pagina_actual() === 1) : ?>
                             <li class="disabled"><i class="fas fa-angle-double-left"></i></li>

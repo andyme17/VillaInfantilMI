@@ -16,7 +16,7 @@
         $votacion = limpiarDatos($_POST['votacion']);
         $mensaje = limpiarDatos($_POST['mensaje']);
 
-        obt_testimonio($conexion);
+        obt_all($conexion,'testimonio');
         $num_rows = num_items($conexion);
 
         if($num_rows < 3){

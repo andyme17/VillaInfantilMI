@@ -33,7 +33,7 @@
             header('Location:'.PATH.'admin/testimonios.php');
         } 
 
-        $testimonio = obt_testimonio_x_id($conexion,$id_testimonio);
+        $testimonio = obt_item_x_id($conexion,'testimonio',$id_testimonio);
 
         if(!$testimonio){
             header('Location:'.PATH.'admin/testimonios.php');

@@ -27,21 +27,21 @@
    $welcome_msg = $welcome_msg[0];
 
    /*testimonials section*/
-   $testimonios = obt_testimonio($conexion);
+   $testimonios = obt_rows_3($conexion,'testimonio');
 
    if (!$testimonios) {
       header('Location: error.php');
    }
 
    /*announcement section*/
-   $avisos = obt_aviso($conexion);
+   $avisos = obt_all($conexion,'aviso');
 
    if (!$avisos) {
       header('Location: error.php');
    }
    
    /*events section*/
-   $eventos = obt_evento($conexion);
+   $eventos = obt_evento($conexion,'evento');
 
    if (!$eventos) {
       header('Location: error.php');

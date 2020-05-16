@@ -47,26 +47,26 @@
                     </div>
                 </main>
                 <section class="container paginacion">
-                    <?php $numero_paginas = num_pag_serv($config_gestor['items_x_pag'], $conexion); ?>
+                    <?php $numero_paginas = num_pag($config_gestor['items_x_pag'], $conexion); ?>
                     <?php if ($numero_paginas > 1) : ?>
                         <ul>
                             <?php if (pagina_actual() === 1) : ?>
                                 <li class="disabled"><i class="fas fa-angle-double-left"></i></li>
                             <?php else : ?>
-                                <li><a href="servicios_after.php?p=<?php echo pagina_actual() - 1; ?>"><i class="fas fa-angle-double-left"></i></a></li>
+                                <li><a href="servicios_afterschool.php?p=<?php echo pagina_actual() - 1; ?>"><i class="fas fa-angle-double-left"></i></a></li>
                             <?php endif; ?>
 
                             <?php for ($i = 1; $i <= $numero_paginas; $i++) : ?>
                                 <?php if (pagina_actual() === $i) : ?>
                                     <li class="active"><?php echo $i; ?></li>
                                 <?php else : ?>
-                                    <li><a href="servicios_after.php?p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                                    <li><a href="servicios_afterschool.php?p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
                                 <?php endif; ?>
                             <?php endfor; ?>
                             <?php if (pagina_actual() == $numero_paginas) : ?>
                                 <li class="disabled"><i class="fas fa-angle-double-right"></i></li>
                             <?php else : ?>
-                                <li><a href="servicios_after.php?p=<?php echo pagina_actual() + 1; ?>"><i class="fas fa-angle-double-right"></i></a></li>
+                                <li><a href="servicios_afterschool.php?p=<?php echo pagina_actual() + 1; ?>"><i class="fas fa-angle-double-right"></i></a></li>
                             <?php endif; ?>
                         </ul>
                     <?php endif; ?>

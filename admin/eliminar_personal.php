@@ -17,14 +17,15 @@
         header('Location: '.PATH.'admin/personal.php');
     }
 
-     /*getting thumb name*/
-    $statement = $conexion->prepare('SELECT thumb FROM personal WHERE id=:id');
-    $statement->execute(array('id' => $id));
-    $result = $statement->fetch();
-    
+    /*getting thumb name*/
+    $result = obt_thumb($conexion, 'personal', $id);
+
+    if (!$result) {
+        header('Location: error.php');
+    }
+        
     /*removing person*/
-    $statement1 = $conexion->prepare('DELETE FROM personal WHERE id=:id');
-    $statement1->execute(array('id' => $id));
+    delete_item($conexion,'personal', $id);
 
     unlink('../img/'.$result['thumb']);
 

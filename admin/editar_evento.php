@@ -25,8 +25,6 @@
         }else{
             $file_uploaded = '../'.$config_gestor['carpeta_img'].$_FILES['thumb']['name'];
             
-            echo $file_uploaded;
-
             move_uploaded_file($_FILES['thumb']['tmp_name'],$file_uploaded);
             unlink('../img/'.$thumb_guardada);
 
@@ -50,7 +48,7 @@
             header('Location:'.PATH.'admin/eventos.php');
         } 
 
-        $evento = obt_evento_x_id($conexion,$id_evento);
+        $evento = obt_item_x_id($conexion,'evento',$id_evento);
 
         if(!$evento){
             header('Location:'.PATH.'admin/eventos.php');

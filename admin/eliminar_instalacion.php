@@ -18,13 +18,14 @@
     }
 
     /*getting thumb name*/
-    $statement = $conexion->prepare('SELECT thumb FROM galeria WHERE id=:id');
-    $statement->execute(array('id'=> $id));
-    $result = $statement->fetch();
+    $result = obt_thumb($conexion, 'galeria', $id);
+
+    if (!$result) {
+        header('Location: error.php');
+    }
     
     /*removing instalation*/
-    $statement1 = $conexion->prepare('DELETE FROM galeria WHERE id=:id');
-    $statement1->execute(array('id' => $id)); 
+    delete_item($conexion, 'galeria', $id); 
     
     unlink('../img/'.$result['thumb']);
 

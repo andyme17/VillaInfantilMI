@@ -51,7 +51,7 @@
         de igual forma esto se puede realizar por este medio.
       </p>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#formOpinion">Dejar comentario o sugerencia ></button>
+      <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#formOpinion">Dejar comentario o sugerencia&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
       
       <!-- Modal -->
       <div class="modal fade modal-form" id="formOpinion" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
@@ -110,10 +110,8 @@
                       <img id="spinner" src="img/spinner.gif">
                     </div>
                     <div class="btn-form-opinion">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        < Cerrar</button>
-                      <button type="submit" class="btn btn-form-primary" id="btnForm" name="submit" value="enviar">Enviar >
-                      </button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar&nbsp;&nbsp;<i class="fas fa-times"></i></button>
+                      <button type="submit" class="btn btn-form-primary" id="btnForm" name="submit" value="enviar">Enviar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                     </div>
                   </form>
                 </div>

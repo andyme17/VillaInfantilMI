@@ -33,7 +33,7 @@
                       <img id="spinner" src="img/spinner.gif">
                     </div>   
                     <div class="text-md-right">
-                        <button type="submit" name="submit" class="btn btn-form-primary" id="btnForm">Enviar ></button>
+                        <button type="submit" name="submit" class="btn btn-form-primary" id="btnForm">Enviar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                     </div>
                 </div>
             </form>

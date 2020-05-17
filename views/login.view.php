@@ -39,7 +39,7 @@
                             <?php endif;?>
 
                             <div class="text-md-right mt-4">
-                                <button type="submit" name="submit" class="btn btn-form-primary" id="btnLogin">Entrar ></button>
+                                <button type="submit" name="submit" class="btn btn-form-primary" id="btnLogin">Entrar&nbsp;&nbsp;<i class="fas fa-caret-right"></i></button>
                             </div>                          
                         </div>
                     </form>

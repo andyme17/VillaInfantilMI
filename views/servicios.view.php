@@ -24,27 +24,27 @@
             </div>
             <div class="row pt-4 content-model">
                 <div class="opc-model col-12 col-md-4 pb-4">
-                    <img src="<?php echo PATH; ?>img/img1-service.png" alt="" class="img-fluid img-serv">
+                    <img src="<?php echo PATH; ?>img/img1-service.png" alt="Imagen ilustrativa del servicio" class="img-fluid img-serv">
                     <p>Programa establecido por la SEP</p>
                 </div>
                 <div class="opc-model col-12 col-md-4 pb-4">
-                    <img src="<?php echo PATH; ?>img/img2-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
+                    <img src="<?php echo PATH; ?>img/img2-service.jpg" alt="Imagen ilustrativa del servicio" class="img-fluid img-serv rounded-circle">
                     <p>Inglés</p>
                 </div>
                 <div class="opc-model col-12 col-md-4 pb-4">
-                    <img src="<?php echo PATH; ?>img/img3-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
+                    <img src="<?php echo PATH; ?>img/img3-service.jpg" alt="Imagen ilustrativa del servicio" class="img-fluid img-serv rounded-circle">
                     <p>Francés</p>
                 </div>
                 <div class="opc-model col-12 col-md-4 pb-4">
-                    <img src="<?php echo PATH; ?>img/img4-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
+                    <img src="<?php echo PATH; ?>img/img4-service.jpg" alt="Imagen ilustrativa del servicio" class="img-fluid img-serv rounded-circle">
                     <p>Educación Física</p>
                 </div>
                 <div class="opc-model col-12 col-md-4 pb-4">
-                    <img src="<?php echo PATH; ?>img/img5-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
+                    <img src="<?php echo PATH; ?>img/img5-service.jpg" alt="Imagen ilustrativa del servicio" class="img-fluid img-serv rounded-circle">
                     <p>Educación Musical</p>
                 </div>
                 <div class="opc-model col-12 col-md-4">
-                    <img src="<?php echo PATH; ?>img/img6-service.jpg" alt="" class="img-fluid img-serv rounded-circle">
+                    <img src="<?php echo PATH; ?>img/img6-service.jpg" alt="Imagen ilustrativa del servicio" class="img-fluid img-serv rounded-circle">
                     <p class="pt-1">Computación</p>
                 </div>
             </div>
@@ -75,7 +75,7 @@
         <div class="container content-inscrip mx-auto">
             <h4 class="mb-3">¿Te interesa formar parte de la comunidad de Villa Infantil María Isabel?</h4>
             <h5>Inscríbete y se parte de nuestra comunidad</h5>
-            <a href="<?php echo PATH; ?>inscripciones.php" class="btn btn-outline-light mt-4">Click aquí ></a>
+            <a href="<?php echo PATH; ?>inscripciones.php" class="btn btn-outline-light mt-4">Click aquí&nbsp;&nbsp;<i class="fas fa-caret-right"></i></a>
         </div>
     </section>
 
@@ -101,7 +101,7 @@
             <p>
                 Comunicate con nosotros llenando el siguiente formulario.
             </p>
-            <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos ></a>
+            <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos&nbsp;&nbsp;<i class="fas fa-caret-right"></i></a>
         </div>
     </section>
 

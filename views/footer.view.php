@@ -34,7 +34,7 @@
                         <i class="fas fa-envelope icon"></i>
                     </div>
                     <div class="col-10 pl-4 pl-lg-3">
-                        <a href="mailto:villa.infantil.mi@live.com.mxsubject=feedback"><p>villa.infantil.mi@live.com.mx</p></a>
+                        <a href="mailto:colegiojrf@gmail.comsubject=feedback"><p>colegiojrf@gmail.com</p></a>
                     </div>
                 </div>
                 <div class="row pl-2 pb-3">

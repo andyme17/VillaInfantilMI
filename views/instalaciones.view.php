@@ -28,7 +28,7 @@
                 Para ofrecerte más informes sobre el lugar y horario de visita
                 consulta el siguiente enlace, o bien dejanos un mensaje.
             </p>
-            <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos ></a>
+            <a href="<?php echo PATH; ?>contacto.php" class="btn btn-outline-light mt-4">Contáctanos&nbsp;&nbsp;<i class="fas fa-caret-right"></i></a>
         </div>
     </section>
 

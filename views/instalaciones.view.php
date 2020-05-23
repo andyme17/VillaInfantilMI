@@ -6,6 +6,7 @@
             <hr>            
         </div>
     </section>
+    
     <main class="img-back py-4">
         <div class="sec-gallery container">
             <ul class="pgwSlideshow">

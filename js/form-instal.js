@@ -55,7 +55,7 @@ function validaImagen2(){
     limpiarError('error-thumb');
 
     if(thumb.value == ""){
-        error(thumb,'error-thumb','Ingrese la fotografía del servicio');
+        error(thumb,'error-thumb','Ingrese la fotografía de la instalación.');
         return false;
     }
     return true;  

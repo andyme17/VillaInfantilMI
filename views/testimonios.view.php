@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="x7i-1eQfu-xEuD6jxgrEJD3LJAi5do0R7iRzlfy9Y_4" />
-    <title>Gestor de contenido VillaMI</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body id="login">
-    <div class="wrapper">
-        <?php require 'side_bar.view.php'; ?>
-        <div id="content">
-            <div class="content-1">
-                <div class="cont-h">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info btn-side-bar">
-                        <i class="fas fa-bars pr-1"></i>
-                        <span>Menú</span>
-                    </button>
-                    <div class="img-init-2">
-                        <img src="<?php echo PATH; ?>img/logo-kinder.png" class="img-fluid">
-                    </div>
-                </div>
+            <?php require 'side_bar.view.php'; ?>
                 <main class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Testimonios</h3>
                     <div class="row mb-4">

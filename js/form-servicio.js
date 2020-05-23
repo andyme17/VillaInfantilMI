@@ -5,6 +5,9 @@
 //regular expressions
 const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
+//variables
+var flag1 = false;
+
 eventListener();
 
 function eventListener() {     
@@ -17,6 +20,10 @@ function iniciar() {
 
 document.getElementById("btnCloseForm").addEventListener('click',function(){
     location.href="servicios_afterschool.php";
+});
+
+servicio.addEventListener('change', function () {
+    return flag1 = true;
 });
 
 function validaServicio() {
@@ -86,10 +93,32 @@ function limpiarError(div_error) {
 }
 
 function validar(e) {
-    if (validaServicio() && validaImagen2() && confirm("Pulsa aceptar para agregar el servicio.")) {
-        return true;
+    var action = document.getElementById('action').value;
+
+    if (action === 'new') {
+        if (validaServicio() && validaImagen2() && confirm("Pulsa aceptar para agregar el servicio.")) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }   
     } else {
-        e.preventDefault();
-        return false;
+        if ((flag1 === false) && thumb.value == "") {
+            if (confirm("Deseas salir sin realizar ningún cambio.")) {
+                return true;
+            } else {
+                e.preventDefault();
+                return false;
+            }
+        } else {
+            if (validaServicio() && confirm("Pulsa aceptar para actualizar la sección de servicios.")) {
+                return true;
+            } else {
+                e.preventDefault();
+                return false;
+            }
+        }
     }
 }
+
+

@@ -222,8 +222,8 @@ ol {
 
 /*Navegation menu*/
 header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f8b524), to(#fcc224));
   background: -o-linear-gradient(#f8b524, #fcc224);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8b524), to(#fcc224));
   background: linear-gradient(#f8b524, #fcc224);
   width: 100%;
   position: fixed;
@@ -291,13 +291,13 @@ header {
 }
 
 .menu .menu-link a:hover {
+  background: -o-linear-gradient(bottom,
+      rgb(23, 162, 184) 0%,
+      rgb(1, 161, 221) 100%);
   background: -webkit-gradient(linear,
       left bottom, left top,
       from(rgb(23, 162, 184)),
       to(rgb(1, 161, 221)));
-  background: -o-linear-gradient(bottom,
-      rgb(23, 162, 184) 0%,
-      rgb(1, 161, 221) 100%);
   background: linear-gradient(0deg,
       rgb(23, 162, 184) 0%,
       rgb(1, 161, 221) 100%);
@@ -677,8 +677,8 @@ header {
   width: 100%;
   height: 15.625rem;
   position: absolute;
-  background: -webkit-gradient(linear, left top, right top, from(#089588), to(#03224e));
   background: -o-linear-gradient(left, #089588, #03224e);
+  background: -webkit-gradient(linear, left top, right top, from(#089588), to(#03224e));
   background: linear-gradient(90deg, #089588, #03224e);
   opacity: 0.7;
 }
@@ -763,8 +763,8 @@ header {
 
 /*Contact section*/
 .sec-contacto {
-  background: -webkit-gradient(linear, left top, left bottom, from(#089588), to(#315993));
   background: -o-linear-gradient(#089588, #315993);
+  background: -webkit-gradient(linear, left top, left bottom, from(#089588), to(#315993));
   background: linear-gradient(#089588, #315993);
   text-align: center;
 }
@@ -899,8 +899,8 @@ header {
 /*first section*/
 .sec-footer {
   font-family: "Roboto", sans-serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffd970), to(#f8b524));
   background: -o-linear-gradient(#ffd970, #f8b524);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffd970), to(#f8b524));
   background: linear-gradient(#ffd970, #f8b524);
   color: #03224e;
 }
@@ -1232,13 +1232,13 @@ textarea:focus~.barra:before {
   background: #1a2980;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
+  background: -o-linear-gradient(left,
+      #1a2980,
+      #26d0ce);
   background: -webkit-gradient(linear,
       left top, right top,
       from(#1a2980),
       to(#26d0ce));
-  background: -o-linear-gradient(left,
-      #1a2980,
-      #26d0ce);
   background: linear-gradient(to right,
       #1a2980,
       #26d0ce);
@@ -1429,8 +1429,8 @@ button.btn {
 }
 
 .sec-opinion {
-  background: -webkit-gradient(linear, left top, left bottom, from(#089588), to(#315993));
   background: -o-linear-gradient(#089588, #315993);
+  background: -webkit-gradient(linear, left top, left bottom, from(#089588), to(#315993));
   background: linear-gradient(#089588, #315993);
   color: #fff;
   text-align: center;
@@ -1638,8 +1638,8 @@ button.btn {
   content: "";
   width: 100%;
   position: absolute;
-  background: -webkit-gradient(linear, left top, right top, from(#089588), to(#03224e));
   background: -o-linear-gradient(left, #089588, #03224e);
+  background: -webkit-gradient(linear, left top, right top, from(#089588), to(#03224e));
   background: linear-gradient(90deg, #089588, #03224e);
   top: 0;
   bottom: 0;
@@ -2038,8 +2038,8 @@ input#esc-procedencia:disabled {
   height: 2.1875rem;
   line-height: 2.1875rem;
   text-align: right;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f8b72a), to(#fcc224));
   background: -o-linear-gradient(bottom, #f8b72a, #fcc224);
+  background: -webkit-gradient(linear, left bottom, left top, from(#f8b72a), to(#fcc224));
   background: linear-gradient(360deg, #f8b72a, #fcc224);
   position: absolute;
   right: 0;
@@ -2051,13 +2051,13 @@ input#esc-procedencia:disabled {
 }
 
 #dismiss:hover {
+  background: -o-linear-gradient(bottom,
+      rgb(23, 162, 184) 0%,
+      rgb(1, 161, 221) 100%);
   background: -webkit-gradient(linear,
       left bottom, left top,
       from(rgb(23, 162, 184)),
       to(rgb(1, 161, 221)));
-  background: -o-linear-gradient(bottom,
-      rgb(23, 162, 184) 0%,
-      rgb(1, 161, 221) 100%);
   background: linear-gradient(0deg,
       rgb(23, 162, 184) 0%,
       rgb(1, 161, 221) 100%);
@@ -2073,19 +2073,19 @@ input#esc-procedencia:disabled {
   padding: 0.625rem 1.25rem;
   font-size: 1.125rem;
   display: block;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f8b72a), to(#fcc224));
   background: -o-linear-gradient(bottom, #f8b72a, #fcc224);
+  background: -webkit-gradient(linear, left bottom, left top, from(#f8b72a), to(#fcc224));
   background: linear-gradient(360deg, #f8b72a, #fcc224);
 }
 
 #sidebar ul li a:hover {
+  background: -o-linear-gradient(bottom,
+      rgb(23, 162, 184) 0%,
+      rgb(1, 161, 221) 100%);
   background: -webkit-gradient(linear,
       left bottom, left top,
       from(rgb(23, 162, 184)),
       to(rgb(1, 161, 221)));
-  background: -o-linear-gradient(bottom,
-      rgb(23, 162, 184) 0%,
-      rgb(1, 161, 221) 100%);
   background: linear-gradient(0deg,
       rgb(23, 162, 184) 0%,
       rgb(1, 161, 221) 100%);
@@ -2120,13 +2120,13 @@ input#esc-procedencia:disabled {
 
 #sidebar ul li ul li a:hover {
   color: #fff;
+  background: -o-linear-gradient(bottom,
+      rgb(23, 162, 184) 0%,
+      rgb(1, 161, 221) 100%) !important;
   background: -webkit-gradient(linear,
       left bottom, left top,
       from(rgb(23, 162, 184)),
       to(rgb(1, 161, 221))) !important;
-  background: -o-linear-gradient(bottom,
-      rgb(23, 162, 184) 0%,
-      rgb(1, 161, 221) 100%) !important;
   background: linear-gradient(0deg,
       rgb(23, 162, 184) 0%,
       rgb(1, 161, 221) 100%) !important;
@@ -2205,9 +2205,10 @@ input#esc-procedencia:disabled {
   position: relative;
 }
 
-#content button.btn {
+#content button.btn,#login button.btn{
   width: auto !important;
   padding: .375rem .75rem !important;
+  font-size: 1rem;
 }
 
 /*header content*/
@@ -2364,10 +2365,10 @@ button.btn.btn-info.btn-side-bar {
 #content a.btn {
   padding: 0.375rem 0.5rem 0.375rem 0.75rem !important;
   display: inline-block !important;
+  font-size: 1rem;
 }
 
 @media(min-width: 576px) {
-
   .btn-opc,
   .btn-opc-card {
     -webkit-box-pack: end;
@@ -2508,6 +2509,12 @@ button.btn.btn-info.btn-side-bar {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+}
+
+.cont-btn .btn.btn-outline-light{
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 .item-extra-2 .content-extra:before {

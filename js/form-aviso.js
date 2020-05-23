@@ -55,7 +55,7 @@ function validaImagen2(){
     limpiarError('error-thumb');
 
     if(thumb.value == ""){
-        error(thumb,'error-thumb','Ingrese la imagen del anuncio ');
+        error(thumb,'error-thumb','Ingrese la imagen del anuncio.');
         return false;
     }
     return true;  

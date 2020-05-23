@@ -6,10 +6,10 @@
             <div class="col-12 offset-lg-2 col-lg-8">
                 <div class="col-12 offset-md-1 col-md-10 text-center shadow" id="list-doc">
                     <h2 class="py-4 text-center text-danger">Error de conexión</h2>
-                    <h3 class="text-center text-danger">Por favor inténtelo más tarde ó intenta volver a cargar el sitio web.</h3>
+                    <h3 class="text-center text-danger">Por favor inténtelo más tarde.</h3>
                     <img src="<?php echo PATH; ?>img/icono-error.jpg" alt="Imagen de error" class="img-fluid icono-error">
                     <div class="f1-buttons">
-                        <a class="btn btn-primary mb-3" href="<?php echo PATH; ?>index.php">Recargar sitio web&nbsp;&nbsp;<i class="fas fa-undo-alt"></i></a>
+                        <a class="btn btn-primary mb-3" href="<?php echo PATH; ?>inscripciones.php">Regresar al formulario&nbsp;&nbsp;<i class="fas fa-undo-alt"></i></a>
                     </div>
                 </div>
             </div>

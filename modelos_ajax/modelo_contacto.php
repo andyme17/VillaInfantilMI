@@ -16,7 +16,7 @@
 
         #Definimos $respuesta en el if evitando el else interior
         if (!empty($nombre) && !empty($email) && !empty($mensaje)) {
-            $email_to = "villa.infantil.mi@live.com.mx";
+            $email_to = "villainfantilmariaisabel@gmail.com";
             $email_subject = "Solicitud de Informes desde villainfantilmi.edu.mx";
             $email_message = "Contenido del mensaje: \n\n";
             $email_message .= " Nombre: " . $nombre;

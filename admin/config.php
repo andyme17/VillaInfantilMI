@@ -2,7 +2,7 @@
     define('PATH','http://localhost/VillaInfantilMI/');
 
     $panel_admin = array(
-        'usuario' => 'admin',
+        'usuario' => 'administrador',
         'password' => hash('sha512','123')
     );
 

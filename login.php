@@ -22,5 +22,3 @@
     }
 
     require 'views/login.view.php';
-    
-    //nl2br(); cuando encuentra un espacio agrega un br al final

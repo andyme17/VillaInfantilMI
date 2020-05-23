@@ -82,7 +82,7 @@
             $html2pdf->setDefaultFont('Arial');
             $html2pdf->writeHTML($html);
            
-            $email_to = "zunosan.ricardo506@gmail.com";
+            $email_to = "villainfantilmariaisabel@gmail.com";
             $subject = "Solicitud de Pre-Inscripción de " . $nombre_alu . " " . $ap_pat_alu . " " . $ap_mat_alu;
 
             $message = "<p>Consulte el archivo adjunto.</p>";
@@ -120,7 +120,7 @@
             if (mail($email_to, $subject, $body, $headers)) {
                 header('Location: recibe.php');
             } else {
-                header('Location: error.php');
+                header('Location: error_inscripcion.php');
             }
         }
     }

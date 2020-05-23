@@ -8,7 +8,7 @@
     $conexion = conexion($bd_config);
 
     if (!$conexion) {
-        header('Location:' . PATH . 'error.php');
+        header('Location: error.php');
     }
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){

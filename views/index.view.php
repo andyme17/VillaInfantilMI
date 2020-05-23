@@ -234,6 +234,6 @@
       });
     });
   </script>
-  </body>
+</body>
 
-  </html>
+</html>

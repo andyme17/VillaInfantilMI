@@ -53,7 +53,7 @@ function validaImagen2() {
     limpiarError('error-thumb');
 
     if (thumb.value == "") {
-        error(thumb, 'error-thumb', 'Ingrese la fotografía del servicio');
+        error(thumb, 'error-thumb', 'Ingrese la fotografía del banner inicial.');
         return false;
     }
     return true;

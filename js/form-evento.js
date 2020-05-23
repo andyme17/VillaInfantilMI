@@ -11,9 +11,6 @@ var titulo = document.getElementById('titulo'),
     flag2 = false;
     flag3 = false;
 
-//regular expressions    
-const regText = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
-
 eventListener();
 
 function eventListener() {
@@ -70,9 +67,10 @@ function limita(maximoCaracteres) {
 function validaCampo(campo) {
     limpiarError('error-titulo');
     limpiarError('error-desc');
+    limpiarError('error-fecha');
 
     if (campo.name == "titulo") {
-        if (campo.value.trim() == "" || !regText.test(campo.value.trim())) {
+        if (campo.value.trim() == "") {
             error(campo, 'error-titulo', "Ingrese el título del evento.");
             return false;
         }
@@ -130,7 +128,7 @@ function validaImagen2(campo) {
     limpiarError('error-thumb');
 
     if (campo.value == "") {
-        error(campo, 'error-thumb', 'Ingrese la fotografía del evento');
+        error(campo, 'error-thumb', 'Ingrese la fotografía del evento.');
         return false;
     }
     return true;

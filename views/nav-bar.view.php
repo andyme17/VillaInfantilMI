@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="x7i-1eQfu-xEuD6jxgrEJD3LJAi5do0R7iRzlfy9Y_4" />
     <title>Villa Infantil María Isabel</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/pgwslideshow.min.css">
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo PATH;?>img/favicon.ico">
+    <link rel="stylesheet" href="<?php echo PATH;?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo PATH;?>css/all.min.css">
+    <link rel="stylesheet" href="<?php echo PATH;?>css/pgwslideshow.min.css">
+    <link rel="stylesheet" href="<?php echo PATH;?>css/styles.min.css">
 </head>
 
 <body>

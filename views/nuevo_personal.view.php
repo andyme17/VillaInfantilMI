@@ -1,4 +1,7 @@
-    <?php require 'side_bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Gestor de contenido VillaMI | Nuevo Miembro</title>
+</head>
+<?php require 'layouts/side_bar.view.php'; ?>
         <div id="content">
             <div class="content-1">
                 <div class="cont-h">
@@ -46,15 +49,11 @@
         </div>
     </div>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>
-  
+    <?php require 'layouts/scripts.view.php'; ?>
+
     <!-- Custom javascript files -->
-    <script src="../js/form-personal.js"></script>
+    <script src="<?php echo PATH;?>js/side-bar.js"></script>
+    <script src="<?php echo PATH;?>js/form-personal.js"></script>
     <script>
         $(document).ready(function() {
             $('#thumb').tooltip('show');

@@ -1,10 +1,14 @@
-    <?php require 'nav-bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?>    
+    <meta name="description" content="Nuestro modelo educativo abarca el programa establecido por la SEP además de inglés, francés, música, computación y clases especiales como ballet, zumba, taekwondo, entre otras."> 
+    <title>Villa Infantil María Isabel | Nuestros Servicios</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
 
     <section class="img-back-blue h-md-back-2 py-4">
         <div class="content-back-blue container mx-auto">
             <div class="row">
                 <div class="col-12">
-                    <h2>Nuestros servicios</h2>
+                    <h1>Nuestros servicios</h1>
                     <hr>
                     <p class="text-back-blue">
                         Ofrecemos una amplia gama de actividades para el desarrollo integral de los pequeños.
@@ -105,14 +109,12 @@
         </div>
     </section>
 
-    <?php require 'footer.view.php'; ?>
+    <?php require 'layouts/footer.view.php'; ?>
 
-    <!--Archivos javascript para bootstrap -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
-    <script src="js/nav-bar.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
+
+    <!-- Custom javascript files -->
+    <script src="<?php echo PATH;?>js/nav-bar.js"></script>
 </body>
 
 </html>

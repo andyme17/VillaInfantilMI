@@ -1,4 +1,7 @@
-            <?php require 'side_bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Gestor de contenido VillaMI | Editar Evento</title>
+</head>
+<?php require 'layouts/side_bar.view.php'; ?>
                 <main class="container">
                     <div class="row">
                         <div class="col-12 offset-md-1 col-md-10">
@@ -43,15 +46,11 @@
         </div>
     </div>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>    
 
     <!-- Custom javascript files -->
-    <script src="../js/form-evento.js"></script>   
+    <script src="<?php echo PATH;?>js/side-bar.js"></script>
+    <script src="<?php echo PATH;?>js/form-evento.js"></script>   
     <script>
         $('#thumb').tooltip('show');
     </script>

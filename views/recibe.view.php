@@ -1,4 +1,7 @@
-<?php require 'nav-bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+  <title>Villa Infantil María Isabel | Recibe</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
 
 <main class="img-back py-3 py-md-4">
     <div class="container">
@@ -21,14 +24,12 @@
     </div>
 </main>
 
-<?php require 'footer.view.php'; ?>
+<?php require 'layouts/footer.view.php'; ?>
 
-<!-- JavaScript files for Bootstrap 4 -->
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/headroom.min.js"></script>
-<script src="js/nav-bar.js"></script>
+<?php require 'layouts/scripts.view.php'; ?>
+
+<!-- Custom javascript files -->
+<script src="<?php echo PATH;?>js/nav-bar.js"></script>
 
 </body>
 

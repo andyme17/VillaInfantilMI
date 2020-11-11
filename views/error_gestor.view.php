@@ -1,4 +1,7 @@
-            <?php require 'side_bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Gestor de contenido VillaMI | Error</title>
+</head>
+<?php require 'layouts/side_bar.view.php'; ?>
                 <main class="py-5">
                     <div class="container">
                         <div class="row">
@@ -11,19 +14,15 @@
                             </div>
                         </div>
                     </div>
-                </main>
+                </main>x
             </div>
         </div>
     </div>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>
-
+    <?php require 'layouts/scripts.view.php'; ?>
+    
     <!-- Custom javascript files -->
+    <script src="../js/side-bar.js"></script>    
     <script src="../js/form-testimonio.js"></script>
 </body>
 

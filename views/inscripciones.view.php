@@ -1,8 +1,12 @@
-    <?php require 'nav-bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <meta name="description" content="Realiza el proceso de inscripción en línea llenando el siguiente formulario.">
+    <title>Villa Infantil María Isabel | Inscripciones</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
 
     <section class="img-back-blue h-md-back-2 py-4">
         <div class="content-back-blue container mx-auto">
-            <h2>Proceso de Inscripción</h2>
+            <h1>Proceso de Inscripción</h1>
             <hr>
             <p class="text-back-blue">
                 A continuación vamos a guíarlo paso a paso a tráves del proceso de inscripción:
@@ -401,17 +405,13 @@
         </div>
     </main>
 
-    <?php require 'footer.view.php'; ?>
+    <?php require 'layouts/footer.view.php'; ?>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
 
     <!-- Custom javascript files -->
-    <script src="js/nav-bar.js"></script>
-    <script src="js/form-inscripcion.js"></script>
+    <script src="<?php echo PATH;?>js/nav-bar.js"></script>
+    <script src="<?php echo PATH;?>js/form-inscripcion.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,12 @@
-    <?php require 'nav-bar.view.php'; ?>
-
+<?php require 'layouts/head.view.php'; ?>
+    <meta name="description" content="Consulta nuestros datos de contacto para más información.">
+    <title>Villa Infantil María Isabel | Contacto</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
     <main class="sec-contact py-4">
         <div class="content-contact container mx-auto">
             <div class="text-contact pb-3">
-                <h3>Para más información</h3>
+                <h1>Contáctanos</h1>
                 <hr>
                 <p class="my-4">Envía tus datos y nos pondremos en contacto contigo a la brevedad</p>
                 <p>Ó bien comunicate al <span>55 21 67 74 36</span> en horario de 8:00 a.m a 4 p.m</p>
@@ -57,17 +60,13 @@
         </div>
     </section>
 
-    <?php require 'footer.view.php'; ?>
+    <?php require 'layouts/footer.view.php'; ?>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
 
     <!-- Custom javascript files -->
-    <script src="js/nav-bar.js"></script>
-    <script src="js/form-contact.js"></script>             
+    <script src="<?php echo PATH;?>js/nav-bar.js"></script>
+    <script src="<?php echo PATH;?>js/form-contact.js"></script>             
 </body>
 
 </html>

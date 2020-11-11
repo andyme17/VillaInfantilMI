@@ -459,7 +459,7 @@ header {
   text-align: center;
 }
 
-.content-back-blue h2,
+.content-back-blue h1,
 .content-back-blue p {
   color: #fff;
 }
@@ -534,12 +534,12 @@ header {
   align-items: center;
 }
 
-.header-banner {
+.header-banner{
   font-family: "Roboto", sans-serif;
-  font-size: 1.875rem;
   font-weight: 900;
   padding-bottom: 0.9375rem;
   text-align: center;
+  color: #ffffff;
 }
 
 @media (min-width: 1024px) {
@@ -1090,7 +1090,7 @@ footer .sec-footer .redes a:hover {
   }
 }
 
-.text-contact h3,
+.text-contact h1,
 .text-contact p {
   font-family: "Roboto", sans-serif;
   color: #fff;

@@ -1,4 +1,7 @@
-            <?php require 'side_bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Gestor de contenido VillaMI | Últimos Eventos</title>
+</head>
+<?php require 'layouts/side_bar.view.php'; ?>
                 <main class="container">
                     <h3 class="my-4 my-md-5 mt-xl-0 text-center">Últimos Eventos</h3>
                     <div class="row mb-4">
@@ -41,12 +44,10 @@
     </div>
     </div>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
+
+    <!-- Custom javascript files -->
+    <script src="<?php echo PATH;?>js/side-bar.js"></script>
     <script>
         var contenedor = document.getElementById('content-card');
 

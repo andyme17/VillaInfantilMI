@@ -1,5 +1,8 @@
-  <?php require 'nav-bar.view.php'; ?>
-
+<?php require 'layouts/head.view.php'; ?> 
+  <meta name="description" content="El jardín de niños Villa Infantil María Isabel ofrece servicios para que sus niños tengan un desarrollo sano y obtengan habilidades que les ayudarán con su proceso de maduración.">
+  <title>Villa Infantil María Isabel</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
   <!-- Ventana emergente -->
   <section id="modalBanner" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -16,7 +19,7 @@
 
   <section class="banner">
     <div class="banner-content">
-      <p class="header-banner">VILLA INFANTIL MARÍA ISABEL</p>
+      <h1 class="header-banner">VILLA INFANTIL MARÍA ISABEL</h1>
       <p class="sub-header-banner">Preparando a sus pequeños para el futuro</p>
     </div>
   </section>
@@ -77,7 +80,7 @@
           <ul class="pgwSlideshow">
             <?php foreach ($avisos as $aviso) : ?>
               <li>
-                <img src="<?php echo PATH; ?>img/<?php echo $aviso['thumb']; ?>">
+                <img src="<?php echo PATH; ?>img/<?php echo $aviso['thumb']; ?>"> 
               </li>
             <?php endforeach; ?>
           </ul>
@@ -206,20 +209,16 @@
       <?php endforeach; ?>
     </div>
   </section>
-  <?php require 'footer.view.php'; ?>
+  <?php require 'layouts/footer.view.php'; ?>
 
-  <!-- JavaScript files for Bootstrap 4 -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/headroom.min.js"></script>
+  <?php require 'layouts/scripts.view.php'; ?>
 
   <!-- JavaScript file for gallery -->
-  <script src="js/pgwslideshow.min.js"></script>
+  <script src="<?php echo PATH;?>js/pgwslideshow.min.js"></script>
 
   <!-- Custom javascript files -->
-  <script src="js/nav-bar.js"></script>
-  <script src="js/form-opinion.js"></script>
+  <script src="<?php echo PATH;?>js/nav-bar.js"></script>
+  <script src="<?php echo PATH;?>js/form-opinion.js"></script>
   <script>
     $(document).ready(function() {
       /*activating the modal for the index page banner*/

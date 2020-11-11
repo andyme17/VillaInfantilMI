@@ -1,8 +1,12 @@
-    <?php require 'nav-bar.view.php'; ?>
-
+<?php require 'layouts/head.view.php'; ?> 
+    <meta name="description" content="Echale un vistazo a nuestra galería de fotos de nuestras instalaciones.">
+    <title>Villa Infantil María Isabel | Instalaciones</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
+    
     <section class="img-back-blue h-md-back-2">
         <div class="content-back-blue container mx-auto">
-            <h2>Instalaciones</h2>
+            <h1>Instalaciones</h1>
             <hr>            
         </div>
     </section>
@@ -33,19 +37,15 @@
         </div>
     </section>
 
-    <?php require 'footer.view.php'; ?>
+    <?php require 'layouts/footer.view.php'; ?>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
-    
+    <?php require 'layouts/scripts.view.php'; ?>
+
     <!-- JavaScript file for gallery -->
-    <script src="js/pgwslideshow.min.js"></script>
+    <script src="<?php echo PATH;?>js/pgwslideshow.min.js"></script>
     
     <!-- Custom javascript files -->
-    <script src="js/nav-bar.js"></script>
+    <script src="<?php echo PATH;?>js/nav-bar.js"></script>
     <script>
         /** Slide gallery script **/
         $(document).ready(function() {

@@ -1,4 +1,7 @@
-            <?php require 'side_bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Gestor de contenido VillaMI | Instalaciones</title>
+</head>
+<?php require 'layouts/side_bar.view.php'; ?>
                 <main class="container">
                     <h3 class="my-3 mt-xl-0 text-center">Instalaciones</h3>
                     <a href="<?php echo PATH; ?>admin/agregar_instalacion.php" class="btn btn-success mb-4 ml-4">
@@ -43,12 +46,10 @@
         </div>
     </div>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
+  
+    <!-- Custom javascript files -->
+    <script src="<?php echo PATH;?>js/side-bar.js"></script>
 </body>
 
 </html>

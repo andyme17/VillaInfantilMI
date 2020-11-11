@@ -1,6 +1,9 @@
-            <?php require 'side_bar.view.php'; ?>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Gestor de contenido VillaMI | Servicios</title>
+</head>
+<?php require 'layouts/side_bar.view.php'; ?> 
                 <main class="container">
-                    <h3 class="my-3 text-center">Servicios</h3>
+                    <h3 class="my-3 text-center">Servicios AfterSchool</h3>
                     <a href="<?php echo PATH; ?>admin/agregar_servicio.php" class="btn btn-success mb-4 ml-3 ml-sm-4">
                         <i class="fas fa-plus-circle pr-2"></i><span>Agregar servicio</span>
                     </a>
@@ -48,12 +51,10 @@
         </div>
     </div>
 
-    <!-- JavaScript files for Bootstrap 4 -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/headroom.min.js"></script>
-    <script src="../js/side-bar.js"></script>  
+    <?php require 'layouts/scripts.view.php'; ?>
+   
+    <!-- Custom javascript files -->
+    <script src="<?php echo PATH;?>js/side-bar.js"></script>
 </body>
 
 </html>

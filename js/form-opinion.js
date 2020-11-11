@@ -173,6 +173,7 @@ function notificacionCorrecta(){
     const enviado = document.createElement('img');
     enviado.src = 'img/mail.gif';
     enviado.style.display = 'block';
+    enviado.alt = 'Imagen de icono de loading';
 
     const textEnviado = document.createElement('p');
     textEnviado.textContent = 'Mensaje enviado correctamente';

@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="x7i-1eQfu-xEuD6jxgrEJD3LJAi5do0R7iRzlfy9Y_4" />
-    <title>Villa Infantil María Isabel</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/styles.min.css">
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Villa Infantil María Isabel | Gestor de contenido</title>
 </head>
-
 <body id="login">
     <main class="img-back-blue h-total">
         <div class="container">
@@ -48,12 +36,10 @@
         </div>
     </main>
 
-    <!--Archivos javascript para bootstrap -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
-    <script src="js/form-login.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
+    
+    <!-- Custom javascript files -->
+    <script src="<?php echo PATH;?>js/form-login.js"></script>
 </body>
 
 </html>

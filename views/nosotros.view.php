@@ -1,8 +1,12 @@
-  <?php require 'nav-bar.view.php'; ?>
-
+<?php require 'layouts/head.view.php'; ?>
+  <meta name="description" content="Villa Infantil María Isabel somos un equipo de profesionales especializados en educación infantil."> 
+  <title>Villa Infantil María Isabel | Nosotros</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
+  
   <section class="img-back-blue h-md-back-3 py-4">
     <div class="content-back-blue container mx-auto">
-      <h2>¿Quiénes Somos?</h2>
+      <h1>¿Quiénes Somos?</h1>
       <hr>
       <p class="text-back-blue"><?php echo $init_msg['descripcion'];?></p>
     </div>
@@ -122,17 +126,13 @@
     </div>
   </section>
   
-  <?php require 'footer.view.php'; ?>
+  <?php require 'layouts/footer.view.php'; ?>
 
-  <!-- JavaScript files for Bootstrap 4 -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/headroom.min.js"></script>
+  <?php require 'layouts/scripts.view.php'; ?>
   
   <!-- Custom javascript files -->
-  <script src="js/nav-bar.js"></script>
-  <script src="js/form-opinion.js"></script>
+  <script src="<?php echo PATH;?>js/nav-bar.js"></script>
+  <script src="<?php echo PATH;?>js/form-opinion.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,10 @@
-    <?php require 'nav-bar.view.php'; ?>
-
-    <main class="sec-nosotros">
-        <div class="text-aviso container mx-auto">
-            <h2 class="text-center pb-4">Aviso de privacidad</h2>
+<?php require 'layouts/head.view.php'; ?> 
+    <title>Villa Infantil María Isabel | Contacto</title>
+</head>
+<?php require 'layouts/nav-bar.view.php'; ?>
+    <main class="container my-5">
+        <div class="text-aviso col-12 col-md-10 mx-auto">
+            <h1 class="text-center mb-5">Aviso de privacidad</h1>
             <p>
                 En términos de lo previsto en la Ley Federal de Protección de Datos Personales en Posesión 
                 de los Particulares (en lo sucesivo denominada como “la Ley”),  el Jardín de niños Villa
@@ -37,14 +39,10 @@
             </ol>
         </div>    
     </main>
+    
+    <?php require 'layouts/footer.view.php'; ?>
 
-    <?php require 'footer.view.php'; ?>
-
-    <!--Archivos javascript para bootstrap -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/headroom.min.js"></script>
-    <script src="js/main.js"></script>
+    <?php require 'layouts/scripts.view.php'; ?>
 </body>
+
 </html>
